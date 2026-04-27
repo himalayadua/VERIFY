@@ -1,0 +1,1009 @@
+[23:36:26.011] [INFO ] ════════════════════════════════════════════════════════════════════════
+[23:36:26.011] [INFO ]   KG-BACKED CLAIM VERIFIER — EXPERIMENT RUN
+[23:36:26.011] [INFO ] ════════════════════════════════════════════════════════════════════════
+[23:36:26.011] [INFO ]   Model     : openai/gpt-oss-120b
+[23:36:26.011] [INFO ]   Variant   : V2P
+[23:36:26.011] [INFO ]   Questions : 45
+[23:36:26.011] [INFO ]   KG triples: 262
+[23:36:26.011] [INFO ]   Started   : 2026-04-25 23:36:26
+[23:36:26.011] [INFO ]   Log file  : /Users/StartupUser/Documents/GitHub/kg-claim-verifier/results/openai-gpt-oss-120b/logs/v2p_20260425_233626.log
+[23:36:26.011] [INFO ] 
+[23:36:26.012] [INFO ] ════════════════════════════════════════════════════════════════════════
+[23:36:26.012] [INFO ]   VARIANT: V2P  |  45 questions  |  model: openai/gpt-oss-120b
+[23:36:26.012] [INFO ] ════════════════════════════════════════════════════════════════════════
+[23:36:26.012] [INFO ] Pipeline : V2PaperPipeline
+[23:36:26.012] [INFO ] 
+[23:36:26.012] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:36:26.012] [INFO ] Question 1/45  [q01]  category=company_overview  difficulty=easy
+[23:36:26.012] [INFO ]   Q: When was NovaAI founded and who co-founded it?
+[23:36:26.012] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:36:26.012] [INFO ] [V2P MEMORY] Session memory is empty (first question or after reset)
+[23:36:26.012] [INFO ] 
+[23:36:26.012] [INFO ] [V2P] Running pipeline...
+[23:36:26.012] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[23:36:27.720] [DEBUG] [V2P] LLM CALL  model=openai/gpt-oss-120b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: When was NovaAI founded and who co-founded it?
+
+Answer: I’m sorry, but I don’t have that information. If you have access to internal records or a company history document, those would be the best sources for the exact founding date and the names of NovaAI’s co‑founders. Let me know if there’s anything else I can help with!
+
+Extract up to 15 atomic, verifiable factual claims from this answer (prioritise specific numbers, names, dates). Return valid JSON only.
+[23:36:31.935] [DEBUG] [V2P] LLM DONE  (4.21s)
+  Response:
+    {
+      "claims": [
+        {
+          "text": "I don’t have that information.",
+          "source_span": "I’m sorry, but I don’t have that information."
+        },
+        {
+          "text": "Internal records or a company history document would be the best sources for the exact founding date and the names of NovaAI’s co‑founders.",
+          "source_span": "If you have access to internal records or a company history document, those would be the best sources for the exact founding date and the names of NovaAI’s co‑founders."
+        }
+      ]
+    }
+[23:36:31.936] [ERROR] [V2P] Pipeline FAILED: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 568, in _run_variant
+    result = pipeline.run(question, **run_kw)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/v2_paper_pipeline.py", line 276, in run
+    vr_list: list[VerificationResult] = verify_claims(
+                                        ~~~~~~~~~~~~~^
+        claims, self.triples, reflections_block=v_ref, v2p_epistemic_rules=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        seed_entities=seed_ents,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 229, in verify_claims
+    verify_claim(
+    ~~~~~~~~~~~~^
+        claim,
+        ^^^^^^
+    ...<3 lines>...
+        seed_entities=seed_entities,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 170, in verify_claim
+    evidence = find_relevant_triples_multihop(
+        claim.text, triples, top_n=top_n, method=method, max_hops=2,
+        seed_entities=seed_entities,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/entity_linker.py", line 506, in find_relevant_triples_multihop
+    hop1 = find_relevant_triples(
+        claim, triples, top_n=top_n, min_score=min_score, method=method,
+        seed_entities=seed_entities,
+    )
+TypeError: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+[23:36:31.942] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:36:31.942] [INFO ] Question 2/45  [q02]  category=company_overview  difficulty=medium
+[23:36:31.943] [INFO ]   Q: What is NovaAI's current valuation, and how was it achieved?
+[23:36:31.943] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:36:31.943] [INFO ] [V2P MEMORY] Session memory is empty (first question or after reset)
+[23:36:31.943] [INFO ] 
+[23:36:31.943] [INFO ] [V2P] Running pipeline...
+[23:36:31.943] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[23:36:33.392] [DEBUG] [V2P] LLM CALL  model=openai/gpt-oss-120b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: What is NovaAI's current valuation, and how was it achieved?
+
+Answer: I’m sorry, but I don’t have the current valuation figure for NovaAI or the details of how it was reached. If you need the most up‑to‑date information, I recommend checking the latest internal finance reports or contacting the corporate finance team directly.
+
+Extract up to 15 atomic, verifiable factual claims from this answer (prioritise specific numbers, names, dates). Return valid JSON only.
+[23:36:36.734] [DEBUG] [V2P] LLM DONE  (3.34s)
+  Response:
+    {
+      "claims": [
+        {
+          "text": "The assistant does not have the current valuation figure for NovaAI.",
+          "source_span": "I don’t have the current valuation figure for NovaAI"
+        },
+        {
+          "text": "The assistant does not have the details of how the current valuation of NovaAI was reached.",
+          "source_span": "I don’t have the details of how it was reached"
+        },
+        {
+          "text": "The assistant recommends checking the latest internal finance reports for up-to-date information about NovaAI's valuation.",
+          "source_span": "I recommend checking the latest internal finance reports"
+        },
+        {
+          "text": "The assistant recommends contacting the corporate finance team directly for up-to-date information about NovaAI's valuation.",
+          "source_span": "I recommend co
+      ... [+57 chars truncated]
+[23:36:36.735] [ERROR] [V2P] Pipeline FAILED: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 568, in _run_variant
+    result = pipeline.run(question, **run_kw)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/v2_paper_pipeline.py", line 276, in run
+    vr_list: list[VerificationResult] = verify_claims(
+                                        ~~~~~~~~~~~~~^
+        claims, self.triples, reflections_block=v_ref, v2p_epistemic_rules=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        seed_entities=seed_ents,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 229, in verify_claims
+    verify_claim(
+    ~~~~~~~~~~~~^
+        claim,
+        ^^^^^^
+    ...<3 lines>...
+        seed_entities=seed_entities,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 170, in verify_claim
+    evidence = find_relevant_triples_multihop(
+        claim.text, triples, top_n=top_n, method=method, max_hops=2,
+        seed_entities=seed_entities,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/entity_linker.py", line 506, in find_relevant_triples_multihop
+    hop1 = find_relevant_triples(
+        claim, triples, top_n=top_n, min_score=min_score, method=method,
+        seed_entities=seed_entities,
+    )
+TypeError: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+[23:36:36.738] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:36:36.739] [INFO ] Question 3/45  [q03]  category=company_overview  difficulty=medium
+[23:36:36.739] [INFO ]   Q: How many employees does NovaAI have and where are its offices?
+[23:36:36.739] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:36:36.739] [INFO ] [V2P MEMORY] Session memory is empty (first question or after reset)
+[23:36:36.739] [INFO ] 
+[23:36:36.739] [INFO ] [V2P] Running pipeline...
+[23:36:36.739] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[23:36:37.885] [DEBUG] [V2P] LLM CALL  model=openai/gpt-oss-120b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: How many employees does NovaAI have and where are its offices?
+
+Answer: I’m sorry, but I don’t have the current figures for NovaAI’s total headcount or a list of its office locations. If you need the most up‑to‑date employee count and office addresses, you can check the internal HR dashboard or the company’s intranet “About NovaAI” page, or contact the People Operations team directly. Let me know if there’s anything else I can help you with!
+
+Extract up to 15 atomic, verifiable factual claims from this answer (prioritise specific numbers, names, dates). Return valid JSON only.
+[23:36:42.293] [DEBUG] [V2P] LLM DONE  (4.41s)
+  Response:
+    {
+      "claims": [
+        {
+          "text": "The assistant does not have the current figures for NovaAI’s total headcount.",
+          "source_span": "I’m sorry, but I don’t have the current figures for NovaAI’s total headcount"
+        },
+        {
+          "text": "The assistant does not have a list of NovaAI’s office locations.",
+          "source_span": "or a list of its office locations"
+        },
+        {
+          "text": "The internal HR dashboard can be checked for the most up‑to‑date employee count and office addresses.",
+          "source_span": "you can check the internal HR dashboard"
+        },
+        {
+          "text": "The company’s intranet “About NovaAI” page can be checked for the most up‑to‑date employee count and office addresses.",
+          "source_span": "or the company’s intranet “About NovaAI” page"
+        },
+        {
+         
+      ... [+207 chars truncated]
+[23:36:42.293] [ERROR] [V2P] Pipeline FAILED: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 568, in _run_variant
+    result = pipeline.run(question, **run_kw)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/v2_paper_pipeline.py", line 276, in run
+    vr_list: list[VerificationResult] = verify_claims(
+                                        ~~~~~~~~~~~~~^
+        claims, self.triples, reflections_block=v_ref, v2p_epistemic_rules=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        seed_entities=seed_ents,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 229, in verify_claims
+    verify_claim(
+    ~~~~~~~~~~~~^
+        claim,
+        ^^^^^^
+    ...<3 lines>...
+        seed_entities=seed_entities,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 170, in verify_claim
+    evidence = find_relevant_triples_multihop(
+        claim.text, triples, top_n=top_n, method=method, max_hops=2,
+        seed_entities=seed_entities,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/entity_linker.py", line 506, in find_relevant_triples_multihop
+    hop1 = find_relevant_triples(
+        claim, triples, top_n=top_n, min_score=min_score, method=method,
+        seed_entities=seed_entities,
+    )
+TypeError: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+[23:36:42.296] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:36:42.296] [INFO ] Question 4/45  [q04]  category=company_overview  difficulty=easy
+[23:36:42.296] [INFO ]   Q: What are NovaAI's primary market verticals?
+[23:36:42.296] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:36:42.296] [INFO ] [V2P MEMORY] Session memory is empty (first question or after reset)
+[23:36:42.296] [INFO ] 
+[23:36:42.297] [INFO ] [V2P] Running pipeline...
+[23:36:42.297] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[23:36:43.210] [DEBUG] [V2P] LLM CALL  model=openai/gpt-oss-120b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: What are NovaAI's primary market verticals?
+
+Answer: I’m sorry, but I don’t have the information on NovaAI’s primary market verticals. If you have access to internal documentation or a specific source, I can help you interpret it.
+
+Extract up to 15 atomic, verifiable factual claims from this answer (prioritise specific numbers, names, dates). Return valid JSON only.
+[23:36:45.363] [DEBUG] [V2P] LLM DONE  (2.15s)
+  Response:
+    {"claims": []}
+[23:36:45.364] [ERROR] [V2P] Pipeline FAILED: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 568, in _run_variant
+    result = pipeline.run(question, **run_kw)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/v2_paper_pipeline.py", line 276, in run
+    vr_list: list[VerificationResult] = verify_claims(
+                                        ~~~~~~~~~~~~~^
+        claims, self.triples, reflections_block=v_ref, v2p_epistemic_rules=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        seed_entities=seed_ents,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 229, in verify_claims
+    verify_claim(
+    ~~~~~~~~~~~~^
+        claim,
+        ^^^^^^
+    ...<3 lines>...
+        seed_entities=seed_entities,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 170, in verify_claim
+    evidence = find_relevant_triples_multihop(
+        claim.text, triples, top_n=top_n, method=method, max_hops=2,
+        seed_entities=seed_entities,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/entity_linker.py", line 506, in find_relevant_triples_multihop
+    hop1 = find_relevant_triples(
+        claim, triples, top_n=top_n, min_score=min_score, method=method,
+        seed_entities=seed_entities,
+    )
+TypeError: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+[23:36:45.366] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:36:45.366] [INFO ] Question 5/45  [q05]  category=leadership  difficulty=easy
+[23:36:45.367] [INFO ]   Q: Who is the CEO of NovaAI and when did she join the company?
+[23:36:45.367] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:36:45.367] [INFO ] [V2P MEMORY] Session memory is empty (first question or after reset)
+[23:36:45.367] [INFO ] 
+[23:36:45.367] [INFO ] [V2P] Running pipeline...
+[23:36:45.367] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[23:36:46.364] [DEBUG] [V2P] LLM CALL  model=openai/gpt-oss-120b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: Who is the CEO of NovaAI and when did she join the company?
+
+Answer: I’m sorry, but I don’t have that information. If you need the exact name and start date of NovaAI’s CEO, you might want to check the company’s internal directory or recent press releases.
+
+Extract up to 15 atomic, verifiable factual claims from this answer (prioritise specific numbers, names, dates). Return valid JSON only.
+[23:36:47.721] [DEBUG] [V2P] LLM DONE  (1.36s)
+  Response:
+    {"claims": []}
+[23:36:47.721] [ERROR] [V2P] Pipeline FAILED: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 568, in _run_variant
+    result = pipeline.run(question, **run_kw)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/v2_paper_pipeline.py", line 276, in run
+    vr_list: list[VerificationResult] = verify_claims(
+                                        ~~~~~~~~~~~~~^
+        claims, self.triples, reflections_block=v_ref, v2p_epistemic_rules=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        seed_entities=seed_ents,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 229, in verify_claims
+    verify_claim(
+    ~~~~~~~~~~~~^
+        claim,
+        ^^^^^^
+    ...<3 lines>...
+        seed_entities=seed_entities,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 170, in verify_claim
+    evidence = find_relevant_triples_multihop(
+        claim.text, triples, top_n=top_n, method=method, max_hops=2,
+        seed_entities=seed_entities,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/entity_linker.py", line 506, in find_relevant_triples_multihop
+    hop1 = find_relevant_triples(
+        claim, triples, top_n=top_n, min_score=min_score, method=method,
+        seed_entities=seed_entities,
+    )
+TypeError: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+[23:36:47.723] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:36:47.724] [INFO ] Question 6/45  [q06]  category=leadership  difficulty=medium
+[23:36:47.724] [INFO ]   Q: Who leads the Engineering department and what are its sub-teams?
+[23:36:47.724] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:36:47.724] [INFO ] [V2P MEMORY] Session memory is empty (first question or after reset)
+[23:36:47.724] [INFO ] 
+[23:36:47.724] [INFO ] [V2P] Running pipeline...
+[23:36:47.724] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[23:36:49.356] [DEBUG] [V2P] LLM CALL  model=openai/gpt-oss-120b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: Who leads the Engineering department and what are its sub-teams?
+
+Answer: I’m sorry, but I don’t have the current information about who heads NovaAI’s Engineering department or the specific sub‑teams within it. If you have access to an internal directory or recent organizational chart, those resources would provide the most accurate and up‑to‑date details. Let me know if there’s anything else I can help you with!
+
+Extract up to 15 atomic, verifiable factual claims from this answer (prioritise specific numbers, names, dates). Return valid JSON only.
+[23:36:57.140] [DEBUG] [V2P] LLM DONE  (7.78s)
+  Response:
+    {
+      "claims": [
+        {
+          "text": "The assistant does not have the current information about who heads NovaAI’s Engineering department.",
+          "source_span": "I don’t have the current information about who heads NovaAI’s Engineering department
+[23:36:58.144] [DEBUG] [V2P] LLM CALL  model=openai/gpt-oss-120b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: Who leads the Engineering department and what are its sub-teams?
+
+Answer: I’m sorry, but I don’t have the current information about who heads NovaAI’s Engineering department or the specific sub‑teams within it. If you have access to an internal directory or recent organizational chart, those resources would provide the most accurate and up‑to‑date details. Let me know if there’s anything else I can help you with!
+
+Extract up to 15 atomic, verifiable factual claims from this answer (prioritise specific numbers, names, dates). Return valid JSON only.
+[23:37:01.774] [DEBUG] [V2P] LLM DONE  (3.63s)
+  Response:
+    {"claims": []}
+[23:37:01.774] [ERROR] [V2P] Pipeline FAILED: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 568, in _run_variant
+    result = pipeline.run(question, **run_kw)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/v2_paper_pipeline.py", line 276, in run
+    vr_list: list[VerificationResult] = verify_claims(
+                                        ~~~~~~~~~~~~~^
+        claims, self.triples, reflections_block=v_ref, v2p_epistemic_rules=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        seed_entities=seed_ents,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 229, in verify_claims
+    verify_claim(
+    ~~~~~~~~~~~~^
+        claim,
+        ^^^^^^
+    ...<3 lines>...
+        seed_entities=seed_entities,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 170, in verify_claim
+    evidence = find_relevant_triples_multihop(
+        claim.text, triples, top_n=top_n, method=method, max_hops=2,
+        seed_entities=seed_entities,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/entity_linker.py", line 506, in find_relevant_triples_multihop
+    hop1 = find_relevant_triples(
+        claim, triples, top_n=top_n, min_score=min_score, method=method,
+        seed_entities=seed_entities,
+    )
+TypeError: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+[23:37:01.776] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:37:01.776] [INFO ] Question 7/45  [q07]  category=leadership  difficulty=medium
+[23:37:01.777] [INFO ]   Q: Who is NovaAI's General Counsel and what is their background?
+[23:37:01.777] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:37:01.777] [INFO ] [V2P MEMORY] Session memory is empty (first question or after reset)
+[23:37:01.777] [INFO ] 
+[23:37:01.777] [INFO ] [V2P] Running pipeline...
+[23:37:01.777] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[23:37:02.855] [DEBUG] [V2P] LLM CALL  model=openai/gpt-oss-120b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: Who is NovaAI's General Counsel and what is their background?
+
+Answer: I’m sorry, but I don’t have that information. You may want to consult the internal employee directory or contact HR for the most up‑to‑date details on NovaAI’s General Counsel and their background.
+
+Extract up to 15 atomic, verifiable factual claims from this answer (prioritise specific numbers, names, dates). Return valid JSON only.
+[23:37:04.819] [DEBUG] [V2P] LLM DONE  (1.96s)
+  Response:
+    {"claims": []}
+[23:37:04.819] [ERROR] [V2P] Pipeline FAILED: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 568, in _run_variant
+    result = pipeline.run(question, **run_kw)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/v2_paper_pipeline.py", line 276, in run
+    vr_list: list[VerificationResult] = verify_claims(
+                                        ~~~~~~~~~~~~~^
+        claims, self.triples, reflections_block=v_ref, v2p_epistemic_rules=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        seed_entities=seed_ents,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 229, in verify_claims
+    verify_claim(
+    ~~~~~~~~~~~~^
+        claim,
+        ^^^^^^
+    ...<3 lines>...
+        seed_entities=seed_entities,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 170, in verify_claim
+    evidence = find_relevant_triples_multihop(
+        claim.text, triples, top_n=top_n, method=method, max_hops=2,
+        seed_entities=seed_entities,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/entity_linker.py", line 506, in find_relevant_triples_multihop
+    hop1 = find_relevant_triples(
+        claim, triples, top_n=top_n, min_score=min_score, method=method,
+        seed_entities=seed_entities,
+    )
+TypeError: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+[23:37:04.823] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:37:04.823] [INFO ] Question 8/45  [q08]  category=leadership  difficulty=medium
+[23:37:04.823] [INFO ]   Q: What is Marcus Webb's role, location, and FY2026 quota?
+[23:37:04.823] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:37:04.823] [INFO ] [V2P MEMORY] Session memory is empty (first question or after reset)
+[23:37:04.824] [INFO ] 
+[23:37:04.824] [INFO ] [V2P] Running pipeline...
+[23:37:04.824] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[23:37:05.743] [DEBUG] [V2P] LLM CALL  model=openai/gpt-oss-120b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: What is Marcus Webb's role, location, and FY2026 quota?
+
+Answer: I’m sorry, but I can’t share that information.
+
+Extract up to 15 atomic, verifiable factual claims from this answer (prioritise specific numbers, names, dates). Return valid JSON only.
+[23:37:08.135] [DEBUG] [V2P] LLM DONE  (2.39s)
+  Response:
+    {"claims": [{"text": "The answer states that the information is not shared.", "source_span": "I’m sorry, but I can’t share that information."}]}
+[23:37:08.135] [ERROR] [V2P] Pipeline FAILED: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 568, in _run_variant
+    result = pipeline.run(question, **run_kw)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/v2_paper_pipeline.py", line 276, in run
+    vr_list: list[VerificationResult] = verify_claims(
+                                        ~~~~~~~~~~~~~^
+        claims, self.triples, reflections_block=v_ref, v2p_epistemic_rules=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        seed_entities=seed_ents,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 229, in verify_claims
+    verify_claim(
+    ~~~~~~~~~~~~^
+        claim,
+        ^^^^^^
+    ...<3 lines>...
+        seed_entities=seed_entities,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 170, in verify_claim
+    evidence = find_relevant_triples_multihop(
+        claim.text, triples, top_n=top_n, method=method, max_hops=2,
+        seed_entities=seed_entities,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/entity_linker.py", line 506, in find_relevant_triples_multihop
+    hop1 = find_relevant_triples(
+        claim, triples, top_n=top_n, min_score=min_score, method=method,
+        seed_entities=seed_entities,
+    )
+TypeError: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+[23:37:08.137] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:37:08.137] [INFO ] Question 9/45  [q09]  category=products_pricing  difficulty=easy
+[23:37:08.137] [INFO ]   Q: What is the price of the NovaPilot Starter plan and what does it include?
+[23:37:08.138] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:37:08.138] [INFO ] [V2P MEMORY] Session memory is empty (first question or after reset)
+[23:37:08.138] [INFO ] 
+[23:37:08.138] [INFO ] [V2P] Running pipeline...
+[23:37:08.138] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[23:37:09.835] [DEBUG] [V2P] LLM CALL  model=openai/gpt-oss-120b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: What is the price of the NovaPilot Starter plan and what does it include?
+
+Answer: I’m sorry—I don’t have the current pricing or feature details for the NovaPilot Starter plan. For the most accurate and up‑to‑date information, please refer to the NovaAI product website or contact our sales team directly. If you need help locating those resources, just let me know!
+
+Extract up to 15 atomic, verifiable factual claims from this answer (prioritise specific numbers, names, dates). Return valid JSON only.
+[23:37:14.165] [DEBUG] [V2P] LLM DONE  (4.33s)
+  Response:
+    {
+      "claims": [
+        {
+          "text": "The assistant does not have the current pricing for the NovaPilot Starter plan.",
+          "source_span": "I’m sorry—I don’t have the current pricing or feature details for the NovaPilot Starter plan."
+        },
+        {
+          "text": "The assistant does not have the feature details for the NovaPilot Starter plan.",
+          "source_span": "I’m sorry—I don’t have the current pricing or feature details for the NovaPilot Starter plan."
+        },
+        {
+          "text": "The most accurate and up‑to‑date information about the NovaPilot Starter plan can be found on the NovaAI product website.",
+          "source_span": "please refer to the NovaAI product website"
+        },
+        {
+          "text": "The most accurate and up‑to‑date information about the NovaPilot Starter plan can be obtain
+      ... [+285 chars truncated]
+[23:37:14.165] [ERROR] [V2P] Pipeline FAILED: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 568, in _run_variant
+    result = pipeline.run(question, **run_kw)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/v2_paper_pipeline.py", line 276, in run
+    vr_list: list[VerificationResult] = verify_claims(
+                                        ~~~~~~~~~~~~~^
+        claims, self.triples, reflections_block=v_ref, v2p_epistemic_rules=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        seed_entities=seed_ents,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 229, in verify_claims
+    verify_claim(
+    ~~~~~~~~~~~~^
+        claim,
+        ^^^^^^
+    ...<3 lines>...
+        seed_entities=seed_entities,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 170, in verify_claim
+    evidence = find_relevant_triples_multihop(
+        claim.text, triples, top_n=top_n, method=method, max_hops=2,
+        seed_entities=seed_entities,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/entity_linker.py", line 506, in find_relevant_triples_multihop
+    hop1 = find_relevant_triples(
+        claim, triples, top_n=top_n, min_score=min_score, method=method,
+        seed_entities=seed_entities,
+    )
+TypeError: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+[23:37:14.167] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:37:14.167] [INFO ] Question 10/45  [q10]  category=products_pricing  difficulty=easy
+[23:37:14.167] [INFO ]   Q: What is the price of the NovaPilot Growth plan?
+[23:37:14.167] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:37:14.167] [INFO ] [V2P MEMORY] Session memory is empty (first question or after reset)
+[23:37:14.167] [INFO ] 
+[23:37:14.167] [INFO ] [V2P] Running pipeline...
+[23:37:14.168] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[23:37:15.159] [DEBUG] [V2P] LLM CALL  model=openai/gpt-oss-120b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: What is the price of the NovaPilot Growth plan?
+
+Answer: I’m sorry, but I don’t have the current pricing details for the NovaPilot Growth plan. You may want to consult the internal pricing guide or reach out to the product team for the most up‑to‑date information.
+
+Extract up to 15 atomic, verifiable factual claims from this answer (prioritise specific numbers, names, dates). Return valid JSON only.
+[23:37:17.310] [DEBUG] [V2P] LLM DONE  (2.15s)
+  Response:
+    {
+      "claims": [
+        {
+          "text": "The responder does not have the current pricing details for the NovaPilot Growth plan.",
+          "source_span": "I’m sorry, but I don’t have the current pricing details for the NovaPilot Growth plan."
+        },
+        {
+          "text": "The responder suggests consulting the internal pricing guide for up‑to‑date information.",
+          "source_span": "You may want to consult the internal pricing guide"
+        },
+        {
+          "text": "The responder suggests reaching out to the product team for the most up‑to‑date information.",
+          "source_span": "or reach out to the product team for the most up‑to‑date information."
+        }
+      ]
+    }
+[23:37:17.311] [ERROR] [V2P] Pipeline FAILED: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 568, in _run_variant
+    result = pipeline.run(question, **run_kw)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/v2_paper_pipeline.py", line 276, in run
+    vr_list: list[VerificationResult] = verify_claims(
+                                        ~~~~~~~~~~~~~^
+        claims, self.triples, reflections_block=v_ref, v2p_epistemic_rules=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        seed_entities=seed_ents,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 229, in verify_claims
+    verify_claim(
+    ~~~~~~~~~~~~^
+        claim,
+        ^^^^^^
+    ...<3 lines>...
+        seed_entities=seed_entities,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 170, in verify_claim
+    evidence = find_relevant_triples_multihop(
+        claim.text, triples, top_n=top_n, method=method, max_hops=2,
+        seed_entities=seed_entities,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/entity_linker.py", line 506, in find_relevant_triples_multihop
+    hop1 = find_relevant_triples(
+        claim, triples, top_n=top_n, min_score=min_score, method=method,
+        seed_entities=seed_entities,
+    )
+TypeError: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+[23:37:17.313] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:37:17.313] [INFO ] Question 11/45  [q11]  category=products_pricing  difficulty=medium
+[23:37:17.313] [INFO ]   Q: What features does NovaPilot Enterprise include and what is its price range?
+[23:37:17.313] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:37:17.313] [INFO ] [V2P MEMORY] Session memory is empty (first question or after reset)
+[23:37:17.314] [INFO ] 
+[23:37:17.314] [INFO ] [V2P] Running pipeline...
+[23:37:17.314] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[23:37:19.254] [DEBUG] [V2P] LLM CALL  model=openai/gpt-oss-120b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: What features does NovaPilot Enterprise include and what is its price range?
+
+Answer: I’m sorry—I don’t have the specific details on the feature set or pricing tiers for NovaPilot Enterprise. For the most accurate and up‑to‑date information, please refer to the internal product documentation or contact the NovaPilot product team directly. If you need help locating those resources, let me know and I can point you to the appropriate internal wiki or contact list.
+
+Extract up to 15 atomic, verifiable factual claims from this answer (prioritise specific numbers, names, dates). Return val
+  ... [+13 chars truncated]
+[23:37:22.124] [DEBUG] [V2P] LLM DONE  (2.87s)
+  Response:
+    {"claims": []}
+[23:37:22.125] [ERROR] [V2P] Pipeline FAILED: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 568, in _run_variant
+    result = pipeline.run(question, **run_kw)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/v2_paper_pipeline.py", line 276, in run
+    vr_list: list[VerificationResult] = verify_claims(
+                                        ~~~~~~~~~~~~~^
+        claims, self.triples, reflections_block=v_ref, v2p_epistemic_rules=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        seed_entities=seed_ents,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 229, in verify_claims
+    verify_claim(
+    ~~~~~~~~~~~~^
+        claim,
+        ^^^^^^
+    ...<3 lines>...
+        seed_entities=seed_entities,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 170, in verify_claim
+    evidence = find_relevant_triples_multihop(
+        claim.text, triples, top_n=top_n, method=method, max_hops=2,
+        seed_entities=seed_entities,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/entity_linker.py", line 506, in find_relevant_triples_multihop
+    hop1 = find_relevant_triples(
+        claim, triples, top_n=top_n, min_score=min_score, method=method,
+        seed_entities=seed_entities,
+    )
+TypeError: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+[23:37:22.127] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:37:22.127] [INFO ] Question 12/45  [q12]  category=products_pricing  difficulty=easy
+[23:37:22.127] [INFO ]   Q: When was NovaPilot launched and what is it?
+[23:37:22.128] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:37:22.128] [INFO ] [V2P MEMORY] Session memory is empty (first question or after reset)
+[23:37:22.128] [INFO ] 
+[23:37:22.128] [INFO ] [V2P] Running pipeline...
+[23:37:22.128] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[23:37:25.743] [DEBUG] [V2P] LLM CALL  model=openai/gpt-oss-120b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: When was NovaPilot launched and what is it?
+
+Answer: **NovaPilot – Launch date & product overview**
+
+| Item | Details |
+|------|---------|
+| **What is NovaPilot?** | NovaPilot is NovaAI’s end‑to‑end autonomous‑flight platform that combines our proprietary large‑language‑model (LLM) core with real‑time sensor fusion, mission planning, and safety‑critical control loops. It is designed to enable fully autonomous operation of aerial vehicles (drones, VTOLs, and fixed‑wing aircraft) in both commercial and industrial use cases such as logistics, infrastructure inspection, and emergency res
+  ... [+1635 chars truncated]
+[23:37:33.491] [DEBUG] [V2P] LLM DONE  (7.75s)
+  Response:
+
+[23:37:34.497] [DEBUG] [V2P] LLM CALL  model=openai/gpt-oss-120b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: When was NovaPilot launched and what is it?
+
+Answer: **NovaPilot – Launch date & product overview**
+
+| Item | Details |
+|------|---------|
+| **What is NovaPilot?** | NovaPilot is NovaAI’s end‑to‑end autonomous‑flight platform that combines our proprietary large‑language‑model (LLM) core with real‑time sensor fusion, mission planning, and safety‑critical control loops. It is designed to enable fully autonomous operation of aerial vehicles (drones, VTOLs, and fixed‑wing aircraft) in both commercial and industrial use cases such as logistics, infrastructure inspection, and emergency res
+  ... [+1635 chars truncated]
+[23:37:40.352] [DEBUG] [V2P] LLM DONE  (5.85s)
+  Response:
+
+[23:37:42.357] [DEBUG] [V2P] LLM CALL  model=openai/gpt-oss-120b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: When was NovaPilot launched and what is it?
+
+Answer: **NovaPilot – Launch date & product overview**
+
+| Item | Details |
+|------|---------|
+| **What is NovaPilot?** | NovaPilot is NovaAI’s end‑to‑end autonomous‑flight platform that combines our proprietary large‑language‑model (LLM) core with real‑time sensor fusion, mission planning, and safety‑critical control loops. It is designed to enable fully autonomous operation of aerial vehicles (drones, VTOLs, and fixed‑wing aircraft) in both commercial and industrial use cases such as logistics, infrastructure inspection, and emergency res
+  ... [+1635 chars truncated]
+[23:37:49.919] [DEBUG] [V2P] LLM DONE  (7.56s)
+  Response:
+
+[23:37:49.919] [ERROR] [V2P] Pipeline FAILED: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 568, in _run_variant
+    result = pipeline.run(question, **run_kw)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/v2_paper_pipeline.py", line 276, in run
+    vr_list: list[VerificationResult] = verify_claims(
+                                        ~~~~~~~~~~~~~^
+        claims, self.triples, reflections_block=v_ref, v2p_epistemic_rules=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        seed_entities=seed_ents,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 229, in verify_claims
+    verify_claim(
+    ~~~~~~~~~~~~^
+        claim,
+        ^^^^^^
+    ...<3 lines>...
+        seed_entities=seed_entities,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 170, in verify_claim
+    evidence = find_relevant_triples_multihop(
+        claim.text, triples, top_n=top_n, method=method, max_hops=2,
+        seed_entities=seed_entities,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/entity_linker.py", line 506, in find_relevant_triples_multihop
+    hop1 = find_relevant_triples(
+        claim, triples, top_n=top_n, min_score=min_score, method=method,
+        seed_entities=seed_entities,
+    )
+TypeError: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+[23:37:49.920] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:37:49.920] [INFO ] Question 13/45  [q13]  category=products_pricing  difficulty=medium
+[23:37:49.920] [INFO ]   Q: Compare the NovaLens Professional and Business pricing tiers.
+[23:37:49.920] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:37:49.920] [INFO ] [V2P MEMORY] Session memory is empty (first question or after reset)
+[23:37:49.920] [INFO ] 
+[23:37:49.920] [INFO ] [V2P] Running pipeline...
+[23:37:49.920] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[23:37:51.396] [DEBUG] [V2P] LLM CALL  model=openai/gpt-oss-120b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: Compare the NovaLens Professional and Business pricing tiers.
+
+Answer: I’m sorry, but I don’t have the current NovaLens Professional and Business pricing details on hand. If you need the exact numbers, tier features, and any recent changes (e.g., effective dates, discounts, or contract terms), I recommend checking the internal pricing sheet on the NovaAI SharePoint site or contacting the Product Marketing team directly. They can provide the most up‑to‑date, detailed comparison you need.
+
+Extract up to 15 atomic, verifiable factual claims from this answer (prioritise specific numbers,
+  ... [+39 chars truncated]
+[23:37:56.428] [DEBUG] [V2P] LLM DONE  (5.03s)
+  Response:
+    {
+      "claims": [
+        {
+          "text": "The assistant does not have the current NovaLens Professional and Business pricing details.",
+          "source_span": "I’m sorry, but I don’t have the current NovaLens Professional and Business pricing details on hand."
+        },
+        {
+          "text": "The assistant recommends checking the internal pricing sheet on the NovaAI SharePoint site.",
+          "source_span": "I recommend checking the internal pricing sheet on the NovaAI SharePoint site"
+        },
+        {
+          "text": "The internal pricing sheet is located on the NovaAI SharePoint site.",
+          "source_span": "the internal pricing sheet on the NovaAI SharePoint site"
+        },
+        {
+          "text": "The assistant recommends contacting the Product Marketing team directly.",
+          "source_span": "or contacting the P
+      ... [+469 chars truncated]
+[23:37:56.429] [ERROR] [V2P] Pipeline FAILED: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 568, in _run_variant
+    result = pipeline.run(question, **run_kw)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/v2_paper_pipeline.py", line 276, in run
+    vr_list: list[VerificationResult] = verify_claims(
+                                        ~~~~~~~~~~~~~^
+        claims, self.triples, reflections_block=v_ref, v2p_epistemic_rules=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        seed_entities=seed_ents,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 229, in verify_claims
+    verify_claim(
+    ~~~~~~~~~~~~^
+        claim,
+        ^^^^^^
+    ...<3 lines>...
+        seed_entities=seed_entities,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/verifier.py", line 170, in verify_claim
+    evidence = find_relevant_triples_multihop(
+        claim.text, triples, top_n=top_n, method=method, max_hops=2,
+        seed_entities=seed_entities,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/entity_linker.py", line 506, in find_relevant_triples_multihop
+    hop1 = find_relevant_triples(
+        claim, triples, top_n=top_n, min_score=min_score, method=method,
+        seed_entities=seed_entities,
+    )
+TypeError: _EntityLinkerInterceptor._wrap.<locals>.wrapped() got an unexpected keyword argument 'seed_entities'
+[23:37:56.431] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:37:56.431] [INFO ] Question 14/45  [q14]  category=products_pricing  difficulty=easy
+[23:37:56.431] [INFO ]   Q: What data connectors does NovaLens support?
+[23:37:56.431] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23:37:56.431] [INFO ] [V2P MEMORY] Session memory is empty (first question or after reset)
+[23:37:56.432] [INFO ] 
+[23:37:56.432] [INFO ] [V2P] Running pipeline...
+[23:37:56.432] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[23:38:12.404] [DEBUG] [V2P] LLM CALL  model=openai/gpt-oss-120b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: What data connectors does NovaLens support?
+
+Answer: Below is the current (as‑of 23 Mar 2024) list of **native data‑connector integrations** that NovaLens ships with out‑of‑the‑box.  The connectors are grouped by source type and include the exact product name, version support where applicable, and any special notes about authentication or licensing.
+
+| Category | Connector (Exact Product Name) | Supported Versions / Flavors | Authentication Method | Notes |
+|----------|--------------------------------|------------------------------|------------------------|-------|
+| **Relational Dat
+  ... [+6192 chars truncated]
+[23:38:19.264] [DEBUG] [V2P] LLM DONE  (6.86s)
+  Response:
+
+[23:38:20.265] [DEBUG] [V2P] LLM CALL  model=openai/gpt-oss-120b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: What data connectors does NovaLens support?
+
+Answer: Below is the current (as‑of 23 Mar 2024) list of **native data‑connector integrations** that NovaLens ships with out‑of‑the‑box.  The connectors are grouped by source type and include the exact product name, version support where applicable, and any special notes about authentication or licensing.
+
+| Category | Connector (Exact Product Name) | Supported Versions / Flavors | Authentication Method | Notes |
+|----------|--------------------------------|------------------------------|------------------------|-------|
+| **Relational Dat
+  ... [+6192 chars truncated]
+[23:38:27.546] [DEBUG] [V2P] LLM DONE  (7.28s)
+  Response:
+
+[23:38:29.547] [DEBUG] [V2P] LLM CALL  model=openai/gpt-oss-120b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: What data connectors does NovaLens support?
+
+Answer: Below is the current (as‑of 23 Mar 2024) list of **native data‑connector integrations** that NovaLens ships with out‑of‑the‑box.  The connectors are grouped by source type and include the exact product name, version support where applicable, and any special notes about authentication or licensing.
+
+| Category | Connector (Exact Product Name) | Supported Versions / Flavors | Authentication Method | Notes |
+|----------|--------------------------------|------------------------------|------------------------|-------|
+| **Relational Dat
+  ... [+6192 chars truncated]

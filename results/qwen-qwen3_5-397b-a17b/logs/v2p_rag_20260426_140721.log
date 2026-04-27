@@ -1,0 +1,433 @@
+[14:23:15.094] [INFO ] ════════════════════════════════════════════════════════════════════════
+[14:23:15.094] [INFO ]   KG-BACKED CLAIM VERIFIER — EXPERIMENT RUN
+[14:23:15.094] [INFO ] ════════════════════════════════════════════════════════════════════════
+[14:23:15.094] [INFO ]   Model     : qwen/qwen3.5-397b-a17b
+[14:23:15.094] [INFO ]   Variant   : V2P_RAG
+[14:23:15.094] [INFO ]   Questions : 45
+[14:23:15.094] [INFO ]   KG triples: 262
+[14:23:15.094] [INFO ]   Started   : 2026-04-26 14:23:15
+[14:23:15.094] [INFO ]   Log file  : /Users/StartupUser/Documents/GitHub/kg-claim-verifier/results/qwen-qwen3_5-397b-a17b/logs/v2p_rag_20260426_140721.log
+[14:23:15.095] [INFO ] 
+[14:23:15.096] [INFO ] ════════════════════════════════════════════════════════════════════════
+[14:23:15.096] [INFO ]   VARIANT: V2P_RAG  |  45 questions  |  model: qwen/qwen3.5-397b-a17b
+[14:23:15.096] [INFO ] ════════════════════════════════════════════════════════════════════════
+[14:23:15.096] [INFO ] Pipeline : V2pRagPipeline
+[14:23:15.096] [INFO ] 
+[14:23:15.096] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:23:15.096] [INFO ] Question 1/45  [q01]  category=company_overview  difficulty=easy
+[14:23:15.096] [INFO ]   Q: When was NovaAI founded and who co-founded it?
+[14:23:15.101] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:23:15.101] [INFO ] [V2P-RAG MEMORY] Session memory is empty (first question or after reset)
+[14:23:15.101] [INFO ] 
+[14:23:15.101] [INFO ] [V2P_RAG] Running pipeline...
+[14:23:15.101] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[14:23:15.101] [DEBUG] [V2P_RAG] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "When was NovaAI founded and who co-founded it?"
+[14:23:15.101] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When was NovaAI founded and who co-founded it?"
+[14:23:17.469] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When was NovaAI founded and who co-founded it?"
+[14:23:21.045] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When was NovaAI founded and who co-founded it?"
+[14:23:29.822] [ERROR] [V2P_RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 570, in _run_variant
+    result = pipeline.run(question, **run_kw)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/v2_paper_pipeline.py", line 258, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=answer_sys,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[14:23:29.824] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:23:29.824] [INFO ] Question 2/45  [q02]  category=company_overview  difficulty=medium
+[14:23:29.824] [INFO ]   Q: What is NovaAI's current valuation, and how was it achieved?
+[14:23:29.824] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:23:29.825] [INFO ] [V2P-RAG MEMORY] Session memory is empty (first question or after reset)
+[14:23:29.825] [INFO ] 
+[14:23:29.825] [INFO ] [V2P_RAG] Running pipeline...
+[14:23:29.825] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[14:23:29.826] [DEBUG] [V2P_RAG] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What is NovaAI's current valuation, and how was it achieved?"
+[14:23:29.826] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's current valuation, and how was it achieved?"
+[14:23:32.363] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's current valuation, and how was it achieved?"
+[14:23:35.838] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's current valuation, and how was it achieved?"
+[14:23:44.709] [ERROR] [V2P_RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 570, in _run_variant
+    result = pipeline.run(question, **run_kw)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/v2_paper_pipeline.py", line 258, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=answer_sys,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[14:23:44.710] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:23:44.710] [INFO ] Question 3/45  [q03]  category=company_overview  difficulty=medium
+[14:23:44.710] [INFO ]   Q: How many employees does NovaAI have and where are its offices?
+[14:23:44.711] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:23:44.711] [INFO ] [V2P-RAG MEMORY] Session memory is empty (first question or after reset)
+[14:23:44.711] [INFO ] 
+[14:23:44.711] [INFO ] [V2P_RAG] Running pipeline...
+[14:23:44.711] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[14:23:44.712] [DEBUG] [V2P_RAG] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "How many employees does NovaAI have and where are its offices?"
+[14:23:44.712] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "How many employees does NovaAI have and where are its offices?"
+[14:23:47.131] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "How many employees does NovaAI have and where are its offices?"
+[14:23:50.702] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "How many employees does NovaAI have and where are its offices?"
+[14:23:59.444] [ERROR] [V2P_RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 570, in _run_variant
+    result = pipeline.run(question, **run_kw)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/v2_paper_pipeline.py", line 258, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=answer_sys,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[14:23:59.446] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:23:59.446] [INFO ] Question 4/45  [q04]  category=company_overview  difficulty=easy
+[14:23:59.447] [INFO ]   Q: What are NovaAI's primary market verticals?
+[14:23:59.447] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:23:59.447] [INFO ] [V2P-RAG MEMORY] Session memory is empty (first question or after reset)
+[14:23:59.447] [INFO ] 
+[14:23:59.447] [INFO ] [V2P_RAG] Running pipeline...
+[14:23:59.447] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[14:23:59.447] [DEBUG] [V2P_RAG] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What are NovaAI's primary market verticals?"
+[14:23:59.447] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What are NovaAI's primary market verticals?"
+[14:24:01.834] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What are NovaAI's primary market verticals?"
+[14:24:05.410] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What are NovaAI's primary market verticals?"
+[14:24:14.340] [ERROR] [V2P_RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 570, in _run_variant
+    result = pipeline.run(question, **run_kw)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/v2_paper_pipeline.py", line 258, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=answer_sys,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[14:24:14.344] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:24:14.344] [INFO ] Question 5/45  [q05]  category=leadership  difficulty=easy
+[14:24:14.345] [INFO ]   Q: Who is the CEO of NovaAI and when did she join the company?
+[14:24:14.345] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:24:14.345] [INFO ] [V2P-RAG MEMORY] Session memory is empty (first question or after reset)
+[14:24:14.345] [INFO ] 
+[14:24:14.345] [INFO ] [V2P_RAG] Running pipeline...
+[14:24:14.345] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[14:24:14.346] [DEBUG] [V2P_RAG] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Who is the CEO of NovaAI and when did she join the company?"
+[14:24:14.346] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is the CEO of NovaAI and when did she join the company?"
+[14:24:16.896] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is the CEO of NovaAI and when did she join the company?"
+[14:24:20.246] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is the CEO of NovaAI and when did she join the company?"
+[14:24:29.009] [ERROR] [V2P_RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 570, in _run_variant
+    result = pipeline.run(question, **run_kw)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/v2_paper_pipeline.py", line 258, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=answer_sys,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[14:24:29.013] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:24:29.013] [INFO ] Question 6/45  [q06]  category=leadership  difficulty=medium
+[14:24:29.014] [INFO ]   Q: Who leads the Engineering department and what are its sub-teams?
+[14:24:29.014] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:24:29.014] [INFO ] [V2P-RAG MEMORY] Session memory is empty (first question or after reset)
+[14:24:29.015] [INFO ] 
+[14:24:29.015] [INFO ] [V2P_RAG] Running pipeline...
+[14:24:29.015] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[14:24:29.016] [DEBUG] [V2P_RAG] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Who leads the Engineering department and what are its sub-teams?"
+[14:24:29.016] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who leads the Engineering department and what are its sub-teams?"
+[14:24:31.464] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who leads the Engineering department and what are its sub-teams?"
+[14:24:35.054] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who leads the Engineering department and what are its sub-teams?"
+[14:24:43.768] [ERROR] [V2P_RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 570, in _run_variant
+    result = pipeline.run(question, **run_kw)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/v2_paper_pipeline.py", line 258, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=answer_sys,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[14:24:43.770] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:24:43.770] [INFO ] Question 7/45  [q07]  category=leadership  difficulty=medium
+[14:24:43.770] [INFO ]   Q: Who is NovaAI's General Counsel and what is their background?
+[14:24:43.770] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:24:43.771] [INFO ] [V2P-RAG MEMORY] Session memory is empty (first question or after reset)
+[14:24:43.771] [INFO ] 
+[14:24:43.771] [INFO ] [V2P_RAG] Running pipeline...
+[14:24:43.771] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[14:24:43.771] [DEBUG] [V2P_RAG] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Who is NovaAI's General Counsel and what is their background?"
+[14:24:43.771] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is NovaAI's General Counsel and what is their background?"
+[14:24:46.297] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is NovaAI's General Counsel and what is their background?"
+[14:24:49.678] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is NovaAI's General Counsel and what is their background?"
+[14:24:58.576] [ERROR] [V2P_RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 570, in _run_variant
+    result = pipeline.run(question, **run_kw)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/v2_paper_pipeline.py", line 258, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=answer_sys,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[14:24:58.578] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:24:58.580] [INFO ] Question 8/45  [q08]  category=leadership  difficulty=medium
+[14:24:58.580] [INFO ]   Q: What is Marcus Webb's role, location, and FY2026 quota?
+[14:24:58.580] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:24:58.580] [INFO ] [V2P-RAG MEMORY] Session memory is empty (first question or after reset)
+[14:24:58.581] [INFO ] 
+[14:24:58.581] [INFO ] [V2P_RAG] Running pipeline...
+[14:24:58.582] [INFO ] [V2P] paper_me mode=kfr_and_no_contradiction kfr_threshold=0.8 abandon=3
+[14:24:58.582] [DEBUG] [V2P_RAG] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What is Marcus Webb's role, location, and FY2026 quota?"
+[14:24:58.583] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is Marcus Webb's role, location, and FY2026 quota?"
+[14:25:01.088] [DEBUG] [V2P_RAG] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is Marcus Webb's role, location, and FY2026 quota?"
