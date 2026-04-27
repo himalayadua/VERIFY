@@ -1,0 +1,206 @@
+{
+  "questions": [
+    {
+      "id": "q36",
+      "category": "products_pricing",
+      "difficulty": "hard",
+      "hops": 2,
+      "hop_chain": [
+        "NovaAI",
+        "is_flagship_product_of",
+        "NovaPilot",
+        "pm_owner",
+        "Fatima Al-Rashid"
+      ],
+      "question": "Who is the PM owner of NovaAI's flagship product?",
+      "ground_truth_answer": "Fatima Al-Rashid is the PM owner of NovaPilot, NovaAI's flagship product.",
+      "key_facts": [
+        "Fatima Al-Rashid",
+        "NovaPilot"
+      ]
+    },
+    {
+      "id": "q37",
+      "category": "leadership",
+      "difficulty": "hard",
+      "hops": 2,
+      "hop_chain": [
+        "UX/Design",
+        "led_by",
+        "Lena Park",
+        "start_date",
+        "June 2022"
+      ],
+      "question": "Who leads the UX/Design team, and when did they join NovaAI?",
+      "ground_truth_answer": "Lena Park leads the UX/Design team and joined NovaAI in June 2022.",
+      "key_facts": [
+        "Lena Park",
+        "UX/Design",
+        "June 2022"
+      ]
+    },
+    {
+      "id": "q38",
+      "category": "leadership",
+      "difficulty": "hard",
+      "hops": 2,
+      "hop_chain": [
+        "SMB Sales",
+        "team_lead",
+        "Tanya Osei",
+        "fy2026_quota",
+        "$6M"
+      ],
+      "question": "Who leads the SMB Sales team, and what is their FY2026 quota?",
+      "ground_truth_answer": "Tanya Osei leads the SMB Sales team, and her FY2026 quota is $6M.",
+      "key_facts": [
+        "Tanya Osei",
+        "SMB Sales",
+        "$6M"
+      ]
+    },
+    {
+      "id": "q39",
+      "category": "leadership",
+      "difficulty": "hard",
+      "hops": 2,
+      "hop_chain": [
+        "NovaAI",
+        "has_cro",
+        "Dominique Leblanc",
+        "start_date",
+        "June 2022"
+      ],
+      "question": "When did NovaAI's Chief Revenue Officer join the company?",
+      "ground_truth_answer": "Dominique Leblanc, NovaAI's Chief Revenue Officer, joined the company in June 2022.",
+      "key_facts": [
+        "Dominique Leblanc",
+        "CRO",
+        "June 2022"
+      ]
+    },
+    {
+      "id": "q40",
+      "category": "leadership",
+      "difficulty": "hard",
+      "hops": 2,
+      "hop_chain": [
+        "NovaAI",
+        "vp_of_marketing",
+        "Rachel Huang",
+        "start_date",
+        "January 2023"
+      ],
+      "question": "When did NovaAI's VP of Marketing join the company?",
+      "ground_truth_answer": "Rachel Huang, NovaAI's VP of Marketing, joined the company in January 2023.",
+      "key_facts": [
+        "Rachel Huang",
+        "VP of Marketing",
+        "January 2023"
+      ]
+    },
+    {
+      "id": "q41",
+      "category": "leadership",
+      "difficulty": "hard",
+      "hops": 2,
+      "hop_chain": [
+        "NovaBridge",
+        "developer_relations_lead",
+        "Priya Osei",
+        "reports_to",
+        "VP of Marketing"
+      ],
+      "question": "Who is NovaBridge's Developer Relations Lead, and to whom do they report?",
+      "ground_truth_answer": "Priya Osei is NovaBridge's Developer Relations Lead, and she reports to the VP of Marketing.",
+      "key_facts": [
+        "Priya Osei",
+        "Developer Relations Lead",
+        "reports to VP of Marketing"
+      ]
+    },
+    {
+      "id": "q42",
+      "category": "leadership",
+      "difficulty": "hard",
+      "hops": 2,
+      "hop_chain": [
+        "NovaAI",
+        "vp_of_product",
+        "Oliver Haines",
+        "start_date",
+        "March 2022"
+      ],
+      "question": "When did NovaAI's VP of Product join the company?",
+      "ground_truth_answer": "Oliver Haines, NovaAI's VP of Product, joined the company in March 2022.",
+      "key_facts": [
+        "Oliver Haines",
+        "VP of Product",
+        "March 2022"
+      ]
+    },
+    {
+      "id": "q43",
+      "category": "leadership",
+      "difficulty": "hard",
+      "hops": 3,
+      "hop_chain": [
+        "NovaAI",
+        "vp_of_customer_success",
+        "Amara Diallo",
+        "department",
+        "Customer Success",
+        "fy2026_nrr_target",
+        "118%"
+      ],
+      "question": "What is the FY2026 NRR target of the department led by NovaAI's VP of Customer Success?",
+      "ground_truth_answer": "Customer Success, the department led by VP of Customer Success Amara Diallo, has an FY2026 NRR target of 118%.",
+      "key_facts": [
+        "Amara Diallo",
+        "Customer Success",
+        "118%",
+        "NRR"
+      ]
+    },
+    {
+      "id": "q44",
+      "category": "products_pricing",
+      "difficulty": "hard",
+      "hops": 2,
+      "hop_chain": [
+        "real-time streaming via Kafka",
+        "planned_feature_of",
+        "NovaLens",
+        "product_type",
+        "Predictive Analytics Engine"
+      ],
+      "question": "Which product has a roadmap for real-time streaming via Kafka, and what type of product is it?",
+      "ground_truth_answer": "NovaLens has a roadmap for real-time streaming via Kafka, and it is a Predictive Analytics Engine.",
+      "key_facts": [
+        "NovaLens",
+        "real-time streaming via Kafka",
+        "Predictive Analytics Engine"
+      ]
+    },
+    {
+      "id": "q45",
+      "category": "leadership",
+      "difficulty": "hard",
+      "hops": 2,
+      "hop_chain": [
+        "Solutions Engineering",
+        "team_lead",
+        "Wei Zhang",
+        "start_date",
+        "April 2023"
+      ],
+      "question": "Who leads the Solutions Engineering team, and when did they join NovaAI?",
+      "ground_truth_answer": "Wei Zhang leads the Solutions Engineering team and joined NovaAI in April 2023.",
+      "key_facts": [
+        "Wei Zhang",
+        "Solutions Engineering",
+        "April 2023"
+      ]
+    }
+  ]
+}

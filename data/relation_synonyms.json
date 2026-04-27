@@ -1,0 +1,1044 @@
+{
+  "401k_eligibility_waiting_period": [
+    "waiting period for 401k",
+    "401k eligibility wait",
+    "how long to qualify for 401k",
+    "401k enrollment waiting time",
+    "401k wait period"
+  ],
+  "401k_match_percent": [
+    "401k match rate",
+    "company 401k match",
+    "401k matching percentage",
+    "employer match percent",
+    "401k contribution match"
+  ],
+  "airfare_booking_platform": [
+    "airfare booking tool",
+    "flight booking system",
+    "travel booking platform",
+    "airline booking portal",
+    "corporate flight booking"
+  ],
+  "also_oversees": [
+    "also manages",
+    "oversees as well",
+    "in addition to",
+    "supervises too",
+    "handles alongside"
+  ],
+  "annual_LD_budget_per_employee": [
+    "learning budget per person",
+    "LD spend per employee",
+    "annual training budget per head",
+    "per employee learning budget",
+    "LD allocation per person"
+  ],
+  "annual_review_calibration_month": [
+    "review calibration month",
+    "calibration month for reviews",
+    "annual review sync month",
+    "performance review calibration",
+    "when reviews are calibrated"
+  ],
+  "annual_review_results_deadline": [
+    "review results due date",
+    "annual review deadline",
+    "when review results are due",
+    "performance review cutoff",
+    "review outcomes deadline"
+  ],
+  "automation_runs_per_month": [
+    "monthly automation runs",
+    "how many automations per month",
+    "automation executions monthly",
+    "automated tasks per month",
+    "monthly run count"
+  ],
+  "avg_accounts_per_CSM": [
+    "accounts per CSM",
+    "average client load per CSM",
+    "CSM account ratio",
+    "clients per customer success",
+    "CSM workload average"
+  ],
+  "base_price": [
+    "base cost",
+    "starting price",
+    "base rate",
+    "standard price",
+    "base fee"
+  ],
+  "books_learning_limit_per_month": [
+    "books per month",
+    "monthly book limit",
+    "learning books cap",
+    "max books per month",
+    "book allowance monthly"
+  ],
+  "business_class_permitted_with_approval": [
+    "business class approved",
+    "approval required for business class",
+    "business class by permission",
+    "need approval for business class",
+    "business class conditional"
+  ],
+  "certification_date": [
+    "certified on",
+    "certification date",
+    "got certified",
+    "certified date",
+    "certification issued"
+  ],
+  "co_founded_by": [
+    "co-founded by",
+    "founded with",
+    "joint founder",
+    "co-founder",
+    "started with"
+  ],
+  "conduct_reporting_platform": [
+    "report conduct",
+    "conduct reporting tool",
+    "reporting platform",
+    "ethics reporting system",
+    "report misconduct"
+  ],
+  "conference_registration_limit": [
+    "conference registration cap",
+    "max attendees",
+    "registration limit",
+    "conference slots",
+    "attendee cap"
+  ],
+  "contributor_count": [
+    "number of contributors",
+    "total contributors",
+    "contributor count",
+    "how many contributors",
+    "contributors total"
+  ],
+  "csm_count": [
+    "CSM count",
+    "customer success managers",
+    "number of CSMs",
+    "CSM team size",
+    "total CSMs"
+  ],
+  "data_connectors": [
+    "data connectors",
+    "integration connectors",
+    "connect data sources",
+    "data integrations",
+    "supported connectors"
+  ],
+  "department": [
+    "department",
+    "team name",
+    "work unit",
+    "organizational unit",
+    "which department"
+  ],
+  "dependent_premium_coverage_percent": [
+    "dependent coverage percentage",
+    "family premium coverage",
+    "coverage for dependents",
+    "dependent insurance percent",
+    "premium share for dependents"
+  ],
+  "developer_relations_lead": [
+    "dev relations lead",
+    "developer liaison",
+    "head of dev relations",
+    "developer engagement lead",
+    "dev community manager"
+  ],
+  "economy_class_required_for_flights": [
+    "economy class only",
+    "must book economy",
+    "economy requirement",
+    "no business class",
+    "economy enforced for flights"
+  ],
+  "employee_count": [
+    "number of employees",
+    "total staff count",
+    "team size",
+    "headcount",
+    "employees total"
+  ],
+  "employee_premium_coverage_percent": [
+    "employee coverage percent",
+    "premium coverage for staff",
+    "employee insurance rate",
+    "coverage percentage for employees",
+    "staff premium share"
+  ],
+  "equipment_stipend_refresh_period": [
+    "equipment stipend cycle",
+    "refresh equipment stipend",
+    "stipend renewal period",
+    "tech allowance update",
+    "equipment stipend frequency"
+  ],
+  "equity_management_platform": [
+    "equity platform",
+    "stock management system",
+    "equity tracking tool",
+    "cap table software",
+    "equity administration platform"
+  ],
+  "equity_vesting_schedule": [
+    "equity vesting timeline",
+    "stock vesting schedule",
+    "equity release plan",
+    "vesting period for equity",
+    "stock grant vesting"
+  ],
+  "expense_submission_deadline": [
+    "expense deadline",
+    "submit expenses by",
+    "expense cutoff date",
+    "reimbursement deadline",
+    "expense report due"
+  ],
+  "expense_submission_platform": [
+    "expense platform",
+    "expense reporting tool",
+    "submit expenses here",
+    "expense system",
+    "reimbursement portal"
+  ],
+  "fiscal_year": [
+    "fiscal year",
+    "FY2024",
+    "financial year",
+    "fiscal period",
+    "FY end",
+    "year ending"
+  ],
+  "founded_in_location": [
+    "founded in",
+    "based in",
+    "originated in",
+    "headquartered in",
+    "started in",
+    "established in"
+  ],
+  "founded_in_year": [
+    "founded in",
+    "established in",
+    "launched in",
+    "started in",
+    "created in",
+    "incorporated in"
+  ],
+  "fully_remote_approval_requires": [
+    "requires approval for",
+    "needs sign-off for",
+    "requires manager approval",
+    "needs HR approval",
+    "must be approved by",
+    "requires leadership signoff"
+  ],
+  "fully_remote_arrangement_reviewed": [
+    "reviewed remote arrangement",
+    "remote work reviewed",
+    "approved remote setup",
+    "remote policy reviewed",
+    "remote status checked",
+    "remote arrangement assessed"
+  ],
+  "fy2026_nrr_target": [
+    "FY2026 NRR target",
+    "NRR goal 2026",
+    "2026 net revenue retention",
+    "NRR target for FY26",
+    "revenue retention goal",
+    "FY26 NRR goal"
+  ],
+  "fy2026_quota": [
+    "FY2026 quota",
+    "2026 sales target",
+    "FY26 sales goal",
+    "quota for FY26",
+    "2026 revenue target",
+    "sales quota 2026"
+  ],
+  "github_stars": [
+    "GitHub stars",
+    "star count",
+    "GitHub star count",
+    "stars on GitHub",
+    "project stars",
+    "GitHub popularity"
+  ],
+  "ground_transport_limit_per_day": [
+    "daily transport limit",
+    "ground transport cap",
+    "daily vehicle limit",
+    "transport limit per day",
+    "ground transport cap per day",
+    "daily ground transport allowance"
+  ],
+  "has_ceo": [
+    "has a CEO",
+    "led by CEO",
+    "CEO in place",
+    "has chief executive",
+    "CEO appointed",
+    "CEO present"
+  ],
+  "has_cfo": [
+    "has CFO",
+    "CFO is",
+    "chief financial officer",
+    "funded by CFO",
+    "CFO leads finance"
+  ],
+  "has_coo": [
+    "has COO",
+    "COO oversees",
+    "chief operating officer",
+    "operated by COO",
+    "COO in charge"
+  ],
+  "has_cro": [
+    "has CRO",
+    "CRO leads sales",
+    "chief revenue officer",
+    "revenue head",
+    "CRO responsible"
+  ],
+  "has_cto": [
+    "has CTO",
+    "CTO leads tech",
+    "chief technology officer",
+    "tech chief",
+    "CTO in charge"
+  ],
+  "has_office_in": [
+    "office in",
+    "located in",
+    "has a branch in",
+    "operates in",
+    "presence in"
+  ],
+  "has_sub_team": [
+    "has sub-team",
+    "subteam under",
+    "smaller team within",
+    "division of",
+    "nested team"
+  ],
+  "has_team": [
+    "has team",
+    "team includes",
+    "group of",
+    "team leads",
+    "organized team"
+  ],
+  "head_of_people_operations": [
+    "head of people",
+    "people ops lead",
+    "HR head",
+    "people operations director",
+    "chief people officer"
+  ],
+  "headcount": [
+    "headcount is",
+    "number of employees",
+    "team size",
+    "total staff",
+    "employee count"
+  ],
+  "headquartered_at": [
+    "headquartered in",
+    "HQ in",
+    "main office at",
+    "based in",
+    "corporate headquarters"
+  ],
+  "health_benefits_coverage": [
+    "covers health benefits",
+    "includes medical insurance",
+    "provides health coverage",
+    "health plan included",
+    "benefits covered",
+    "health insurance provided"
+  ],
+  "health_benefits_provider": [
+    "health provider is",
+    "insurance provider",
+    "covers through",
+    "health plan by",
+    "benefits from",
+    "offered by"
+  ],
+  "home_office_equipment_stipend": [
+    "home office stipend",
+    "equipment allowance",
+    "remote setup budget",
+    "office gear stipend",
+    "home office fund",
+    "remote work equipment"
+  ],
+  "hotel_limit_major_cities": [
+    "max hotel cost major cities",
+    "hotel cap in big cities",
+    "major city lodging limit",
+    "hotel budget for metros",
+    "upper limit major hotels",
+    "accommodation cap major"
+  ],
+  "hotel_limit_other_cities": [
+    "hotel cap other cities",
+    "lodging limit outside metros",
+    "minor city hotel budget",
+    "non-major hotel limit",
+    "other cities accommodation cap",
+    "hotel max outside big cities"
+  ],
+  "includes_feature": [
+    "has feature",
+    "includes this",
+    "comes with",
+    "offers",
+    "features",
+    "built-in"
+  ],
+  "integrates_with": [
+    "works with",
+    "connects to",
+    "compatible with",
+    "syncs with",
+    "plugs into",
+    "links to"
+  ],
+  "international_remote_notification_threshold": [
+    "remote alert threshold",
+    "overseas notice limit",
+    "international remote cap",
+    "notify after days abroad",
+    "remote abroad threshold",
+    "overseas work alert"
+  ],
+  "is_flagship_product_of": [
+    "flagship product of",
+    "main offering of",
+    "star product of",
+    "lead product of",
+    "premier offering",
+    "top product of"
+  ],
+  "joined_NovaAI": [
+    "joined NovaAI",
+    "became part of NovaAI",
+    "started at NovaAI",
+    "onboarded to NovaAI",
+    "joined the team at NovaAI",
+    "came to NovaAI"
+  ],
+  "joined_NovaAI_inhouse": [
+    "joined NovaAI",
+    "started at NovaAI",
+    "became part of NovaAI",
+    "onboarded at NovaAI",
+    "joined in-house at NovaAI"
+  ],
+  "large_expense_approval_threshold": [
+    "large expense limit",
+    "approval threshold",
+    "high-cost cap",
+    "expense approval limit",
+    "big spend cutoff"
+  ],
+  "large_expense_approver": [
+    "approves big expenses",
+    "expense approver",
+    "high-cost approver",
+    "authorizes large spends",
+    "signs off on big expenses"
+  ],
+  "launched_in": [
+    "launched in",
+    "released in",
+    "went live in",
+    "debuted in",
+    "started in"
+  ],
+  "ld_budget_refresh_date": [
+    "budget refresh date",
+    "budget reset date",
+    "funding update date",
+    "budget reloaded on",
+    "budget cycle date"
+  ],
+  "ld_budget_unused_rollover": [
+    "unused budget rollover",
+    "carry forward budget",
+    "budget rollover",
+    "leftover funds carryover",
+    "unspent budget carried"
+  ],
+  "ld_request_submitted_via": [
+    "submitted via",
+    "request channel",
+    "submitted through",
+    "used to submit",
+    "submission method"
+  ],
+  "led_by": [
+    "led by",
+    "headed by",
+    "managed by",
+    "under leadership of",
+    "run by"
+  ],
+  "license": [
+    "license key",
+    "software license",
+    "licensed under",
+    "license type",
+    "has license"
+  ],
+  "london_office_opened": [
+    "London office opened",
+    "opened in London",
+    "London location launched",
+    "London branch started",
+    "established in London"
+  ],
+  "maintained_by": [
+    "maintained by",
+    "owned by",
+    "managed by",
+    "supported by",
+    "responsible for"
+  ],
+  "mid_year_review_calibration_month": [
+    "calibration month",
+    "mid-year calibration",
+    "review calibration",
+    "calibration period",
+    "mid-year sync month"
+  ],
+  "mid_year_review_results_deadline": [
+    "results deadline",
+    "mid-year deadline",
+    "review submission due",
+    "results due date",
+    "mid-year cutoff"
+  ],
+  "minimum_tenure_for_formal_rating": [
+    "minimum tenure",
+    "required tenure",
+    "eligibility period",
+    "tenure threshold",
+    "must be employed for"
+  ],
+  "model_refresh_frequency": [
+    "refresh frequency",
+    "model update cycle",
+    "how often updated",
+    "refresh interval",
+    "model retraining cadence"
+  ],
+  "monitored_models_limit": [
+    "monitored limit",
+    "max models monitored",
+    "model cap",
+    "monitoring limit",
+    "upper bound on models"
+  ],
+  "new_customers_Q4_2025": [
+    "new customers Q4 2025",
+    "Q4 2025 new clients",
+    "new customers in Q4",
+    "Q4 2025 growth",
+    "new signups Q4 2025"
+  ],
+  "new_hire_review_designation": [
+    "new hire review",
+    "onboarding review",
+    "probation review",
+    "new employee eval",
+    "first review designation"
+  ],
+  "off_cycle_promotion_requires": [
+    "requires off-cycle",
+    "off-cycle promotion needs",
+    "needs approval for",
+    "exception promotion criteria",
+    "off-cycle trigger"
+  ],
+  "office": [
+    "office location",
+    "workplace",
+    "branch",
+    "team office",
+    "physical location"
+  ],
+  "on_call_compensation": [
+    "on-call pay",
+    "on-call stipend",
+    "on-call bonus",
+    "compensated for on-call",
+    "on-call reimbursement"
+  ],
+  "on_call_managed_by": [
+    "on-call managed by",
+    "handles on-call",
+    "owns on-call schedule",
+    "responsible for on-call",
+    "on-call team lead"
+  ],
+  "open_req": [
+    "open requisition",
+    "hiring open",
+    "position open",
+    "job opening",
+    "role available"
+  ],
+  "open_requisitions": [
+    "open requisitions",
+    "active hiring roles",
+    "current job openings",
+    "pending hires",
+    "unfilled positions"
+  ],
+  "ownership_type": [
+    "ownership type",
+    "company ownership",
+    "owned by",
+    "corporate structure",
+    "ownership model"
+  ],
+  "paid_company_holidays_per_year": [
+    "paid holidays per year",
+    "company holidays",
+    "paid time off holidays",
+    "annual paid holidays",
+    "holiday allowance"
+  ],
+  "parental_leave_applies_to": [
+    "parental leave applies to",
+    "eligible for parental leave",
+    "covers parental leave",
+    "who gets parental leave",
+    "parental leave eligibility"
+  ],
+  "parental_leave_duration": [
+    "parental leave length",
+    "parental leave duration",
+    "paid parental leave days",
+    "maternity/paternity leave time",
+    "how long is parental leave"
+  ],
+  "part_of": [
+    "part of",
+    "belongs to",
+    "subunit of",
+    "under",
+    "within"
+  ],
+  "performance_rating_level_1": [
+    "performance level 1",
+    "lowest rating",
+    "needs improvement",
+    "unsatisfactory performance",
+    "poor performance rating"
+  ],
+  "performance_rating_level_2": [
+    "needs improvement",
+    "below expectations",
+    "poor performance",
+    "unsatisfactory rating",
+    "level 2 performance"
+  ],
+  "performance_rating_level_3": [
+    "meets expectations",
+    "solid performer",
+    "average rating",
+    "standard performance",
+    "level 3 rating"
+  ],
+  "performance_rating_level_4": [
+    "exceeds expectations",
+    "strong performer",
+    "above average",
+    "high performer",
+    "level 4 rating"
+  ],
+  "performance_rating_level_5": [
+    "outstanding performance",
+    "excellent rating",
+    "top performer",
+    "exceptional work",
+    "level 5 rating"
+  ],
+  "performance_rating_scale": [
+    "performance scale",
+    "rating scale",
+    "performance levels",
+    "employee rating system",
+    "performance tiers"
+  ],
+  "performance_review_cycle": [
+    "review cycle",
+    "annual review",
+    "performance review period",
+    "evaluation cycle",
+    "review schedule"
+  ],
+  "pip_initiation_window": [
+    "PIP start window",
+    "when PIP begins",
+    "PIP initiation period",
+    "trigger window for PIP",
+    "time to initiate PIP"
+  ],
+  "pip_triggered_by_rating": [
+    "PIP triggered by rating",
+    "rating triggers PIP",
+    "low rating leads to PIP",
+    "PIP from performance score",
+    "rating causes PIP"
+  ],
+  "planned_feature_H2_2026": [
+    "H2 2026 feature",
+    "planned feature 2026",
+    "Q3-Q4 2026 roadmap",
+    "next half-year feature",
+    "2026 feature plan"
+  ],
+  "pm_owner": [
+    "product manager",
+    "PM owner",
+    "product lead",
+    "assigned PM",
+    "owner of product"
+  ],
+  "previously_at": [
+    "worked at",
+    "formerly at",
+    "past employer",
+    "before joining",
+    "previous company"
+  ],
+  "price": [
+    "costs",
+    "price is",
+    "listed price",
+    "unit price",
+    "selling price"
+  ],
+  "price_range": [
+    "price range",
+    "costs between",
+    "ranges from",
+    "price bracket",
+    "affordable range"
+  ],
+  "primary_cloud_provider": [
+    "main cloud provider",
+    "primary cloud",
+    "main cloud service",
+    "primary provider",
+    "main AWS/Azure/GCP"
+  ],
+  "primary_vertical": [
+    "main industry",
+    "primary sector",
+    "core market",
+    "main vertical",
+    "focus industry"
+  ],
+  "product_type": [
+    "type of product",
+    "product category",
+    "product kind",
+    "what it is",
+    "product classification"
+  ],
+  "pto_advance_notice_for_3_plus_days": [
+    "notice for PTO",
+    "3-day PTO notice",
+    "PTO notice required",
+    "advance PTO notice",
+    "need to request early"
+  ],
+  "pto_minimum_per_year": [
+    "minimum PTO",
+    "PTO guarantee",
+    "annual leave minimum",
+    "paid time off minimum",
+    "min days off"
+  ],
+  "pto_policy_type": [
+    "PTO policy",
+    "leave policy type",
+    "PTO structure",
+    "time off policy",
+    "how PTO works"
+  ],
+  "pto_submission_system": [
+    "PTO system",
+    "submit PTO",
+    "time off portal",
+    "PTO tracker",
+    "request PTO online"
+  ],
+  "purchase_motion": [
+    "buy request",
+    "purchase motion",
+    "buy approval",
+    "procurement motion",
+    "request to buy"
+  ],
+  "receipt_required_above": [
+    "receipt needed above",
+    "receipt threshold",
+    "require receipt over",
+    "receipt for expenses",
+    "receipt required if"
+  ],
+  "received_certification": [
+    "got certified",
+    "holds certification",
+    "certified in",
+    "received badge",
+    "certification obtained"
+  ],
+  "released_in": [
+    "launched in",
+    "came out in",
+    "released on",
+    "debuted in",
+    "went live in"
+  ],
+  "report_frequency": [
+    "reporting frequency",
+    "how often reported",
+    "weekly report",
+    "report cadence",
+    "report schedule"
+  ],
+  "reports_to": [
+    "reports to",
+    "direct manager",
+    "supervised by",
+    "works for",
+    "line manager"
+  ],
+  "required_in_office_days": [
+    "in-office days",
+    "must be in office",
+    "office requirement",
+    "days onsite",
+    "required presence"
+  ],
+  "responsible_for": [
+    "responsible for",
+    "owns",
+    "in charge of",
+    "handles",
+    "manages"
+  ],
+  "secondary_cloud_provider": [
+    "backup cloud",
+    "secondary provider",
+    "other cloud",
+    "secondary cloud service",
+    "backup cloud provider"
+  ],
+  "series_c_date": [
+    "Series C closed",
+    "Series C funding",
+    "raised Series C",
+    "Series C round",
+    "Series C date"
+  ],
+  "series_c_led_by": [
+    "led Series C",
+    "Series C lead",
+    "led funding round",
+    "led investment",
+    "Series C investor"
+  ],
+  "sick_leave_tracked": [
+    "tracks sick leave",
+    "sick time logged",
+    "sick leave monitored",
+    "sick days recorded",
+    "sick time tracked"
+  ],
+  "sick_notification_deadline": [
+    "sick notice deadline",
+    "notify before sick",
+    "sick call cutoff",
+    "sick leave alert",
+    "when to call in sick"
+  ],
+  "singapore_office_opened": [
+    "Singapore office opened",
+    "opened in Singapore",
+    "Singapore launch",
+    "Singapore location started",
+    "established Singapore office"
+  ],
+  "sla_uptime": [
+    "SLA uptime",
+    "uptime guarantee",
+    "service uptime",
+    "SLA availability",
+    "uptime SLA"
+  ],
+  "standard_promotion_cycle": [
+    "promotion cycle",
+    "annual review cycle",
+    "promotion timeline",
+    "career progression cycle",
+    "standard promotion schedule"
+  ],
+  "start_date": [
+    "started on",
+    "commencement date",
+    "launch date",
+    "beginning date",
+    "first day"
+  ],
+  "subscriber_count": [
+    "number of subscribers",
+    "total subscribers",
+    "subscriber base",
+    "paid users",
+    "subscription count"
+  ],
+  "supports_connector": [
+    "supports connector",
+    "has connector",
+    "integrates with",
+    "connector available",
+    "compatible with"
+  ],
+  "team_lead": [
+    "team lead",
+    "team manager",
+    "lead of team",
+    "team head",
+    "team supervisor"
+  ],
+  "team_meal_limit_per_person": [
+    "meal limit per person",
+    "per person meal cap",
+    "team lunch allowance",
+    "meal budget per person",
+    "food limit per teammate"
+  ],
+  "tech_talk_frequency": [
+    "tech talk frequency",
+    "how often tech talks",
+    "tech talk schedule",
+    "regular tech talks",
+    "talks per week"
+  ],
+  "tech_talk_time": [
+    "tech talk time",
+    "when tech talks happen",
+    "tech talk slot",
+    "talk time",
+    "scheduled tech talk"
+  ],
+  "third_party_integrations_count": [
+    "third-party integrations",
+    "number of integrations",
+    "external integrations",
+    "connected services",
+    "integration count"
+  ],
+  "threshold": [
+    "threshold",
+    "minimum limit",
+    "cut-off point",
+    "trigger level",
+    "threshold value"
+  ],
+  "title": [
+    "job title",
+    "role title",
+    "position",
+    "title",
+    "job designation"
+  ],
+  "total_funding": [
+    "total funding",
+    "raised funding",
+    "funding amount",
+    "total capital raised",
+    "funding total"
+  ],
+  "user_limit": [
+    "user limit",
+    "max users",
+    "user cap",
+    "maximum users",
+    "user quota"
+  ],
+  "valuation": [
+    "company valuation",
+    "valuation",
+    "estimated value",
+    "business valuation",
+    "current valuation"
+  ],
+  "valuation_achieved_via": [
+    "valuation achieved via",
+    "how valuation was set",
+    "valuation method",
+    "based on",
+    "valuation driver"
+  ],
+  "vp_of_customer_success": [
+    "VP of Customer Success",
+    "head of customer success",
+    "customer success VP",
+    "VP CS",
+    "customer success leader"
+  ],
+  "vp_of_engineering": [
+    "VP of Engineering",
+    "engineering VP",
+    "head of engineering",
+    "VP Eng",
+    "chief engineering officer"
+  ],
+  "vp_of_marketing": [
+    "VP of Marketing",
+    "marketing VP",
+    "head of marketing",
+    "VP Mktg",
+    "marketing leader"
+  ],
+  "vp_of_product": [
+    "VP of Product",
+    "product VP",
+    "head of product",
+    "VP Product",
+    "product leader"
+  ],
+  "work_arrangement": [
+    "work arrangement",
+    "work setup",
+    "work style",
+    "job arrangement",
+    "work format"
+  ],
+  "work_model": [
+    "work model",
+    "work structure",
+    "remote policy",
+    "office model",
+    "work location model"
+  ]
+}

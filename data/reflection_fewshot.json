@@ -1,0 +1,9 @@
+{
+  "examples": [
+    "When the question asks for NovaAI pricing or plan tiers, I must not invent dollar amounts. I should mentally map each tier name to its exact KG triple (e.g., NovaPilot Starter | price | $2,500/month) before stating a number.",
+    "For leadership or role claims, I must not substitute a plausible name for the KG holder of that unique slot (CEO, General Counsel, PM owner). If the KG names a different person, guessing is a contradiction risk.",
+    "For founding year, headquarters, or funding totals, I must treat small numeric differences as fatal errors. I should quote the KG object field verbatim for dates and currency strings.",
+    "For policy or product existence questions, denying something that appears in the KG is a contradiction. I should scan for negations in my answer and cross-check against affirmative triples.",
+    "When I am unsure whether a fact exists in the KG, I should hedge or omit the claim rather than fabricating a specific number, partner name, or date that could be contradicted by retrieval."
+  ]
+}
