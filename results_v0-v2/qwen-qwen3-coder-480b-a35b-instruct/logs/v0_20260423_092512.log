@@ -1,0 +1,1122 @@
+[09:25:12.324] [INFO ] ════════════════════════════════════════════════════════════════════════
+[09:25:12.324] [INFO ]   KG-BACKED CLAIM VERIFIER — EXPERIMENT RUN
+[09:25:12.324] [INFO ] ════════════════════════════════════════════════════════════════════════
+[09:25:12.324] [INFO ]   Model     : qwen/qwen3-coder-480b-a35b-instruct
+[09:25:12.324] [INFO ]   Variant   : V0
+[09:25:12.324] [INFO ]   Questions : 45
+[09:25:12.324] [INFO ]   KG triples: 262
+[09:25:12.324] [INFO ]   Started   : 2026-04-23 09:25:12
+[09:25:12.324] [INFO ]   Log file  : /Users/StartupUser/Documents/GitHub/kg-claim-verifier/results/qwen-qwen3-coder-480b-a35b-instruct/logs/v0_20260423_092512.log
+[09:25:12.324] [INFO ] 
+[09:25:12.324] [INFO ] ════════════════════════════════════════════════════════════════════════
+[09:25:12.324] [INFO ]   VARIANT: V0  |  45 questions  |  model: qwen/qwen3-coder-480b-a35b-instruct
+[09:25:12.324] [INFO ] ════════════════════════════════════════════════════════════════════════
+[09:25:12.324] [INFO ] Pipeline : V0Pipeline
+[09:25:12.324] [INFO ] 
+[09:25:12.324] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:12.324] [INFO ] Question 1/45  [q01]  category=company_overview  difficulty=easy
+[09:25:12.324] [INFO ]   Q: When was NovaAI founded and who co-founded it?
+[09:25:12.324] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:12.324] [INFO ] [V0] Running pipeline...
+[09:25:13.812] [INFO ] 
+[09:25:13.812] [INFO ] ── RAW ANSWER ──
+[09:25:13.812] [INFO ]     I don't have specific information about when NovaAI was founded or who co-founded it in my knowledge base. To get accurate details about NovaAI's founding date and co-founders, I'd recommend checking the company's official website, LinkedIn page, or contacting NovaAI's HR department or leadership team directly.
+[09:25:13.812] [INFO ] 
+[09:25:13.812] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[09:25:13.812] [INFO ]     I don't have specific information about when NovaAI was founded or who co-founded it in my knowledge base. To get accurate details about NovaAI's founding date and co-founders, I'd recommend checking the company's official website, LinkedIn page, or contacting NovaAI's HR department or leadership team directly.
+[09:25:13.813] [INFO ] 
+[09:25:13.813] [INFO ] ── EVALUATION ──
+[09:25:13.813] [INFO ]   Ground truth  : NovaAI was founded in 2021 by Dr. Mara Chen and Lucas Ferreira.
+[09:25:13.813] [INFO ]   Key facts     : ['2021', 'Dr. Mara Chen', 'Lucas Ferreira']
+[09:25:13.813] [INFO ]   KFR           : 0.000 (0/3 facts found) ✗
+[09:25:13.813] [WARNING]   Missing facts : ['2021', 'Dr. Mara Chen', 'Lucas Ferreira']
+[09:25:13.813] [INFO ]   Exact match   : False
+[09:25:13.813] [INFO ]   Latency       : 1.49s
+[09:25:13.813] [INFO ] 
+[09:25:13.813] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:13.813] [INFO ] Question 2/45  [q02]  category=company_overview  difficulty=medium
+[09:25:13.813] [INFO ]   Q: What is NovaAI's current valuation, and how was it achieved?
+[09:25:13.813] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:13.813] [INFO ] [V0] Running pipeline...
+[09:25:15.279] [INFO ] 
+[09:25:15.280] [INFO ] ── RAW ANSWER ──
+[09:25:15.280] [INFO ]     I don't have access to NovaAI's current valuation information or the specific details of how it was achieved. This type of financial information would typically be confidential and only available to employees with appropriate clearance or through official company communications.
+    
+    If you're looking for this information, I'd recommend:
+    - Checking with the finance or investor relations team
+    - Reviewing any official company announcements or press releases
+    - Contacting NovaAI's leadership team directly
+    
+    Is there something specific about NovaAI's products or services I can help you with instead?
+[09:25:15.280] [INFO ] 
+[09:25:15.280] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[09:25:15.280] [INFO ]     I don't have access to NovaAI's current valuation information or the specific details of how it was achieved. This type of financial information would typically be confidential and only available to employees with appropriate clearance or through official company communications.
+    
+    If you're looking for this information, I'd recommend:
+    - Checking with the finance or investor relations team
+    - Reviewing any official company announcements or press releases
+    - Contacting NovaAI's leadership team directly
+    
+    Is there something specific about NovaAI's products or services I can help you with instead?
+[09:25:15.281] [INFO ] 
+[09:25:15.281] [INFO ] ── EVALUATION ──
+[09:25:15.281] [INFO ]   Ground truth  : NovaAI reached a $1.4B valuation through its Series C round, which was completed in November 2025 and led by Horizon Ventures. Total funding stands at $210M.
+[09:25:15.281] [INFO ]   Key facts     : ['$1.4B', 'Series C', 'November 2025', 'Horizon Ventures', '$210M']
+[09:25:15.281] [INFO ]   KFR           : 0.000 (0/5 facts found) ✗
+[09:25:15.281] [WARNING]   Missing facts : ['$1.4B', 'Series C', 'November 2025', 'Horizon Ventures', '$210M']
+[09:25:15.281] [INFO ]   Exact match   : False
+[09:25:15.281] [INFO ]   Latency       : 1.47s
+[09:25:15.281] [INFO ] 
+[09:25:15.281] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:15.281] [INFO ] Question 3/45  [q03]  category=company_overview  difficulty=medium
+[09:25:15.281] [INFO ]   Q: How many employees does NovaAI have and where are its offices?
+[09:25:15.281] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:15.281] [INFO ] [V0] Running pipeline...
+[09:25:17.077] [INFO ] 
+[09:25:17.077] [INFO ] ── RAW ANSWER ──
+[09:25:17.077] [INFO ]     I don't have access to current employee counts or comprehensive office location information for NovaAI. This type of detailed organizational information about NovaAI's workforce and office locations isn't available in my knowledge base.
+    
+    For accurate, up-to-date information about NovaAI's employee count and office locations, I'd recommend checking:
+    - NovaAI's official website
+    - LinkedIn company page
+    - Contacting NovaAI's HR department directly
+    
+    Is there something specific about NovaAI's offices or team structure that you're trying to learn about? I might be able to suggest better resources for that information.
+[09:25:17.077] [INFO ] 
+[09:25:17.077] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[09:25:17.077] [INFO ]     I don't have access to current employee counts or comprehensive office location information for NovaAI. This type of detailed organizational information about NovaAI's workforce and office locations isn't available in my knowledge base.
+    
+    For accurate, up-to-date information about NovaAI's employee count and office locations, I'd recommend checking:
+    - NovaAI's official website
+    - LinkedIn company page
+    - Contacting NovaAI's HR department directly
+    
+    Is there something specific about NovaAI's offices or team structure that you're trying to learn about? I might be able to suggest better resources for that information.
+[09:25:17.077] [INFO ] 
+[09:25:17.078] [INFO ] ── EVALUATION ──
+[09:25:17.078] [INFO ]   Ground truth  : NovaAI has 312 full-time employees as of Q1 2026. The company has offices in San Francisco, London (opened 2023), and Singapore (opened 2024).
+[09:25:17.078] [INFO ]   Key facts     : ['312', 'San Francisco', 'London', 'Singapore', '2023', '2024']
+[09:25:17.078] [INFO ]   KFR           : 0.000 (0/6 facts found) ✗
+[09:25:17.078] [WARNING]   Missing facts : ['312', 'San Francisco', 'London', 'Singapore', '2023', '2024']
+[09:25:17.078] [INFO ]   Exact match   : False
+[09:25:17.078] [INFO ]   Latency       : 1.80s
+[09:25:17.078] [INFO ] 
+[09:25:17.078] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:17.078] [INFO ] Question 4/45  [q04]  category=company_overview  difficulty=easy
+[09:25:17.078] [INFO ]   Q: What are NovaAI's primary market verticals?
+[09:25:17.078] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:17.078] [INFO ] [V0] Running pipeline...
+[09:25:18.603] [INFO ] 
+[09:25:18.604] [INFO ] ── RAW ANSWER ──
+[09:25:18.605] [INFO ]     I don't have specific information about NovaAI's primary market verticals in my knowledge base. To provide you with accurate details about our market focus areas, I'd recommend checking NovaAI's official website, investor presentations, or contacting our business development team directly. They would be able to share the most current and comprehensive information about our target markets and verticals.
+[09:25:18.605] [INFO ] 
+[09:25:18.605] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[09:25:18.605] [INFO ]     I don't have specific information about NovaAI's primary market verticals in my knowledge base. To provide you with accurate details about our market focus areas, I'd recommend checking NovaAI's official website, investor presentations, or contacting our business development team directly. They would be able to share the most current and comprehensive information about our target markets and verticals.
+[09:25:18.605] [INFO ] 
+[09:25:18.606] [INFO ] ── EVALUATION ──
+[09:25:18.606] [INFO ]   Ground truth  : NovaAI's primary market verticals are financial services, healthcare, and logistics.
+[09:25:18.606] [INFO ]   Key facts     : ['financial services', 'healthcare', 'logistics']
+[09:25:18.606] [INFO ]   KFR           : 0.000 (0/3 facts found) ✗
+[09:25:18.606] [WARNING]   Missing facts : ['financial services', 'healthcare', 'logistics']
+[09:25:18.606] [INFO ]   Exact match   : False
+[09:25:18.606] [INFO ]   Latency       : 1.53s
+[09:25:18.606] [INFO ] 
+[09:25:18.606] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:18.607] [INFO ] Question 5/45  [q05]  category=leadership  difficulty=easy
+[09:25:18.607] [INFO ]   Q: Who is the CEO of NovaAI and when did she join the company?
+[09:25:18.607] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:18.607] [INFO ] [V0] Running pipeline...
+[09:25:20.395] [INFO ] 
+[09:25:20.395] [INFO ] ── RAW ANSWER ──
+[09:25:20.395] [INFO ]     I don't have specific information about who currently serves as CEO of NovaAI or when they joined the company. I don't have access to current organizational charts or leadership information for NovaAI, so I cannot provide accurate details about the CEO or their tenure.
+    
+    If you need this information, I'd recommend checking NovaAI's official website or contacting the company directly for their current leadership details.
+[09:25:20.395] [INFO ] 
+[09:25:20.396] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[09:25:20.396] [INFO ]     I don't have specific information about who currently serves as CEO of NovaAI or when they joined the company. I don't have access to current organizational charts or leadership information for NovaAI, so I cannot provide accurate details about the CEO or their tenure.
+    
+    If you need this information, I'd recommend checking NovaAI's official website or contacting the company directly for their current leadership details.
+[09:25:20.396] [INFO ] 
+[09:25:20.396] [INFO ] ── EVALUATION ──
+[09:25:20.397] [INFO ]   Ground truth  : Dr. Mara Chen is the CEO and co-founder of NovaAI. She joined in January 2021 when the company was founded and is based in San Francisco.
+[09:25:20.397] [INFO ]   Key facts     : ['Dr. Mara Chen', 'CEO', 'January 2021', 'San Francisco']
+[09:25:20.397] [INFO ]   KFR           : 0.250 (1/4 facts found) ✗
+[09:25:20.397] [WARNING]   Missing facts : ['Dr. Mara Chen', 'January 2021', 'San Francisco']
+[09:25:20.397] [INFO ]   Exact match   : False
+[09:25:20.397] [INFO ]   Latency       : 1.79s
+[09:25:20.397] [INFO ] 
+[09:25:20.397] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:20.397] [INFO ] Question 6/45  [q06]  category=leadership  difficulty=medium
+[09:25:20.397] [INFO ]   Q: Who leads the Engineering department and what are its sub-teams?
+[09:25:20.397] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:20.397] [INFO ] [V0] Running pipeline...
+[09:25:22.156] [INFO ] 
+[09:25:22.156] [INFO ] ── RAW ANSWER ──
+[09:25:22.156] [INFO ]     I don't have current information about who specifically leads the Engineering department at NovaAI or the detailed structure of its sub-teams. 
+    
+    To get accurate information about the current Engineering leadership and organizational structure, I'd recommend:
+    
+    1. Checking the company's internal org chart or directory
+    2. Contacting the People/HR team who would have the most up-to-date organizational information
+    3. Speaking with your manager or colleagues in Engineering for the current structure
+    
+    If you need this information for a specific purpose, the People team would be your best resource for accurate and current details about departmental leadership and team structure.
+[09:25:22.157] [INFO ] 
+[09:25:22.157] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[09:25:22.157] [INFO ]     I don't have current information about who specifically leads the Engineering department at NovaAI or the detailed structure of its sub-teams. 
+    
+    To get accurate information about the current Engineering leadership and organizational structure, I'd recommend:
+    
+    1. Checking the company's internal org chart or directory
+    2. Contacting the People/HR team who would have the most up-to-date organizational information
+    3. Speaking with your manager or colleagues in Engineering for the current structure
+    
+    If you need this information for a specific purpose, the People team would be your best resource for accurate and current details about departmental leadership and team structure.
+[09:25:22.157] [INFO ] 
+[09:25:22.157] [INFO ] ── EVALUATION ──
+[09:25:22.157] [INFO ]   Ground truth  : Sofia Andersson is the VP of Engineering. Engineering has four sub-teams: Platform Infrastructure (led by Raj Mehta), ML Systems (led by Dr. Yuki Tanaka), Product Engineering (led by Carlos Rivera), and Security Engineering (led by Ananya Bose).
+[09:25:22.158] [INFO ]   Key facts     : ['Sofia Andersson', 'Platform Infrastructure', 'ML Systems', 'Product Engineering', 'Security Engineering']
+[09:25:22.158] [INFO ]   KFR           : 0.000 (0/5 facts found) ✗
+[09:25:22.158] [WARNING]   Missing facts : ['Sofia Andersson', 'Platform Infrastructure', 'ML Systems', 'Product Engineering', 'Security Engineering']
+[09:25:22.158] [INFO ]   Exact match   : False
+[09:25:22.158] [INFO ]   Latency       : 1.76s
+[09:25:22.158] [INFO ] 
+[09:25:22.158] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:22.158] [INFO ] Question 7/45  [q07]  category=leadership  difficulty=medium
+[09:25:22.158] [INFO ]   Q: Who is NovaAI's General Counsel and what is their background?
+[09:25:22.159] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:22.159] [INFO ] [V0] Running pipeline...
+[09:25:23.906] [INFO ] 
+[09:25:23.906] [INFO ] ── RAW ANSWER ──
+[09:25:23.906] [INFO ]     I don't have current information about who specifically serves as NovaAI's General Counsel or their background. This type of executive leadership information can change over time and I want to avoid providing potentially outdated or incorrect details about specific personnel.
+    
+    For the most accurate and up-to-date information about NovaAI's General Counsel and their background, I'd recommend:
+    
+    1. Checking NovaAI's official leadership page on their website
+    2. Looking at recent company announcements or press releases
+    3. Contacting NovaAI directly through their official channels
+    
+    If you're looking for this information for a specific business purpose, you might also consider reaching out to NovaAI's HR or corporate communications team who would have the most current organizational details.
+[09:25:23.906] [INFO ] 
+[09:25:23.906] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[09:25:23.906] [INFO ]     I don't have current information about who specifically serves as NovaAI's General Counsel or their background. This type of executive leadership information can change over time and I want to avoid providing potentially outdated or incorrect details about specific personnel.
+    
+    For the most accurate and up-to-date information about NovaAI's General Counsel and their background, I'd recommend:
+    
+    1. Checking NovaAI's official leadership page on their website
+    2. Looking at recent company announcements or press releases
+    3. Contacting NovaAI directly through their official channels
+    
+    If you're looking for this information for a specific business purpose, you might also consider reaching out to NovaAI's HR or corporate communications team who would have the most current organizational details.
+[09:25:23.906] [INFO ] 
+[09:25:23.906] [INFO ] ── EVALUATION ──
+[09:25:23.906] [INFO ]   Ground truth  : Derek Shin is NovaAI's General Counsel. He joined the company in-house in May 2023 and previously worked at Cooley LLP. Legal is also overseen by CFO Priya Nambiar.
+[09:25:23.906] [INFO ]   Key facts     : ['Derek Shin', 'General Counsel', 'May 2023', 'Cooley LLP', 'Priya Nambiar']
+[09:25:23.906] [INFO ]   KFR           : 0.200 (1/5 facts found) ✗
+[09:25:23.906] [WARNING]   Missing facts : ['Derek Shin', 'May 2023', 'Cooley LLP', 'Priya Nambiar']
+[09:25:23.906] [INFO ]   Exact match   : False
+[09:25:23.906] [INFO ]   Latency       : 1.75s
+[09:25:23.906] [INFO ] 
+[09:25:23.906] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:23.906] [INFO ] Question 8/45  [q08]  category=leadership  difficulty=medium
+[09:25:23.906] [INFO ]   Q: What is Marcus Webb's role, location, and FY2026 quota?
+[09:25:23.906] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:23.907] [INFO ] [V0] Running pipeline...
+[09:25:25.452] [INFO ] 
+[09:25:25.453] [INFO ] ── RAW ANSWER ──
+[09:25:25.454] [INFO ]     I don't have access to specific employee information including Marcus Webb's role, location, or FY2026 quota details. This type of detailed employee data is not available in my knowledge base.
+    
+    If you need this information, I'd recommend checking with NovaAI's internal HR systems, employee directory, or contacting the relevant manager directly.
+[09:25:25.454] [INFO ] 
+[09:25:25.454] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[09:25:25.454] [INFO ]     I don't have access to specific employee information including Marcus Webb's role, location, or FY2026 quota details. This type of detailed employee data is not available in my knowledge base.
+    
+    If you need this information, I'd recommend checking with NovaAI's internal HR systems, employee directory, or contacting the relevant manager directly.
+[09:25:25.454] [INFO ] 
+[09:25:25.454] [INFO ] ── EVALUATION ──
+[09:25:25.454] [INFO ]   Ground truth  : Marcus Webb is the Enterprise Sales team lead. He is based in New York with an approved fully remote work arrangement. His FY2026 quota is $18M.
+[09:25:25.455] [INFO ]   Key facts     : ['Marcus Webb', 'Enterprise Sales', 'New York', 'fully remote', '$18M']
+[09:25:25.455] [INFO ]   KFR           : 0.200 (1/5 facts found) ✗
+[09:25:25.455] [WARNING]   Missing facts : ['Enterprise Sales', 'New York', 'fully remote', '$18M']
+[09:25:25.455] [INFO ]   Exact match   : False
+[09:25:25.455] [INFO ]   Latency       : 1.55s
+[09:25:25.455] [INFO ] 
+[09:25:25.455] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:25.455] [INFO ] Question 9/45  [q09]  category=products_pricing  difficulty=easy
+[09:25:25.455] [INFO ]   Q: What is the price of the NovaPilot Starter plan and what does it include?
+[09:25:25.455] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:25.455] [INFO ] [V0] Running pipeline...
+[09:25:29.320] [INFO ] 
+[09:25:29.320] [INFO ] ── RAW ANSWER ──
+[09:25:29.321] [INFO ]     I don't have current information about the specific pricing or features of the NovaPilot Starter plan in my knowledge base. 
+    
+    To get accurate, up-to-date information about NovaPilot pricing and included features, I'd recommend:
+    
+    1. Checking the official NovaAI website or product documentation
+    2. Contacting NovaAI sales or customer support directly
+    3. Speaking with your NovaAI account manager if you have one
+    
+    This will ensure you get the most current and accurate pricing details and feature specifications for the NovaPilot Starter plan.
+[09:25:29.321] [INFO ] 
+[09:25:29.321] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[09:25:29.321] [INFO ]     I don't have current information about the specific pricing or features of the NovaPilot Starter plan in my knowledge base. 
+    
+    To get accurate, up-to-date information about NovaPilot pricing and included features, I'd recommend:
+    
+    1. Checking the official NovaAI website or product documentation
+    2. Contacting NovaAI sales or customer support directly
+    3. Speaking with your NovaAI account manager if you have one
+    
+    This will ensure you get the most current and accurate pricing details and feature specifications for the NovaPilot Starter plan.
+[09:25:29.322] [INFO ] 
+[09:25:29.322] [INFO ] ── EVALUATION ──
+[09:25:29.322] [INFO ]   Ground truth  : The NovaPilot Starter plan costs $2,500/month. It includes up to 10 users and 50,000 automation runs per month.
+[09:25:29.322] [INFO ]   Key facts     : ['$2,500/month', '10 users', '50,000']
+[09:25:29.322] [INFO ]   KFR           : 0.000 (0/3 facts found) ✗
+[09:25:29.323] [WARNING]   Missing facts : ['$2,500/month', '10 users', '50,000']
+[09:25:29.323] [INFO ]   Exact match   : False
+[09:25:29.323] [INFO ]   Latency       : 3.86s
+[09:25:29.323] [INFO ] 
+[09:25:29.323] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:29.323] [INFO ] Question 10/45  [q10]  category=products_pricing  difficulty=easy
+[09:25:29.323] [INFO ]   Q: What is the price of the NovaPilot Growth plan?
+[09:25:29.324] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:29.324] [INFO ] [V0] Running pipeline...
+[09:25:32.319] [INFO ] 
+[09:25:32.320] [INFO ] ── RAW ANSWER ──
+[09:25:32.320] [INFO ]     I don't have access to current pricing information for NovaPilot plans, including the Growth plan. Pricing details can change frequently and may vary based on factors like contract length, usage volume, and specific customer needs.
+    
+    For the most accurate and up-to-date pricing information for the NovaPilot Growth plan, I'd recommend:
+    
+    1. Contacting NovaAI's sales team directly at sales@novai.com
+    2. Checking the official NovaAI website at www.novai.com
+    3. Speaking with your account representative if you're an existing customer
+    
+    This will ensure you get the current pricing structure and any available promotions or custom pricing options.
+[09:25:32.320] [INFO ] 
+[09:25:32.320] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[09:25:32.320] [INFO ]     I don't have access to current pricing information for NovaPilot plans, including the Growth plan. Pricing details can change frequently and may vary based on factors like contract length, usage volume, and specific customer needs.
+    
+    For the most accurate and up-to-date pricing information for the NovaPilot Growth plan, I'd recommend:
+    
+    1. Contacting NovaAI's sales team directly at sales@novai.com
+    2. Checking the official NovaAI website at www.novai.com
+    3. Speaking with your account representative if you're an existing customer
+    
+    This will ensure you get the current pricing structure and any available promotions or custom pricing options.
+[09:25:32.320] [INFO ] 
+[09:25:32.321] [INFO ] ── EVALUATION ──
+[09:25:32.321] [INFO ]   Ground truth  : The NovaPilot Growth plan costs $8,000/month. It supports up to 50 users, 500,000 automation runs per month, and includes audit logs.
+[09:25:32.321] [INFO ]   Key facts     : ['$8,000/month', '50 users', '500,000', 'audit logs']
+[09:25:32.321] [INFO ]   KFR           : 0.000 (0/4 facts found) ✗
+[09:25:32.321] [WARNING]   Missing facts : ['$8,000/month', '50 users', '500,000', 'audit logs']
+[09:25:32.321] [INFO ]   Exact match   : False
+[09:25:32.321] [INFO ]   Latency       : 3.00s
+[09:25:32.321] [INFO ] 
+[09:25:32.321] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:32.321] [INFO ] Question 11/45  [q11]  category=products_pricing  difficulty=medium
+[09:25:32.321] [INFO ]   Q: What features does NovaPilot Enterprise include and what is its price range?
+[09:25:32.321] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:32.321] [INFO ] [V0] Running pipeline...
+[09:25:44.530] [INFO ] 
+[09:25:44.531] [INFO ] ── RAW ANSWER ──
+[09:25:44.531] [INFO ]     I don't have current information about NovaPilot Enterprise's specific features or price range in my knowledge base. 
+    
+    To get accurate details about NovaPilot Enterprise features and pricing, I'd recommend:
+    
+    1. Checking the official NovaAI website or product documentation
+    2. Contacting NovaAI's sales team directly
+    3. Speaking with your NovaAI account representative if you're an existing customer
+    
+    This will ensure you get the most up-to-date and accurate information about this product's capabilities and pricing structure.
+[09:25:44.531] [INFO ] 
+[09:25:44.531] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[09:25:44.531] [INFO ]     I don't have current information about NovaPilot Enterprise's specific features or price range in my knowledge base. 
+    
+    To get accurate details about NovaPilot Enterprise features and pricing, I'd recommend:
+    
+    1. Checking the official NovaAI website or product documentation
+    2. Contacting NovaAI's sales team directly
+    3. Speaking with your NovaAI account representative if you're an existing customer
+    
+    This will ensure you get the most up-to-date and accurate information about this product's capabilities and pricing structure.
+[09:25:44.532] [INFO ] 
+[09:25:44.532] [INFO ] ── EVALUATION ──
+[09:25:44.532] [INFO ]   Ground truth  : NovaPilot Enterprise is priced at $30,000–$120,000/month. It includes unlimited users, a dedicated CSM, 99.95% SLA uptime, private cloud deployment on AWS or Azure, and HIPAA-compliant data handling.
+[09:25:44.532] [INFO ]   Key facts     : ['$30,000', '$120,000', 'unlimited users', 'dedicated CSM', '99.95%', 'HIPAA']
+[09:25:44.532] [INFO ]   KFR           : 0.000 (0/6 facts found) ✗
+[09:25:44.532] [WARNING]   Missing facts : ['$30,000', '$120,000', 'unlimited users', 'dedicated CSM', '99.95%', 'HIPAA']
+[09:25:44.532] [INFO ]   Exact match   : False
+[09:25:44.532] [INFO ]   Latency       : 12.21s
+[09:25:44.532] [INFO ] 
+[09:25:44.532] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:44.532] [INFO ] Question 12/45  [q12]  category=products_pricing  difficulty=easy
+[09:25:44.532] [INFO ]   Q: When was NovaPilot launched and what is it?
+[09:25:44.532] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:44.533] [INFO ] [V0] Running pipeline...
+[09:25:46.181] [INFO ] 
+[09:25:46.181] [INFO ] ── RAW ANSWER ──
+[09:25:46.181] [INFO ]     I don't have specific information about when NovaPilot was launched or what it is in my knowledge base. To provide you with accurate details about NovaPilot's launch date and functionality, I would need access to current NovaAI product documentation or announcements.
+    
+    If you're looking for this information, I'd recommend checking NovaAI's official product announcements, press releases, or contacting the NovaAI marketing or product teams directly for the most up-to-date and accurate information about NovaPilot.
+[09:25:46.181] [INFO ] 
+[09:25:46.181] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[09:25:46.181] [INFO ]     I don't have specific information about when NovaPilot was launched or what it is in my knowledge base. To provide you with accurate details about NovaPilot's launch date and functionality, I would need access to current NovaAI product documentation or announcements.
+    
+    If you're looking for this information, I'd recommend checking NovaAI's official product announcements, press releases, or contacting the NovaAI marketing or product teams directly for the most up-to-date and accurate information about NovaPilot.
+[09:25:46.181] [INFO ] 
+[09:25:46.181] [INFO ] ── EVALUATION ──
+[09:25:46.181] [INFO ]   Ground truth  : NovaPilot is NovaAI's flagship product, launched in Q3 2022. It is an AI workflow automation platform that integrates with 120+ third-party tools including Salesforce, SAP, and ServiceNow.
+[09:25:46.182] [INFO ]   Key facts     : ['Q3 2022', 'flagship', '120+', 'Salesforce', 'SAP', 'ServiceNow']
+[09:25:46.182] [INFO ]   KFR           : 0.000 (0/6 facts found) ✗
+[09:25:46.182] [WARNING]   Missing facts : ['Q3 2022', 'flagship', '120+', 'Salesforce', 'SAP', 'ServiceNow']
+[09:25:46.182] [INFO ]   Exact match   : False
+[09:25:46.182] [INFO ]   Latency       : 1.65s
+[09:25:46.182] [INFO ] 
+[09:25:46.182] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:46.182] [INFO ] Question 13/45  [q13]  category=products_pricing  difficulty=medium
+[09:25:46.182] [INFO ]   Q: Compare the NovaLens Professional and Business pricing tiers.
+[09:25:46.182] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:46.182] [INFO ] [V0] Running pipeline...
+[09:25:48.827] [INFO ] 
+[09:25:48.827] [INFO ] ── RAW ANSWER ──
+[09:25:48.828] [INFO ]     I don't have access to the current specific pricing details for NovaLens Professional and Business tiers in my knowledge base. Pricing information can change frequently and varies by region and specific plan details.
+    
+    For the most accurate and up-to-date comparison of NovaLens Professional and Business pricing tiers, I'd recommend:
+    
+    1. Checking the official NovaAI website or NovaLens product pages
+    2. Contacting NovaAI sales directly at sales@novaai.com
+    3. Speaking with your NovaAI account representative if you have one
+    
+    Generally speaking, NovaLens pricing tiers typically differ in:
+    - Number of users/seats included
+    - Storage capacity
+    - Advanced feature access (like custom model training, advanced analytics)
+    - Support level (standard vs. premium/enterprise support)
+    - Integration capabilities
+    - Compliance features
+    
+    However, since I cannot provide the specific current pricing details, please refer to the official sources mentioned above for accurate, up-to-date pricing information.
+[09:25:48.828] [INFO ] 
+[09:25:48.828] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[09:25:48.828] [INFO ]     I don't have access to the current specific pricing details for NovaLens Professional and Business tiers in my knowledge base. Pricing information can change frequently and varies by region and specific plan details.
+    
+    For the most accurate and up-to-date comparison of NovaLens Professional and Business pricing tiers, I'd recommend:
+    
+    1. Checking the official NovaAI website or NovaLens product pages
+    2. Contacting NovaAI sales directly at sales@novaai.com
+    3. Speaking with your NovaAI account representative if you have one
+    
+    Generally speaking, NovaLens pricing tiers typically differ in:
+    - Number of users/seats included
+    - Storage capacity
+    - Advanced feature access (like custom model training, advanced analytics)
+    - Support level (standard vs. premium/enterprise support)
+    - Integration capabilities
+    - Compliance features
+    
+    However, since I cannot provide the specific current pricing details, please refer to the official sources mentioned above for accurate, up-to-date pricing information.
+[09:25:48.828] [INFO ] 
+[09:25:48.828] [INFO ] ── EVALUATION ──
+[09:25:48.828] [INFO ]   Ground truth  : NovaLens Professional costs $4,000/month and supports 5 users, 3 data connectors, and monthly model refresh. NovaLens Business costs $12,000/month and supports 20 users, 15 data connectors, weekly model refresh, and custom dashboards.
+[09:25:48.828] [INFO ]   Key facts     : ['$4,000/month', '5 users', '3', 'monthly', '$12,000/month', '20 users', '15', 'weekly', 'custom dashboards']
+[09:25:48.828] [INFO ]   KFR           : 0.222 (2/9 facts found) ✗
+[09:25:48.828] [WARNING]   Missing facts : ['$4,000/month', '3', 'monthly', '$12,000/month', '15', 'weekly', 'custom dashboards']
+[09:25:48.828] [INFO ]   Exact match   : False
+[09:25:48.828] [INFO ]   Latency       : 2.65s
+[09:25:48.828] [INFO ] 
+[09:25:48.828] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:48.829] [INFO ] Question 14/45  [q14]  category=products_pricing  difficulty=easy
+[09:25:48.829] [INFO ]   Q: What data connectors does NovaLens support?
+[09:25:48.829] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:48.829] [INFO ] [V0] Running pipeline...
+[09:25:56.152] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:25:56.158] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:56.158] [INFO ] Question 15/45  [q15]  category=products_pricing  difficulty=medium
+[09:25:56.158] [INFO ]   Q: What is the price and model monitoring limit for NovaGuard Advanced?
+[09:25:56.158] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:25:56.158] [INFO ] [V0] Running pipeline...
+[09:26:00.991] [INFO ] 
+[09:26:00.991] [INFO ] ── RAW ANSWER ──
+[09:26:00.991] [INFO ]     I don't have specific information about the pricing or model monitoring limits for NovaGuard Advanced in my knowledge base. To get accurate details about this product's pricing and technical specifications, I'd recommend:
+    
+    1. Checking the official NovaAI website or product documentation
+    2. Contacting NovaAI sales or customer support directly
+    3. Speaking with your account manager if you're an existing customer
+    
+    If you have access to internal product documentation or pricing sheets, those would be the most reliable sources for this specific information.
+[09:26:00.991] [INFO ] 
+[09:26:00.991] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[09:26:00.991] [INFO ]     I don't have specific information about the pricing or model monitoring limits for NovaGuard Advanced in my knowledge base. To get accurate details about this product's pricing and technical specifications, I'd recommend:
+    
+    1. Checking the official NovaAI website or product documentation
+    2. Contacting NovaAI sales or customer support directly
+    3. Speaking with your account manager if you're an existing customer
+    
+    If you have access to internal product documentation or pricing sheets, those would be the most reliable sources for this specific information.
+[09:26:00.992] [INFO ] 
+[09:26:00.992] [INFO ] ── EVALUATION ──
+[09:26:00.992] [INFO ]   Ground truth  : NovaGuard Advanced costs $9,500/month and can monitor up to 20 AI models. It includes daily reports and Slack/PagerDuty integration, and is available via self-serve.
+[09:26:00.992] [INFO ]   Key facts     : ['$9,500/month', '20', 'daily', 'Slack/PagerDuty', 'self-serve']
+[09:26:00.992] [INFO ]   KFR           : 0.000 (0/5 facts found) ✗
+[09:26:00.992] [WARNING]   Missing facts : ['$9,500/month', '20', 'daily', 'Slack/PagerDuty', 'self-serve']
+[09:26:00.992] [INFO ]   Exact match   : False
+[09:26:00.992] [INFO ]   Latency       : 4.83s
+[09:26:00.992] [INFO ] 
+[09:26:00.992] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:26:00.992] [INFO ] Question 16/45  [q16]  category=products_pricing  difficulty=easy
+[09:26:00.992] [INFO ]   Q: What is the price and model limit for NovaGuard Standard?
+[09:26:00.992] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:26:00.992] [INFO ] [V0] Running pipeline...
+[09:26:08.492] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:26:08.494] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:26:08.494] [INFO ] Question 17/45  [q17]  category=products_pricing  difficulty=easy
+[09:26:08.494] [INFO ]   Q: What license is NovaBridge released under and how many GitHub stars does it have?
+[09:26:08.494] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:26:08.494] [INFO ] [V0] Running pipeline...
+[09:26:16.100] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:26:16.103] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:26:16.103] [INFO ] Question 18/45  [q18]  category=hr_policy  difficulty=medium
+[09:26:16.103] [INFO ]   Q: What is NovaAI's PTO policy?
+[09:26:16.103] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:26:16.103] [INFO ] [V0] Running pipeline...
+[09:26:23.704] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:26:23.707] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:26:23.707] [INFO ] Question 19/45  [q19]  category=hr_policy  difficulty=medium
+[09:26:23.707] [INFO ]   Q: What are NovaAI's in-office requirements for San Francisco employees?
+[09:26:23.707] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:26:23.707] [INFO ] [V0] Running pipeline...
+[09:26:31.143] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:26:31.145] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:26:31.145] [INFO ] Question 20/45  [q20]  category=hr_policy  difficulty=medium
+[09:26:31.145] [INFO ]   Q: What are the expense limits for hotel stays and how must expenses be submitted?
+[09:26:31.145] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:26:31.146] [INFO ] [V0] Running pipeline...
+[09:26:38.671] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:26:38.674] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:26:38.674] [INFO ] Question 21/45  [q21]  category=hr_policy  difficulty=hard
+[09:26:38.674] [INFO ]   Q: How does NovaAI's performance review cycle work?
+[09:26:38.674] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:26:38.674] [INFO ] [V0] Running pipeline...
+[09:26:46.109] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:26:46.111] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:26:46.111] [INFO ] Question 22/45  [q22]  category=hr_policy  difficulty=medium
+[09:26:46.111] [INFO ]   Q: What is NovaAI's airfare booking policy?
+[09:26:46.112] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:26:46.112] [INFO ] [V0] Running pipeline...
+[09:26:53.341] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:26:53.344] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:26:53.344] [INFO ] Question 23/45  [q23]  category=benefits  difficulty=easy
+[09:26:53.344] [INFO ]   Q: What is NovaAI's parental leave policy?
+[09:26:53.344] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:26:53.344] [INFO ] [V0] Running pipeline...
+[09:27:00.699] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:27:00.701] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:27:00.701] [INFO ] Question 24/45  [q24]  category=benefits  difficulty=easy
+[09:27:00.701] [INFO ]   Q: What is the 401(k) match at NovaAI and when are employees eligible?
+[09:27:00.701] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:27:00.701] [INFO ] [V0] Running pipeline...
+[09:27:07.870] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:27:07.873] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:27:07.873] [INFO ] Question 25/45  [q25]  category=benefits  difficulty=medium
+[09:27:07.873] [INFO ]   Q: What is the annual L&D budget per employee and how does it work?
+[09:27:07.873] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:27:07.873] [INFO ] [V0] Running pipeline...
+[09:27:15.274] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:27:15.274] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:27:15.275] [INFO ] Question 26/45  [q26]  category=leadership  difficulty=easy
+[09:27:15.275] [INFO ]   Q: Who is NovaAI's Chief Operating Officer?
+[09:27:15.275] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:27:15.275] [INFO ] [V0] Running pipeline...
+[09:27:22.578] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:27:22.579] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:27:22.579] [INFO ] Question 27/45  [q27]  category=benefits  difficulty=easy
+[09:27:22.579] [INFO ]   Q: Which platform does NovaAI use for equity management?
+[09:27:22.579] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:27:22.579] [INFO ] [V0] Running pipeline...
+[09:27:29.831] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:27:29.833] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:27:29.833] [INFO ] Question 28/45  [q28]  category=company_overview  difficulty=easy
+[09:27:29.833] [INFO ]   Q: What is the street address of NovaAI's headquarters?
+[09:27:29.833] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:27:29.833] [INFO ] [V0] Running pipeline...
+[09:27:37.216] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:27:37.219] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:27:37.219] [INFO ] Question 29/45  [q29]  category=benefits  difficulty=easy
+[09:27:37.219] [INFO ]   Q: Which provider administers NovaAI's health benefits?
+[09:27:37.219] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:27:37.219] [INFO ] [V0] Running pipeline...
+[09:27:44.570] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:27:44.571] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:27:44.571] [INFO ] Question 30/45  [q30]  category=products_pricing  difficulty=easy
+[09:27:44.571] [INFO ]   Q: When was NovaGuard launched?
+[09:27:44.572] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:27:44.572] [INFO ] [V0] Running pipeline...
+[09:27:51.807] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:27:51.809] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:27:51.809] [INFO ] Question 31/45  [q31]  category=products_pricing  difficulty=easy
+[09:27:51.809] [INFO ]   Q: When was NovaBridge released?
+[09:27:51.809] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:27:51.809] [INFO ] [V0] Running pipeline...
+[09:27:59.327] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:27:59.328] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:27:59.329] [INFO ] Question 32/45  [q32]  category=company_overview  difficulty=easy
+[09:27:59.329] [INFO ]   Q: Which cloud provider does NovaAI use as its secondary provider?
+[09:27:59.329] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:27:59.329] [INFO ] [V0] Running pipeline...
+[09:28:06.726] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:28:06.727] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:28:06.727] [INFO ] Question 33/45  [q33]  category=benefits  difficulty=easy
+[09:28:06.727] [INFO ]   Q: What is NovaAI's on-call compensation rate?
+[09:28:06.727] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:28:06.727] [INFO ] [V0] Running pipeline...
+[09:28:14.537] [INFO ] 
+[09:28:14.537] [INFO ] ── RAW ANSWER ──
+[09:28:14.537] [INFO ]     I don't have access to the current on-call compensation rate for NovaAI. This type of compensation information can vary by role, seniority level, and may change over time based on company policy updates.
+    
+    For the most accurate and up-to-date information about on-call compensation rates, I'd recommend:
+    
+    1. Checking the company handbook or compensation policy documents
+    2. Contacting the HR department directly
+    3. Speaking with your manager or the finance team
+    
+    They would be able to provide you with the specific rates that apply to your role and current pay period.
+[09:28:14.537] [INFO ] 
+[09:28:14.537] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[09:28:14.537] [INFO ]     I don't have access to the current on-call compensation rate for NovaAI. This type of compensation information can vary by role, seniority level, and may change over time based on company policy updates.
+    
+    For the most accurate and up-to-date information about on-call compensation rates, I'd recommend:
+    
+    1. Checking the company handbook or compensation policy documents
+    2. Contacting the HR department directly
+    3. Speaking with your manager or the finance team
+    
+    They would be able to provide you with the specific rates that apply to your role and current pay period.
+[09:28:14.538] [INFO ] 
+[09:28:14.538] [INFO ] ── EVALUATION ──
+[09:28:14.538] [INFO ]   Ground truth  : NovaAI pays an additional $300 per week for on-call duty.
+[09:28:14.538] [INFO ]   Key facts     : ['$300/week', 'on-call']
+[09:28:14.538] [INFO ]   KFR           : 0.500 (1/2 facts found) ✗
+[09:28:14.538] [WARNING]   Missing facts : ['$300/week']
+[09:28:14.538] [INFO ]   Exact match   : False
+[09:28:14.538] [INFO ]   Latency       : 7.81s
+[09:28:14.538] [INFO ] 
+[09:28:14.538] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:28:14.538] [INFO ] Question 34/45  [q34]  category=benefits  difficulty=easy
+[09:28:14.538] [INFO ]   Q: What is NovaAI's home office equipment stipend for new hires?
+[09:28:14.538] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:28:14.539] [INFO ] [V0] Running pipeline...
+[09:28:22.091] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:28:22.093] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:28:22.094] [INFO ] Question 35/45  [q35]  category=benefits  difficulty=easy
+[09:28:22.094] [INFO ]   Q: What health benefits coverage does NovaAI provide?
+[09:28:22.094] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:28:22.094] [INFO ] [V0] Running pipeline...
+[09:28:29.568] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:28:29.570] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:28:29.570] [INFO ] Question 36/45  [q36]  category=products_pricing  difficulty=hard
+[09:28:29.570] [INFO ]   Q: Who is the PM owner of NovaAI's flagship product?
+[09:28:29.570] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:28:29.570] [INFO ] [V0] Running pipeline...
+[09:28:36.934] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:28:36.935] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:28:36.935] [INFO ] Question 37/45  [q37]  category=leadership  difficulty=hard
+[09:28:36.935] [INFO ]   Q: Who leads the UX/Design team, and when did they join NovaAI?
+[09:28:36.935] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:28:36.935] [INFO ] [V0] Running pipeline...
+[09:28:44.197] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:28:44.198] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:28:44.198] [INFO ] Question 38/45  [q38]  category=leadership  difficulty=hard
+[09:28:44.198] [INFO ]   Q: Who leads the SMB Sales team, and what is their FY2026 quota?
+[09:28:44.198] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:28:44.198] [INFO ] [V0] Running pipeline...
+[09:28:51.527] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:28:51.529] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:28:51.529] [INFO ] Question 39/45  [q39]  category=leadership  difficulty=hard
+[09:28:51.529] [INFO ]   Q: When did NovaAI's Chief Revenue Officer join the company?
+[09:28:51.529] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:28:51.529] [INFO ] [V0] Running pipeline...
+[09:28:58.752] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:28:58.754] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:28:58.754] [INFO ] Question 40/45  [q40]  category=leadership  difficulty=hard
+[09:28:58.754] [INFO ]   Q: When did NovaAI's VP of Marketing join the company?
+[09:28:58.754] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:28:58.754] [INFO ] [V0] Running pipeline...
+[09:29:06.232] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:29:06.233] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:29:06.233] [INFO ] Question 41/45  [q41]  category=leadership  difficulty=hard
+[09:29:06.233] [INFO ]   Q: Who is NovaBridge's Developer Relations Lead, and to whom do they report?
+[09:29:06.233] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:29:06.233] [INFO ] [V0] Running pipeline...
+[09:29:13.447] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:29:13.448] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:29:13.448] [INFO ] Question 42/45  [q42]  category=leadership  difficulty=hard
+[09:29:13.448] [INFO ]   Q: When did NovaAI's VP of Product join the company?
+[09:29:13.448] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:29:13.448] [INFO ] [V0] Running pipeline...
+[09:29:20.631] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:29:20.635] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:29:20.635] [INFO ] Question 43/45  [q43]  category=leadership  difficulty=hard
+[09:29:20.635] [INFO ]   Q: What is the FY2026 NRR target of the department led by NovaAI's VP of Customer Success?
+[09:29:20.635] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:29:20.635] [INFO ] [V0] Running pipeline...
+[09:29:27.899] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:29:27.901] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:29:27.901] [INFO ] Question 44/45  [q44]  category=products_pricing  difficulty=hard
+[09:29:27.901] [INFO ]   Q: Which product has a roadmap for real-time streaming via Kafka, and what type of product is it?
+[09:29:27.901] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:29:27.901] [INFO ] [V0] Running pipeline...
+[09:29:35.385] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:29:35.386] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:29:35.386] [INFO ] Question 45/45  [q45]  category=leadership  difficulty=hard
+[09:29:35.386] [INFO ]   Q: Who leads the Solutions Engineering team, and when did they join NovaAI?
+[09:29:35.386] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:29:35.386] [INFO ] [V0] Running pipeline...
+[09:29:42.871] [ERROR] [V0] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 100, in run
+    answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=ANSWER_SYSTEM_PROMPT_BASE,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:29:42.872] [INFO ] ════════════════════════════════════════════════════════════════════════
+[09:29:42.872] [INFO ]   SUMMARY — V0
+[09:29:42.873] [INFO ] ════════════════════════════════════════════════════════════════════════
+[09:29:42.873] [INFO ]   Questions     : 45
+[09:29:42.873] [INFO ]   Correct       : 0/45  (0.0%)
+[09:29:42.873] [INFO ]   Avg KFR       : 0.030
+[09:29:42.873] [INFO ]   Avg latency   : 1.09s
+[09:29:42.873] [INFO ] 
+[09:29:42.873] [INFO ]   ID     Category             Diff     KFR     OK?   Hallucs  Latency
+[09:29:42.873] [INFO ]   --------------------------------------------------------------
+[09:29:42.873] [INFO ]   q01    company_overview     easy     0.000   ✗     N/A      1.5s
+[09:29:42.873] [INFO ]   q02    company_overview     medium   0.000   ✗     N/A      1.5s
+[09:29:42.873] [INFO ]   q03    company_overview     medium   0.000   ✗     N/A      1.8s
+[09:29:42.873] [INFO ]   q04    company_overview     easy     0.000   ✗     N/A      1.5s
+[09:29:42.873] [INFO ]   q05    leadership           easy     0.250   ✗     N/A      1.8s
+[09:29:42.873] [INFO ]   q06    leadership           medium   0.000   ✗     N/A      1.8s
+[09:29:42.873] [INFO ]   q07    leadership           medium   0.200   ✗     N/A      1.7s
+[09:29:42.873] [INFO ]   q08    leadership           medium   0.200   ✗     N/A      1.5s
+[09:29:42.873] [INFO ]   q09    products_pricing     easy     0.000   ✗     N/A      3.9s
+[09:29:42.873] [INFO ]   q10    products_pricing     easy     0.000   ✗     N/A      3.0s
+[09:29:42.873] [INFO ]   q11    products_pricing     medium   0.000   ✗     N/A      12.2s
+[09:29:42.873] [INFO ]   q12    products_pricing     easy     0.000   ✗     N/A      1.6s
+[09:29:42.873] [INFO ]   q13    products_pricing     medium   0.222   ✗     N/A      2.6s
+[09:29:42.874] [INFO ]   q14    products_pricing     easy     0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q15    products_pricing     medium   0.000   ✗     N/A      4.8s
+[09:29:42.874] [INFO ]   q16    products_pricing     easy     0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q17    products_pricing     easy     0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q18    hr_policy            medium   0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q19    hr_policy            medium   0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q20    hr_policy            medium   0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q21    hr_policy            hard     0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q22    hr_policy            medium   0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q23    benefits             easy     0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q24    benefits             easy     0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q25    benefits             medium   0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q26    leadership           easy     0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q27    benefits             easy     0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q28    company_overview     easy     0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q29    benefits             easy     0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q30    products_pricing     easy     0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q31    products_pricing     easy     0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q32    company_overview     easy     0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q33    benefits             easy     0.500   ✗     N/A      7.8s
+[09:29:42.874] [INFO ]   q34    benefits             easy     0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q35    benefits             easy     0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q36    products_pricing     hard     0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q37    leadership           hard     0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q38    leadership           hard     0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q39    leadership           hard     0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q40    leadership           hard     0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q41    leadership           hard     0.000   ✗     N/A      0.0s
+[09:29:42.874] [INFO ]   q42    leadership           hard     0.000   ✗     N/A      0.0s
+[09:29:42.875] [INFO ]   q43    leadership           hard     0.000   ✗     N/A      0.0s
+[09:29:42.875] [INFO ]   q44    products_pricing     hard     0.000   ✗     N/A      0.0s
+[09:29:42.875] [INFO ]   q45    leadership           hard     0.000   ✗     N/A      0.0s
+[09:29:42.875] [INFO ] 
+[09:29:42.877] [INFO ] Results saved → /Users/StartupUser/Documents/GitHub/kg-claim-verifier/results/qwen-qwen3-coder-480b-a35b-instruct/v0_results.json

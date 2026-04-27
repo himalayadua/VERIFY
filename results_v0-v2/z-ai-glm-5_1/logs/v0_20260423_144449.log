@@ -1,0 +1,1044 @@
+[14:44:49.500] [INFO ] ════════════════════════════════════════════════════════════════════════
+[14:44:49.500] [INFO ]   KG-BACKED CLAIM VERIFIER — EXPERIMENT RUN
+[14:44:49.500] [INFO ] ════════════════════════════════════════════════════════════════════════
+[14:44:49.501] [INFO ]   Model     : z-ai/glm-5.1
+[14:44:49.501] [INFO ]   Variant   : V0
+[14:44:49.501] [INFO ]   Questions : 45
+[14:44:49.501] [INFO ]   KG triples: 262
+[14:44:49.501] [INFO ]   Started   : 2026-04-23 14:44:49
+[14:44:49.501] [INFO ]   Log file  : /Users/StartupUser/Documents/GitHub/kg-claim-verifier/results/z-ai-glm-5_1/logs/v0_20260423_144449.log
+[14:44:49.501] [INFO ] 
+[14:44:49.501] [INFO ] ════════════════════════════════════════════════════════════════════════
+[14:44:49.501] [INFO ]   VARIANT: V0  |  45 questions  |  model: z-ai/glm-5.1
+[14:44:49.501] [INFO ] ════════════════════════════════════════════════════════════════════════
+[14:44:49.501] [INFO ] Pipeline : V0Pipeline
+[14:44:49.501] [INFO ] 
+[14:44:49.501] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:44:49.501] [INFO ] Question 1/45  [q01]  category=company_overview  difficulty=easy
+[14:44:49.501] [INFO ]   Q: When was NovaAI founded and who co-founded it?
+[14:44:49.501] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:44:49.501] [INFO ] [V0] Running pipeline...
+[14:45:24.126] [INFO ] 
+[14:45:24.127] [INFO ] ── RAW ANSWER ──
+[14:45:24.127] [INFO ]     I do not have specific information about when NovaAI was founded or who co-founded it in my current knowledge base. I would recommend checking NovaAI's internal company wiki, your onboarding documentation, or reaching out to the People team for the exact dates and names.
+[14:45:24.127] [INFO ] 
+[14:45:24.127] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:45:24.127] [INFO ]     I do not have specific information about when NovaAI was founded or who co-founded it in my current knowledge base. I would recommend checking NovaAI's internal company wiki, your onboarding documentation, or reaching out to the People team for the exact dates and names.
+[14:45:24.128] [INFO ] 
+[14:45:24.128] [INFO ] ── EVALUATION ──
+[14:45:24.128] [INFO ]   Ground truth  : NovaAI was founded in 2021 by Dr. Mara Chen and Lucas Ferreira.
+[14:45:24.128] [INFO ]   Key facts     : ['2021', 'Dr. Mara Chen', 'Lucas Ferreira']
+[14:45:24.128] [INFO ]   KFR           : 0.000 (0/3 facts found) ✗
+[14:45:24.128] [WARNING]   Missing facts : ['2021', 'Dr. Mara Chen', 'Lucas Ferreira']
+[14:45:24.128] [INFO ]   Exact match   : False
+[14:45:24.128] [INFO ]   Latency       : 34.63s
+[14:45:24.128] [INFO ] 
+[14:45:24.128] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:45:24.128] [INFO ] Question 2/45  [q02]  category=company_overview  difficulty=medium
+[14:45:24.128] [INFO ]   Q: What is NovaAI's current valuation, and how was it achieved?
+[14:45:24.128] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:45:24.128] [INFO ] [V0] Running pipeline...
+[14:45:27.137] [INFO ] 
+[14:45:27.137] [INFO ] ── RAW ANSWER ──
+[14:45:27.137] [INFO ]     I do not know NovaAI's current valuation or the details of how it was achieved. I do not have any information regarding funding rounds, investor valuations, or financial milestones in my current knowledge base. 
+    
+    If you need this information, I recommend reaching out to the Finance department or checking the company's internal wiki and official announcements for the most accurate and up-to-date figures.
+[14:45:27.138] [INFO ] 
+[14:45:27.138] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:45:27.138] [INFO ]     I do not know NovaAI's current valuation or the details of how it was achieved. I do not have any information regarding funding rounds, investor valuations, or financial milestones in my current knowledge base. 
+    
+    If you need this information, I recommend reaching out to the Finance department or checking the company's internal wiki and official announcements for the most accurate and up-to-date figures.
+[14:45:27.138] [INFO ] 
+[14:45:27.138] [INFO ] ── EVALUATION ──
+[14:45:27.138] [INFO ]   Ground truth  : NovaAI reached a $1.4B valuation through its Series C round, which was completed in November 2025 and led by Horizon Ventures. Total funding stands at $210M.
+[14:45:27.138] [INFO ]   Key facts     : ['$1.4B', 'Series C', 'November 2025', 'Horizon Ventures', '$210M']
+[14:45:27.138] [INFO ]   KFR           : 0.000 (0/5 facts found) ✗
+[14:45:27.138] [WARNING]   Missing facts : ['$1.4B', 'Series C', 'November 2025', 'Horizon Ventures', '$210M']
+[14:45:27.138] [INFO ]   Exact match   : False
+[14:45:27.138] [INFO ]   Latency       : 3.01s
+[14:45:27.138] [INFO ] 
+[14:45:27.138] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:45:27.139] [INFO ] Question 3/45  [q03]  category=company_overview  difficulty=medium
+[14:45:27.139] [INFO ]   Q: How many employees does NovaAI have and where are its offices?
+[14:45:27.139] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:45:27.139] [INFO ] [V0] Running pipeline...
+[14:45:48.836] [INFO ] 
+[14:45:48.836] [INFO ] ── RAW ANSWER ──
+[14:45:48.836] [INFO ]     I do not have access to NovaAI's internal employee headcount or office location data in my current knowledge base, and I do not want to provide an inaccurate guess. 
+    
+    I recommend checking the company intranet, our internal employee directory (such as our Org Chart), or reaching out to the People Operations team for the most up-to-date and exact numbers and locations.
+[14:45:48.837] [INFO ] 
+[14:45:48.837] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:45:48.837] [INFO ]     I do not have access to NovaAI's internal employee headcount or office location data in my current knowledge base, and I do not want to provide an inaccurate guess. 
+    
+    I recommend checking the company intranet, our internal employee directory (such as our Org Chart), or reaching out to the People Operations team for the most up-to-date and exact numbers and locations.
+[14:45:48.837] [INFO ] 
+[14:45:48.837] [INFO ] ── EVALUATION ──
+[14:45:48.837] [INFO ]   Ground truth  : NovaAI has 312 full-time employees as of Q1 2026. The company has offices in San Francisco, London (opened 2023), and Singapore (opened 2024).
+[14:45:48.837] [INFO ]   Key facts     : ['312', 'San Francisco', 'London', 'Singapore', '2023', '2024']
+[14:45:48.837] [INFO ]   KFR           : 0.000 (0/6 facts found) ✗
+[14:45:48.837] [WARNING]   Missing facts : ['312', 'San Francisco', 'London', 'Singapore', '2023', '2024']
+[14:45:48.837] [INFO ]   Exact match   : False
+[14:45:48.837] [INFO ]   Latency       : 21.70s
+[14:45:48.837] [INFO ] 
+[14:45:48.837] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:45:48.837] [INFO ] Question 4/45  [q04]  category=company_overview  difficulty=easy
+[14:45:48.838] [INFO ]   Q: What are NovaAI's primary market verticals?
+[14:45:48.838] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:45:48.838] [INFO ] [V0] Running pipeline...
+[14:45:56.742] [INFO ] 
+[14:45:56.744] [INFO ] ── RAW ANSWER ──
+[14:45:56.744] [INFO ]     I do not have information regarding NovaAI's primary market verticals, as I do not have access to specific company data, internal documents, or product details for NovaAI. I recommend checking internal company resources, such as the company wiki, intranet, or reaching out to the Sales or Strategy teams, for the most accurate and up-to-date information.
+[14:45:56.744] [INFO ] 
+[14:45:56.744] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:45:56.744] [INFO ]     I do not have information regarding NovaAI's primary market verticals, as I do not have access to specific company data, internal documents, or product details for NovaAI. I recommend checking internal company resources, such as the company wiki, intranet, or reaching out to the Sales or Strategy teams, for the most accurate and up-to-date information.
+[14:45:56.744] [INFO ] 
+[14:45:56.744] [INFO ] ── EVALUATION ──
+[14:45:56.744] [INFO ]   Ground truth  : NovaAI's primary market verticals are financial services, healthcare, and logistics.
+[14:45:56.744] [INFO ]   Key facts     : ['financial services', 'healthcare', 'logistics']
+[14:45:56.744] [INFO ]   KFR           : 0.000 (0/3 facts found) ✗
+[14:45:56.745] [WARNING]   Missing facts : ['financial services', 'healthcare', 'logistics']
+[14:45:56.745] [INFO ]   Exact match   : False
+[14:45:56.745] [INFO ]   Latency       : 7.90s
+[14:45:56.745] [INFO ] 
+[14:45:56.745] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:45:56.745] [INFO ] Question 5/45  [q05]  category=leadership  difficulty=easy
+[14:45:56.745] [INFO ]   Q: Who is the CEO of NovaAI and when did she join the company?
+[14:45:56.745] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:45:56.745] [INFO ] [V0] Running pipeline...
+[14:45:58.591] [INFO ] 
+[14:45:58.591] [INFO ] ── RAW ANSWER ──
+[14:45:58.591] [INFO ]     I do not have specific information about the CEO of NovaAI or when she joined the company. I don't have access to NovaAI's internal employee directory or company records to provide the exact name and date. I recommend checking the company intranet, an internal org chart, or reaching out to HR for the most accurate and up-to-date information.
+[14:45:58.591] [INFO ] 
+[14:45:58.591] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:45:58.592] [INFO ]     I do not have specific information about the CEO of NovaAI or when she joined the company. I don't have access to NovaAI's internal employee directory or company records to provide the exact name and date. I recommend checking the company intranet, an internal org chart, or reaching out to HR for the most accurate and up-to-date information.
+[14:45:58.592] [INFO ] 
+[14:45:58.592] [INFO ] ── EVALUATION ──
+[14:45:58.592] [INFO ]   Ground truth  : Dr. Mara Chen is the CEO and co-founder of NovaAI. She joined in January 2021 when the company was founded and is based in San Francisco.
+[14:45:58.592] [INFO ]   Key facts     : ['Dr. Mara Chen', 'CEO', 'January 2021', 'San Francisco']
+[14:45:58.592] [INFO ]   KFR           : 0.250 (1/4 facts found) ✗
+[14:45:58.592] [WARNING]   Missing facts : ['Dr. Mara Chen', 'January 2021', 'San Francisco']
+[14:45:58.592] [INFO ]   Exact match   : False
+[14:45:58.593] [INFO ]   Latency       : 1.85s
+[14:45:58.593] [INFO ] 
+[14:45:58.593] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:45:58.593] [INFO ] Question 6/45  [q06]  category=leadership  difficulty=medium
+[14:45:58.593] [INFO ]   Q: Who leads the Engineering department and what are its sub-teams?
+[14:45:58.593] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:45:58.593] [INFO ] [V0] Running pipeline...
+[14:46:42.277] [INFO ] 
+[14:46:42.279] [INFO ] ── RAW ANSWER ──
+[14:46:42.279] [INFO ]     I do not have information about NovaAI's organizational structure, including who leads the Engineering department or what its sub-teams are. I don't have access to internal company directories or team charts to provide those specific names or details. 
+    
+    I recommend checking the company intranet, your internal org chart, or reaching out to your HR or People Operations team for the most up-to-date and accurate information.
+[14:46:42.279] [INFO ] 
+[14:46:42.279] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:46:42.279] [INFO ]     I do not have information about NovaAI's organizational structure, including who leads the Engineering department or what its sub-teams are. I don't have access to internal company directories or team charts to provide those specific names or details. 
+    
+    I recommend checking the company intranet, your internal org chart, or reaching out to your HR or People Operations team for the most up-to-date and accurate information.
+[14:46:42.280] [INFO ] 
+[14:46:42.280] [INFO ] ── EVALUATION ──
+[14:46:42.280] [INFO ]   Ground truth  : Sofia Andersson is the VP of Engineering. Engineering has four sub-teams: Platform Infrastructure (led by Raj Mehta), ML Systems (led by Dr. Yuki Tanaka), Product Engineering (led by Carlos Rivera), and Security Engineering (led by Ananya Bose).
+[14:46:42.280] [INFO ]   Key facts     : ['Sofia Andersson', 'Platform Infrastructure', 'ML Systems', 'Product Engineering', 'Security Engineering']
+[14:46:42.280] [INFO ]   KFR           : 0.000 (0/5 facts found) ✗
+[14:46:42.280] [WARNING]   Missing facts : ['Sofia Andersson', 'Platform Infrastructure', 'ML Systems', 'Product Engineering', 'Security Engineering']
+[14:46:42.280] [INFO ]   Exact match   : False
+[14:46:42.280] [INFO ]   Latency       : 43.68s
+[14:46:42.280] [INFO ] 
+[14:46:42.280] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:46:42.280] [INFO ] Question 7/45  [q07]  category=leadership  difficulty=medium
+[14:46:42.280] [INFO ]   Q: Who is NovaAI's General Counsel and what is their background?
+[14:46:42.280] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:46:42.280] [INFO ] [V0] Running pipeline...
+[14:47:10.353] [INFO ] 
+[14:47:10.354] [INFO ] ── RAW ANSWER ──
+[14:47:10.354] [INFO ]     I do not have information about NovaAI's General Counsel or their background in my current knowledge base. I recommend checking the company intranet directory or reaching out to the People team for the most accurate and up-to-date information.
+[14:47:10.354] [INFO ] 
+[14:47:10.354] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:47:10.354] [INFO ]     I do not have information about NovaAI's General Counsel or their background in my current knowledge base. I recommend checking the company intranet directory or reaching out to the People team for the most accurate and up-to-date information.
+[14:47:10.355] [INFO ] 
+[14:47:10.355] [INFO ] ── EVALUATION ──
+[14:47:10.355] [INFO ]   Ground truth  : Derek Shin is NovaAI's General Counsel. He joined the company in-house in May 2023 and previously worked at Cooley LLP. Legal is also overseen by CFO Priya Nambiar.
+[14:47:10.355] [INFO ]   Key facts     : ['Derek Shin', 'General Counsel', 'May 2023', 'Cooley LLP', 'Priya Nambiar']
+[14:47:10.355] [INFO ]   KFR           : 0.200 (1/5 facts found) ✗
+[14:47:10.355] [WARNING]   Missing facts : ['Derek Shin', 'May 2023', 'Cooley LLP', 'Priya Nambiar']
+[14:47:10.355] [INFO ]   Exact match   : False
+[14:47:10.356] [INFO ]   Latency       : 28.07s
+[14:47:10.356] [INFO ] 
+[14:47:10.356] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:47:10.356] [INFO ] Question 8/45  [q08]  category=leadership  difficulty=medium
+[14:47:10.356] [INFO ]   Q: What is Marcus Webb's role, location, and FY2026 quota?
+[14:47:10.356] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:47:10.356] [INFO ] [V0] Running pipeline...
+[14:47:24.865] [INFO ] 
+[14:47:24.866] [INFO ] ── RAW ANSWER ──
+[14:47:24.866] [INFO ]     I do not have any information regarding a person named Marcus Webb, their role, location, or FY2026 quota. My current records do not include data on this individual.
+[14:47:24.866] [INFO ] 
+[14:47:24.866] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:47:24.866] [INFO ]     I do not have any information regarding a person named Marcus Webb, their role, location, or FY2026 quota. My current records do not include data on this individual.
+[14:47:24.866] [INFO ] 
+[14:47:24.866] [INFO ] ── EVALUATION ──
+[14:47:24.866] [INFO ]   Ground truth  : Marcus Webb is the Enterprise Sales team lead. He is based in New York with an approved fully remote work arrangement. His FY2026 quota is $18M.
+[14:47:24.866] [INFO ]   Key facts     : ['Marcus Webb', 'Enterprise Sales', 'New York', 'fully remote', '$18M']
+[14:47:24.866] [INFO ]   KFR           : 0.200 (1/5 facts found) ✗
+[14:47:24.866] [WARNING]   Missing facts : ['Enterprise Sales', 'New York', 'fully remote', '$18M']
+[14:47:24.866] [INFO ]   Exact match   : False
+[14:47:24.867] [INFO ]   Latency       : 14.51s
+[14:47:24.867] [INFO ] 
+[14:47:24.867] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:47:24.867] [INFO ] Question 9/45  [q09]  category=products_pricing  difficulty=easy
+[14:47:24.867] [INFO ]   Q: What is the price of the NovaPilot Starter plan and what does it include?
+[14:47:24.867] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:47:24.867] [INFO ] [V0] Running pipeline...
+[14:47:28.797] [INFO ] 
+[14:47:28.797] [INFO ] ── RAW ANSWER ──
+[14:47:28.797] [INFO ]     I'm sorry, but I don't have information regarding the pricing or specific features of the NovaPilot Starter plan. I don't have access to details about this product and wouldn't want to provide you with incorrect information. 
+    
+    I recommend checking the company's internal wiki or product documentation, or reaching out to the Product or Sales team for the most accurate and up-to-date details.
+[14:47:28.797] [INFO ] 
+[14:47:28.797] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:47:28.797] [INFO ]     I'm sorry, but I don't have information regarding the pricing or specific features of the NovaPilot Starter plan. I don't have access to details about this product and wouldn't want to provide you with incorrect information. 
+    
+    I recommend checking the company's internal wiki or product documentation, or reaching out to the Product or Sales team for the most accurate and up-to-date details.
+[14:47:28.798] [INFO ] 
+[14:47:28.798] [INFO ] ── EVALUATION ──
+[14:47:28.798] [INFO ]   Ground truth  : The NovaPilot Starter plan costs $2,500/month. It includes up to 10 users and 50,000 automation runs per month.
+[14:47:28.798] [INFO ]   Key facts     : ['$2,500/month', '10 users', '50,000']
+[14:47:28.798] [INFO ]   KFR           : 0.000 (0/3 facts found) ✗
+[14:47:28.798] [WARNING]   Missing facts : ['$2,500/month', '10 users', '50,000']
+[14:47:28.798] [INFO ]   Exact match   : False
+[14:47:28.798] [INFO ]   Latency       : 3.93s
+[14:47:28.798] [INFO ] 
+[14:47:28.798] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:47:28.798] [INFO ] Question 10/45  [q10]  category=products_pricing  difficulty=easy
+[14:47:28.798] [INFO ]   Q: What is the price of the NovaPilot Growth plan?
+[14:47:28.798] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:47:28.798] [INFO ] [V0] Running pipeline...
+[14:47:32.001] [INFO ] 
+[14:47:32.001] [INFO ] ── RAW ANSWER ──
+[14:47:32.001] [INFO ]     I do not know the price of the NovaPilot Growth plan. I don't have access to NovaAI's current pricing details or product documentation to provide that specific number. I recommend checking the company's internal wiki, the product pricing page, or reaching out to the Product or Sales team for the most accurate and up-to-date information.
+[14:47:32.002] [INFO ] 
+[14:47:32.002] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:47:32.002] [INFO ]     I do not know the price of the NovaPilot Growth plan. I don't have access to NovaAI's current pricing details or product documentation to provide that specific number. I recommend checking the company's internal wiki, the product pricing page, or reaching out to the Product or Sales team for the most accurate and up-to-date information.
+[14:47:32.002] [INFO ] 
+[14:47:32.002] [INFO ] ── EVALUATION ──
+[14:47:32.002] [INFO ]   Ground truth  : The NovaPilot Growth plan costs $8,000/month. It supports up to 50 users, 500,000 automation runs per month, and includes audit logs.
+[14:47:32.002] [INFO ]   Key facts     : ['$8,000/month', '50 users', '500,000', 'audit logs']
+[14:47:32.002] [INFO ]   KFR           : 0.000 (0/4 facts found) ✗
+[14:47:32.002] [WARNING]   Missing facts : ['$8,000/month', '50 users', '500,000', 'audit logs']
+[14:47:32.002] [INFO ]   Exact match   : False
+[14:47:32.002] [INFO ]   Latency       : 3.20s
+[14:47:32.002] [INFO ] 
+[14:47:32.003] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:47:32.003] [INFO ] Question 11/45  [q11]  category=products_pricing  difficulty=medium
+[14:47:32.003] [INFO ]   Q: What features does NovaPilot Enterprise include and what is its price range?
+[14:47:32.003] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:47:32.003] [INFO ] [V0] Running pipeline...
+[14:47:42.209] [INFO ] 
+[14:47:42.210] [INFO ] ── RAW ANSWER ──
+[14:47:42.210] [INFO ]     I do not have any information regarding a product called "NovaPilot Enterprise," including its features or pricing. I am not aware of this product in NovaAI's current lineup or documentation. 
+    
+    It is possible this is a very new offering, a codename, or a product from a different company. If you have internal documentation or a product sheet you can point me to, I’d be happy to help summarize it. Otherwise, I recommend checking with the Product or Sales teams for the most up-to-date information.
+[14:47:42.210] [INFO ] 
+[14:47:42.210] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:47:42.210] [INFO ]     I do not have any information regarding a product called "NovaPilot Enterprise," including its features or pricing. I am not aware of this product in NovaAI's current lineup or documentation. 
+    
+    It is possible this is a very new offering, a codename, or a product from a different company. If you have internal documentation or a product sheet you can point me to, I’d be happy to help summarize it. Otherwise, I recommend checking with the Product or Sales teams for the most up-to-date information.
+[14:47:42.211] [INFO ] 
+[14:47:42.211] [INFO ] ── EVALUATION ──
+[14:47:42.211] [INFO ]   Ground truth  : NovaPilot Enterprise is priced at $30,000–$120,000/month. It includes unlimited users, a dedicated CSM, 99.95% SLA uptime, private cloud deployment on AWS or Azure, and HIPAA-compliant data handling.
+[14:47:42.211] [INFO ]   Key facts     : ['$30,000', '$120,000', 'unlimited users', 'dedicated CSM', '99.95%', 'HIPAA']
+[14:47:42.211] [INFO ]   KFR           : 0.000 (0/6 facts found) ✗
+[14:47:42.211] [WARNING]   Missing facts : ['$30,000', '$120,000', 'unlimited users', 'dedicated CSM', '99.95%', 'HIPAA']
+[14:47:42.211] [INFO ]   Exact match   : False
+[14:47:42.211] [INFO ]   Latency       : 10.21s
+[14:47:42.211] [INFO ] 
+[14:47:42.211] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:47:42.211] [INFO ] Question 12/45  [q12]  category=products_pricing  difficulty=easy
+[14:47:42.211] [INFO ]   Q: When was NovaPilot launched and what is it?
+[14:47:42.211] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:47:42.211] [INFO ] [V0] Running pipeline...
+[14:48:23.190] [INFO ] 
+[14:48:23.193] [INFO ] ── RAW ANSWER ──
+[14:48:23.194] [INFO ]     I do not have any information regarding a product called "NovaPilot," including its launch date or description. I am not aware of this being part of NovaAI's current or past product lineup. 
+    
+    If you have internal documentation or release notes you can share, I would be happy to help you extract the details. Otherwise, I recommend checking with the Product team or searching the internal wiki for the most up-to-date information.
+[14:48:23.194] [INFO ] 
+[14:48:23.194] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:48:23.194] [INFO ]     I do not have any information regarding a product called "NovaPilot," including its launch date or description. I am not aware of this being part of NovaAI's current or past product lineup. 
+    
+    If you have internal documentation or release notes you can share, I would be happy to help you extract the details. Otherwise, I recommend checking with the Product team or searching the internal wiki for the most up-to-date information.
+[14:48:23.194] [INFO ] 
+[14:48:23.194] [INFO ] ── EVALUATION ──
+[14:48:23.196] [INFO ]   Ground truth  : NovaPilot is NovaAI's flagship product, launched in Q3 2022. It is an AI workflow automation platform that integrates with 120+ third-party tools including Salesforce, SAP, and ServiceNow.
+[14:48:23.196] [INFO ]   Key facts     : ['Q3 2022', 'flagship', '120+', 'Salesforce', 'SAP', 'ServiceNow']
+[14:48:23.196] [INFO ]   KFR           : 0.000 (0/6 facts found) ✗
+[14:48:23.196] [WARNING]   Missing facts : ['Q3 2022', 'flagship', '120+', 'Salesforce', 'SAP', 'ServiceNow']
+[14:48:23.196] [INFO ]   Exact match   : False
+[14:48:23.196] [INFO ]   Latency       : 40.98s
+[14:48:23.197] [INFO ] 
+[14:48:23.198] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:48:23.198] [INFO ] Question 13/45  [q13]  category=products_pricing  difficulty=medium
+[14:48:23.198] [INFO ]   Q: Compare the NovaLens Professional and Business pricing tiers.
+[14:48:23.198] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:48:23.198] [INFO ] [V0] Running pipeline...
+[14:49:04.911] [INFO ] 
+[14:49:04.913] [INFO ] ── RAW ANSWER ──
+[14:49:04.913] [INFO ]     I'm sorry, but I don't have any information regarding NovaAI's products, pricing tiers, or a product called "NovaLens." I am unable to compare the Professional and Business pricing tiers because I do not have access to that data.
+    
+    I recommend checking the company's internal wiki, reaching out to the Sales or Product teams, or consulting the latest pricing documentation to get the exact numbers and feature differences. If you can provide me with the details, I'd be happy to help you format or analyze the comparison!
+[14:49:04.913] [INFO ] 
+[14:49:04.913] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:49:04.914] [INFO ]     I'm sorry, but I don't have any information regarding NovaAI's products, pricing tiers, or a product called "NovaLens." I am unable to compare the Professional and Business pricing tiers because I do not have access to that data.
+    
+    I recommend checking the company's internal wiki, reaching out to the Sales or Product teams, or consulting the latest pricing documentation to get the exact numbers and feature differences. If you can provide me with the details, I'd be happy to help you format or analyze the comparison!
+[14:49:04.914] [INFO ] 
+[14:49:04.914] [INFO ] ── EVALUATION ──
+[14:49:04.914] [INFO ]   Ground truth  : NovaLens Professional costs $4,000/month and supports 5 users, 3 data connectors, and monthly model refresh. NovaLens Business costs $12,000/month and supports 20 users, 15 data connectors, weekly model refresh, and custom dashboards.
+[14:49:04.914] [INFO ]   Key facts     : ['$4,000/month', '5 users', '3', 'monthly', '$12,000/month', '20 users', '15', 'weekly', 'custom dashboards']
+[14:49:04.914] [INFO ]   KFR           : 0.000 (0/9 facts found) ✗
+[14:49:04.914] [WARNING]   Missing facts : ['$4,000/month', '5 users', '3', 'monthly', '$12,000/month', '20 users', '15', 'weekly', 'custom dashboards']
+[14:49:04.914] [INFO ]   Exact match   : False
+[14:49:04.914] [INFO ]   Latency       : 41.71s
+[14:49:04.914] [INFO ] 
+[14:49:04.914] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:49:04.914] [INFO ] Question 14/45  [q14]  category=products_pricing  difficulty=easy
+[14:49:04.914] [INFO ]   Q: What data connectors does NovaLens support?
+[14:49:04.914] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:49:04.914] [INFO ] [V0] Running pipeline...
+[14:49:31.052] [INFO ] 
+[14:49:31.055] [INFO ] ── RAW ANSWER ──
+[14:49:31.055] [INFO ]     I do not have any information about NovaAI's products, including a product called NovaLens or the data connectors it supports. I recommend checking the company's internal documentation, product wiki, or reaching out to the NovaLens product team for the most accurate and up-to-date details.
+[14:49:31.055] [INFO ] 
+[14:49:31.055] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:49:31.056] [INFO ]     I do not have any information about NovaAI's products, including a product called NovaLens or the data connectors it supports. I recommend checking the company's internal documentation, product wiki, or reaching out to the NovaLens product team for the most accurate and up-to-date details.
+[14:49:31.056] [INFO ] 
+[14:49:31.056] [INFO ] ── EVALUATION ──
+[14:49:31.056] [INFO ]   Ground truth  : NovaLens supports connectors for Snowflake, Databricks, BigQuery, Redshift, and PostgreSQL.
+[14:49:31.056] [INFO ]   Key facts     : ['Snowflake', 'Databricks', 'BigQuery', 'Redshift', 'PostgreSQL']
+[14:49:31.056] [INFO ]   KFR           : 0.000 (0/5 facts found) ✗
+[14:49:31.056] [WARNING]   Missing facts : ['Snowflake', 'Databricks', 'BigQuery', 'Redshift', 'PostgreSQL']
+[14:49:31.056] [INFO ]   Exact match   : False
+[14:49:31.056] [INFO ]   Latency       : 26.14s
+[14:49:31.056] [INFO ] 
+[14:49:31.056] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:49:31.056] [INFO ] Question 15/45  [q15]  category=products_pricing  difficulty=medium
+[14:49:31.056] [INFO ]   Q: What is the price and model monitoring limit for NovaGuard Advanced?
+[14:49:31.056] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:49:31.056] [INFO ] [V0] Running pipeline...
+[14:50:13.597] [INFO ] 
+[14:50:13.599] [INFO ] ── RAW ANSWER ──
+[14:50:13.600] [INFO ]     I do not have information regarding the pricing or model monitoring limits for a product called NovaGuard Advanced. I am not familiar with this specific product or its details. I recommend checking the internal product documentation or reaching out to the product or sales team for the most accurate and up-to-date information.
+[14:50:13.600] [INFO ] 
+[14:50:13.600] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:50:13.600] [INFO ]     I do not have information regarding the pricing or model monitoring limits for a product called NovaGuard Advanced. I am not familiar with this specific product or its details. I recommend checking the internal product documentation or reaching out to the product or sales team for the most accurate and up-to-date information.
+[14:50:13.600] [INFO ] 
+[14:50:13.600] [INFO ] ── EVALUATION ──
+[14:50:13.600] [INFO ]   Ground truth  : NovaGuard Advanced costs $9,500/month and can monitor up to 20 AI models. It includes daily reports and Slack/PagerDuty integration, and is available via self-serve.
+[14:50:13.600] [INFO ]   Key facts     : ['$9,500/month', '20', 'daily', 'Slack/PagerDuty', 'self-serve']
+[14:50:13.600] [INFO ]   KFR           : 0.000 (0/5 facts found) ✗
+[14:50:13.600] [WARNING]   Missing facts : ['$9,500/month', '20', 'daily', 'Slack/PagerDuty', 'self-serve']
+[14:50:13.600] [INFO ]   Exact match   : False
+[14:50:13.601] [INFO ]   Latency       : 42.54s
+[14:50:13.601] [INFO ] 
+[14:50:13.601] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:50:13.601] [INFO ] Question 16/45  [q16]  category=products_pricing  difficulty=easy
+[14:50:13.601] [INFO ]   Q: What is the price and model limit for NovaGuard Standard?
+[14:50:13.601] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:50:13.601] [INFO ] [V0] Running pipeline...
+[14:50:29.742] [INFO ] 
+[14:50:29.744] [INFO ] ── RAW ANSWER ──
+[14:50:29.744] [INFO ]     I do not have any information regarding a product called "NovaGuard Standard," including its pricing or model limits. I am not familiar with this product in NovaAI's current lineup, and I don't want to provide incorrect information by guessing. 
+    
+    I recommend checking the official internal product wiki or reaching out to the Product or Sales teams for the most accurate and up-to-date details.
+[14:50:29.745] [INFO ] 
+[14:50:29.745] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:50:29.745] [INFO ]     I do not have any information regarding a product called "NovaGuard Standard," including its pricing or model limits. I am not familiar with this product in NovaAI's current lineup, and I don't want to provide incorrect information by guessing. 
+    
+    I recommend checking the official internal product wiki or reaching out to the Product or Sales teams for the most accurate and up-to-date details.
+[14:50:29.745] [INFO ] 
+[14:50:29.745] [INFO ] ── EVALUATION ──
+[14:50:29.745] [INFO ]   Ground truth  : NovaGuard Standard costs $3,000/month and can monitor up to 3 AI models. It includes weekly reports and email alerts, and is available via self-serve.
+[14:50:29.745] [INFO ]   Key facts     : ['$3,000/month', '3', 'weekly', 'email alerts', 'self-serve']
+[14:50:29.745] [INFO ]   KFR           : 0.000 (0/5 facts found) ✗
+[14:50:29.745] [WARNING]   Missing facts : ['$3,000/month', '3', 'weekly', 'email alerts', 'self-serve']
+[14:50:29.745] [INFO ]   Exact match   : False
+[14:50:29.745] [INFO ]   Latency       : 16.14s
+[14:50:29.745] [INFO ] 
+[14:50:29.745] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:50:29.745] [INFO ] Question 17/45  [q17]  category=products_pricing  difficulty=easy
+[14:50:29.745] [INFO ]   Q: What license is NovaBridge released under and how many GitHub stars does it have?
+[14:50:29.746] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:50:29.746] [INFO ] [V0] Running pipeline...
+[14:51:24.602] [INFO ] 
+[14:51:24.603] [INFO ] ── RAW ANSWER ──
+[14:51:24.603] [INFO ]     I do not have information about the specific license for NovaBridge or its current number of GitHub stars. I am not familiar with the details of that product in our internal records. 
+    
+    I recommend checking the official NovaAI GitHub repository directly for the most accurate and up-to-date numbers, or reaching out to the engineering team that maintains NovaBridge for more details.
+[14:51:24.603] [INFO ] 
+[14:51:24.604] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:51:24.604] [INFO ]     I do not have information about the specific license for NovaBridge or its current number of GitHub stars. I am not familiar with the details of that product in our internal records. 
+    
+    I recommend checking the official NovaAI GitHub repository directly for the most accurate and up-to-date numbers, or reaching out to the engineering team that maintains NovaBridge for more details.
+[14:51:24.604] [INFO ] 
+[14:51:24.604] [INFO ] ── EVALUATION ──
+[14:51:24.604] [INFO ]   Ground truth  : NovaBridge is open-source and released under the Apache 2.0 license. It has over 4,200 GitHub stars and approximately 800 contributors. The base version is free.
+[14:51:24.604] [INFO ]   Key facts     : ['Apache 2.0', '4,200+', '~800', 'free']
+[14:51:24.604] [INFO ]   KFR           : 0.000 (0/4 facts found) ✗
+[14:51:24.604] [WARNING]   Missing facts : ['Apache 2.0', '4,200+', '~800', 'free']
+[14:51:24.604] [INFO ]   Exact match   : False
+[14:51:24.604] [INFO ]   Latency       : 54.86s
+[14:51:24.604] [INFO ] 
+[14:51:24.604] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:51:24.604] [INFO ] Question 18/45  [q18]  category=hr_policy  difficulty=medium
+[14:51:24.604] [INFO ]   Q: What is NovaAI's PTO policy?
+[14:51:24.604] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:51:24.604] [INFO ] [V0] Running pipeline...
+[14:52:02.938] [INFO ] 
+[14:52:02.939] [INFO ] ── RAW ANSWER ──
+[14:52:02.940] [INFO ]     I do not have any information regarding NovaAI's PTO policy in my current knowledge base. I am not aware of the specific details, such as accrual rates, rollover rules, or request procedures. 
+    
+    I recommend reaching out to the Human Resources department or checking the company intranet (such as the employee handbook or HR portal) for the most accurate and up-to-date information regarding PTO.
+[14:52:02.940] [INFO ] 
+[14:52:02.940] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:52:02.940] [INFO ]     I do not have any information regarding NovaAI's PTO policy in my current knowledge base. I am not aware of the specific details, such as accrual rates, rollover rules, or request procedures. 
+    
+    I recommend reaching out to the Human Resources department or checking the company intranet (such as the employee handbook or HR portal) for the most accurate and up-to-date information regarding PTO.
+[14:52:02.940] [INFO ] 
+[14:52:02.940] [INFO ] ── EVALUATION ──
+[14:52:02.940] [INFO ]   Ground truth  : NovaAI has a flexible/unlimited PTO policy. Employees must take a minimum of 15 days per year. PTO requests of 3 or more days must be submitted in Workday at least 5 business days in advance. Sick leave is tracked separately from PTO. NovaAI also provides 11 paid company holidays per year.
+[14:52:02.940] [INFO ]   Key facts     : ['flexible/unlimited', '15 days', '5 business days', 'Workday', 'separately', '11']
+[14:52:02.940] [INFO ]   KFR           : 0.000 (0/6 facts found) ✗
+[14:52:02.940] [WARNING]   Missing facts : ['flexible/unlimited', '15 days', '5 business days', 'Workday', 'separately', '11']
+[14:52:02.940] [INFO ]   Exact match   : False
+[14:52:02.940] [INFO ]   Latency       : 38.33s
+[14:52:02.941] [INFO ] 
+[14:52:02.941] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:52:02.941] [INFO ] Question 19/45  [q19]  category=hr_policy  difficulty=medium
+[14:52:02.941] [INFO ]   Q: What are NovaAI's in-office requirements for San Francisco employees?
+[14:52:02.941] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:52:02.941] [INFO ] [V0] Running pipeline...
+[14:52:04.765] [INFO ] 
+[14:52:04.765] [INFO ] ── RAW ANSWER ──
+[14:52:04.766] [INFO ]     I do not have information regarding NovaAI's specific in-office requirements for San Francisco employees. I am not aware of the current policy details, including the number of required days or specific guidelines for that office. 
+    
+    I recommend reaching out to the Human Resources department or checking the company intranet for the most accurate and up-to-date information on NovaAI's workplace policies.
+[14:52:04.766] [INFO ] 
+[14:52:04.766] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:52:04.766] [INFO ]     I do not have information regarding NovaAI's specific in-office requirements for San Francisco employees. I am not aware of the current policy details, including the number of required days or specific guidelines for that office. 
+    
+    I recommend reaching out to the Human Resources department or checking the company intranet for the most accurate and up-to-date information on NovaAI's workplace policies.
+[14:52:04.766] [INFO ] 
+[14:52:04.766] [INFO ] ── EVALUATION ──
+[14:52:04.766] [INFO ]   Ground truth  : NovaAI is hybrid-first. San Francisco-based employees are required to be in the office on Tuesday and Thursday each week. Fully remote arrangements require approval from the direct manager, department VP, and Claudia Torres, and are reviewed annually.
+[14:52:04.766] [INFO ]   Key facts     : ['hybrid-first', 'Tuesday', 'Thursday', 'Claudia Torres', 'annually']
+[14:52:04.766] [INFO ]   KFR           : 0.000 (0/5 facts found) ✗
+[14:52:04.767] [WARNING]   Missing facts : ['hybrid-first', 'Tuesday', 'Thursday', 'Claudia Torres', 'annually']
+[14:52:04.767] [INFO ]   Exact match   : False
+[14:52:04.767] [INFO ]   Latency       : 1.82s
+[14:52:04.767] [INFO ] 
+[14:52:04.767] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:52:04.767] [INFO ] Question 20/45  [q20]  category=hr_policy  difficulty=medium
+[14:52:04.767] [INFO ]   Q: What are the expense limits for hotel stays and how must expenses be submitted?
+[14:52:04.767] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:52:04.767] [INFO ] [V0] Running pipeline...
+[14:52:55.073] [INFO ] 
+[14:52:55.075] [INFO ] ── RAW ANSWER ──
+[14:52:55.075] [INFO ]     I do not have access to NovaAI's internal policy documents, so I do not know the specific expense limits for hotel stays or the exact procedure for submitting expenses. 
+    
+    I recommend checking the company intranet or the employee handbook for the Travel and Expense policy, or reaching out to the Finance or HR team for the exact dollar limits and submission guidelines. If you can provide me with the relevant policy text, I would be happy to help summarize or answer questions based on it!
+[14:52:55.075] [INFO ] 
+[14:52:55.075] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:52:55.075] [INFO ]     I do not have access to NovaAI's internal policy documents, so I do not know the specific expense limits for hotel stays or the exact procedure for submitting expenses. 
+    
+    I recommend checking the company intranet or the employee handbook for the Travel and Expense policy, or reaching out to the Finance or HR team for the exact dollar limits and submission guidelines. If you can provide me with the relevant policy text, I would be happy to help summarize or answer questions based on it!
+[14:52:55.076] [INFO ] 
+[14:52:55.076] [INFO ] ── EVALUATION ──
+[14:52:55.076] [INFO ]   Ground truth  : The hotel limit is $350/night in major cities (SF, NYC, London) and $250/night in other cities. All expenses must be submitted through Expensify within 30 days of the expense date. Receipts are required for expenses over $25.
+[14:52:55.076] [INFO ]   Key facts     : ['$350/night', 'SF, NYC, London', '$250/night', 'Expensify', '30 days', '$25']
+[14:52:55.076] [INFO ]   KFR           : 0.000 (0/6 facts found) ✗
+[14:52:55.076] [WARNING]   Missing facts : ['$350/night', 'SF, NYC, London', '$250/night', 'Expensify', '30 days', '$25']
+[14:52:55.076] [INFO ]   Exact match   : False
+[14:52:55.076] [INFO ]   Latency       : 50.31s
+[14:52:55.076] [INFO ] 
+[14:52:55.076] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:52:55.076] [INFO ] Question 21/45  [q21]  category=hr_policy  difficulty=hard
+[14:52:55.076] [INFO ]   Q: How does NovaAI's performance review cycle work?
+[14:52:55.076] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:52:55.076] [INFO ] [V0] Running pipeline...
+[14:53:34.677] [INFO ] 
+[14:53:34.681] [INFO ] ── RAW ANSWER ──
+[14:53:34.681] [INFO ]     I do not have specific information regarding NovaAI's performance review cycle, including its timing, structure, or policies. 
+    
+    I recommend checking your employee handbook, the internal company wiki, or reaching out to the People/HR team for the exact details and current guidelines.
+[14:53:34.681] [INFO ] 
+[14:53:34.682] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:53:34.682] [INFO ]     I do not have specific information regarding NovaAI's performance review cycle, including its timing, structure, or policies. 
+    
+    I recommend checking your employee handbook, the internal company wiki, or reaching out to the People/HR team for the exact details and current guidelines.
+[14:53:34.682] [INFO ] 
+[14:53:34.682] [INFO ] ── EVALUATION ──
+[14:53:34.682] [INFO ]   Ground truth  : NovaAI runs a bi-annual performance review cycle. The mid-year review calibration happens in July with results delivered by July 31. The annual review calibration is in January with results by January 31. Ratings use a 5-point scale (Exceptional, Exceeds Expectations, Meets Expectations, Developing, Unsatisfactory). A rating of Developing or below triggers a PIP within 30 days.
+[14:53:34.682] [INFO ]   Key facts     : ['bi-annual', 'July', 'July 31', 'January', 'January 31', '5-point', 'Developing', '30 days']
+[14:53:34.682] [INFO ]   KFR           : 0.000 (0/8 facts found) ✗
+[14:53:34.682] [WARNING]   Missing facts : ['bi-annual', 'July', 'July 31', 'January', 'January 31', '5-point', 'Developing', '30 days']
+[14:53:34.682] [INFO ]   Exact match   : False
+[14:53:34.682] [INFO ]   Latency       : 39.60s
+[14:53:34.682] [INFO ] 
+[14:53:34.682] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:53:34.682] [INFO ] Question 22/45  [q22]  category=hr_policy  difficulty=medium
+[14:53:34.682] [INFO ]   Q: What is NovaAI's airfare booking policy?
+[14:53:34.682] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:53:34.682] [INFO ] [V0] Running pipeline...
+[14:53:35.920] [INFO ] 
+[14:53:35.920] [INFO ] ── RAW ANSWER ──
+[14:53:35.920] [INFO ]     I do not have any information regarding NovaAI's airfare booking or travel policy in my current knowledge base. I recommend reaching out to the Human Resources or Finance team, or checking the company intranet for the official travel and expense guidelines.
+[14:53:35.920] [INFO ] 
+[14:53:35.920] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:53:35.920] [INFO ]     I do not have any information regarding NovaAI's airfare booking or travel policy in my current knowledge base. I recommend reaching out to the Human Resources or Finance team, or checking the company intranet for the official travel and expense guidelines.
+[14:53:35.920] [INFO ] 
+[14:53:35.921] [INFO ] ── EVALUATION ──
+[14:53:35.921] [INFO ]   Ground truth  : Airfare must be booked through TravelPerk. Economy class is required for flights under 6 hours. Business class is permitted for flights of 6 hours or more with VP+ approval. Expenses over $5,000 require CFO (Priya Nambiar) approval.
+[14:53:35.921] [INFO ]   Key facts     : ['TravelPerk', 'economy', 'under 6 hours', 'business class', '6 hours or more', '$5,000', 'CFO']
+[14:53:35.921] [INFO ]   KFR           : 0.000 (0/7 facts found) ✗
+[14:53:35.921] [WARNING]   Missing facts : ['TravelPerk', 'economy', 'under 6 hours', 'business class', '6 hours or more', '$5,000', 'CFO']
+[14:53:35.921] [INFO ]   Exact match   : False
+[14:53:35.921] [INFO ]   Latency       : 1.24s
+[14:53:35.921] [INFO ] 
+[14:53:35.921] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:53:35.921] [INFO ] Question 23/45  [q23]  category=benefits  difficulty=easy
+[14:53:35.921] [INFO ]   Q: What is NovaAI's parental leave policy?
+[14:53:35.921] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:53:35.922] [INFO ] [V0] Running pipeline...
+[14:53:56.726] [INFO ] 
+[14:53:56.727] [INFO ] ── RAW ANSWER ──
+[14:53:56.727] [INFO ]     I do not have information regarding NovaAI's parental leave policy in my current knowledge base. I am not aware of the specific details, such as the duration of leave, eligibility requirements, or whether the policy differentiates between birthing, non-birthing, and adoptive parents. 
+    
+    I recommend reaching out to the Human Resources department or checking the company intranet (likely under the HR or Benefits section) for the exact policy details and documentation.
+[14:53:56.727] [INFO ] 
+[14:53:56.727] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:53:56.727] [INFO ]     I do not have information regarding NovaAI's parental leave policy in my current knowledge base. I am not aware of the specific details, such as the duration of leave, eligibility requirements, or whether the policy differentiates between birthing, non-birthing, and adoptive parents. 
+    
+    I recommend reaching out to the Human Resources department or checking the company intranet (likely under the HR or Benefits section) for the exact policy details and documentation.
+[14:53:56.727] [INFO ] 
+[14:53:56.727] [INFO ] ── EVALUATION ──
+[14:53:56.727] [INFO ]   Ground truth  : NovaAI provides 16 weeks of fully paid parental leave for all parents regardless of gender, including both birthing and non-birthing parents.
+[14:53:56.727] [INFO ]   Key facts     : ['16 weeks', 'fully paid', 'all parents', 'regardless of gender']
+[14:53:56.727] [INFO ]   KFR           : 0.000 (0/4 facts found) ✗
+[14:53:56.728] [WARNING]   Missing facts : ['16 weeks', 'fully paid', 'all parents', 'regardless of gender']
+[14:53:56.728] [INFO ]   Exact match   : False
+[14:53:56.728] [INFO ]   Latency       : 20.80s
+[14:53:56.728] [INFO ] 
+[14:53:56.728] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:53:56.728] [INFO ] Question 24/45  [q24]  category=benefits  difficulty=easy
+[14:53:56.728] [INFO ]   Q: What is the 401(k) match at NovaAI and when are employees eligible?
+[14:53:56.728] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:53:56.728] [INFO ] [V0] Running pipeline...
+[14:54:34.850] [INFO ] 
+[14:54:34.851] [INFO ] ── RAW ANSWER ──
+[14:54:34.852] [INFO ]     I do not have information about NovaAI's 401(k) match or employee eligibility requirements in my current knowledge base. I would recommend reaching out to the Human Resources or People Operations team for the most accurate and up-to-date details regarding benefits.
+[14:54:34.852] [INFO ] 
+[14:54:34.852] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:54:34.852] [INFO ]     I do not have information about NovaAI's 401(k) match or employee eligibility requirements in my current knowledge base. I would recommend reaching out to the Human Resources or People Operations team for the most accurate and up-to-date details regarding benefits.
+[14:54:34.852] [INFO ] 
+[14:54:34.852] [INFO ] ── EVALUATION ──
+[14:54:34.852] [INFO ]   Ground truth  : NovaAI matches 4% of salary dollar-for-dollar on 401(k) contributions. There is a 6-month eligibility waiting period before employees can participate.
+[14:54:34.852] [INFO ]   Key facts     : ['4%', 'dollar-for-dollar', '6 months']
+[14:54:34.852] [INFO ]   KFR           : 0.000 (0/3 facts found) ✗
+[14:54:34.852] [WARNING]   Missing facts : ['4%', 'dollar-for-dollar', '6 months']
+[14:54:34.852] [INFO ]   Exact match   : False
+[14:54:34.852] [INFO ]   Latency       : 38.12s
+[14:54:34.852] [INFO ] 
+[14:54:34.852] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:54:34.853] [INFO ] Question 25/45  [q25]  category=benefits  difficulty=medium
+[14:54:34.853] [INFO ]   Q: What is the annual L&D budget per employee and how does it work?
+[14:54:34.853] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:54:34.853] [INFO ] [V0] Running pipeline...
+[14:55:49.198] [INFO ] 
+[14:55:49.200] [INFO ] ── RAW ANSWER ──
+[14:55:49.200] [INFO ]     I do not have information regarding NovaAI's specific annual Learning & Development (L&D) budget per employee or the details of how the program works. 
+    
+    I recommend reaching out to the People Operations or HR team directly, or checking the internal company wiki (typically under the Benefits or Professional Development sections), as they will have the exact current figures and policies regarding training allocations, approval workflows, and eligible expenses.
+[14:55:49.200] [INFO ] 
+[14:55:49.200] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:55:49.200] [INFO ]     I do not have information regarding NovaAI's specific annual Learning & Development (L&D) budget per employee or the details of how the program works. 
+    
+    I recommend reaching out to the People Operations or HR team directly, or checking the internal company wiki (typically under the Benefits or Professional Development sections), as they will have the exact current figures and policies regarding training allocations, approval workflows, and eligible expenses.
+[14:55:49.200] [INFO ] 
+[14:55:49.201] [INFO ] ── EVALUATION ──
+[14:55:49.201] [INFO ]   Ground truth  : Each employee receives a $2,500 annual L&D budget, refreshed on January 1. Unused budget does not roll over. Requests must be submitted via the Workday L&D portal.
+[14:55:49.201] [INFO ]   Key facts     : ['$2,500', 'January 1', 'does not roll over', 'Workday']
+[14:55:49.201] [INFO ]   KFR           : 0.000 (0/4 facts found) ✗
+[14:55:49.201] [WARNING]   Missing facts : ['$2,500', 'January 1', 'does not roll over', 'Workday']
+[14:55:49.201] [INFO ]   Exact match   : False
+[14:55:49.201] [INFO ]   Latency       : 74.35s
+[14:55:49.201] [INFO ] 
+[14:55:49.201] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:55:49.201] [INFO ] Question 26/45  [q26]  category=leadership  difficulty=easy
+[14:55:49.201] [INFO ]   Q: Who is NovaAI's Chief Operating Officer?
+[14:55:49.201] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:55:49.201] [INFO ] [V0] Running pipeline...
+[14:56:20.841] [INFO ] 
+[14:56:20.842] [INFO ] ── RAW ANSWER ──
+[14:56:20.842] [INFO ]     I do not know who NovaAI's Chief Operating Officer is. I don't have access to a specific company directory or internal database for NovaAI, so I cannot provide the exact name. I recommend checking the company's internal wiki, HR directory, or the official "Our Team" page for the most accurate and up-to-date information.
+[14:56:20.842] [INFO ] 
+[14:56:20.842] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:56:20.842] [INFO ]     I do not know who NovaAI's Chief Operating Officer is. I don't have access to a specific company directory or internal database for NovaAI, so I cannot provide the exact name. I recommend checking the company's internal wiki, HR directory, or the official "Our Team" page for the most accurate and up-to-date information.
+[14:56:20.842] [INFO ] 
+[14:56:20.842] [INFO ] ── EVALUATION ──
+[14:56:20.842] [INFO ]   Ground truth  : James Whitfield is NovaAI's Chief Operating Officer.
+[14:56:20.842] [INFO ]   Key facts     : ['James Whitfield', 'COO']
+[14:56:20.842] [INFO ]   KFR           : 0.000 (0/2 facts found) ✗
+[14:56:20.842] [WARNING]   Missing facts : ['James Whitfield', 'COO']
+[14:56:20.842] [INFO ]   Exact match   : False
+[14:56:20.842] [INFO ]   Latency       : 31.64s
+[14:56:20.842] [INFO ] 
+[14:56:20.842] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:56:20.843] [INFO ] Question 27/45  [q27]  category=benefits  difficulty=easy
+[14:56:20.843] [INFO ]   Q: Which platform does NovaAI use for equity management?
+[14:56:20.843] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:56:20.843] [INFO ] [V0] Running pipeline...
+[14:57:31.704] [INFO ] 
+[14:57:31.705] [INFO ] ── RAW ANSWER ──
+[14:57:31.705] [INFO ]     I do not know which platform NovaAI uses for equity management, as I do not have information on that specific internal tool or vendor in my current records. I recommend checking with the Finance or People Operations team for the exact details.
+[14:57:31.705] [INFO ] 
+[14:57:31.705] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:57:31.705] [INFO ]     I do not know which platform NovaAI uses for equity management, as I do not have information on that specific internal tool or vendor in my current records. I recommend checking with the Finance or People Operations team for the exact details.
+[14:57:31.705] [INFO ] 
+[14:57:31.706] [INFO ] ── EVALUATION ──
+[14:57:31.706] [INFO ]   Ground truth  : NovaAI uses Carta as its equity management platform.
+[14:57:31.706] [INFO ]   Key facts     : ['Carta', 'equity management']
+[14:57:31.706] [INFO ]   KFR           : 0.500 (1/2 facts found) ✗
+[14:57:31.706] [WARNING]   Missing facts : ['Carta']
+[14:57:31.706] [INFO ]   Exact match   : False
+[14:57:31.706] [INFO ]   Latency       : 70.86s
+[14:57:31.706] [INFO ] 
+[14:57:31.706] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:57:31.706] [INFO ] Question 28/45  [q28]  category=company_overview  difficulty=easy
+[14:57:31.706] [INFO ]   Q: What is the street address of NovaAI's headquarters?
+[14:57:31.706] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:57:31.706] [INFO ] [V0] Running pipeline...
+[14:58:11.587] [INFO ] 
+[14:58:11.589] [INFO ] ── RAW ANSWER ──
+[14:58:11.590] [INFO ]     I do not know the street address of NovaAI's headquarters. I don't have access to that specific information in my current knowledge base.
+[14:58:11.590] [INFO ] 
+[14:58:11.590] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:58:11.590] [INFO ]     I do not know the street address of NovaAI's headquarters. I don't have access to that specific information in my current knowledge base.
+[14:58:11.590] [INFO ] 
+[14:58:11.590] [INFO ] ── EVALUATION ──
+[14:58:11.590] [INFO ]   Ground truth  : NovaAI's headquarters is at 450 Market Street, Suite 1200, with ZIP code 94105.
+[14:58:11.590] [INFO ]   Key facts     : ['450 Market Street', 'Suite 1200', '94105']
+[14:58:11.590] [INFO ]   KFR           : 0.000 (0/3 facts found) ✗
+[14:58:11.590] [WARNING]   Missing facts : ['450 Market Street', 'Suite 1200', '94105']
+[14:58:11.590] [INFO ]   Exact match   : False
+[14:58:11.590] [INFO ]   Latency       : 39.88s
+[14:58:11.590] [INFO ] 
+[14:58:11.590] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:58:11.591] [INFO ] Question 29/45  [q29]  category=benefits  difficulty=easy
+[14:58:11.591] [INFO ]   Q: Which provider administers NovaAI's health benefits?
+[14:58:11.591] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:58:11.591] [INFO ] [V0] Running pipeline...
+[14:58:57.716] [INFO ] 
+[14:58:57.718] [INFO ] ── RAW ANSWER ──
+[14:58:57.719] [INFO ]     I do not know which provider administers NovaAI's health benefits. I don't have access to the company's HR or benefits documentation in my current knowledge base. I recommend reaching out to the Human Resources team or checking the employee benefits portal for the exact provider information.
+[14:58:57.719] [INFO ] 
+[14:58:57.719] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:58:57.719] [INFO ]     I do not know which provider administers NovaAI's health benefits. I don't have access to the company's HR or benefits documentation in my current knowledge base. I recommend reaching out to the Human Resources team or checking the employee benefits portal for the exact provider information.
+[14:58:57.719] [INFO ] 
+[14:58:57.719] [INFO ] ── EVALUATION ──
+[14:58:57.719] [INFO ]   Ground truth  : Anthem Blue Cross administers NovaAI's health benefits.
+[14:58:57.719] [INFO ]   Key facts     : ['Anthem Blue Cross', 'health benefits provider']
+[14:58:57.719] [INFO ]   KFR           : 0.500 (1/2 facts found) ✗
+[14:58:57.719] [WARNING]   Missing facts : ['Anthem Blue Cross']
+[14:58:57.719] [INFO ]   Exact match   : False
+[14:58:57.719] [INFO ]   Latency       : 46.13s
+[14:58:57.719] [INFO ] 
+[14:58:57.719] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:58:57.719] [INFO ] Question 30/45  [q30]  category=products_pricing  difficulty=easy
+[14:58:57.720] [INFO ]   Q: When was NovaGuard launched?
+[14:58:57.720] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:58:57.720] [INFO ] [V0] Running pipeline...
+[14:59:19.473] [INFO ] 
+[14:59:19.475] [INFO ] ── RAW ANSWER ──
+[14:59:19.475] [INFO ]     I do not have information about a product called NovaGuard or its launch date in my current knowledge base. I recommend checking NovaAI's internal product wiki or reaching out to the product management team for the exact date.
+[14:59:19.475] [INFO ] 
+[14:59:19.475] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:59:19.475] [INFO ]     I do not have information about a product called NovaGuard or its launch date in my current knowledge base. I recommend checking NovaAI's internal product wiki or reaching out to the product management team for the exact date.
+[14:59:19.475] [INFO ] 
+[14:59:19.475] [INFO ] ── EVALUATION ──
+[14:59:19.475] [INFO ]   Ground truth  : NovaGuard was launched in Q4 2023.
+[14:59:19.475] [INFO ]   Key facts     : ['NovaGuard', 'Q4 2023']
+[14:59:19.475] [INFO ]   KFR           : 0.500 (1/2 facts found) ✗
+[14:59:19.475] [WARNING]   Missing facts : ['Q4 2023']
+[14:59:19.475] [INFO ]   Exact match   : False
+[14:59:19.476] [INFO ]   Latency       : 21.75s
+[14:59:19.476] [INFO ] 
+[14:59:19.476] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:59:19.476] [INFO ] Question 31/45  [q31]  category=products_pricing  difficulty=easy
+[14:59:19.476] [INFO ]   Q: When was NovaBridge released?
+[14:59:19.476] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:59:19.476] [INFO ] [V0] Running pipeline...
+[14:59:46.046] [INFO ] 
+[14:59:46.048] [INFO ] ── RAW ANSWER ──
+[14:59:46.049] [INFO ]     I do not have any information about a product called NovaBridge or its release date in my current knowledge base. I recommend checking the internal product wiki or reaching out to the product team for the most accurate and up-to-date information.
+[14:59:46.050] [INFO ] 
+[14:59:46.050] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[14:59:46.050] [INFO ]     I do not have any information about a product called NovaBridge or its release date in my current knowledge base. I recommend checking the internal product wiki or reaching out to the product team for the most accurate and up-to-date information.
+[14:59:46.050] [INFO ] 
+[14:59:46.050] [INFO ] ── EVALUATION ──
+[14:59:46.050] [INFO ]   Ground truth  : NovaBridge was released in March 2024.
+[14:59:46.050] [INFO ]   Key facts     : ['NovaBridge', 'March 2024']
+[14:59:46.050] [INFO ]   KFR           : 0.500 (1/2 facts found) ✗
+[14:59:46.050] [WARNING]   Missing facts : ['March 2024']
+[14:59:46.051] [INFO ]   Exact match   : False
+[14:59:46.051] [INFO ]   Latency       : 26.57s
+[14:59:46.051] [INFO ] 
+[14:59:46.051] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:59:46.051] [INFO ] Question 32/45  [q32]  category=company_overview  difficulty=easy
+[14:59:46.051] [INFO ]   Q: Which cloud provider does NovaAI use as its secondary provider?
+[14:59:46.051] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14:59:46.051] [INFO ] [V0] Running pipeline...
+[15:00:33.098] [INFO ] 
+[15:00:33.100] [INFO ] ── RAW ANSWER ──
+[15:00:33.101] [INFO ]     I do not know which cloud provider NovaAI uses as its secondary provider. I don't have access to that specific information in my current resources.
+[15:00:33.101] [INFO ] 
+[15:00:33.101] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[15:00:33.101] [INFO ]     I do not know which cloud provider NovaAI uses as its secondary provider. I don't have access to that specific information in my current resources.
+[15:00:33.109] [INFO ] 
+[15:00:33.109] [INFO ] ── EVALUATION ──
+[15:00:33.109] [INFO ]   Ground truth  : GCP is NovaAI's secondary cloud provider.
+[15:00:33.109] [INFO ]   Key facts     : ['GCP', 'secondary cloud']
+[15:00:33.109] [INFO ]   KFR           : 0.500 (1/2 facts found) ✗
+[15:00:33.109] [WARNING]   Missing facts : ['GCP']
+[15:00:33.109] [INFO ]   Exact match   : False
+[15:00:33.109] [INFO ]   Latency       : 47.05s
+[15:00:33.109] [INFO ] 
+[15:00:33.109] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:00:33.109] [INFO ] Question 33/45  [q33]  category=benefits  difficulty=easy
+[15:00:33.109] [INFO ]   Q: What is NovaAI's on-call compensation rate?
+[15:00:33.109] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:00:33.109] [INFO ] [V0] Running pipeline...
+[15:00:46.583] [INFO ] 
+[15:00:46.585] [INFO ] ── RAW ANSWER ──
+[15:00:46.586] [INFO ]     I do not know the answer to that. I don't have any information regarding NovaAI's specific on-call compensation rates in my current knowledge base. You may want to check the company's internal HR portal, the employee handbook, or reach out to the People Operations team for the exact figures and policies.
+[15:00:46.586] [INFO ] 
+[15:00:46.586] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[15:00:46.587] [INFO ]     I do not know the answer to that. I don't have any information regarding NovaAI's specific on-call compensation rates in my current knowledge base. You may want to check the company's internal HR portal, the employee handbook, or reach out to the People Operations team for the exact figures and policies.
+[15:00:46.587] [INFO ] 
+[15:00:46.587] [INFO ] ── EVALUATION ──
+[15:00:46.587] [INFO ]   Ground truth  : NovaAI pays an additional $300 per week for on-call duty.
+[15:00:46.587] [INFO ]   Key facts     : ['$300/week', 'on-call']
+[15:00:46.587] [INFO ]   KFR           : 0.500 (1/2 facts found) ✗
+[15:00:46.587] [WARNING]   Missing facts : ['$300/week']
+[15:00:46.587] [INFO ]   Exact match   : False
+[15:00:46.588] [INFO ]   Latency       : 13.47s
+[15:00:46.588] [INFO ] 
+[15:00:46.588] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:00:46.588] [INFO ] Question 34/45  [q34]  category=benefits  difficulty=easy
+[15:00:46.588] [INFO ]   Q: What is NovaAI's home office equipment stipend for new hires?
+[15:00:46.588] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:00:46.588] [INFO ] [V0] Running pipeline...
+[15:01:23.463] [INFO ] 
+[15:01:23.466] [INFO ] ── RAW ANSWER ──
+[15:01:23.467] [INFO ]     I do not have information regarding a specific home office equipment stipend for new hires at NovaAI. I am not aware of the exact amount or the policy details surrounding this benefit. 
+    
+    I recommend reaching out to the People Operations team or checking the internal employee handbook on the company intranet for the most accurate and up-to-date information.
+[15:01:23.467] [INFO ] 
+[15:01:23.467] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[15:01:23.467] [INFO ]     I do not have information regarding a specific home office equipment stipend for new hires at NovaAI. I am not aware of the exact amount or the policy details surrounding this benefit. 
+    
+    I recommend reaching out to the People Operations team or checking the internal employee handbook on the company intranet for the most accurate and up-to-date information.
+[15:01:23.468] [INFO ] 
+[15:01:23.468] [INFO ] ── EVALUATION ──
+[15:01:23.468] [INFO ]   Ground truth  : NovaAI provides a $1,500 one-time home office equipment stipend upon hire.
+[15:01:23.468] [INFO ]   Key facts     : ['$1,500', 'one-time', 'upon hire']
+[15:01:23.468] [INFO ]   KFR           : 0.000 (0/3 facts found) ✗
+[15:01:23.468] [WARNING]   Missing facts : ['$1,500', 'one-time', 'upon hire']
+[15:01:23.468] [INFO ]   Exact match   : False
+[15:01:23.468] [INFO ]   Latency       : 36.87s
+[15:01:23.468] [INFO ] 
+[15:01:23.468] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:01:23.468] [INFO ] Question 35/45  [q35]  category=benefits  difficulty=easy
+[15:01:23.468] [INFO ]   Q: What health benefits coverage does NovaAI provide?
+[15:01:23.468] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:01:23.468] [INFO ] [V0] Running pipeline...
+[15:01:26.744] [INFO ] 
+[15:01:26.744] [INFO ] ── RAW ANSWER ──
+[15:01:26.744] [INFO ]     I do not have information regarding the specific health benefits coverage provided by NovaAI. I don't have access to the company's HR policies, insurance plans, or employee handbook details. 
+    
+    For accurate and up-to-date information regarding your health benefits, I recommend reaching out to NovaAI's Human Resources department or checking the internal employee portal (such as an HRIS or company intranet) where benefits documentation is typically hosted.
+[15:01:26.744] [INFO ] 
+[15:01:26.744] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[15:01:26.745] [INFO ]     I do not have information regarding the specific health benefits coverage provided by NovaAI. I don't have access to the company's HR policies, insurance plans, or employee handbook details. 
+    
+    For accurate and up-to-date information regarding your health benefits, I recommend reaching out to NovaAI's Human Resources department or checking the internal employee portal (such as an HRIS or company intranet) where benefits documentation is typically hosted.
+[15:01:26.745] [INFO ] 
+[15:01:26.745] [INFO ] ── EVALUATION ──
+[15:01:26.745] [INFO ]   Ground truth  : NovaAI provides medical, dental, and vision health benefits coverage.
+[15:01:26.745] [INFO ]   Key facts     : ['medical', 'dental', 'vision']
+[15:01:26.745] [INFO ]   KFR           : 0.000 (0/3 facts found) ✗
+[15:01:26.745] [WARNING]   Missing facts : ['medical', 'dental', 'vision']
+[15:01:26.745] [INFO ]   Exact match   : False
+[15:01:26.745] [INFO ]   Latency       : 3.28s
+[15:01:26.745] [INFO ] 
+[15:01:26.745] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:01:26.745] [INFO ] Question 36/45  [q36]  category=products_pricing  difficulty=hard
+[15:01:26.745] [INFO ]   Q: Who is the PM owner of NovaAI's flagship product?
+[15:01:26.746] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:01:26.746] [INFO ] [V0] Running pipeline...
+[15:01:42.558] [INFO ] 
+[15:01:42.559] [INFO ] ── RAW ANSWER ──
+[15:01:42.559] [INFO ]     I do not have access to NovaAI's internal organizational charts or product ownership details, so I don't know who the PM owner of the flagship product is. I recommend checking the company intranet, our internal team directory, or reaching out to your manager or the product leadership team for the most up-to-date and accurate information.
+[15:01:42.559] [INFO ] 
+[15:01:42.559] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[15:01:42.559] [INFO ]     I do not have access to NovaAI's internal organizational charts or product ownership details, so I don't know who the PM owner of the flagship product is. I recommend checking the company intranet, our internal team directory, or reaching out to your manager or the product leadership team for the most up-to-date and accurate information.
+[15:01:42.560] [INFO ] 
+[15:01:42.560] [INFO ] ── EVALUATION ──
+[15:01:42.560] [INFO ]   Ground truth  : Fatima Al-Rashid is the PM owner of NovaPilot, NovaAI's flagship product.
+[15:01:42.560] [INFO ]   Key facts     : ['Fatima Al-Rashid', 'NovaPilot']
+[15:01:42.560] [INFO ]   KFR           : 0.000 (0/2 facts found) ✗
+[15:01:42.560] [WARNING]   Missing facts : ['Fatima Al-Rashid', 'NovaPilot']
+[15:01:42.560] [INFO ]   Exact match   : False
+[15:01:42.560] [INFO ]   Latency       : 15.81s
+[15:01:42.560] [INFO ] 
+[15:01:42.560] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:01:42.560] [INFO ] Question 37/45  [q37]  category=leadership  difficulty=hard
+[15:01:42.560] [INFO ]   Q: Who leads the UX/Design team, and when did they join NovaAI?
+[15:01:42.560] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:01:42.560] [INFO ] [V0] Running pipeline...
+[15:02:15.991] [INFO ] 
+[15:02:15.993] [INFO ] ── RAW ANSWER ──
+[15:02:15.993] [INFO ]     I do not have information about who leads the UX/Design team or when they joined NovaAI. I don't have access to specific details regarding NovaAI's personnel or internal team structures.
+[15:02:15.993] [INFO ] 
+[15:02:15.993] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[15:02:15.993] [INFO ]     I do not have information about who leads the UX/Design team or when they joined NovaAI. I don't have access to specific details regarding NovaAI's personnel or internal team structures.
+[15:02:15.994] [INFO ] 
+[15:02:15.994] [INFO ] ── EVALUATION ──
+[15:02:15.994] [INFO ]   Ground truth  : Lena Park leads the UX/Design team and joined NovaAI in June 2022.
+[15:02:15.994] [INFO ]   Key facts     : ['Lena Park', 'UX/Design', 'June 2022']
+[15:02:15.994] [INFO ]   KFR           : 0.333 (1/3 facts found) ✗
+[15:02:15.994] [WARNING]   Missing facts : ['Lena Park', 'June 2022']
+[15:02:15.994] [INFO ]   Exact match   : False
+[15:02:15.994] [INFO ]   Latency       : 33.43s
+[15:02:15.994] [INFO ] 
+[15:02:15.994] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:02:15.994] [INFO ] Question 38/45  [q38]  category=leadership  difficulty=hard
+[15:02:15.994] [INFO ]   Q: Who leads the SMB Sales team, and what is their FY2026 quota?
+[15:02:15.994] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:02:15.994] [INFO ] [V0] Running pipeline...
+[15:03:00.923] [INFO ] 
+[15:03:00.924] [INFO ] ── RAW ANSWER ──
+[15:03:00.924] [INFO ]     I do not have information about who leads the SMB Sales team or what their FY2026 quota is. I don't have access to NovaAI's internal sales leadership directory or quota data, so I cannot provide those specific names or numbers.
+[15:03:00.925] [INFO ] 
+[15:03:00.925] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[15:03:00.925] [INFO ]     I do not have information about who leads the SMB Sales team or what their FY2026 quota is. I don't have access to NovaAI's internal sales leadership directory or quota data, so I cannot provide those specific names or numbers.
+[15:03:00.925] [INFO ] 
+[15:03:00.925] [INFO ] ── EVALUATION ──
+[15:03:00.925] [INFO ]   Ground truth  : Tanya Osei leads the SMB Sales team, and her FY2026 quota is $6M.
+[15:03:00.925] [INFO ]   Key facts     : ['Tanya Osei', 'SMB Sales', '$6M']
+[15:03:00.925] [INFO ]   KFR           : 0.333 (1/3 facts found) ✗
+[15:03:00.925] [WARNING]   Missing facts : ['Tanya Osei', '$6M']
+[15:03:00.925] [INFO ]   Exact match   : False
+[15:03:00.925] [INFO ]   Latency       : 44.93s
+[15:03:00.925] [INFO ] 
+[15:03:00.925] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:03:00.925] [INFO ] Question 39/45  [q39]  category=leadership  difficulty=hard
+[15:03:00.925] [INFO ]   Q: When did NovaAI's Chief Revenue Officer join the company?
+[15:03:00.925] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:03:00.925] [INFO ] [V0] Running pipeline...
+[15:03:33.039] [INFO ] 
+[15:03:33.041] [INFO ] ── RAW ANSWER ──
+[15:03:33.042] [INFO ]     I do not have information regarding the specific date that NovaAI's Chief Revenue Officer joined the company. I recommend checking our internal employee directory, HR system, or official company announcements for the exact start date.
+[15:03:33.042] [INFO ] 
+[15:03:33.042] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[15:03:33.042] [INFO ]     I do not have information regarding the specific date that NovaAI's Chief Revenue Officer joined the company. I recommend checking our internal employee directory, HR system, or official company announcements for the exact start date.
+[15:03:33.042] [INFO ] 
+[15:03:33.042] [INFO ] ── EVALUATION ──
+[15:03:33.042] [INFO ]   Ground truth  : Dominique Leblanc, NovaAI's Chief Revenue Officer, joined the company in June 2022.
+[15:03:33.042] [INFO ]   Key facts     : ['Dominique Leblanc', 'CRO', 'June 2022']
+[15:03:33.042] [INFO ]   KFR           : 0.000 (0/3 facts found) ✗
+[15:03:33.042] [WARNING]   Missing facts : ['Dominique Leblanc', 'CRO', 'June 2022']
+[15:03:33.042] [INFO ]   Exact match   : False
+[15:03:33.042] [INFO ]   Latency       : 32.11s
+[15:03:33.042] [INFO ] 
+[15:03:33.042] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:03:33.042] [INFO ] Question 40/45  [q40]  category=leadership  difficulty=hard
+[15:03:33.042] [INFO ]   Q: When did NovaAI's VP of Marketing join the company?
+[15:03:33.042] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:03:33.042] [INFO ] [V0] Running pipeline...
+[15:04:39.293] [INFO ] 
+[15:04:39.294] [INFO ] ── RAW ANSWER ──
+[15:04:39.294] [INFO ]     I do not have information about when NovaAI's VP of Marketing joined the company, as I do not have access to specific personnel records or start dates in my current knowledge base. I recommend checking the company's internal HR directory or reaching out to the People Operations team for the exact date.
+[15:04:39.294] [INFO ] 
+[15:04:39.294] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[15:04:39.294] [INFO ]     I do not have information about when NovaAI's VP of Marketing joined the company, as I do not have access to specific personnel records or start dates in my current knowledge base. I recommend checking the company's internal HR directory or reaching out to the People Operations team for the exact date.
+[15:04:39.294] [INFO ] 
+[15:04:39.294] [INFO ] ── EVALUATION ──
+[15:04:39.294] [INFO ]   Ground truth  : Rachel Huang, NovaAI's VP of Marketing, joined the company in January 2023.
+[15:04:39.295] [INFO ]   Key facts     : ['Rachel Huang', 'VP of Marketing', 'January 2023']
+[15:04:39.295] [INFO ]   KFR           : 0.333 (1/3 facts found) ✗
+[15:04:39.295] [WARNING]   Missing facts : ['Rachel Huang', 'January 2023']
+[15:04:39.295] [INFO ]   Exact match   : False
+[15:04:39.295] [INFO ]   Latency       : 66.25s
+[15:04:39.295] [INFO ] 
+[15:04:39.295] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:04:39.295] [INFO ] Question 41/45  [q41]  category=leadership  difficulty=hard
+[15:04:39.295] [INFO ]   Q: Who is NovaBridge's Developer Relations Lead, and to whom do they report?
+[15:04:39.295] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:04:39.295] [INFO ] [V0] Running pipeline...
+[15:05:11.954] [INFO ] 
+[15:05:11.957] [INFO ] ── RAW ANSWER ──
+[15:05:11.957] [INFO ]     I do not have information about who the Developer Relations Lead for NovaBridge is, or who they report to. I am not aware of the specific team structures or personnel details for that product.
+[15:05:11.961] [INFO ] 
+[15:05:11.961] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[15:05:11.961] [INFO ]     I do not have information about who the Developer Relations Lead for NovaBridge is, or who they report to. I am not aware of the specific team structures or personnel details for that product.
+[15:05:11.961] [INFO ] 
+[15:05:11.961] [INFO ] ── EVALUATION ──
+[15:05:11.961] [INFO ]   Ground truth  : Priya Osei is NovaBridge's Developer Relations Lead, and she reports to the VP of Marketing.
+[15:05:11.961] [INFO ]   Key facts     : ['Priya Osei', 'Developer Relations Lead', 'reports to VP of Marketing']
+[15:05:11.961] [INFO ]   KFR           : 0.333 (1/3 facts found) ✗
+[15:05:11.962] [WARNING]   Missing facts : ['Priya Osei', 'reports to VP of Marketing']
+[15:05:11.962] [INFO ]   Exact match   : False
+[15:05:11.962] [INFO ]   Latency       : 32.66s
+[15:05:11.962] [INFO ] 
+[15:05:11.962] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:05:11.962] [INFO ] Question 42/45  [q42]  category=leadership  difficulty=hard
+[15:05:11.962] [INFO ]   Q: When did NovaAI's VP of Product join the company?
+[15:05:11.962] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:05:11.962] [INFO ] [V0] Running pipeline...
+[15:05:39.410] [INFO ] 
+[15:05:39.410] [INFO ] ── RAW ANSWER ──
+[15:05:39.410] [INFO ]     I do not know the answer to that question. I don't have specific information regarding NovaAI's VP of Product or their start date in my current records.
+[15:05:39.410] [INFO ] 
+[15:05:39.410] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[15:05:39.410] [INFO ]     I do not know the answer to that question. I don't have specific information regarding NovaAI's VP of Product or their start date in my current records.
+[15:05:39.410] [INFO ] 
+[15:05:39.410] [INFO ] ── EVALUATION ──
+[15:05:39.410] [INFO ]   Ground truth  : Oliver Haines, NovaAI's VP of Product, joined the company in March 2022.
+[15:05:39.411] [INFO ]   Key facts     : ['Oliver Haines', 'VP of Product', 'March 2022']
+[15:05:39.411] [INFO ]   KFR           : 0.333 (1/3 facts found) ✗
+[15:05:39.411] [WARNING]   Missing facts : ['Oliver Haines', 'March 2022']
+[15:05:39.411] [INFO ]   Exact match   : False
+[15:05:39.411] [INFO ]   Latency       : 27.45s
+[15:05:39.411] [INFO ] 
+[15:05:39.411] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:05:39.411] [INFO ] Question 43/45  [q43]  category=leadership  difficulty=hard
+[15:05:39.411] [INFO ]   Q: What is the FY2026 NRR target of the department led by NovaAI's VP of Customer Success?
+[15:05:39.411] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:05:39.411] [INFO ] [V0] Running pipeline...
+[15:06:13.272] [INFO ] 
+[15:06:13.272] [INFO ] ── RAW ANSWER ──
+[15:06:13.272] [INFO ]     I do not know the answer to that question. I do not have information regarding NovaAI's internal financial targets, such as the FY2026 NRR (Net Retention Rate) target for the Customer Success department or any other specific department.
+[15:06:13.272] [INFO ] 
+[15:06:13.272] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[15:06:13.272] [INFO ]     I do not know the answer to that question. I do not have information regarding NovaAI's internal financial targets, such as the FY2026 NRR (Net Retention Rate) target for the Customer Success department or any other specific department.
+[15:06:13.273] [INFO ] 
+[15:06:13.273] [INFO ] ── EVALUATION ──
+[15:06:13.273] [INFO ]   Ground truth  : Customer Success, the department led by VP of Customer Success Amara Diallo, has an FY2026 NRR target of 118%.
+[15:06:13.273] [INFO ]   Key facts     : ['Amara Diallo', 'Customer Success', '118%', 'NRR']
+[15:06:13.273] [INFO ]   KFR           : 0.500 (2/4 facts found) ✗
+[15:06:13.273] [WARNING]   Missing facts : ['Amara Diallo', '118%']
+[15:06:13.273] [INFO ]   Exact match   : False
+[15:06:13.273] [INFO ]   Latency       : 33.86s
+[15:06:13.273] [INFO ] 
+[15:06:13.273] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:06:13.273] [INFO ] Question 44/45  [q44]  category=products_pricing  difficulty=hard
+[15:06:13.273] [INFO ]   Q: Which product has a roadmap for real-time streaming via Kafka, and what type of product is it?
+[15:06:13.273] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:06:13.273] [INFO ] [V0] Running pipeline...
+[15:06:34.811] [INFO ] 
+[15:06:34.811] [INFO ] ── RAW ANSWER ──
+[15:06:34.811] [INFO ]     I do not have information about NovaAI's specific product roadmaps or which product is planned to support real-time streaming via Kafka. I am not aware of the details regarding this feature or the specific product type associated with it. 
+    
+    I recommend checking the internal product roadmap portal or reaching out to the product management team for the most accurate and up-to-date information.
+[15:06:34.811] [INFO ] 
+[15:06:34.811] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[15:06:34.811] [INFO ]     I do not have information about NovaAI's specific product roadmaps or which product is planned to support real-time streaming via Kafka. I am not aware of the details regarding this feature or the specific product type associated with it. 
+    
+    I recommend checking the internal product roadmap portal or reaching out to the product management team for the most accurate and up-to-date information.
+[15:06:34.811] [INFO ] 
+[15:06:34.811] [INFO ] ── EVALUATION ──
+[15:06:34.811] [INFO ]   Ground truth  : NovaLens has a roadmap for real-time streaming via Kafka, and it is a Predictive Analytics Engine.
+[15:06:34.811] [INFO ]   Key facts     : ['NovaLens', 'real-time streaming via Kafka', 'Predictive Analytics Engine']
+[15:06:34.811] [INFO ]   KFR           : 0.333 (1/3 facts found) ✗
+[15:06:34.811] [WARNING]   Missing facts : ['NovaLens', 'Predictive Analytics Engine']
+[15:06:34.811] [INFO ]   Exact match   : False
+[15:06:34.811] [INFO ]   Latency       : 21.54s
+[15:06:34.811] [INFO ] 
+[15:06:34.811] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:06:34.811] [INFO ] Question 45/45  [q45]  category=leadership  difficulty=hard
+[15:06:34.811] [INFO ]   Q: Who leads the Solutions Engineering team, and when did they join NovaAI?
+[15:06:34.811] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:06:34.811] [INFO ] [V0] Running pipeline...
+[15:06:43.303] [INFO ] 
+[15:06:43.303] [INFO ] ── RAW ANSWER ──
+[15:06:43.303] [INFO ]     I do not have information about who leads the Solutions Engineering team or when they joined NovaAI. I don't have access to specific organizational charts or employee records to provide those details.
+[15:06:43.303] [INFO ] 
+[15:06:43.303] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[15:06:43.303] [INFO ]     I do not have information about who leads the Solutions Engineering team or when they joined NovaAI. I don't have access to specific organizational charts or employee records to provide those details.
+[15:06:43.304] [INFO ] 
+[15:06:43.304] [INFO ] ── EVALUATION ──
+[15:06:43.304] [INFO ]   Ground truth  : Wei Zhang leads the Solutions Engineering team and joined NovaAI in April 2023.
+[15:06:43.304] [INFO ]   Key facts     : ['Wei Zhang', 'Solutions Engineering', 'April 2023']
+[15:06:43.304] [INFO ]   KFR           : 0.333 (1/3 facts found) ✗
+[15:06:43.304] [WARNING]   Missing facts : ['Wei Zhang', 'April 2023']
+[15:06:43.304] [INFO ]   Exact match   : False
+[15:06:43.304] [INFO ]   Latency       : 8.49s
+[15:06:43.304] [INFO ] 
+[15:06:43.304] [INFO ] ════════════════════════════════════════════════════════════════════════
+[15:06:43.304] [INFO ]   SUMMARY — V0
+[15:06:43.304] [INFO ] ════════════════════════════════════════════════════════════════════════
+[15:06:43.304] [INFO ]   Questions     : 45
+[15:06:43.305] [INFO ]   Correct       : 0/45  (0.0%)
+[15:06:43.305] [INFO ]   Avg KFR       : 0.144
+[15:06:43.305] [INFO ]   Avg latency   : 29.19s
+[15:06:43.305] [INFO ] 
+[15:06:43.305] [INFO ]   ID     Category             Diff     KFR     OK?   Hallucs  Latency
+[15:06:43.305] [INFO ]   --------------------------------------------------------------
+[15:06:43.305] [INFO ]   q01    company_overview     easy     0.000   ✗     N/A      34.6s
+[15:06:43.305] [INFO ]   q02    company_overview     medium   0.000   ✗     N/A      3.0s
+[15:06:43.305] [INFO ]   q03    company_overview     medium   0.000   ✗     N/A      21.7s
+[15:06:43.305] [INFO ]   q04    company_overview     easy     0.000   ✗     N/A      7.9s
+[15:06:43.305] [INFO ]   q05    leadership           easy     0.250   ✗     N/A      1.8s
+[15:06:43.305] [INFO ]   q06    leadership           medium   0.000   ✗     N/A      43.7s
+[15:06:43.305] [INFO ]   q07    leadership           medium   0.200   ✗     N/A      28.1s
+[15:06:43.306] [INFO ]   q08    leadership           medium   0.200   ✗     N/A      14.5s
+[15:06:43.306] [INFO ]   q09    products_pricing     easy     0.000   ✗     N/A      3.9s
+[15:06:43.306] [INFO ]   q10    products_pricing     easy     0.000   ✗     N/A      3.2s
+[15:06:43.306] [INFO ]   q11    products_pricing     medium   0.000   ✗     N/A      10.2s
+[15:06:43.306] [INFO ]   q12    products_pricing     easy     0.000   ✗     N/A      41.0s
+[15:06:43.306] [INFO ]   q13    products_pricing     medium   0.000   ✗     N/A      41.7s
+[15:06:43.306] [INFO ]   q14    products_pricing     easy     0.000   ✗     N/A      26.1s
+[15:06:43.306] [INFO ]   q15    products_pricing     medium   0.000   ✗     N/A      42.5s
+[15:06:43.306] [INFO ]   q16    products_pricing     easy     0.000   ✗     N/A      16.1s
+[15:06:43.306] [INFO ]   q17    products_pricing     easy     0.000   ✗     N/A      54.9s
+[15:06:43.306] [INFO ]   q18    hr_policy            medium   0.000   ✗     N/A      38.3s
+[15:06:43.306] [INFO ]   q19    hr_policy            medium   0.000   ✗     N/A      1.8s
+[15:06:43.306] [INFO ]   q20    hr_policy            medium   0.000   ✗     N/A      50.3s
+[15:06:43.306] [INFO ]   q21    hr_policy            hard     0.000   ✗     N/A      39.6s
+[15:06:43.306] [INFO ]   q22    hr_policy            medium   0.000   ✗     N/A      1.2s
+[15:06:43.307] [INFO ]   q23    benefits             easy     0.000   ✗     N/A      20.8s
+[15:06:43.307] [INFO ]   q24    benefits             easy     0.000   ✗     N/A      38.1s
+[15:06:43.307] [INFO ]   q25    benefits             medium   0.000   ✗     N/A      74.3s
+[15:06:43.307] [INFO ]   q26    leadership           easy     0.000   ✗     N/A      31.6s
+[15:06:43.307] [INFO ]   q27    benefits             easy     0.500   ✗     N/A      70.9s
+[15:06:43.307] [INFO ]   q28    company_overview     easy     0.000   ✗     N/A      39.9s
+[15:06:43.307] [INFO ]   q29    benefits             easy     0.500   ✗     N/A      46.1s
+[15:06:43.307] [INFO ]   q30    products_pricing     easy     0.500   ✗     N/A      21.8s
+[15:06:43.307] [INFO ]   q31    products_pricing     easy     0.500   ✗     N/A      26.6s
+[15:06:43.307] [INFO ]   q32    company_overview     easy     0.500   ✗     N/A      47.0s
+[15:06:43.308] [INFO ]   q33    benefits             easy     0.500   ✗     N/A      13.5s
+[15:06:43.308] [INFO ]   q34    benefits             easy     0.000   ✗     N/A      36.9s
+[15:06:43.308] [INFO ]   q35    benefits             easy     0.000   ✗     N/A      3.3s
+[15:06:43.308] [INFO ]   q36    products_pricing     hard     0.000   ✗     N/A      15.8s
+[15:06:43.308] [INFO ]   q37    leadership           hard     0.333   ✗     N/A      33.4s
+[15:06:43.308] [INFO ]   q38    leadership           hard     0.333   ✗     N/A      44.9s
+[15:06:43.308] [INFO ]   q39    leadership           hard     0.000   ✗     N/A      32.1s
+[15:06:43.308] [INFO ]   q40    leadership           hard     0.333   ✗     N/A      66.3s
+[15:06:43.308] [INFO ]   q41    leadership           hard     0.333   ✗     N/A      32.7s
+[15:06:43.308] [INFO ]   q42    leadership           hard     0.333   ✗     N/A      27.4s
+[15:06:43.308] [INFO ]   q43    leadership           hard     0.500   ✗     N/A      33.9s
+[15:06:43.308] [INFO ]   q44    products_pricing     hard     0.333   ✗     N/A      21.5s
+[15:06:43.308] [INFO ]   q45    leadership           hard     0.333   ✗     N/A      8.5s
+[15:06:43.308] [INFO ] 
+[15:06:43.310] [INFO ] Results saved → /Users/StartupUser/Documents/GitHub/kg-claim-verifier/results/z-ai-glm-5_1/v0_results.json

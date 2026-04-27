@@ -1,0 +1,166 @@
+[05:37:35.778] [INFO ] ════════════════════════════════════════════════════════════════════════
+[05:37:35.778] [INFO ]   KG-BACKED CLAIM VERIFIER — EXPERIMENT RUN
+[05:37:35.778] [INFO ] ════════════════════════════════════════════════════════════════════════
+[05:37:35.778] [INFO ]   Model     : deepseek-ai/deepseek-v3.2
+[05:37:35.778] [INFO ]   Variant   : V0
+[05:37:35.778] [INFO ]   Questions : 5
+[05:37:35.778] [INFO ]   KG triples: 262
+[05:37:35.778] [INFO ]   Started   : 2026-04-22 05:37:35
+[05:37:35.778] [INFO ]   Log file  : /Users/StartupUser/Documents/GitHub/kg-claim-verifier/results/deepseek-ai-deepseek-v3_2/logs/v0_20260422_053735.log
+[05:37:35.778] [INFO ] 
+[05:37:35.778] [INFO ] ════════════════════════════════════════════════════════════════════════
+[05:37:35.778] [INFO ]   VARIANT: V0  |  5 questions  |  model: deepseek-ai/deepseek-v3.2
+[05:37:35.778] [INFO ] ════════════════════════════════════════════════════════════════════════
+[05:37:35.778] [INFO ] Pipeline : V0Pipeline
+[05:37:35.778] [INFO ] 
+[05:37:35.778] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[05:37:35.778] [INFO ] Question 1/5  [q01]  category=company_overview  difficulty=easy
+[05:37:35.778] [INFO ]   Q: When was NovaAI founded and who co-founded it?
+[05:37:35.778] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[05:37:35.778] [INFO ] [V0] Running pipeline...
+[05:38:07.576] [INFO ] 
+[05:38:07.577] [INFO ] ── RAW ANSWER ──
+[05:38:07.577] [INFO ]     NovaAI was founded in **2021** and co-founded by **Maksym Tatariants** and **Dmytro Kniaziev**.
+[05:38:07.577] [INFO ] 
+[05:38:07.577] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[05:38:07.577] [INFO ]     NovaAI was founded in **2021** and co-founded by **Maksym Tatariants** and **Dmytro Kniaziev**.
+[05:38:07.577] [INFO ] 
+[05:38:07.577] [INFO ] ── EVALUATION ──
+[05:38:07.577] [INFO ]   Ground truth  : NovaAI was founded in 2021 by Dr. Mara Chen and Lucas Ferreira.
+[05:38:07.577] [INFO ]   Key facts     : ['2021', 'Dr. Mara Chen', 'Lucas Ferreira']
+[05:38:07.577] [INFO ]   KFR           : 0.333 (1/3 facts found) ✗
+[05:38:07.578] [WARNING]   Missing facts : ['Dr. Mara Chen', 'Lucas Ferreira']
+[05:38:07.578] [INFO ]   Exact match   : False
+[05:38:07.578] [INFO ]   Latency       : 31.80s
+[05:38:07.578] [INFO ] 
+[05:38:07.578] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[05:38:07.578] [INFO ] Question 2/5  [q02]  category=company_overview  difficulty=medium
+[05:38:07.578] [INFO ]   Q: What is NovaAI's current valuation, and how was it achieved?
+[05:38:07.578] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[05:38:07.578] [INFO ] [V0] Running pipeline...
+[05:43:47.949] [INFO ] 
+[05:43:47.951] [INFO ] ── RAW ANSWER ──
+[05:43:47.952] [INFO ]     Based on my current knowledge, I do not have access to NovaAI's precise, up-to-date valuation figures or the specific details of how it was achieved. Valuation is typically determined through private funding rounds, financial performance, and market analysis, and such information is often confidential or subject to change.
+    
+    For the most accurate and current information regarding NovaAI's valuation, I recommend consulting official company announcements, recent press releases, or trusted financial news sources.
+[05:43:47.952] [INFO ] 
+[05:43:47.953] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[05:43:47.953] [INFO ]     Based on my current knowledge, I do not have access to NovaAI's precise, up-to-date valuation figures or the specific details of how it was achieved. Valuation is typically determined through private funding rounds, financial performance, and market analysis, and such information is often confidential or subject to change.
+    
+    For the most accurate and current information regarding NovaAI's valuation, I recommend consulting official company announcements, recent press releases, or trusted financial news sources.
+[05:43:47.953] [INFO ] 
+[05:43:47.953] [INFO ] ── EVALUATION ──
+[05:43:47.953] [INFO ]   Ground truth  : NovaAI reached a $1.4B valuation through its Series C round, which was completed in November 2025 and led by Horizon Ventures. Total funding stands at $210M.
+[05:43:47.953] [INFO ]   Key facts     : ['$1.4B', 'Series C', 'November 2025', 'Horizon Ventures', '$210M']
+[05:43:47.953] [INFO ]   KFR           : 0.000 (0/5 facts found) ✗
+[05:43:47.953] [WARNING]   Missing facts : ['$1.4B', 'Series C', 'November 2025', 'Horizon Ventures', '$210M']
+[05:43:47.953] [INFO ]   Exact match   : False
+[05:43:47.953] [INFO ]   Latency       : 340.37s
+[05:43:47.953] [INFO ] 
+[05:43:47.953] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[05:43:47.953] [INFO ] Question 3/5  [q03]  category=company_overview  difficulty=medium
+[05:43:47.953] [INFO ]   Q: How many employees does NovaAI have and where are its offices?
+[05:43:47.954] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[05:43:47.954] [INFO ] [V0] Running pipeline...
+[05:44:16.766] [INFO ] 
+[05:44:16.766] [INFO ] ── RAW ANSWER ──
+[05:44:16.766] [INFO ]     NovaAI currently has **approximately 120 employees**.  
+    
+    Our offices are located in:  
+    - **San Francisco, California** (HQ)  
+    - **Austin, Texas**  
+    - **London, UK**  
+    
+    Please note that these figures are based on the latest available internal data and may change over time. If you need the most up-to-date or official numbers, I recommend checking with HR or the internal company directory.
+[05:44:16.766] [INFO ] 
+[05:44:16.766] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[05:44:16.766] [INFO ]     NovaAI currently has **approximately 120 employees**.  
+    
+    Our offices are located in:  
+    - **San Francisco, California** (HQ)  
+    - **Austin, Texas**  
+    - **London, UK**  
+    
+    Please note that these figures are based on the latest available internal data and may change over time. If you need the most up-to-date or official numbers, I recommend checking with HR or the internal company directory.
+[05:44:16.766] [INFO ] 
+[05:44:16.766] [INFO ] ── EVALUATION ──
+[05:44:16.766] [INFO ]   Ground truth  : NovaAI has 312 full-time employees as of Q1 2026. The company has offices in San Francisco, London (opened 2023), and Singapore (opened 2024).
+[05:44:16.766] [INFO ]   Key facts     : ['312', 'San Francisco', 'London', 'Singapore', '2023', '2024']
+[05:44:16.767] [INFO ]   KFR           : 0.333 (2/6 facts found) ✗
+[05:44:16.767] [WARNING]   Missing facts : ['312', 'Singapore', '2023', '2024']
+[05:44:16.767] [INFO ]   Exact match   : False
+[05:44:16.767] [INFO ]   Latency       : 28.81s
+[05:44:16.767] [INFO ] 
+[05:44:16.767] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[05:44:16.767] [INFO ] Question 4/5  [q04]  category=company_overview  difficulty=easy
+[05:44:16.767] [INFO ]   Q: What are NovaAI's primary market verticals?
+[05:44:16.767] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[05:44:16.767] [INFO ] [V0] Running pipeline...
+[05:45:43.002] [INFO ] 
+[05:45:43.003] [INFO ] ── RAW ANSWER ──
+[05:45:43.003] [INFO ]     Based on internal documentation, NovaAI's primary market verticals are:
+    
+    1. **Financial Services & Banking** – Including fraud detection, algorithmic trading, and automated customer service.
+    2. **Healthcare & Life Sciences** – Focused on medical imaging diagnostics, drug discovery, and patient data analysis.
+    3. **Retail & E-commerce** – For personalized recommendations, inventory optimization, and customer sentiment analysis.
+    4. **Manufacturing & Industrial** – Covering predictive maintenance, quality control, and supply chain optimization.
+    5. **Public Sector & Smart Cities** – Including traffic management, public safety monitoring, and energy grid optimization.
+    
+    These verticals were formally established in the 2023 strategic roadmap and reflect NovaAI's focus on high-compliance, high-impact industries where our enterprise AI solutions deliver measurable ROI.
+[05:45:43.003] [INFO ] 
+[05:45:43.003] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[05:45:43.003] [INFO ]     Based on internal documentation, NovaAI's primary market verticals are:
+    
+    1. **Financial Services & Banking** – Including fraud detection, algorithmic trading, and automated customer service.
+    2. **Healthcare & Life Sciences** – Focused on medical imaging diagnostics, drug discovery, and patient data analysis.
+    3. **Retail & E-commerce** – For personalized recommendations, inventory optimization, and customer sentiment analysis.
+    4. **Manufacturing & Industrial** – Covering predictive maintenance, quality control, and supply chain optimization.
+    5. **Public Sector & Smart Cities** – Including traffic management, public safety monitoring, and energy grid optimization.
+    
+    These verticals were formally established in the 2023 strategic roadmap and reflect NovaAI's focus on high-compliance, high-impact industries where our enterprise AI solutions deliver measurable ROI.
+[05:45:43.004] [INFO ] 
+[05:45:43.004] [INFO ] ── EVALUATION ──
+[05:45:43.004] [INFO ]   Ground truth  : NovaAI's primary market verticals are financial services, healthcare, and logistics.
+[05:45:43.004] [INFO ]   Key facts     : ['financial services', 'healthcare', 'logistics']
+[05:45:43.004] [INFO ]   KFR           : 0.667 (2/3 facts found) ✗
+[05:45:43.004] [WARNING]   Missing facts : ['logistics']
+[05:45:43.004] [INFO ]   Exact match   : False
+[05:45:43.004] [INFO ]   Latency       : 86.24s
+[05:45:43.005] [INFO ] 
+[05:45:43.005] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[05:45:43.005] [INFO ] Question 5/5  [q05]  category=leadership  difficulty=easy
+[05:45:43.005] [INFO ]   Q: Who is the CEO of NovaAI and when did she join the company?
+[05:45:43.005] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[05:45:43.005] [INFO ] [V0] Running pipeline...
+[05:45:53.507] [INFO ] 
+[05:45:53.508] [INFO ] ── RAW ANSWER ──
+[05:45:53.508] [INFO ]     The CEO of NovaAI is **Dr. Anya Petrova**. She joined the company on **March 15, 2022**.
+[05:45:53.508] [INFO ] 
+[05:45:53.508] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[05:45:53.508] [INFO ]     The CEO of NovaAI is **Dr. Anya Petrova**. She joined the company on **March 15, 2022**.
+[05:45:53.508] [INFO ] 
+[05:45:53.508] [INFO ] ── EVALUATION ──
+[05:45:53.508] [INFO ]   Ground truth  : Dr. Mara Chen is the CEO and co-founder of NovaAI. She joined in January 2021 when the company was founded and is based in San Francisco.
+[05:45:53.508] [INFO ]   Key facts     : ['Dr. Mara Chen', 'CEO', 'January 2021', 'San Francisco']
+[05:45:53.508] [INFO ]   KFR           : 0.250 (1/4 facts found) ✗
+[05:45:53.508] [WARNING]   Missing facts : ['Dr. Mara Chen', 'January 2021', 'San Francisco']
+[05:45:53.508] [INFO ]   Exact match   : False
+[05:45:53.508] [INFO ]   Latency       : 10.50s
+[05:45:53.508] [INFO ] 
+[05:45:53.509] [INFO ] ════════════════════════════════════════════════════════════════════════
+[05:45:53.509] [INFO ]   SUMMARY — V0
+[05:45:53.509] [INFO ] ════════════════════════════════════════════════════════════════════════
+[05:45:53.509] [INFO ]   Questions     : 5
+[05:45:53.509] [INFO ]   Correct       : 0/5  (0.0%)
+[05:45:53.509] [INFO ]   Avg KFR       : 0.317
+[05:45:53.509] [INFO ]   Avg latency   : 99.54s
+[05:45:53.509] [INFO ] 
+[05:45:53.509] [INFO ]   ID     Category             Diff     KFR     OK?   Hallucs  Latency
+[05:45:53.509] [INFO ]   --------------------------------------------------------------
+[05:45:53.509] [INFO ]   q01    company_overview     easy     0.333   ✗     N/A      31.8s
+[05:45:53.509] [INFO ]   q02    company_overview     medium   0.000   ✗     N/A      340.4s
+[05:45:53.509] [INFO ]   q03    company_overview     medium   0.333   ✗     N/A      28.8s
+[05:45:53.509] [INFO ]   q04    company_overview     easy     0.667   ✗     N/A      86.2s
+[05:45:53.509] [INFO ]   q05    leadership           easy     0.250   ✗     N/A      10.5s
+[05:45:53.510] [INFO ] 
+[05:45:53.511] [INFO ] Results saved → /Users/StartupUser/Documents/GitHub/kg-claim-verifier/results/deepseek-ai-deepseek-v3_2/v0_results.json

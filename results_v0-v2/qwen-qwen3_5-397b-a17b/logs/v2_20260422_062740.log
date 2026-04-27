@@ -1,0 +1,2513 @@
+[07:48:23.749] [INFO ] ════════════════════════════════════════════════════════════════════════
+[07:48:23.749] [INFO ]   KG-BACKED CLAIM VERIFIER — EXPERIMENT RUN
+[07:48:23.749] [INFO ] ════════════════════════════════════════════════════════════════════════
+[07:48:23.749] [INFO ]   Model     : qwen/qwen3.5-397b-a17b
+[07:48:23.749] [INFO ]   Variant   : V2
+[07:48:23.750] [INFO ]   Questions : 45
+[07:48:23.750] [INFO ]   KG triples: 262
+[07:48:23.750] [INFO ]   Started   : 2026-04-22 07:48:23
+[07:48:23.750] [INFO ]   Log file  : /Users/StartupUser/Documents/GitHub/kg-claim-verifier/results/qwen-qwen3_5-397b-a17b/logs/v2_20260422_062740.log
+[07:48:23.750] [INFO ] 
+[07:48:23.750] [INFO ] ════════════════════════════════════════════════════════════════════════
+[07:48:23.750] [INFO ]   VARIANT: V2  |  45 questions  |  model: qwen/qwen3.5-397b-a17b
+[07:48:23.750] [INFO ] ════════════════════════════════════════════════════════════════════════
+[07:48:23.750] [INFO ] Pipeline : V2Pipeline
+[07:48:23.750] [INFO ] 
+[07:48:23.750] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:48:23.750] [INFO ] Question 1/45  [q01]  category=company_overview  difficulty=easy
+[07:48:23.750] [INFO ]   Q: When was NovaAI founded and who co-founded it?
+[07:48:23.750] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:48:23.750] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:48:23.750] [INFO ] 
+[07:48:23.750] [INFO ] [V2] Running pipeline...
+[07:48:31.146] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:48:31.146] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:48:31.146] [INFO ] Question 2/45  [q02]  category=company_overview  difficulty=medium
+[07:48:31.146] [INFO ]   Q: What is NovaAI's current valuation, and how was it achieved?
+[07:48:31.146] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:48:31.146] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:48:31.146] [INFO ] 
+[07:48:31.146] [INFO ] [V2] Running pipeline...
+[07:48:38.450] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:48:38.452] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:48:38.452] [INFO ] Question 3/45  [q03]  category=company_overview  difficulty=medium
+[07:48:38.452] [INFO ]   Q: How many employees does NovaAI have and where are its offices?
+[07:48:38.452] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:48:38.452] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:48:38.453] [INFO ] 
+[07:48:38.453] [INFO ] [V2] Running pipeline...
+[07:48:45.839] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:48:45.841] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:48:45.842] [INFO ] Question 4/45  [q04]  category=company_overview  difficulty=easy
+[07:48:45.842] [INFO ]   Q: What are NovaAI's primary market verticals?
+[07:48:45.842] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:48:45.842] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:48:45.842] [INFO ] 
+[07:48:45.842] [INFO ] [V2] Running pipeline...
+[07:48:53.438] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:48:53.440] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:48:53.441] [INFO ] Question 5/45  [q05]  category=leadership  difficulty=easy
+[07:48:53.441] [INFO ]   Q: Who is the CEO of NovaAI and when did she join the company?
+[07:48:53.441] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:48:53.441] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:48:53.441] [INFO ] 
+[07:48:53.441] [INFO ] [V2] Running pipeline...
+[07:49:00.793] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:49:00.795] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:49:00.795] [INFO ] Question 6/45  [q06]  category=leadership  difficulty=medium
+[07:49:00.795] [INFO ]   Q: Who leads the Engineering department and what are its sub-teams?
+[07:49:00.795] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:49:00.795] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:49:00.795] [INFO ] 
+[07:49:00.795] [INFO ] [V2] Running pipeline...
+[07:49:07.916] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:49:07.918] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:49:07.918] [INFO ] Question 7/45  [q07]  category=leadership  difficulty=medium
+[07:49:07.918] [INFO ]   Q: Who is NovaAI's General Counsel and what is their background?
+[07:49:07.918] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:49:07.919] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:49:07.919] [INFO ] 
+[07:49:07.919] [INFO ] [V2] Running pipeline...
+[07:49:15.343] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:49:15.346] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:49:15.347] [INFO ] Question 8/45  [q08]  category=leadership  difficulty=medium
+[07:49:15.347] [INFO ]   Q: What is Marcus Webb's role, location, and FY2026 quota?
+[07:49:15.347] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:49:15.347] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:49:15.347] [INFO ] 
+[07:49:15.347] [INFO ] [V2] Running pipeline...
+[07:49:22.798] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:49:22.799] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:49:22.799] [INFO ] Question 9/45  [q09]  category=products_pricing  difficulty=easy
+[07:49:22.799] [INFO ]   Q: What is the price of the NovaPilot Starter plan and what does it include?
+[07:49:22.799] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:49:22.799] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:49:22.799] [INFO ] 
+[07:49:22.799] [INFO ] [V2] Running pipeline...
+[07:49:30.075] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:49:30.077] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:49:30.078] [INFO ] Question 10/45  [q10]  category=products_pricing  difficulty=easy
+[07:49:30.078] [INFO ]   Q: What is the price of the NovaPilot Growth plan?
+[07:49:30.078] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:49:30.078] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:49:30.078] [INFO ] 
+[07:49:30.078] [INFO ] [V2] Running pipeline...
+[07:49:37.673] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:49:37.674] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:49:37.675] [INFO ] Question 11/45  [q11]  category=products_pricing  difficulty=medium
+[07:49:37.675] [INFO ]   Q: What features does NovaPilot Enterprise include and what is its price range?
+[07:49:37.675] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:49:37.675] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:49:37.675] [INFO ] 
+[07:49:37.675] [INFO ] [V2] Running pipeline...
+[07:49:45.323] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:49:45.325] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:49:45.326] [INFO ] Question 12/45  [q12]  category=products_pricing  difficulty=easy
+[07:49:45.326] [INFO ]   Q: When was NovaPilot launched and what is it?
+[07:49:45.327] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:49:45.327] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:49:45.327] [INFO ] 
+[07:49:45.327] [INFO ] [V2] Running pipeline...
+[07:49:52.706] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:49:52.707] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:49:52.708] [INFO ] Question 13/45  [q13]  category=products_pricing  difficulty=medium
+[07:49:52.708] [INFO ]   Q: Compare the NovaLens Professional and Business pricing tiers.
+[07:49:52.708] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:49:52.708] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:49:52.708] [INFO ] 
+[07:49:52.708] [INFO ] [V2] Running pipeline...
+[07:49:59.958] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:49:59.960] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:49:59.961] [INFO ] Question 14/45  [q14]  category=products_pricing  difficulty=easy
+[07:49:59.961] [INFO ]   Q: What data connectors does NovaLens support?
+[07:49:59.961] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:49:59.961] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:49:59.961] [INFO ] 
+[07:49:59.961] [INFO ] [V2] Running pipeline...
+[07:50:07.279] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:50:07.281] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:50:07.282] [INFO ] Question 15/45  [q15]  category=products_pricing  difficulty=medium
+[07:50:07.282] [INFO ]   Q: What is the price and model monitoring limit for NovaGuard Advanced?
+[07:50:07.282] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:50:07.282] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:50:07.282] [INFO ] 
+[07:50:07.282] [INFO ] [V2] Running pipeline...
+[07:50:14.859] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:50:14.860] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:50:14.860] [INFO ] Question 16/45  [q16]  category=products_pricing  difficulty=easy
+[07:50:14.860] [INFO ]   Q: What is the price and model limit for NovaGuard Standard?
+[07:50:14.860] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:50:14.861] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:50:14.861] [INFO ] 
+[07:50:14.861] [INFO ] [V2] Running pipeline...
+[07:50:22.366] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:50:22.367] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:50:22.367] [INFO ] Question 17/45  [q17]  category=products_pricing  difficulty=easy
+[07:50:22.367] [INFO ]   Q: What license is NovaBridge released under and how many GitHub stars does it have?
+[07:50:22.367] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:50:22.367] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:50:22.367] [INFO ] 
+[07:50:22.367] [INFO ] [V2] Running pipeline...
+[07:50:29.875] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:50:29.877] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:50:29.877] [INFO ] Question 18/45  [q18]  category=hr_policy  difficulty=medium
+[07:50:29.877] [INFO ]   Q: What is NovaAI's PTO policy?
+[07:50:29.878] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:50:29.878] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:50:29.878] [INFO ] 
+[07:50:29.878] [INFO ] [V2] Running pipeline...
+[07:50:42.626] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: What is NovaAI's PTO policy?
+
+Answer: I do not have access to NovaAI's specific, up-to-date internal employee handbook or HR policies regarding Paid Time Off (PTO). PTO accrual rates, carry-over limits, and approval processes can vary by location, employment contract type (e.g., full-time vs. contractor), and tenure, and these details are subject to change.
+
+To get the accurate and official policy:
+1.  Check the **NovaAI Employee Handbook** on the company intranet (often found on Notion, Confluence, or the HR portal).
+2.  Log in to your **HRIS platform** (e.g., Workday, BambooHR, Gus
+  ... [+398 chars truncated]
+[07:50:44.999] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: What is NovaAI's PTO policy?
+
+Answer: I do not have access to NovaAI's specific, up-to-date internal employee handbook or HR policies regarding Paid Time Off (PTO). PTO accrual rates, carry-over limits, and approval processes can vary by location, employment contract type (e.g., full-time vs. contractor), and tenure, and these details are subject to change.
+
+To get the accurate and official policy:
+1.  Check the **NovaAI Employee Handbook** on the company intranet (often found on Notion, Confluence, or the HR portal).
+2.  Log in to your **HRIS platform** (e.g., Workday, BambooHR, Gus
+  ... [+398 chars truncated]
+[07:50:48.503] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: What is NovaAI's PTO policy?
+
+Answer: I do not have access to NovaAI's specific, up-to-date internal employee handbook or HR policies regarding Paid Time Off (PTO). PTO accrual rates, carry-over limits, and approval processes can vary by location, employment contract type (e.g., full-time vs. contractor), and tenure, and these details are subject to change.
+
+To get the accurate and official policy:
+1.  Check the **NovaAI Employee Handbook** on the company intranet (often found on Notion, Confluence, or the HR portal).
+2.  Log in to your **HRIS platform** (e.g., Workday, BambooHR, Gus
+  ... [+398 chars truncated]
+[07:50:50.023] [DEBUG] [ENTITY_LINKER] Lookup  claim="I do not have access to NovaAI's specific, up-to-date internal employee handbook or HR policies rega
+  ... [+25 chars truncated]"  method=llm
+[07:50:50.024] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "I do not have access to NovaAI's specific, up-to-date internal employee handbook or HR policies regarding Paid Time Off (PTO)"
+[07:50:50.024] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "I do not have access to NovaAI's specific, up-to-date internal employee handbook or HR policies regarding Paid Time Off (PTO)"
+[07:50:52.452] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "I do not have access to NovaAI's specific, up-to-date internal employee handbook or HR policies regarding Paid Time Off (PTO)"
+[07:50:55.961] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "I do not have access to NovaAI's specific, up-to-date internal employee handbook or HR policies regarding Paid Time Off (PTO)"
+[07:50:57.589] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.57s):
+    [ 83]  NovaAI | employee_count | 312 full-time employees (as of Q1 2026)
+    [ 71]  NovaAI | series_c_date | November 2025
+    [ 69]  NovaAI | tech_talk_time | 12 PM PT
+    [ 62]  NovaAI | pto_policy_type | flexible/unlimited
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+    [ 59]  NovaAI | annual_LD_budget_per_employee | $2,500
+[07:50:57.622] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: I do not have access to NovaAI's specific, up-to-date internal employee handbook or HR policies regarding Paid Time Off (PTO)
+
+Relevant Knowledge Graph Triples:
+- NovaAI | employee_count | 312 full-time employees (as of Q1 2026)  (relevance score: 83)
+- NovaAI | series_c_date | November 2025  (relevance score: 71)
+- NovaAI | tech_talk_time | 12 PM PT  (relevance score: 69)
+- NovaAI | pto_policy_type | flexible/unlimited  (relevance score: 62)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance
+  ... [+1564 chars truncated]
+[07:50:57.622] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: I do not have access to NovaAI's specific, up-to-date internal employee handbook or HR policies regarding Paid Time Off (PTO)
+
+Relevant Knowledge Graph Triples:
+- NovaAI | employee_count | 312 full-time employees (as of Q1 2026)  (relevance score: 83)
+- NovaAI | series_c_date | November 2025  (relevance score: 71)
+- NovaAI | tech_talk_time | 12 PM PT  (relevance score: 69)
+- NovaAI | pto_policy_type | flexible/unlimited  (relevance score: 62)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 60)
+- NovaAI | has_cto | Lucas Ferreira  (relevance score: 60)
+- NovaAI | has_cfo | Priya Na
+  ... [+1464 chars truncated]
+[07:51:00.000] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: I do not have access to NovaAI's specific, up-to-date internal employee handbook or HR policies regarding Paid Time Off (PTO)
+
+Relevant Knowledge Graph Triples:
+- NovaAI | employee_count | 312 full-time employees (as of Q1 2026)  (relevance score: 83)
+- NovaAI | series_c_date | November 2025  (relevance score: 71)
+- NovaAI | tech_talk_time | 12 PM PT  (relevance score: 69)
+- NovaAI | pto_policy_type | flexible/unlimited  (relevance score: 62)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 60)
+- NovaAI | has_cto | Lucas Ferreira  (relevance score: 60)
+- NovaAI | has_cfo | Priya Na
+  ... [+1464 chars truncated]
+[07:51:03.562] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: I do not have access to NovaAI's specific, up-to-date internal employee handbook or HR policies regarding Paid Time Off (PTO)
+
+Relevant Knowledge Graph Triples:
+- NovaAI | employee_count | 312 full-time employees (as of Q1 2026)  (relevance score: 83)
+- NovaAI | series_c_date | November 2025  (relevance score: 71)
+- NovaAI | tech_talk_time | 12 PM PT  (relevance score: 69)
+- NovaAI | pto_policy_type | flexible/unlimited  (relevance score: 62)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 60)
+- NovaAI | has_cto | Lucas Ferreira  (relevance score: 60)
+- NovaAI | has_cfo | Priya Na
+  ... [+1464 chars truncated]
+[07:51:05.034] [DEBUG] [ENTITY_LINKER] Lookup  claim="PTO accrual rates, carry-over limits, and approval processes can vary by location, employment contra
+  ... [+27 chars truncated]"  method=llm
+[07:51:05.035] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "PTO accrual rates, carry-over limits, and approval processes can vary by location, employment contract type (e.g., full-time vs"
+[07:51:05.035] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "PTO accrual rates, carry-over limits, and approval processes can vary by location, employment contract type (e.g., full-time vs"
+[07:51:07.687] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "PTO accrual rates, carry-over limits, and approval processes can vary by location, employment contract type (e.g., full-time vs"
+[07:51:11.201] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "PTO accrual rates, carry-over limits, and approval processes can vary by location, employment contract type (e.g., full-time vs"
+[07:51:12.563] [DEBUG] [ENTITY_LINKER] No triples found (7.53s)
+[07:51:12.563] [DEBUG] [ENTITY_LINKER] Lookup  claim="contractor), and tenure, and these details are subject to change"  method=llm
+[07:51:12.563] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "contractor), and tenure, and these details are subject to change"
+[07:51:12.563] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "contractor), and tenure, and these details are subject to change"
+[07:51:15.132] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "contractor), and tenure, and these details are subject to change"
+[07:51:18.598] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "contractor), and tenure, and these details are subject to change"
+[07:51:20.026] [DEBUG] [ENTITY_LINKER] No triples found (7.46s)
+[07:51:20.026] [DEBUG] [ENTITY_LINKER] Lookup  claim="To get the accurate and official policy:
+1"  method=llm
+[07:51:20.026] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "To get the accurate and official policy:
+1"
+[07:51:20.026] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "To get the accurate and official policy:
+1"
+[07:51:22.669] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "To get the accurate and official policy:
+1"
+[07:51:26.160] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "To get the accurate and official policy:
+1"
+[07:51:27.699] [DEBUG] [ENTITY_LINKER] No triples found (7.67s)
+[07:51:27.699] [DEBUG] [ENTITY_LINKER] Lookup  claim="Check the **NovaAI Employee Handbook** on the company intranet (often found on Notion, Confluence, o
+  ... [+16 chars truncated]"  method=llm
+[07:51:27.700] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Check the **NovaAI Employee Handbook** on the company intranet (often found on Notion, Confluence, or the HR portal)"
+[07:51:27.700] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Check the **NovaAI Employee Handbook** on the company intranet (often found on Notion, Confluence, or the HR portal)"
+[07:51:30.119] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Check the **NovaAI Employee Handbook** on the company intranet (often found on Notion, Confluence, or the HR portal)"
+[07:51:33.494] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Check the **NovaAI Employee Handbook** on the company intranet (often found on Notion, Confluence, or the HR portal)"
+[07:51:34.948] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.25s):
+    [ 83]  NovaAI | employee_count | 312 full-time employees (as of Q1 2026)
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+    [ 59]  NovaAI | annual_LD_budget_per_employee | $2,500
+    [ 55]  NovaAI | valuation | $1.4B
+    [ 55]  NovaAI | paid_company_holidays_per_year | 11
+    [ 55]  NovaAI | employee_premium_coverage_percent | 90%
+[07:51:34.973] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: Check the **NovaAI Employee Handbook** on the company intranet (often found on Notion, Confluence, or the HR portal)
+
+Relevant Knowledge Graph Triples:
+- NovaAI | employee_count | 312 full-time employees (as of Q1 2026)  (relevance score: 83)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 60)
+- NovaAI | has_cto | Lucas Ferreira  (relevance score: 60)
+- NovaAI | has_cfo | Priya Nambiar  (relevance score: 60)
+- NovaAI | has_coo | James Whitfield  (relevance score: 60)
+- NovaAI | has_
+  ... [+1502 chars truncated]
+[07:51:34.973] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: Check the **NovaAI Employee Handbook** on the company intranet (often found on Notion, Confluence, or the HR portal)
+
+Relevant Knowledge Graph Triples:
+- NovaAI | employee_count | 312 full-time employees (as of Q1 2026)  (relevance score: 83)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 60)
+- NovaAI | has_cto | Lucas Ferreira  (relevance score: 60)
+- NovaAI | has_cfo | Priya Nambiar  (relevance score: 60)
+- NovaAI | has_coo | James Whitfield  (relevance score: 60)
+- NovaAI | has_cro | Dominique Leblanc  (relevance score: 60)
+- NovaAI | annual_LD_budget_per_employee | $2,500  (r
+  ... [+1402 chars truncated]
+[07:51:37.320] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: Check the **NovaAI Employee Handbook** on the company intranet (often found on Notion, Confluence, or the HR portal)
+
+Relevant Knowledge Graph Triples:
+- NovaAI | employee_count | 312 full-time employees (as of Q1 2026)  (relevance score: 83)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 60)
+- NovaAI | has_cto | Lucas Ferreira  (relevance score: 60)
+- NovaAI | has_cfo | Priya Nambiar  (relevance score: 60)
+- NovaAI | has_coo | James Whitfield  (relevance score: 60)
+- NovaAI | has_cro | Dominique Leblanc  (relevance score: 60)
+- NovaAI | annual_LD_budget_per_employee | $2,500  (r
+  ... [+1402 chars truncated]
+[07:51:40.870] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: Check the **NovaAI Employee Handbook** on the company intranet (often found on Notion, Confluence, or the HR portal)
+
+Relevant Knowledge Graph Triples:
+- NovaAI | employee_count | 312 full-time employees (as of Q1 2026)  (relevance score: 83)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 60)
+- NovaAI | has_cto | Lucas Ferreira  (relevance score: 60)
+- NovaAI | has_cfo | Priya Nambiar  (relevance score: 60)
+- NovaAI | has_coo | James Whitfield  (relevance score: 60)
+- NovaAI | has_cro | Dominique Leblanc  (relevance score: 60)
+- NovaAI | annual_LD_budget_per_employee | $2,500  (r
+  ... [+1402 chars truncated]
+[07:51:42.387] [DEBUG] [ENTITY_LINKER] Lookup  claim="Log in to your **HRIS platform** (e.g., Workday, BambooHR, Gusto) where your specific balance and po
+  ... [+23 chars truncated]"  method=llm
+[07:51:42.388] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Log in to your **HRIS platform** (e.g., Workday, BambooHR, Gusto) where your specific balance and policy details are listed"
+[07:51:42.388] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Log in to your **HRIS platform** (e.g., Workday, BambooHR, Gusto) where your specific balance and policy details are listed"
+[07:51:44.833] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Log in to your **HRIS platform** (e.g., Workday, BambooHR, Gusto) where your specific balance and policy details are listed"
+[07:51:48.372] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Log in to your **HRIS platform** (e.g., Workday, BambooHR, Gusto) where your specific balance and policy details are listed"
+[07:51:49.930] [DEBUG] [ENTITY_LINKER] No triples found (7.54s)
+[07:51:49.930] [DEBUG] [ENTITY_LINKER] Lookup  claim="Contact **People Operations** or your specific HR representative directly"  method=llm
+[07:51:49.930] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Contact **People Operations** or your specific HR representative directly"
+[07:51:49.930] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Contact **People Operations** or your specific HR representative directly"
+[07:51:52.557] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Contact **People Operations** or your specific HR representative directly"
+[07:51:56.229] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Contact **People Operations** or your specific HR representative directly"
+[07:51:57.641] [DEBUG] [ENTITY_LINKER] Found 4 triple(s) (7.71s):
+    [ 76]  Claudia Torres | department | People Operations
+    [ 71]  Claudia Torres | title | Head of People Operations
+    [ 69]  NovaAI | head_of_people_operations | Claudia Torres
+    [ 65]  People Operations | open_requisitions | 14 (as of March 2026)
+[07:51:57.653] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: Contact **People Operations** or your specific HR representative directly
+
+Relevant Knowledge Graph Triples:
+- Claudia Torres | department | People Operations  (relevance score: 76)
+- Claudia Torres | title | Head of People Operations  (relevance score: 71)
+- NovaAI | head_of_people_operations | Claudia Torres  (relevance score: 69)
+- People Operations | open_requisitions | 14 (as of March 2026)  (relevance score: 65)
+- NovaAI | founded_in_year | 2021  (relevance score: 100)
+- NovaAI | co
+  ... [+351 chars truncated]
+[07:51:57.653] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: Contact **People Operations** or your specific HR representative directly
+
+Relevant Knowledge Graph Triples:
+- Claudia Torres | department | People Operations  (relevance score: 76)
+- Claudia Torres | title | Head of People Operations  (relevance score: 71)
+- NovaAI | head_of_people_operations | Claudia Torres  (relevance score: 69)
+- People Operations | open_requisitions | 14 (as of March 2026)  (relevance score: 65)
+- NovaAI | founded_in_year | 2021  (relevance score: 100)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 100)
+- NovaAI | co_founded_by | Lucas Ferreira  (rele
+  ... [+251 chars truncated]
+[07:52:00.150] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: Contact **People Operations** or your specific HR representative directly
+
+Relevant Knowledge Graph Triples:
+- Claudia Torres | department | People Operations  (relevance score: 76)
+- Claudia Torres | title | Head of People Operations  (relevance score: 71)
+- NovaAI | head_of_people_operations | Claudia Torres  (relevance score: 69)
+- People Operations | open_requisitions | 14 (as of March 2026)  (relevance score: 65)
+- NovaAI | founded_in_year | 2021  (relevance score: 100)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 100)
+- NovaAI | co_founded_by | Lucas Ferreira  (rele
+  ... [+251 chars truncated]
+[07:52:03.731] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: Contact **People Operations** or your specific HR representative directly
+
+Relevant Knowledge Graph Triples:
+- Claudia Torres | department | People Operations  (relevance score: 76)
+- Claudia Torres | title | Head of People Operations  (relevance score: 71)
+- NovaAI | head_of_people_operations | Claudia Torres  (relevance score: 69)
+- People Operations | open_requisitions | 14 (as of March 2026)  (relevance score: 65)
+- NovaAI | founded_in_year | 2021  (relevance score: 100)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 100)
+- NovaAI | co_founded_by | Lucas Ferreira  (rele
+  ... [+251 chars truncated]
+[07:52:05.368] [DEBUG] [ENTITY_LINKER] Lookup  claim="I cannot provide specific numbers or dates to ensure you receive the correct information for your sp
+  ... [+16 chars truncated]"  method=llm
+[07:52:05.369] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "I cannot provide specific numbers or dates to ensure you receive the correct information for your specific situation"
+[07:52:05.369] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "I cannot provide specific numbers or dates to ensure you receive the correct information for your specific situation"
+[07:52:07.980] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "I cannot provide specific numbers or dates to ensure you receive the correct information for your specific situation"
+[07:52:11.415] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "I cannot provide specific numbers or dates to ensure you receive the correct information for your specific situation"
+[07:52:13.013] [DEBUG] [ENTITY_LINKER] No triples found (7.65s)
+[07:52:13.013] [INFO ] 
+[07:52:13.015] [INFO ] ── RAW ANSWER ──
+[07:52:13.015] [INFO ]     I do not have access to NovaAI's specific, up-to-date internal employee handbook or HR policies regarding Paid Time Off (PTO). PTO accrual rates, carry-over limits, and approval processes can vary by location, employment contract type (e.g., full-time vs. contractor), and tenure, and these details are subject to change.
+    
+    To get the accurate and official policy:
+    1.  Check the **NovaAI Employee Handbook** on the company intranet (often found on Notion, Confluence, or the HR portal).
+    2.  Log in to your **HRIS platform** (e.g., Workday, BambooHR, Gusto) where your specific balance and policy details are listed.
+    3.  Contact **People Operations** or your specific HR representative directly.
+    
+    I cannot provide specific numbers or dates to ensure you receive the correct information for your specific situation.
+[07:52:13.015] [INFO ] 
+[07:52:13.015] [INFO ] ── CLAIMS EXTRACTED  (8) ──
+[07:52:13.015] [INFO ]    1. I do not have access to NovaAI's specific, up-to-date internal employee handbook or HR policies regarding Paid Time Off (PTO)
+[07:52:13.015] [INFO ]    2. PTO accrual rates, carry-over limits, and approval processes can vary by location, employment contract type (e.g., full-time vs
+[07:52:13.015] [INFO ]    3. contractor), and tenure, and these details are subject to change
+[07:52:13.015] [INFO ]    4. To get the accurate and official policy:
+1
+[07:52:13.015] [INFO ]    5. Check the **NovaAI Employee Handbook** on the company intranet (often found on Notion, Confluence, or the HR portal)
+[07:52:13.016] [INFO ]    6. Log in to your **HRIS platform** (e.g., Workday, BambooHR, Gusto) where your specific balance and policy details are listed
+[07:52:13.016] [INFO ]    7. Contact **People Operations** or your specific HR representative directly
+[07:52:13.016] [INFO ]    8. I cannot provide specific numbers or dates to ensure you receive the correct information for your specific situation
+[07:52:13.016] [INFO ] 
+[07:52:13.016] [INFO ] ── VERIFICATION RESULTS ──
+[07:52:13.016] [DEBUG]   [UNVERIFIABLE ] (conf=0.00)  "I do not have access to NovaAI's specific, up-to-date internal employee handbook
+  ... [+45 chars truncated]"
+[07:52:13.016] [DEBUG]     Reasoning : Verification call failed: call_llm_json failed to produce valid JSON after 3 attempts. Last error: call_llm failed after 1 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:52:13.016] [DEBUG]     Evidence  : NovaAI | employee_count | 312 full-time employees (as of Q1 2026)
+[07:52:13.016] [DEBUG]   [UNVERIFIABLE ] (conf=0.00)  "PTO accrual rates, carry-over limits, and approval processes can vary by locatio
+  ... [+47 chars truncated]"
+[07:52:13.016] [DEBUG]     Reasoning : No relevant KG triples found for this claim.
+[07:52:13.016] [DEBUG]   [UNVERIFIABLE ] (conf=0.00)  "contractor), and tenure, and these details are subject to change"
+[07:52:13.016] [DEBUG]     Reasoning : No relevant KG triples found for this claim.
+[07:52:13.016] [DEBUG]   [UNVERIFIABLE ] (conf=0.00)  "To get the accurate and official policy:
+1"
+[07:52:13.016] [DEBUG]     Reasoning : No relevant KG triples found for this claim.
+[07:52:13.016] [DEBUG]   [UNVERIFIABLE ] (conf=0.00)  "Check the **NovaAI Employee Handbook** on the company intranet (often found on N
+  ... [+36 chars truncated]"
+[07:52:13.016] [DEBUG]     Reasoning : Verification call failed: call_llm_json failed to produce valid JSON after 3 attempts. Last error: call_llm failed after 1 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:52:13.016] [DEBUG]     Evidence  : NovaAI | employee_count | 312 full-time employees (as of Q1 2026)
+[07:52:13.016] [DEBUG]   [UNVERIFIABLE ] (conf=0.00)  "Log in to your **HRIS platform** (e.g., Workday, BambooHR, Gusto) where your spe
+  ... [+43 chars truncated]"
+[07:52:13.016] [DEBUG]     Reasoning : No relevant KG triples found for this claim.
+[07:52:13.016] [DEBUG]   [UNVERIFIABLE ] (conf=0.00)  "Contact **People Operations** or your specific HR representative directly"
+[07:52:13.016] [DEBUG]     Reasoning : Verification call failed: call_llm_json failed to produce valid JSON after 3 attempts. Last error: call_llm failed after 1 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:52:13.016] [DEBUG]     Evidence  : Claudia Torres | department | People Operations
+[07:52:13.016] [DEBUG]   [UNVERIFIABLE ] (conf=0.00)  "I cannot provide specific numbers or dates to ensure you receive the correct inf
+  ... [+36 chars truncated]"
+[07:52:13.016] [DEBUG]     Reasoning : No relevant KG triples found for this claim.
+[07:52:13.016] [INFO ] 
+[07:52:13.016] [INFO ] ── REPAIR: not needed (no contradictions) ──
+[07:52:13.016] [INFO ] 
+[07:52:13.016] [INFO ] [V2 MEMORY] No new reflection. Memory: 0 reflection(s)
+[07:52:13.017] [INFO ] 
+[07:52:13.017] [INFO ] ── EVALUATION ──
+[07:52:13.017] [INFO ]   Ground truth  : NovaAI has a flexible/unlimited PTO policy. Employees must take a minimum of 15 days per year. PTO requests of 3 or more days must be submitted in Workday at least 5 business days in advance. Sick leave is tracked separately from PTO. NovaAI also provides 11 paid company holidays per year.
+[07:52:13.017] [INFO ]   Key facts     : ['flexible/unlimited', '15 days', '5 business days', 'Workday', 'separately', '11']
+[07:52:13.017] [INFO ]   KFR           : 0.167 (1/6 facts found) ✗
+[07:52:13.017] [WARNING]   Missing facts : ['flexible/unlimited', '15 days', '5 business days', 'separately', '11']
+[07:52:13.017] [INFO ]   Exact match   : False
+[07:52:13.017] [INFO ]   Latency       : 103.14s
+[07:52:13.017] [INFO ] 
+[07:52:13.017] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:52:13.017] [INFO ] Question 19/45  [q19]  category=hr_policy  difficulty=medium
+[07:52:13.017] [INFO ]   Q: What are NovaAI's in-office requirements for San Francisco employees?
+[07:52:13.017] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:52:13.017] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:52:13.017] [INFO ] 
+[07:52:13.017] [INFO ] [V2] Running pipeline...
+[07:52:20.633] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:52:20.635] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:52:20.636] [INFO ] Question 20/45  [q20]  category=hr_policy  difficulty=medium
+[07:52:20.636] [INFO ]   Q: What are the expense limits for hotel stays and how must expenses be submitted?
+[07:52:20.636] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:52:20.637] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:52:20.637] [INFO ] 
+[07:52:20.637] [INFO ] [V2] Running pipeline...
+[07:52:28.253] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:52:28.255] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:52:28.255] [INFO ] Question 21/45  [q21]  category=hr_policy  difficulty=hard
+[07:52:28.255] [INFO ]   Q: How does NovaAI's performance review cycle work?
+[07:52:28.255] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:52:28.255] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:52:28.256] [INFO ] 
+[07:52:28.256] [INFO ] [V2] Running pipeline...
+[07:52:35.575] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:52:35.579] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:52:35.579] [INFO ] Question 22/45  [q22]  category=hr_policy  difficulty=medium
+[07:52:35.579] [INFO ]   Q: What is NovaAI's airfare booking policy?
+[07:52:35.579] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:52:35.579] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:52:35.579] [INFO ] 
+[07:52:35.579] [INFO ] [V2] Running pipeline...
+[07:52:42.999] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:52:43.000] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:52:43.000] [INFO ] Question 23/45  [q23]  category=benefits  difficulty=easy
+[07:52:43.000] [INFO ]   Q: What is NovaAI's parental leave policy?
+[07:52:43.000] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:52:43.000] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:52:43.000] [INFO ] 
+[07:52:43.000] [INFO ] [V2] Running pipeline...
+[07:52:50.503] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:52:50.506] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:52:50.507] [INFO ] Question 24/45  [q24]  category=benefits  difficulty=easy
+[07:52:50.507] [INFO ]   Q: What is the 401(k) match at NovaAI and when are employees eligible?
+[07:52:50.507] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:52:50.507] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:52:50.507] [INFO ] 
+[07:52:50.507] [INFO ] [V2] Running pipeline...
+[07:52:57.851] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:52:57.852] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:52:57.852] [INFO ] Question 25/45  [q25]  category=benefits  difficulty=medium
+[07:52:57.852] [INFO ]   Q: What is the annual L&D budget per employee and how does it work?
+[07:52:57.852] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:52:57.852] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:52:57.852] [INFO ] 
+[07:52:57.852] [INFO ] [V2] Running pipeline...
+[07:53:05.435] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:53:05.439] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:53:05.439] [INFO ] Question 26/45  [q26]  category=leadership  difficulty=easy
+[07:53:05.439] [INFO ]   Q: Who is NovaAI's Chief Operating Officer?
+[07:53:05.439] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:53:05.439] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:53:05.439] [INFO ] 
+[07:53:05.439] [INFO ] [V2] Running pipeline...
+[07:53:12.722] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:53:12.723] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:53:12.723] [INFO ] Question 27/45  [q27]  category=benefits  difficulty=easy
+[07:53:12.723] [INFO ]   Q: Which platform does NovaAI use for equity management?
+[07:53:12.724] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:53:12.724] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:53:12.724] [INFO ] 
+[07:53:12.724] [INFO ] [V2] Running pipeline...
+[07:53:20.126] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:53:20.128] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:53:20.128] [INFO ] Question 28/45  [q28]  category=company_overview  difficulty=easy
+[07:53:20.128] [INFO ]   Q: What is the street address of NovaAI's headquarters?
+[07:53:20.128] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:53:20.129] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:53:20.129] [INFO ] 
+[07:53:20.129] [INFO ] [V2] Running pipeline...
+[07:53:27.305] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:53:27.309] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:53:27.309] [INFO ] Question 29/45  [q29]  category=benefits  difficulty=easy
+[07:53:27.309] [INFO ]   Q: Which provider administers NovaAI's health benefits?
+[07:53:27.309] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:53:27.309] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:53:27.309] [INFO ] 
+[07:53:27.309] [INFO ] [V2] Running pipeline...
+[07:53:34.505] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:53:34.506] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:53:34.507] [INFO ] Question 30/45  [q30]  category=products_pricing  difficulty=easy
+[07:53:34.507] [INFO ]   Q: When was NovaGuard launched?
+[07:53:34.507] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:53:34.507] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:53:34.507] [INFO ] 
+[07:53:34.507] [INFO ] [V2] Running pipeline...
+[07:53:42.039] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:53:42.041] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:53:42.041] [INFO ] Question 31/45  [q31]  category=products_pricing  difficulty=easy
+[07:53:42.041] [INFO ]   Q: When was NovaBridge released?
+[07:53:42.042] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:53:42.042] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:53:42.042] [INFO ] 
+[07:53:42.042] [INFO ] [V2] Running pipeline...
+[07:53:49.315] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:53:49.316] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:53:49.317] [INFO ] Question 32/45  [q32]  category=company_overview  difficulty=easy
+[07:53:49.317] [INFO ]   Q: Which cloud provider does NovaAI use as its secondary provider?
+[07:53:49.317] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:53:49.317] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:53:49.317] [INFO ] 
+[07:53:49.317] [INFO ] [V2] Running pipeline...
+[07:53:56.381] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:53:56.382] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:53:56.382] [INFO ] Question 33/45  [q33]  category=benefits  difficulty=easy
+[07:53:56.382] [INFO ]   Q: What is NovaAI's on-call compensation rate?
+[07:53:56.382] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:53:56.383] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:53:56.383] [INFO ] 
+[07:53:56.383] [INFO ] [V2] Running pipeline...
+[07:54:03.642] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:54:03.644] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:54:03.644] [INFO ] Question 34/45  [q34]  category=benefits  difficulty=easy
+[07:54:03.644] [INFO ]   Q: What is NovaAI's home office equipment stipend for new hires?
+[07:54:03.644] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:54:03.644] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:54:03.644] [INFO ] 
+[07:54:03.644] [INFO ] [V2] Running pipeline...
+[07:54:11.102] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:54:11.103] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:54:11.103] [INFO ] Question 35/45  [q35]  category=benefits  difficulty=easy
+[07:54:11.103] [INFO ]   Q: What health benefits coverage does NovaAI provide?
+[07:54:11.103] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:54:11.103] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:54:11.103] [INFO ] 
+[07:54:11.103] [INFO ] [V2] Running pipeline...
+[07:54:18.608] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:54:18.612] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:54:18.612] [INFO ] Question 36/45  [q36]  category=products_pricing  difficulty=hard
+[07:54:18.612] [INFO ]   Q: Who is the PM owner of NovaAI's flagship product?
+[07:54:18.612] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:54:18.613] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:54:18.613] [INFO ] 
+[07:54:18.613] [INFO ] [V2] Running pipeline...
+[07:54:25.667] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:54:25.668] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:54:25.669] [INFO ] Question 37/45  [q37]  category=leadership  difficulty=hard
+[07:54:25.669] [INFO ]   Q: Who leads the UX/Design team, and when did they join NovaAI?
+[07:54:25.669] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:54:25.669] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:54:25.669] [INFO ] 
+[07:54:25.669] [INFO ] [V2] Running pipeline...
+[07:54:33.142] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:54:33.142] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:54:33.142] [INFO ] Question 38/45  [q38]  category=leadership  difficulty=hard
+[07:54:33.142] [INFO ]   Q: Who leads the SMB Sales team, and what is their FY2026 quota?
+[07:54:33.142] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:54:33.142] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:54:33.142] [INFO ] 
+[07:54:33.142] [INFO ] [V2] Running pipeline...
+[07:54:42.136] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: Who leads the SMB Sales team, and what is their FY2026 quota?
+
+Answer: I do not have access to internal NovaAI documents regarding specific team leadership assignments or FY2026 quota targets. As an AI assistant, my training data does not include real-time internal HR directories, sales compensation plans, or future fiscal year goals.
+
+To find the current leader of the SMB Sales team and their specific FY2026 quota, please:
+1.  Check the internal **Salesforce** or **Clari** dashboards for the most recent territory assignments.
+2.  Review the **FY2026 Sales Compensation Plan** documen
+  ... [+316 chars truncated]
+[07:54:44.676] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: Who leads the SMB Sales team, and what is their FY2026 quota?
+
+Answer: I do not have access to internal NovaAI documents regarding specific team leadership assignments or FY2026 quota targets. As an AI assistant, my training data does not include real-time internal HR directories, sales compensation plans, or future fiscal year goals.
+
+To find the current leader of the SMB Sales team and their specific FY2026 quota, please:
+1.  Check the internal **Salesforce** or **Clari** dashboards for the most recent territory assignments.
+2.  Review the **FY2026 Sales Compensation Plan** documen
+  ... [+316 chars truncated]
+[07:54:48.181] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: Who leads the SMB Sales team, and what is their FY2026 quota?
+
+Answer: I do not have access to internal NovaAI documents regarding specific team leadership assignments or FY2026 quota targets. As an AI assistant, my training data does not include real-time internal HR directories, sales compensation plans, or future fiscal year goals.
+
+To find the current leader of the SMB Sales team and their specific FY2026 quota, please:
+1.  Check the internal **Salesforce** or **Clari** dashboards for the most recent territory assignments.
+2.  Review the **FY2026 Sales Compensation Plan** documen
+  ... [+316 chars truncated]
+[07:54:49.524] [DEBUG] [ENTITY_LINKER] Lookup  claim="I do not have access to internal NovaAI documents regarding specific team leadership assignments or 
+  ... [+20 chars truncated]"  method=llm
+[07:54:49.525] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "I do not have access to internal NovaAI documents regarding specific team leadership assignments or FY2026 quota targets"
+[07:54:49.525] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "I do not have access to internal NovaAI documents regarding specific team leadership assignments or FY2026 quota targets"
+[07:54:51.926] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "I do not have access to internal NovaAI documents regarding specific team leadership assignments or FY2026 quota targets"
+[07:54:55.431] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "I do not have access to internal NovaAI documents regarding specific team leadership assignments or FY2026 quota targets"
+[07:54:57.044] [DEBUG] [ENTITY_LINKER] Found 8 triple(s) (7.52s):
+    [ 89]  Tanya Osei | fy2026_quota | $6M
+    [ 86]  Marcus Webb | fy2026_quota | $18M
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+    [ 55]  NovaAI | valuation | $1.4B
+[07:54:57.077] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: I do not have access to internal NovaAI documents regarding specific team leadership assignments or FY2026 quota targets
+
+Relevant Knowledge Graph Triples:
+- Tanya Osei | fy2026_quota | $6M  (relevance score: 89)
+- Marcus Webb | fy2026_quota | $18M  (relevance score: 86)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 60)
+- NovaAI | has_cto | Lucas Ferreira  (relevance score: 60)
+- NovaAI | has_cfo | Priya Nambiar  (relevance score: 60)
+- NovaAI | has_coo | James Whitfield  (relevan
+  ... [+1173 chars truncated]
+[07:54:57.077] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: I do not have access to internal NovaAI documents regarding specific team leadership assignments or FY2026 quota targets
+
+Relevant Knowledge Graph Triples:
+- Tanya Osei | fy2026_quota | $6M  (relevance score: 89)
+- Marcus Webb | fy2026_quota | $18M  (relevance score: 86)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 60)
+- NovaAI | has_cto | Lucas Ferreira  (relevance score: 60)
+- NovaAI | has_cfo | Priya Nambiar  (relevance score: 60)
+- NovaAI | has_coo | James Whitfield  (relevance score: 60)
+- NovaAI | has_cro | Dominique Leblanc  (relevance score: 60)
+- NovaAI | valuation | $
+  ... [+1073 chars truncated]
+[07:54:59.549] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: I do not have access to internal NovaAI documents regarding specific team leadership assignments or FY2026 quota targets
+
+Relevant Knowledge Graph Triples:
+- Tanya Osei | fy2026_quota | $6M  (relevance score: 89)
+- Marcus Webb | fy2026_quota | $18M  (relevance score: 86)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 60)
+- NovaAI | has_cto | Lucas Ferreira  (relevance score: 60)
+- NovaAI | has_cfo | Priya Nambiar  (relevance score: 60)
+- NovaAI | has_coo | James Whitfield  (relevance score: 60)
+- NovaAI | has_cro | Dominique Leblanc  (relevance score: 60)
+- NovaAI | valuation | $
+  ... [+1073 chars truncated]
+[07:55:03.161] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: I do not have access to internal NovaAI documents regarding specific team leadership assignments or FY2026 quota targets
+
+Relevant Knowledge Graph Triples:
+- Tanya Osei | fy2026_quota | $6M  (relevance score: 89)
+- Marcus Webb | fy2026_quota | $18M  (relevance score: 86)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 60)
+- NovaAI | has_cto | Lucas Ferreira  (relevance score: 60)
+- NovaAI | has_cfo | Priya Nambiar  (relevance score: 60)
+- NovaAI | has_coo | James Whitfield  (relevance score: 60)
+- NovaAI | has_cro | Dominique Leblanc  (relevance score: 60)
+- NovaAI | valuation | $
+  ... [+1073 chars truncated]
+[07:55:04.644] [DEBUG] [ENTITY_LINKER] Lookup  claim="As an AI assistant, my training data does not include real-time internal HR directories, sales compe
+  ... [+42 chars truncated]"  method=llm
+[07:55:04.645] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "As an AI assistant, my training data does not include real-time internal HR directories, sales compensation plans, or future fiscal year goals"
+[07:55:04.645] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "As an AI assistant, my training data does not include real-time internal HR directories, sales compensation plans, or future fiscal year goals"
+[07:55:07.096] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "As an AI assistant, my training data does not include real-time internal HR directories, sales compensation plans, or future fiscal year goals"
+[07:55:10.683] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "As an AI assistant, my training data does not include real-time internal HR directories, sales compensation plans, or future fiscal year goals"
+[07:55:12.125] [DEBUG] [ENTITY_LINKER] Found 2 triple(s) (7.48s):
+    [ 76]  NovaAI | fiscal_year | January 1 to December 31
+    [ 62]  NovaAI | on_call_compensation | $300/week additional
+[07:55:12.132] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: As an AI assistant, my training data does not include real-time internal HR directories, sales compensation plans, or future fiscal year goals
+
+Relevant Knowledge Graph Triples:
+- NovaAI | fiscal_year | January 1 to December 31  (relevance score: 76)
+- NovaAI | on_call_compensation | $300/week additional  (relevance score: 62)
+- NovaAI | founded_in_year | 2021  (relevance score: 100)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 100)
+- NovaAI | co_founded_by | Lucas Ferreira
+  ... [+221 chars truncated]
+[07:55:12.132] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: As an AI assistant, my training data does not include real-time internal HR directories, sales compensation plans, or future fiscal year goals
+
+Relevant Knowledge Graph Triples:
+- NovaAI | fiscal_year | January 1 to December 31  (relevance score: 76)
+- NovaAI | on_call_compensation | $300/week additional  (relevance score: 62)
+- NovaAI | founded_in_year | 2021  (relevance score: 100)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 100)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 100)
+- Dr. Mara Chen | start_date | January 2021  (relevance score: 60)
+- Lucas 
+  ... [+121 chars truncated]
+[07:55:14.591] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: As an AI assistant, my training data does not include real-time internal HR directories, sales compensation plans, or future fiscal year goals
+
+Relevant Knowledge Graph Triples:
+- NovaAI | fiscal_year | January 1 to December 31  (relevance score: 76)
+- NovaAI | on_call_compensation | $300/week additional  (relevance score: 62)
+- NovaAI | founded_in_year | 2021  (relevance score: 100)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 100)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 100)
+- Dr. Mara Chen | start_date | January 2021  (relevance score: 60)
+- Lucas 
+  ... [+121 chars truncated]
+[07:55:18.110] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: As an AI assistant, my training data does not include real-time internal HR directories, sales compensation plans, or future fiscal year goals
+
+Relevant Knowledge Graph Triples:
+- NovaAI | fiscal_year | January 1 to December 31  (relevance score: 76)
+- NovaAI | on_call_compensation | $300/week additional  (relevance score: 62)
+- NovaAI | founded_in_year | 2021  (relevance score: 100)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 100)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 100)
+- Dr. Mara Chen | start_date | January 2021  (relevance score: 60)
+- Lucas 
+  ... [+121 chars truncated]
+[07:55:19.585] [DEBUG] [ENTITY_LINKER] Lookup  claim="To find the current leader of the SMB Sales team and their specific FY2026 quota, please:
+1"  method=llm
+[07:55:19.586] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "To find the current leader of the SMB Sales team and their specific FY2026 quota, please:
+1"
+[07:55:19.587] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "To find the current leader of the SMB Sales team and their specific FY2026 quota, please:
+1"
+[07:55:22.119] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "To find the current leader of the SMB Sales team and their specific FY2026 quota, please:
+1"
+[07:55:25.694] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "To find the current leader of the SMB Sales team and their specific FY2026 quota, please:
+1"
+[07:55:27.162] [DEBUG] [ENTITY_LINKER] Found 4 triple(s) (7.58s):
+    [ 89]  Tanya Osei | fy2026_quota | $6M
+    [ 86]  Marcus Webb | fy2026_quota | $18M
+    [ 85]  SMB Sales | team_lead | Tanya Osei
+    [ 56]  Enterprise Sales | team_lead | Marcus Webb
+[07:55:27.175] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: To find the current leader of the SMB Sales team and their specific FY2026 quota, please:
+1
+
+Relevant Knowledge Graph Triples:
+- Tanya Osei | fy2026_quota | $6M  (relevance score: 89)
+- Marcus Webb | fy2026_quota | $18M  (relevance score: 86)
+- SMB Sales | team_lead | Tanya Osei  (relevance score: 85)
+- Enterprise Sales | team_lead | Marcus Webb  (relevance score: 56)
+- NovaBridge | developer_relations_lead | Priya Osei  (relevance score: 57)
+- NovaGuard Enterprise | purchase_motion | sal
+  ... [+251 chars truncated]
+[07:55:27.176] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: To find the current leader of the SMB Sales team and their specific FY2026 quota, please:
+1
+
+Relevant Knowledge Graph Triples:
+- Tanya Osei | fy2026_quota | $6M  (relevance score: 89)
+- Marcus Webb | fy2026_quota | $18M  (relevance score: 86)
+- SMB Sales | team_lead | Tanya Osei  (relevance score: 85)
+- Enterprise Sales | team_lead | Marcus Webb  (relevance score: 56)
+- NovaBridge | developer_relations_lead | Priya Osei  (relevance score: 57)
+- NovaGuard Enterprise | purchase_motion | sales-assisted  (relevance score: 100)
+- Enterprise segment | threshold | accounts at or above $50K ARR
+  ... [+151 chars truncated]
+[07:55:29.570] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: To find the current leader of the SMB Sales team and their specific FY2026 quota, please:
+1
+
+Relevant Knowledge Graph Triples:
+- Tanya Osei | fy2026_quota | $6M  (relevance score: 89)
+- Marcus Webb | fy2026_quota | $18M  (relevance score: 86)
+- SMB Sales | team_lead | Tanya Osei  (relevance score: 85)
+- Enterprise Sales | team_lead | Marcus Webb  (relevance score: 56)
+- NovaBridge | developer_relations_lead | Priya Osei  (relevance score: 57)
+- NovaGuard Enterprise | purchase_motion | sales-assisted  (relevance score: 100)
+- Enterprise segment | threshold | accounts at or above $50K ARR
+  ... [+151 chars truncated]
+[07:55:33.074] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: To find the current leader of the SMB Sales team and their specific FY2026 quota, please:
+1
+
+Relevant Knowledge Graph Triples:
+- Tanya Osei | fy2026_quota | $6M  (relevance score: 89)
+- Marcus Webb | fy2026_quota | $18M  (relevance score: 86)
+- SMB Sales | team_lead | Tanya Osei  (relevance score: 85)
+- Enterprise Sales | team_lead | Marcus Webb  (relevance score: 56)
+- NovaBridge | developer_relations_lead | Priya Osei  (relevance score: 57)
+- NovaGuard Enterprise | purchase_motion | sales-assisted  (relevance score: 100)
+- Enterprise segment | threshold | accounts at or above $50K ARR
+  ... [+151 chars truncated]
+[07:55:34.640] [DEBUG] [ENTITY_LINKER] Lookup  claim="Check the internal **Salesforce** or **Clari** dashboards for the most recent territory assignments"  method=llm
+[07:55:34.640] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Check the internal **Salesforce** or **Clari** dashboards for the most recent territory assignments"
+[07:55:34.641] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Check the internal **Salesforce** or **Clari** dashboards for the most recent territory assignments"
+[07:55:37.183] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Check the internal **Salesforce** or **Clari** dashboards for the most recent territory assignments"
+[07:55:40.680] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Check the internal **Salesforce** or **Clari** dashboards for the most recent territory assignments"
+[07:55:42.219] [DEBUG] [ENTITY_LINKER] Found 1 triple(s) (7.58s):
+    [ 56]  NovaPilot | integrates_with | Salesforce
+[07:55:42.226] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: Check the internal **Salesforce** or **Clari** dashboards for the most recent territory assignments
+
+Relevant Knowledge Graph Triples:
+- NovaPilot | integrates_with | Salesforce  (relevance score: 56)
+- NovaPilot | is_flagship_product_of | NovaAI  (relevance score: 100)
+- NovaPilot | launched_in | Q3 2022  (relevance score: 100)
+- NovaPilot | third_party_integrations_count | 120+  (relevance score: 100)
+
+Evaluate the claim based ONLY on these triples. Return JSON.
+[07:55:42.226] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: Check the internal **Salesforce** or **Clari** dashboards for the most recent territory assignments
+
+Relevant Knowledge Graph Triples:
+- NovaPilot | integrates_with | Salesforce  (relevance score: 56)
+- NovaPilot | is_flagship_product_of | NovaAI  (relevance score: 100)
+- NovaPilot | launched_in | Q3 2022  (relevance score: 100)
+- NovaPilot | third_party_integrations_count | 120+  (relevance score: 100)
+
+Evaluate the claim based ONLY on these triples. Return JSON.
+[07:55:44.884] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: Check the internal **Salesforce** or **Clari** dashboards for the most recent territory assignments
+
+Relevant Knowledge Graph Triples:
+- NovaPilot | integrates_with | Salesforce  (relevance score: 56)
+- NovaPilot | is_flagship_product_of | NovaAI  (relevance score: 100)
+- NovaPilot | launched_in | Q3 2022  (relevance score: 100)
+- NovaPilot | third_party_integrations_count | 120+  (relevance score: 100)
+
+Evaluate the claim based ONLY on these triples. Return JSON.
+[07:55:48.344] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: Check the internal **Salesforce** or **Clari** dashboards for the most recent territory assignments
+
+Relevant Knowledge Graph Triples:
+- NovaPilot | integrates_with | Salesforce  (relevance score: 56)
+- NovaPilot | is_flagship_product_of | NovaAI  (relevance score: 100)
+- NovaPilot | launched_in | Q3 2022  (relevance score: 100)
+- NovaPilot | third_party_integrations_count | 120+  (relevance score: 100)
+
+Evaluate the claim based ONLY on these triples. Return JSON.
+[07:55:49.799] [DEBUG] [ENTITY_LINKER] Lookup  claim="Review the **FY2026 Sales Compensation Plan** document located on the internal wiki (Confluence/Noti
+  ... [+3 chars truncated]"  method=llm
+[07:55:49.800] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Review the **FY2026 Sales Compensation Plan** document located on the internal wiki (Confluence/Notion)"
+[07:55:49.800] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Review the **FY2026 Sales Compensation Plan** document located on the internal wiki (Confluence/Notion)"
+[07:55:52.213] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Review the **FY2026 Sales Compensation Plan** document located on the internal wiki (Confluence/Notion)"
+[07:55:55.818] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Review the **FY2026 Sales Compensation Plan** document located on the internal wiki (Confluence/Notion)"
+[07:55:57.187] [DEBUG] [ENTITY_LINKER] Found 3 triple(s) (7.39s):
+    [ 71]  NovaAI | on_call_compensation | $300/week additional
+    [ 57]  Tanya Osei | fy2026_quota | $6M
+    [ 55]  Marcus Webb | fy2026_quota | $18M
+[07:55:57.206] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: Review the **FY2026 Sales Compensation Plan** document located on the internal wiki (Confluence/Notion)
+
+Relevant Knowledge Graph Triples:
+- NovaAI | on_call_compensation | $300/week additional  (relevance score: 71)
+- Tanya Osei | fy2026_quota | $6M  (relevance score: 57)
+- Marcus Webb | fy2026_quota | $18M  (relevance score: 55)
+- SMB Sales | team_lead | Tanya Osei  (relevance score: 100)
+- NovaBridge | developer_relations_lead | Priya Osei  (relevance score: 57)
+- Enterprise Sales | te
+  ... [+362 chars truncated]
+[07:55:57.206] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: Review the **FY2026 Sales Compensation Plan** document located on the internal wiki (Confluence/Notion)
+
+Relevant Knowledge Graph Triples:
+- NovaAI | on_call_compensation | $300/week additional  (relevance score: 71)
+- Tanya Osei | fy2026_quota | $6M  (relevance score: 57)
+- Marcus Webb | fy2026_quota | $18M  (relevance score: 55)
+- SMB Sales | team_lead | Tanya Osei  (relevance score: 100)
+- NovaBridge | developer_relations_lead | Priya Osei  (relevance score: 57)
+- Enterprise Sales | team_lead | Marcus Webb  (relevance score: 100)
+- Marcus Webb | start_date | January 2024  (relevance 
+  ... [+262 chars truncated]
+[07:55:59.614] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: Review the **FY2026 Sales Compensation Plan** document located on the internal wiki (Confluence/Notion)
+
+Relevant Knowledge Graph Triples:
+- NovaAI | on_call_compensation | $300/week additional  (relevance score: 71)
+- Tanya Osei | fy2026_quota | $6M  (relevance score: 57)
+- Marcus Webb | fy2026_quota | $18M  (relevance score: 55)
+- SMB Sales | team_lead | Tanya Osei  (relevance score: 100)
+- NovaBridge | developer_relations_lead | Priya Osei  (relevance score: 57)
+- Enterprise Sales | team_lead | Marcus Webb  (relevance score: 100)
+- Marcus Webb | start_date | January 2024  (relevance 
+  ... [+262 chars truncated]
+[07:56:03.065] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: Review the **FY2026 Sales Compensation Plan** document located on the internal wiki (Confluence/Notion)
+
+Relevant Knowledge Graph Triples:
+- NovaAI | on_call_compensation | $300/week additional  (relevance score: 71)
+- Tanya Osei | fy2026_quota | $6M  (relevance score: 57)
+- Marcus Webb | fy2026_quota | $18M  (relevance score: 55)
+- SMB Sales | team_lead | Tanya Osei  (relevance score: 100)
+- NovaBridge | developer_relations_lead | Priya Osei  (relevance score: 57)
+- Enterprise Sales | team_lead | Marcus Webb  (relevance score: 100)
+- Marcus Webb | start_date | January 2024  (relevance 
+  ... [+262 chars truncated]
+[07:56:04.547] [DEBUG] [ENTITY_LINKER] Lookup  claim="Contact **Sarah Jenkins** (VP of Sales) or the **Sales Operations** team directly for the official r
+  ... [+21 chars truncated]"  method=llm
+[07:56:04.548] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Contact **Sarah Jenkins** (VP of Sales) or the **Sales Operations** team directly for the official roster and quota sheet"
+[07:56:04.548] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Contact **Sarah Jenkins** (VP of Sales) or the **Sales Operations** team directly for the official roster and quota sheet"
+[07:56:07.016] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Contact **Sarah Jenkins** (VP of Sales) or the **Sales Operations** team directly for the official roster and quota sheet"
+[07:56:10.511] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Contact **Sarah Jenkins** (VP of Sales) or the **Sales Operations** team directly for the official roster and quota sheet"
+[07:56:12.100] [DEBUG] [ENTITY_LINKER] Found 4 triple(s) (7.55s):
+    [ 69]  SMB Sales | team_lead | Tanya Osei
+    [ 59]  Claudia Torres | title | Head of People Operations
+    [ 58]  NovaAI | head_of_people_operations | Claudia Torres
+    [ 56]  Enterprise Sales | team_lead | Marcus Webb
+[07:56:12.120] [DEBUG] [V2] LLM JSON CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: Contact **Sarah Jenkins** (VP of Sales) or the **Sales Operations** team directly for the official roster and quota sheet
+
+Relevant Knowledge Graph Triples:
+- SMB Sales | team_lead | Tanya Osei  (relevance score: 69)
+- Claudia Torres | title | Head of People Operations  (relevance score: 59)
+- NovaAI | head_of_people_operations | Claudia Torres  (relevance score: 58)
+- Enterprise Sales | team_lead | Marcus Webb  (relevance score: 56)
+- Tanya Osei | fy2026_quota | $6M  (relevance score: 10
+  ... [+786 chars truncated]
+[07:56:12.120] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: Contact **Sarah Jenkins** (VP of Sales) or the **Sales Operations** team directly for the official roster and quota sheet
+
+Relevant Knowledge Graph Triples:
+- SMB Sales | team_lead | Tanya Osei  (relevance score: 69)
+- Claudia Torres | title | Head of People Operations  (relevance score: 59)
+- NovaAI | head_of_people_operations | Claudia Torres  (relevance score: 58)
+- Enterprise Sales | team_lead | Marcus Webb  (relevance score: 56)
+- Tanya Osei | fy2026_quota | $6M  (relevance score: 100)
+- NovaBridge | developer_relations_lead | Priya Osei  (relevance score: 57)
+- People Operations |
+  ... [+686 chars truncated]
+[07:56:14.624] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: Contact **Sarah Jenkins** (VP of Sales) or the **Sales Operations** team directly for the official roster and quota sheet
+
+Relevant Knowledge Graph Triples:
+- SMB Sales | team_lead | Tanya Osei  (relevance score: 69)
+- Claudia Torres | title | Head of People Operations  (relevance score: 59)
+- NovaAI | head_of_people_operations | Claudia Torres  (relevance score: 58)
+- Enterprise Sales | team_lead | Marcus Webb  (relevance score: 56)
+- Tanya Osei | fy2026_quota | $6M  (relevance score: 100)
+- NovaBridge | developer_relations_lead | Priya Osei  (relevance score: 57)
+- People Operations |
+  ... [+686 chars truncated]
+[07:56:18.019] [DEBUG] [V2] LLM CALL  model=qwen/qwen3.5-397b-a17b
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: Contact **Sarah Jenkins** (VP of Sales) or the **Sales Operations** team directly for the official roster and quota sheet
+
+Relevant Knowledge Graph Triples:
+- SMB Sales | team_lead | Tanya Osei  (relevance score: 69)
+- Claudia Torres | title | Head of People Operations  (relevance score: 59)
+- NovaAI | head_of_people_operations | Claudia Torres  (relevance score: 58)
+- Enterprise Sales | team_lead | Marcus Webb  (relevance score: 56)
+- Tanya Osei | fy2026_quota | $6M  (relevance score: 100)
+- NovaBridge | developer_relations_lead | Priya Osei  (relevance score: 57)
+- People Operations |
+  ... [+686 chars truncated]
+[07:56:19.478] [INFO ] 
+[07:56:19.480] [INFO ] ── RAW ANSWER ──
+[07:56:19.480] [INFO ]     I do not have access to internal NovaAI documents regarding specific team leadership assignments or FY2026 quota targets. As an AI assistant, my training data does not include real-time internal HR directories, sales compensation plans, or future fiscal year goals.
+    
+    To find the current leader of the SMB Sales team and their specific FY2026 quota, please:
+    1.  Check the internal **Salesforce** or **Clari** dashboards for the most recent territory assignments.
+    2.  Review the **FY2026 Sales Compensation Plan** document located on the internal wiki (Confluence/Notion).
+    3.  Contact **Sarah Jenkins** (VP of Sales) or the **Sales Operations** team directly for the official roster and quota sheet.
+[07:56:19.480] [INFO ] 
+[07:56:19.481] [INFO ] ── CLAIMS EXTRACTED  (6) ──
+[07:56:19.481] [INFO ]    1. I do not have access to internal NovaAI documents regarding specific team leadership assignments or FY2026 quota targets
+[07:56:19.481] [INFO ]    2. As an AI assistant, my training data does not include real-time internal HR directories, sales compensation plans, or future fiscal year goals
+[07:56:19.481] [INFO ]    3. To find the current leader of the SMB Sales team and their specific FY2026 quota, please:
+1
+[07:56:19.481] [INFO ]    4. Check the internal **Salesforce** or **Clari** dashboards for the most recent territory assignments
+[07:56:19.481] [INFO ]    5. Review the **FY2026 Sales Compensation Plan** document located on the internal wiki (Confluence/Notion)
+[07:56:19.482] [INFO ]    6. Contact **Sarah Jenkins** (VP of Sales) or the **Sales Operations** team directly for the official roster and quota sheet
+[07:56:19.482] [INFO ] 
+[07:56:19.482] [INFO ] ── VERIFICATION RESULTS ──
+[07:56:19.482] [DEBUG]   [UNVERIFIABLE ] (conf=0.00)  "I do not have access to internal NovaAI documents regarding specific team leader
+  ... [+40 chars truncated]"
+[07:56:19.482] [DEBUG]     Reasoning : Verification call failed: call_llm_json failed to produce valid JSON after 3 attempts. Last error: call_llm failed after 1 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:56:19.482] [DEBUG]     Evidence  : Tanya Osei | fy2026_quota | $6M
+[07:56:19.482] [DEBUG]   [UNVERIFIABLE ] (conf=0.00)  "As an AI assistant, my training data does not include real-time internal HR dire
+  ... [+62 chars truncated]"
+[07:56:19.482] [DEBUG]     Reasoning : Verification call failed: call_llm_json failed to produce valid JSON after 3 attempts. Last error: call_llm failed after 1 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:56:19.482] [DEBUG]     Evidence  : NovaAI | fiscal_year | January 1 to December 31
+[07:56:19.482] [DEBUG]   [UNVERIFIABLE ] (conf=0.00)  "To find the current leader of the SMB Sales team and their specific FY2026 quota
+  ... [+11 chars truncated]"
+[07:56:19.482] [DEBUG]     Reasoning : Verification call failed: call_llm_json failed to produce valid JSON after 3 attempts. Last error: call_llm failed after 1 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:56:19.482] [DEBUG]     Evidence  : Tanya Osei | fy2026_quota | $6M
+[07:56:19.482] [DEBUG]   [UNVERIFIABLE ] (conf=0.00)  "Check the internal **Salesforce** or **Clari** dashboards for the most recent te
+  ... [+19 chars truncated]"
+[07:56:19.483] [DEBUG]     Reasoning : Verification call failed: call_llm_json failed to produce valid JSON after 3 attempts. Last error: call_llm failed after 1 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:56:19.483] [DEBUG]     Evidence  : NovaPilot | integrates_with | Salesforce
+[07:56:19.483] [DEBUG]   [UNVERIFIABLE ] (conf=0.00)  "Review the **FY2026 Sales Compensation Plan** document located on the internal w
+  ... [+23 chars truncated]"
+[07:56:19.483] [DEBUG]     Reasoning : Verification call failed: call_llm_json failed to produce valid JSON after 3 attempts. Last error: call_llm failed after 1 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:56:19.483] [DEBUG]     Evidence  : NovaAI | on_call_compensation | $300/week additional
+[07:56:19.483] [DEBUG]   [UNVERIFIABLE ] (conf=0.00)  "Contact **Sarah Jenkins** (VP of Sales) or the **Sales Operations** team directl
+  ... [+41 chars truncated]"
+[07:56:19.483] [DEBUG]     Reasoning : Verification call failed: call_llm_json failed to produce valid JSON after 3 attempts. Last error: call_llm failed after 1 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:56:19.483] [DEBUG]     Evidence  : SMB Sales | team_lead | Tanya Osei
+[07:56:19.483] [INFO ] 
+[07:56:19.483] [INFO ] ── REPAIR: not needed (no contradictions) ──
+[07:56:19.484] [INFO ] 
+[07:56:19.484] [INFO ] [V2 MEMORY] No new reflection. Memory: 0 reflection(s)
+[07:56:19.484] [INFO ] 
+[07:56:19.484] [INFO ] ── EVALUATION ──
+[07:56:19.484] [INFO ]   Ground truth  : Tanya Osei leads the SMB Sales team, and her FY2026 quota is $6M.
+[07:56:19.484] [INFO ]   Key facts     : ['Tanya Osei', 'SMB Sales', '$6M']
+[07:56:19.484] [INFO ]   KFR           : 0.333 (1/3 facts found) ✗
+[07:56:19.484] [WARNING]   Missing facts : ['Tanya Osei', '$6M']
+[07:56:19.484] [INFO ]   Exact match   : False
+[07:56:19.484] [INFO ]   Latency       : 106.34s
+[07:56:19.484] [INFO ] 
+[07:56:19.484] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:56:19.484] [INFO ] Question 39/45  [q39]  category=leadership  difficulty=hard
+[07:56:19.484] [INFO ]   Q: When did NovaAI's Chief Revenue Officer join the company?
+[07:56:19.484] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:56:19.485] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:56:19.485] [INFO ] 
+[07:56:19.485] [INFO ] [V2] Running pipeline...
+[07:56:26.876] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:56:26.876] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:56:26.876] [INFO ] Question 40/45  [q40]  category=leadership  difficulty=hard
+[07:56:26.876] [INFO ]   Q: When did NovaAI's VP of Marketing join the company?
+[07:56:26.876] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:56:26.876] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:56:26.876] [INFO ] 
+[07:56:26.876] [INFO ] [V2] Running pipeline...
+[07:56:34.388] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:56:34.389] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:56:34.389] [INFO ] Question 41/45  [q41]  category=leadership  difficulty=hard
+[07:56:34.389] [INFO ]   Q: Who is NovaBridge's Developer Relations Lead, and to whom do they report?
+[07:56:34.389] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:56:34.389] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:56:34.389] [INFO ] 
+[07:56:34.389] [INFO ] [V2] Running pipeline...
+[07:56:41.560] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:56:41.562] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:56:41.562] [INFO ] Question 42/45  [q42]  category=leadership  difficulty=hard
+[07:56:41.562] [INFO ]   Q: When did NovaAI's VP of Product join the company?
+[07:56:41.562] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:56:41.562] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:56:41.562] [INFO ] 
+[07:56:41.563] [INFO ] [V2] Running pipeline...
+[07:56:48.795] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:56:48.796] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:56:48.796] [INFO ] Question 43/45  [q43]  category=leadership  difficulty=hard
+[07:56:48.796] [INFO ]   Q: What is the FY2026 NRR target of the department led by NovaAI's VP of Customer Success?
+[07:56:48.797] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:56:48.797] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:56:48.797] [INFO ] 
+[07:56:48.797] [INFO ] [V2] Running pipeline...
+[07:56:56.221] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:56:56.222] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:56:56.222] [INFO ] Question 44/45  [q44]  category=products_pricing  difficulty=hard
+[07:56:56.222] [INFO ]   Q: Which product has a roadmap for real-time streaming via Kafka, and what type of product is it?
+[07:56:56.222] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:56:56.222] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:56:56.222] [INFO ] 
+[07:56:56.223] [INFO ] [V2] Running pipeline...
+[07:57:03.637] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:57:03.638] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:57:03.638] [INFO ] Question 45/45  [q45]  category=leadership  difficulty=hard
+[07:57:03.638] [INFO ]   Q: Who leads the Solutions Engineering team, and when did they join NovaAI?
+[07:57:03.638] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[07:57:03.638] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[07:57:03.638] [INFO ] 
+[07:57:03.639] [INFO ] [V2] Running pipeline...
+[07:57:10.969] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-397b-a17b'
+[07:57:10.969] [INFO ] ════════════════════════════════════════════════════════════════════════
+[07:57:10.969] [INFO ]   SUMMARY — V2
+[07:57:10.970] [INFO ] ════════════════════════════════════════════════════════════════════════
+[07:57:10.970] [INFO ]   Questions     : 45
+[07:57:10.970] [INFO ]   Correct       : 0/45  (0.0%)
+[07:57:10.970] [INFO ]   Avg KFR       : 0.011
+[07:57:10.970] [INFO ]   Hallucinations: 0/45 questions had contradicted claims
+[07:57:10.970] [INFO ]   Avg latency   : 4.65s
+[07:57:10.970] [INFO ] 
+[07:57:10.970] [INFO ]   ID     Category             Diff     KFR     OK?   Hallucs  Latency
+[07:57:10.970] [INFO ]   --------------------------------------------------------------
+[07:57:10.970] [INFO ]   q01    company_overview     easy     0.000   ✗     N/A      0.0s
+[07:57:10.970] [INFO ]   q02    company_overview     medium   0.000   ✗     N/A      0.0s
+[07:57:10.970] [INFO ]   q03    company_overview     medium   0.000   ✗     N/A      0.0s
+[07:57:10.970] [INFO ]   q04    company_overview     easy     0.000   ✗     N/A      0.0s
+[07:57:10.970] [INFO ]   q05    leadership           easy     0.000   ✗     N/A      0.0s
+[07:57:10.970] [INFO ]   q06    leadership           medium   0.000   ✗     N/A      0.0s
+[07:57:10.970] [INFO ]   q07    leadership           medium   0.000   ✗     N/A      0.0s
+[07:57:10.970] [INFO ]   q08    leadership           medium   0.000   ✗     N/A      0.0s
+[07:57:10.970] [INFO ]   q09    products_pricing     easy     0.000   ✗     N/A      0.0s
+[07:57:10.970] [INFO ]   q10    products_pricing     easy     0.000   ✗     N/A      0.0s
+[07:57:10.970] [INFO ]   q11    products_pricing     medium   0.000   ✗     N/A      0.0s
+[07:57:10.970] [INFO ]   q12    products_pricing     easy     0.000   ✗     N/A      0.0s
+[07:57:10.970] [INFO ]   q13    products_pricing     medium   0.000   ✗     N/A      0.0s
+[07:57:10.970] [INFO ]   q14    products_pricing     easy     0.000   ✗     N/A      0.0s
+[07:57:10.970] [INFO ]   q15    products_pricing     medium   0.000   ✗     N/A      0.0s
+[07:57:10.970] [INFO ]   q16    products_pricing     easy     0.000   ✗     N/A      0.0s
+[07:57:10.970] [INFO ]   q17    products_pricing     easy     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q18    hr_policy            medium   0.167   ✗     no       103.1s
+[07:57:10.971] [INFO ]   q19    hr_policy            medium   0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q20    hr_policy            medium   0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q21    hr_policy            hard     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q22    hr_policy            medium   0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q23    benefits             easy     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q24    benefits             easy     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q25    benefits             medium   0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q26    leadership           easy     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q27    benefits             easy     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q28    company_overview     easy     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q29    benefits             easy     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q30    products_pricing     easy     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q31    products_pricing     easy     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q32    company_overview     easy     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q33    benefits             easy     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q34    benefits             easy     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q35    benefits             easy     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q36    products_pricing     hard     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q37    leadership           hard     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q38    leadership           hard     0.333   ✗     no       106.3s
+[07:57:10.971] [INFO ]   q39    leadership           hard     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q40    leadership           hard     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q41    leadership           hard     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q42    leadership           hard     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q43    leadership           hard     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q44    products_pricing     hard     0.000   ✗     N/A      0.0s
+[07:57:10.971] [INFO ]   q45    leadership           hard     0.000   ✗     N/A      0.0s
+[07:57:10.972] [INFO ] 
+[07:57:10.975] [INFO ] Results saved → /Users/StartupUser/Documents/GitHub/kg-claim-verifier/results/qwen-qwen3_5-397b-a17b/v2_results.json

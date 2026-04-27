@@ -1,0 +1,1017 @@
+[06:22:05.972] [INFO ] ════════════════════════════════════════════════════════════════════════
+[06:22:05.972] [INFO ]   KG-BACKED CLAIM VERIFIER — EXPERIMENT RUN
+[06:22:05.972] [INFO ] ════════════════════════════════════════════════════════════════════════
+[06:22:05.972] [INFO ]   Model     : qwen/qwen3.5-122b-a10b
+[06:22:05.972] [INFO ]   Variant   : V2
+[06:22:05.972] [INFO ]   Questions : 45
+[06:22:05.972] [INFO ]   KG triples: 262
+[06:22:05.973] [INFO ]   Started   : 2026-04-22 06:22:05
+[06:22:05.973] [INFO ]   Log file  : /Users/StartupUser/Documents/GitHub/kg-claim-verifier/results/qwen-qwen3_5-122b-a10b/logs/v2_20260422_055332.log
+[06:22:05.973] [INFO ] 
+[06:22:05.973] [INFO ] ════════════════════════════════════════════════════════════════════════
+[06:22:05.973] [INFO ]   VARIANT: V2  |  45 questions  |  model: qwen/qwen3.5-122b-a10b
+[06:22:05.973] [INFO ] ════════════════════════════════════════════════════════════════════════
+[06:22:05.973] [INFO ] Pipeline : V2Pipeline
+[06:22:05.973] [INFO ] 
+[06:22:05.973] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:22:05.973] [INFO ] Question 1/45  [q01]  category=company_overview  difficulty=easy
+[06:22:05.973] [INFO ]   Q: When was NovaAI founded and who co-founded it?
+[06:22:05.973] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:22:05.973] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:22:05.973] [INFO ] 
+[06:22:05.973] [INFO ] [V2] Running pipeline...
+[06:22:13.289] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:22:13.292] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:22:13.292] [INFO ] Question 2/45  [q02]  category=company_overview  difficulty=medium
+[06:22:13.292] [INFO ]   Q: What is NovaAI's current valuation, and how was it achieved?
+[06:22:13.292] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:22:13.293] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:22:13.293] [INFO ] 
+[06:22:13.293] [INFO ] [V2] Running pipeline...
+[06:22:20.806] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:22:20.807] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:22:20.807] [INFO ] Question 3/45  [q03]  category=company_overview  difficulty=medium
+[06:22:20.807] [INFO ]   Q: How many employees does NovaAI have and where are its offices?
+[06:22:20.807] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:22:20.808] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:22:20.808] [INFO ] 
+[06:22:20.808] [INFO ] [V2] Running pipeline...
+[06:22:27.826] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:22:27.827] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:22:27.827] [INFO ] Question 4/45  [q04]  category=company_overview  difficulty=easy
+[06:22:27.827] [INFO ]   Q: What are NovaAI's primary market verticals?
+[06:22:27.827] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:22:27.827] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:22:27.827] [INFO ] 
+[06:22:27.827] [INFO ] [V2] Running pipeline...
+[06:22:35.046] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:22:35.047] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:22:35.048] [INFO ] Question 5/45  [q05]  category=leadership  difficulty=easy
+[06:22:35.048] [INFO ]   Q: Who is the CEO of NovaAI and when did she join the company?
+[06:22:35.048] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:22:35.048] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:22:35.049] [INFO ] 
+[06:22:35.049] [INFO ] [V2] Running pipeline...
+[06:22:42.638] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:22:42.640] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:22:42.640] [INFO ] Question 6/45  [q06]  category=leadership  difficulty=medium
+[06:22:42.640] [INFO ]   Q: Who leads the Engineering department and what are its sub-teams?
+[06:22:42.640] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:22:42.641] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:22:42.641] [INFO ] 
+[06:22:42.641] [INFO ] [V2] Running pipeline...
+[06:22:49.790] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:22:49.792] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:22:49.792] [INFO ] Question 7/45  [q07]  category=leadership  difficulty=medium
+[06:22:49.792] [INFO ]   Q: Who is NovaAI's General Counsel and what is their background?
+[06:22:49.792] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:22:49.792] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:22:49.793] [INFO ] 
+[06:22:49.793] [INFO ] [V2] Running pipeline...
+[06:22:56.862] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:22:56.864] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:22:56.865] [INFO ] Question 8/45  [q08]  category=leadership  difficulty=medium
+[06:22:56.865] [INFO ]   Q: What is Marcus Webb's role, location, and FY2026 quota?
+[06:22:56.865] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:22:56.865] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:22:56.865] [INFO ] 
+[06:22:56.865] [INFO ] [V2] Running pipeline...
+[06:23:04.406] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:23:04.407] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:23:04.407] [INFO ] Question 9/45  [q09]  category=products_pricing  difficulty=easy
+[06:23:04.407] [INFO ]   Q: What is the price of the NovaPilot Starter plan and what does it include?
+[06:23:04.407] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:23:04.407] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:23:04.407] [INFO ] 
+[06:23:04.407] [INFO ] [V2] Running pipeline...
+[06:23:11.902] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:23:11.905] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:23:11.905] [INFO ] Question 10/45  [q10]  category=products_pricing  difficulty=easy
+[06:23:11.905] [INFO ]   Q: What is the price of the NovaPilot Growth plan?
+[06:23:11.905] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:23:11.905] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:23:11.905] [INFO ] 
+[06:23:11.905] [INFO ] [V2] Running pipeline...
+[06:23:19.447] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:23:19.449] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:23:19.449] [INFO ] Question 11/45  [q11]  category=products_pricing  difficulty=medium
+[06:23:19.449] [INFO ]   Q: What features does NovaPilot Enterprise include and what is its price range?
+[06:23:19.449] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:23:19.449] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:23:19.450] [INFO ] 
+[06:23:19.450] [INFO ] [V2] Running pipeline...
+[06:23:26.523] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:23:26.525] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:23:26.526] [INFO ] Question 12/45  [q12]  category=products_pricing  difficulty=easy
+[06:23:26.526] [INFO ]   Q: When was NovaPilot launched and what is it?
+[06:23:26.526] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:23:26.526] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:23:26.526] [INFO ] 
+[06:23:26.526] [INFO ] [V2] Running pipeline...
+[06:23:33.984] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:23:33.986] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:23:33.986] [INFO ] Question 13/45  [q13]  category=products_pricing  difficulty=medium
+[06:23:33.986] [INFO ]   Q: Compare the NovaLens Professional and Business pricing tiers.
+[06:23:33.986] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:23:33.986] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:23:33.986] [INFO ] 
+[06:23:33.986] [INFO ] [V2] Running pipeline...
+[06:23:41.500] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:23:41.502] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:23:41.502] [INFO ] Question 14/45  [q14]  category=products_pricing  difficulty=easy
+[06:23:41.502] [INFO ]   Q: What data connectors does NovaLens support?
+[06:23:41.503] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:23:41.503] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:23:41.503] [INFO ] 
+[06:23:41.503] [INFO ] [V2] Running pipeline...
+[06:23:48.987] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:23:48.989] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:23:48.989] [INFO ] Question 15/45  [q15]  category=products_pricing  difficulty=medium
+[06:23:48.989] [INFO ]   Q: What is the price and model monitoring limit for NovaGuard Advanced?
+[06:23:48.990] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:23:48.990] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:23:48.990] [INFO ] 
+[06:23:48.990] [INFO ] [V2] Running pipeline...
+[06:23:56.057] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:23:56.059] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:23:56.059] [INFO ] Question 16/45  [q16]  category=products_pricing  difficulty=easy
+[06:23:56.059] [INFO ]   Q: What is the price and model limit for NovaGuard Standard?
+[06:23:56.059] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:23:56.059] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:23:56.059] [INFO ] 
+[06:23:56.059] [INFO ] [V2] Running pipeline...
+[06:24:03.519] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:24:03.522] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:24:03.522] [INFO ] Question 17/45  [q17]  category=products_pricing  difficulty=easy
+[06:24:03.522] [INFO ]   Q: What license is NovaBridge released under and how many GitHub stars does it have?
+[06:24:03.522] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:24:03.523] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:24:03.523] [INFO ] 
+[06:24:03.523] [INFO ] [V2] Running pipeline...
+[06:24:10.707] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:24:10.709] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:24:10.709] [INFO ] Question 18/45  [q18]  category=hr_policy  difficulty=medium
+[06:24:10.709] [INFO ]   Q: What is NovaAI's PTO policy?
+[06:24:10.710] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:24:10.710] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:24:10.710] [INFO ] 
+[06:24:10.710] [INFO ] [V2] Running pipeline...
+[06:24:18.062] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:24:18.064] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:24:18.065] [INFO ] Question 19/45  [q19]  category=hr_policy  difficulty=medium
+[06:24:18.065] [INFO ]   Q: What are NovaAI's in-office requirements for San Francisco employees?
+[06:24:18.065] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:24:18.065] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:24:18.065] [INFO ] 
+[06:24:18.065] [INFO ] [V2] Running pipeline...
+[06:24:25.425] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:24:25.427] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:24:25.427] [INFO ] Question 20/45  [q20]  category=hr_policy  difficulty=medium
+[06:24:25.427] [INFO ]   Q: What are the expense limits for hotel stays and how must expenses be submitted?
+[06:24:25.427] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:24:25.427] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:24:25.427] [INFO ] 
+[06:24:25.428] [INFO ] [V2] Running pipeline...
+[06:24:32.978] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:24:32.980] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:24:32.980] [INFO ] Question 21/45  [q21]  category=hr_policy  difficulty=hard
+[06:24:32.980] [INFO ]   Q: How does NovaAI's performance review cycle work?
+[06:24:32.981] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:24:32.981] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:24:32.981] [INFO ] 
+[06:24:32.981] [INFO ] [V2] Running pipeline...
+[06:24:40.199] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:24:40.201] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:24:40.201] [INFO ] Question 22/45  [q22]  category=hr_policy  difficulty=medium
+[06:24:40.201] [INFO ]   Q: What is NovaAI's airfare booking policy?
+[06:24:40.201] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:24:40.201] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:24:40.201] [INFO ] 
+[06:24:40.201] [INFO ] [V2] Running pipeline...
+[06:24:47.438] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:24:47.440] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:24:47.440] [INFO ] Question 23/45  [q23]  category=benefits  difficulty=easy
+[06:24:47.440] [INFO ]   Q: What is NovaAI's parental leave policy?
+[06:24:47.440] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:24:47.440] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:24:47.441] [INFO ] 
+[06:24:47.441] [INFO ] [V2] Running pipeline...
+[06:24:54.945] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:24:54.947] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:24:54.948] [INFO ] Question 24/45  [q24]  category=benefits  difficulty=easy
+[06:24:54.948] [INFO ]   Q: What is the 401(k) match at NovaAI and when are employees eligible?
+[06:24:54.948] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:24:54.948] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:24:54.949] [INFO ] 
+[06:24:54.949] [INFO ] [V2] Running pipeline...
+[06:25:02.526] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:25:02.527] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:25:02.527] [INFO ] Question 25/45  [q25]  category=benefits  difficulty=medium
+[06:25:02.527] [INFO ]   Q: What is the annual L&D budget per employee and how does it work?
+[06:25:02.527] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:25:02.527] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:25:02.527] [INFO ] 
+[06:25:02.527] [INFO ] [V2] Running pipeline...
+[06:25:09.820] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:25:09.823] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:25:09.824] [INFO ] Question 26/45  [q26]  category=leadership  difficulty=easy
+[06:25:09.824] [INFO ]   Q: Who is NovaAI's Chief Operating Officer?
+[06:25:09.824] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:25:09.824] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:25:09.824] [INFO ] 
+[06:25:09.825] [INFO ] [V2] Running pipeline...
+[06:25:17.466] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:25:17.468] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:25:17.468] [INFO ] Question 27/45  [q27]  category=benefits  difficulty=easy
+[06:25:17.468] [INFO ]   Q: Which platform does NovaAI use for equity management?
+[06:25:17.468] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:25:17.468] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:25:17.468] [INFO ] 
+[06:25:17.468] [INFO ] [V2] Running pipeline...
+[06:25:24.614] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:25:24.616] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:25:24.616] [INFO ] Question 28/45  [q28]  category=company_overview  difficulty=easy
+[06:25:24.617] [INFO ]   Q: What is the street address of NovaAI's headquarters?
+[06:25:24.617] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:25:24.617] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:25:24.617] [INFO ] 
+[06:25:24.617] [INFO ] [V2] Running pipeline...
+[06:25:32.162] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:25:32.164] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:25:32.164] [INFO ] Question 29/45  [q29]  category=benefits  difficulty=easy
+[06:25:32.164] [INFO ]   Q: Which provider administers NovaAI's health benefits?
+[06:25:32.165] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:25:32.165] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:25:32.165] [INFO ] 
+[06:25:32.165] [INFO ] [V2] Running pipeline...
+[06:25:39.550] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:25:39.553] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:25:39.553] [INFO ] Question 30/45  [q30]  category=products_pricing  difficulty=easy
+[06:25:39.553] [INFO ]   Q: When was NovaGuard launched?
+[06:25:39.553] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:25:39.553] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:25:39.554] [INFO ] 
+[06:25:39.554] [INFO ] [V2] Running pipeline...
+[06:25:46.838] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:25:46.840] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:25:46.840] [INFO ] Question 31/45  [q31]  category=products_pricing  difficulty=easy
+[06:25:46.840] [INFO ]   Q: When was NovaBridge released?
+[06:25:46.840] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:25:46.840] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:25:46.840] [INFO ] 
+[06:25:46.840] [INFO ] [V2] Running pipeline...
+[06:25:54.284] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:25:54.285] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:25:54.286] [INFO ] Question 32/45  [q32]  category=company_overview  difficulty=easy
+[06:25:54.286] [INFO ]   Q: Which cloud provider does NovaAI use as its secondary provider?
+[06:25:54.286] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:25:54.286] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:25:54.286] [INFO ] 
+[06:25:54.286] [INFO ] [V2] Running pipeline...
+[06:26:01.494] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:26:01.496] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:26:01.496] [INFO ] Question 33/45  [q33]  category=benefits  difficulty=easy
+[06:26:01.496] [INFO ]   Q: What is NovaAI's on-call compensation rate?
+[06:26:01.496] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:26:01.496] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:26:01.497] [INFO ] 
+[06:26:01.497] [INFO ] [V2] Running pipeline...
+[06:26:08.786] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:26:08.787] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:26:08.787] [INFO ] Question 34/45  [q34]  category=benefits  difficulty=easy
+[06:26:08.787] [INFO ]   Q: What is NovaAI's home office equipment stipend for new hires?
+[06:26:08.787] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:26:08.787] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:26:08.787] [INFO ] 
+[06:26:08.787] [INFO ] [V2] Running pipeline...
+[06:26:15.864] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:26:15.867] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:26:15.867] [INFO ] Question 35/45  [q35]  category=benefits  difficulty=easy
+[06:26:15.867] [INFO ]   Q: What health benefits coverage does NovaAI provide?
+[06:26:15.867] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:26:15.867] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:26:15.867] [INFO ] 
+[06:26:15.868] [INFO ] [V2] Running pipeline...
+[06:26:23.106] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:26:23.108] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:26:23.109] [INFO ] Question 36/45  [q36]  category=products_pricing  difficulty=hard
+[06:26:23.109] [INFO ]   Q: Who is the PM owner of NovaAI's flagship product?
+[06:26:23.109] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:26:23.109] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:26:23.109] [INFO ] 
+[06:26:23.109] [INFO ] [V2] Running pipeline...
+[06:26:30.630] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:26:30.632] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:26:30.632] [INFO ] Question 37/45  [q37]  category=leadership  difficulty=hard
+[06:26:30.633] [INFO ]   Q: Who leads the UX/Design team, and when did they join NovaAI?
+[06:26:30.633] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:26:30.633] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:26:30.633] [INFO ] 
+[06:26:30.633] [INFO ] [V2] Running pipeline...
+[06:26:38.009] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:26:38.012] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:26:38.012] [INFO ] Question 38/45  [q38]  category=leadership  difficulty=hard
+[06:26:38.012] [INFO ]   Q: Who leads the SMB Sales team, and what is their FY2026 quota?
+[06:26:38.012] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:26:38.012] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:26:38.012] [INFO ] 
+[06:26:38.013] [INFO ] [V2] Running pipeline...
+[06:26:45.461] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:26:45.463] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:26:45.463] [INFO ] Question 39/45  [q39]  category=leadership  difficulty=hard
+[06:26:45.464] [INFO ]   Q: When did NovaAI's Chief Revenue Officer join the company?
+[06:26:45.464] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:26:45.464] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:26:45.464] [INFO ] 
+[06:26:45.464] [INFO ] [V2] Running pipeline...
+[06:26:53.065] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:26:53.068] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:26:53.068] [INFO ] Question 40/45  [q40]  category=leadership  difficulty=hard
+[06:26:53.068] [INFO ]   Q: When did NovaAI's VP of Marketing join the company?
+[06:26:53.068] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:26:53.068] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:26:53.069] [INFO ] 
+[06:26:53.069] [INFO ] [V2] Running pipeline...
+[06:27:00.509] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:27:00.511] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:27:00.511] [INFO ] Question 41/45  [q41]  category=leadership  difficulty=hard
+[06:27:00.511] [INFO ]   Q: Who is NovaBridge's Developer Relations Lead, and to whom do they report?
+[06:27:00.512] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:27:00.512] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:27:00.512] [INFO ] 
+[06:27:00.512] [INFO ] [V2] Running pipeline...
+[06:27:08.008] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:27:08.011] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:27:08.011] [INFO ] Question 42/45  [q42]  category=leadership  difficulty=hard
+[06:27:08.011] [INFO ]   Q: When did NovaAI's VP of Product join the company?
+[06:27:08.011] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:27:08.011] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:27:08.012] [INFO ] 
+[06:27:08.012] [INFO ] [V2] Running pipeline...
+[06:27:15.489] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:27:15.492] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:27:15.492] [INFO ] Question 43/45  [q43]  category=leadership  difficulty=hard
+[06:27:15.492] [INFO ]   Q: What is the FY2026 NRR target of the department led by NovaAI's VP of Customer Success?
+[06:27:15.493] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:27:15.493] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:27:15.493] [INFO ] 
+[06:27:15.493] [INFO ] [V2] Running pipeline...
+[06:27:23.036] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:27:23.038] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:27:23.038] [INFO ] Question 44/45  [q44]  category=products_pricing  difficulty=hard
+[06:27:23.038] [INFO ]   Q: Which product has a roadmap for real-time streaming via Kafka, and what type of product is it?
+[06:27:23.038] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:27:23.038] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:27:23.038] [INFO ] 
+[06:27:23.038] [INFO ] [V2] Running pipeline...
+[06:27:30.535] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:27:30.536] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:27:30.536] [INFO ] Question 45/45  [q45]  category=leadership  difficulty=hard
+[06:27:30.536] [INFO ]   Q: Who leads the Solutions Engineering team, and when did they join NovaAI?
+[06:27:30.536] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[06:27:30.536] [INFO ] [V2 MEMORY] Session memory is empty (first question or after reset)
+[06:27:30.536] [INFO ] 
+[06:27:30.537] [INFO ] [V2] Running pipeline...
+[06:27:37.768] [ERROR] [V2] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 289, in run
+    raw_answer = call_llm(
+        question,
+        model=self.model,
+        system_prompt=system_prompt,
+    )
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3.5-122b-a10b'
+[06:27:37.770] [INFO ] ════════════════════════════════════════════════════════════════════════
+[06:27:37.770] [INFO ]   SUMMARY — V2
+[06:27:37.770] [INFO ] ════════════════════════════════════════════════════════════════════════
+[06:27:37.770] [INFO ]   Questions     : 45
+[06:27:37.770] [INFO ]   Correct       : 0/45  (0.0%)
+[06:27:37.770] [INFO ]   Avg KFR       : 0.000
+[06:27:37.770] [INFO ]   Avg latency   : 0.00s
+[06:27:37.770] [INFO ] 
+[06:27:37.770] [INFO ]   ID     Category             Diff     KFR     OK?   Hallucs  Latency
+[06:27:37.771] [INFO ]   --------------------------------------------------------------
+[06:27:37.771] [INFO ]   q01    company_overview     easy     0.000   ✗     N/A      0.0s
+[06:27:37.771] [INFO ]   q02    company_overview     medium   0.000   ✗     N/A      0.0s
+[06:27:37.771] [INFO ]   q03    company_overview     medium   0.000   ✗     N/A      0.0s
+[06:27:37.771] [INFO ]   q04    company_overview     easy     0.000   ✗     N/A      0.0s
+[06:27:37.771] [INFO ]   q05    leadership           easy     0.000   ✗     N/A      0.0s
+[06:27:37.771] [INFO ]   q06    leadership           medium   0.000   ✗     N/A      0.0s
+[06:27:37.771] [INFO ]   q07    leadership           medium   0.000   ✗     N/A      0.0s
+[06:27:37.771] [INFO ]   q08    leadership           medium   0.000   ✗     N/A      0.0s
+[06:27:37.771] [INFO ]   q09    products_pricing     easy     0.000   ✗     N/A      0.0s
+[06:27:37.771] [INFO ]   q10    products_pricing     easy     0.000   ✗     N/A      0.0s
+[06:27:37.771] [INFO ]   q11    products_pricing     medium   0.000   ✗     N/A      0.0s
+[06:27:37.771] [INFO ]   q12    products_pricing     easy     0.000   ✗     N/A      0.0s
+[06:27:37.771] [INFO ]   q13    products_pricing     medium   0.000   ✗     N/A      0.0s
+[06:27:37.772] [INFO ]   q14    products_pricing     easy     0.000   ✗     N/A      0.0s
+[06:27:37.772] [INFO ]   q15    products_pricing     medium   0.000   ✗     N/A      0.0s
+[06:27:37.772] [INFO ]   q16    products_pricing     easy     0.000   ✗     N/A      0.0s
+[06:27:37.772] [INFO ]   q17    products_pricing     easy     0.000   ✗     N/A      0.0s
+[06:27:37.772] [INFO ]   q18    hr_policy            medium   0.000   ✗     N/A      0.0s
+[06:27:37.772] [INFO ]   q19    hr_policy            medium   0.000   ✗     N/A      0.0s
+[06:27:37.772] [INFO ]   q20    hr_policy            medium   0.000   ✗     N/A      0.0s
+[06:27:37.772] [INFO ]   q21    hr_policy            hard     0.000   ✗     N/A      0.0s
+[06:27:37.772] [INFO ]   q22    hr_policy            medium   0.000   ✗     N/A      0.0s
+[06:27:37.772] [INFO ]   q23    benefits             easy     0.000   ✗     N/A      0.0s
+[06:27:37.772] [INFO ]   q24    benefits             easy     0.000   ✗     N/A      0.0s
+[06:27:37.772] [INFO ]   q25    benefits             medium   0.000   ✗     N/A      0.0s
+[06:27:37.772] [INFO ]   q26    leadership           easy     0.000   ✗     N/A      0.0s
+[06:27:37.772] [INFO ]   q27    benefits             easy     0.000   ✗     N/A      0.0s
+[06:27:37.772] [INFO ]   q28    company_overview     easy     0.000   ✗     N/A      0.0s
+[06:27:37.772] [INFO ]   q29    benefits             easy     0.000   ✗     N/A      0.0s
+[06:27:37.773] [INFO ]   q30    products_pricing     easy     0.000   ✗     N/A      0.0s
+[06:27:37.773] [INFO ]   q31    products_pricing     easy     0.000   ✗     N/A      0.0s
+[06:27:37.773] [INFO ]   q32    company_overview     easy     0.000   ✗     N/A      0.0s
+[06:27:37.773] [INFO ]   q33    benefits             easy     0.000   ✗     N/A      0.0s
+[06:27:37.773] [INFO ]   q34    benefits             easy     0.000   ✗     N/A      0.0s
+[06:27:37.773] [INFO ]   q35    benefits             easy     0.000   ✗     N/A      0.0s
+[06:27:37.773] [INFO ]   q36    products_pricing     hard     0.000   ✗     N/A      0.0s
+[06:27:37.773] [INFO ]   q37    leadership           hard     0.000   ✗     N/A      0.0s
+[06:27:37.773] [INFO ]   q38    leadership           hard     0.000   ✗     N/A      0.0s
+[06:27:37.773] [INFO ]   q39    leadership           hard     0.000   ✗     N/A      0.0s
+[06:27:37.773] [INFO ]   q40    leadership           hard     0.000   ✗     N/A      0.0s
+[06:27:37.774] [INFO ]   q41    leadership           hard     0.000   ✗     N/A      0.0s
+[06:27:37.774] [INFO ]   q42    leadership           hard     0.000   ✗     N/A      0.0s
+[06:27:37.774] [INFO ]   q43    leadership           hard     0.000   ✗     N/A      0.0s
+[06:27:37.774] [INFO ]   q44    products_pricing     hard     0.000   ✗     N/A      0.0s
+[06:27:37.774] [INFO ]   q45    leadership           hard     0.000   ✗     N/A      0.0s
+[06:27:37.774] [INFO ] 
+[06:27:37.776] [INFO ] Results saved → /Users/StartupUser/Documents/GitHub/kg-claim-verifier/results/qwen-qwen3_5-122b-a10b/v2_results.json

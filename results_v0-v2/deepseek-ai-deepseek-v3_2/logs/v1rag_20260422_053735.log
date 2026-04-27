@@ -1,0 +1,2278 @@
+[08:07:00.956] [INFO ] ════════════════════════════════════════════════════════════════════════
+[08:07:00.956] [INFO ]   KG-BACKED CLAIM VERIFIER — EXPERIMENT RUN
+[08:07:00.956] [INFO ] ════════════════════════════════════════════════════════════════════════
+[08:07:00.956] [INFO ]   Model     : deepseek-ai/deepseek-v3.2
+[08:07:00.956] [INFO ]   Variant   : V1RAG
+[08:07:00.956] [INFO ]   Questions : 5
+[08:07:00.956] [INFO ]   KG triples: 262
+[08:07:00.956] [INFO ]   Started   : 2026-04-22 08:07:00
+[08:07:00.956] [INFO ]   Log file  : /Users/StartupUser/Documents/GitHub/kg-claim-verifier/results/deepseek-ai-deepseek-v3_2/logs/v1rag_20260422_053735.log
+[08:07:00.956] [INFO ] 
+[08:07:00.957] [INFO ] ════════════════════════════════════════════════════════════════════════
+[08:07:00.957] [INFO ]   VARIANT: V1RAG  |  5 questions  |  model: deepseek-ai/deepseek-v3.2
+[08:07:00.957] [INFO ] ════════════════════════════════════════════════════════════════════════
+[08:07:00.957] [INFO ] Pipeline : V1RAGPipeline
+[08:07:00.957] [INFO ] 
+[08:07:00.957] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[08:07:00.957] [INFO ] Question 1/5  [q01]  category=company_overview  difficulty=easy
+[08:07:00.957] [INFO ]   Q: When was NovaAI founded and who co-founded it?
+[08:07:00.957] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[08:07:00.957] [INFO ] [V1RAG] Running pipeline...
+[08:07:00.957] [DEBUG] [ENTITY_LINKER] Lookup  claim="When was NovaAI founded and who co-founded it?"  method=llm
+[08:07:00.957] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "When was NovaAI founded and who co-founded it?"
+[08:07:00.957] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When was NovaAI founded and who co-founded it?"
+[08:12:33.372] [DEBUG] [V1RAG] LLM DONE  (332.41s)
+  Response:
+    ```json
+    {
+      "entities": ["NovaAI"],
+      "relations": ["founded", "co-founded"],
+      "values": []
+    }
+    ```
+[08:12:33.373] [DEBUG] [V1RAG] LLM JSON DONE  (332.42s)
+  Parsed : {
+  "entities": [
+    "NovaAI"
+  ],
+  "relations": [
+    "founded",
+    "co-founded"
+  ],
+  "values": []
+}
+[08:12:33.379] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (332.42s):
+    [127]  NovaAI | co_founded_by | Dr. Mara Chen
+    [127]  NovaAI | co_founded_by | Lucas Ferreira
+    [125]  NovaAI | founded_in_year | 2021
+    [125]  NovaAI | founded_in_location | San Francisco, California
+    [123]  NovaAI | has_cfo | Priya Nambiar
+    [117]  NovaAI | series_c_date | November 2025
+    [117]  NovaAI | total_funding | $210M
+    [117]  NovaAI | ownership_type | privately held
+    [100]  NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105
+    [100]  NovaAI | employee_count | 312 full-time employees (as of Q1 2026)
+[08:12:59.755] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: When was NovaAI founded and who co-founded it?
+
+Answer: NovaAI was founded in 2021. It was co-founded by Dr. Mara Chen and Lucas Ferreira.
+
+Extract up to 15 atomic, verifiable factual claims from this answer (prioritise specific numbers, names, dates). Return valid JSON only.
+[08:14:55.486] [DEBUG] [V1RAG] LLM DONE  (115.73s)
+  Response:
+    {
+      "claims": [
+        {
+          "text": "NovaAI was founded in 2021.",
+          "source_span": "NovaAI was founded in 2021."
+        },
+        {
+          "text": "NovaAI was co-founded by Dr. Mara Chen.",
+          "source_span": "It was co-founded by Dr. Mara Chen"
+        },
+        {
+          "text": "NovaAI was co-founded by Lucas Ferreira.",
+          "source_span": "and Lucas Ferreira."
+        }
+      ]
+    }
+[08:14:55.488] [DEBUG] [ENTITY_LINKER] Lookup  claim="NovaAI was founded in 2021."  method=llm
+[08:14:55.489] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "NovaAI was founded in 2021."
+[08:14:55.489] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "NovaAI was founded in 2021."
+[08:15:45.741] [DEBUG] [V1RAG] LLM DONE  (50.25s)
+  Response:
+    ```json
+    {
+      "entities": ["NovaAI"],
+      "relations": ["founded in"],
+      "values": ["2021"]
+    }
+    ```
+[08:15:45.742] [DEBUG] [V1RAG] LLM JSON DONE  (50.25s)
+  Parsed : {
+  "entities": [
+    "NovaAI"
+  ],
+  "relations": [
+    "founded in"
+  ],
+  "values": [
+    "2021"
+  ]
+}
+[08:15:45.748] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (50.26s):
+    [130]  NovaAI | founded_in_year | 2021
+    [130]  NovaAI | founded_in_location | San Francisco, California
+    [125]  NovaAI | co_founded_by | Dr. Mara Chen
+    [125]  NovaAI | co_founded_by | Lucas Ferreira
+    [118]  NovaAI | has_cfo | Priya Nambiar
+    [118]  NovaAI | series_c_led_by | Horizon Ventures
+    [117]  NovaAI | fully_remote_approval_requires | direct manager, department VP, and Claudia Torres
+    [117]  NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105
+    [100]  NovaAI | employee_count | 312 full-time employees (as of Q1 2026)
+    [100]  NovaAI | has_office_in | San Francisco
+[08:15:45.782] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: NovaAI was founded in 2021.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | founded_in_year | 2021  (relevance score: 130)
+- NovaAI | founded_in_location | San Francisco, California  (relevance score: 130)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 125)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 125)
+- NovaAI | has_cfo | Priya Nambiar  (relevance score: 118)
+- NovaAI | series_c_led_by | Horizon Ventures  (relevance score: 118)
+- NovaAI | fully_remote_appro
+  ... [+1159 chars truncated]
+[08:15:45.782] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: NovaAI was founded in 2021.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | founded_in_year | 2021  (relevance score: 130)
+- NovaAI | founded_in_location | San Francisco, California  (relevance score: 130)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 125)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 125)
+- NovaAI | has_cfo | Priya Nambiar  (relevance score: 118)
+- NovaAI | series_c_led_by | Horizon Ventures  (relevance score: 118)
+- NovaAI | fully_remote_approval_requires | direct manager, department VP, and Claudia Torres  (relevance score: 117)
+- NovaAI | 
+  ... [+1059 chars truncated]
+[08:16:43.709] [DEBUG] [V1RAG] LLM DONE  (57.93s)
+  Response:
+    {"verdict": "SUPPORTED", "confidence": 1.0, "reasoning": "The triple 'NovaAI | founded_in_year | 2021' directly confirms the claim."}
+[08:16:43.710] [DEBUG] [V1RAG] LLM JSON DONE  (57.93s)
+  Parsed : {
+  "verdict": "SUPPORTED",
+  "confidence": 1.0,
+  "reasoning": "The triple 'NovaAI | founded_in_year | 2021' directly confirms the claim."
+}
+[08:16:43.710] [DEBUG] [ENTITY_LINKER] Lookup  claim="NovaAI was co-founded by Dr. Mara Chen."  method=llm
+[08:16:43.711] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "NovaAI was co-founded by Dr. Mara Chen."
+[08:16:43.711] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "NovaAI was co-founded by Dr. Mara Chen."
+[08:18:12.658] [DEBUG] [V1RAG] LLM DONE  (88.95s)
+  Response:
+    {
+      "entities": ["NovaAI", "Dr. Mara Chen"],
+      "relations": ["co-founded by"],
+      "values": []
+    }
+[08:18:12.659] [DEBUG] [V1RAG] LLM JSON DONE  (88.95s)
+  Parsed : {
+  "entities": [
+    "NovaAI",
+    "Dr. Mara Chen"
+  ],
+  "relations": [
+    "co-founded by"
+  ],
+  "values": []
+}
+[08:18:12.665] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (88.95s):
+    [130]  NovaAI | co_founded_by | Dr. Mara Chen
+    [130]  NovaAI | co_founded_by | Lucas Ferreira
+    [128]  NovaAI | has_cfo | Priya Nambiar
+    [121]  NovaAI | has_ceo | Dr. Mara Chen
+    [120]  NovaAI | ownership_type | privately held
+    [119]  NovaAI | has_coo | James Whitfield
+    [118]  NovaAI | founded_in_year | 2021
+    [118]  NovaAI | founded_in_location | San Francisco, California
+    [118]  NovaAI | health_benefits_provider | Anthem Blue Cross
+    [100]  NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105
+[08:18:12.692] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: NovaAI was co-founded by Dr. Mara Chen.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 130)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 130)
+- NovaAI | has_cfo | Priya Nambiar  (relevance score: 128)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 121)
+- NovaAI | ownership_type | privately held  (relevance score: 120)
+- NovaAI | has_coo | James Whitfield  (relevance score: 119)
+- NovaAI | founded_in_year | 2021  (relev
+  ... [+939 chars truncated]
+[08:18:12.692] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: NovaAI was co-founded by Dr. Mara Chen.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 130)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 130)
+- NovaAI | has_cfo | Priya Nambiar  (relevance score: 128)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 121)
+- NovaAI | ownership_type | privately held  (relevance score: 120)
+- NovaAI | has_coo | James Whitfield  (relevance score: 119)
+- NovaAI | founded_in_year | 2021  (relevance score: 118)
+- NovaAI | founded_in_location | San Francisco, California  (relevance score: 118)
+
+  ... [+839 chars truncated]
+[08:19:27.129] [DEBUG] [V1RAG] LLM DONE  (74.44s)
+  Response:
+    {"verdict": "SUPPORTED", "confidence": 1.0, "reasoning": "The triple 'NovaAI | co_founded_by | Dr. Mara Chen' directly confirms the claim."}
+[08:19:27.130] [DEBUG] [V1RAG] LLM JSON DONE  (74.44s)
+  Parsed : {
+  "verdict": "SUPPORTED",
+  "confidence": 1.0,
+  "reasoning": "The triple 'NovaAI | co_founded_by | Dr. Mara Chen' directly confirms the claim."
+}
+[08:19:27.130] [DEBUG] [ENTITY_LINKER] Lookup  claim="NovaAI was co-founded by Lucas Ferreira."  method=llm
+[08:19:27.130] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "NovaAI was co-founded by Lucas Ferreira."
+[08:19:27.131] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "NovaAI was co-founded by Lucas Ferreira."
+[08:20:13.087] [DEBUG] [V1RAG] LLM DONE  (45.96s)
+  Response:
+    ```json
+    {
+      "entities": ["NovaAI", "Lucas Ferreira"],
+      "relations": ["co-founded by"],
+      "values": []
+    }
+    ```
+[08:20:13.090] [DEBUG] [V1RAG] LLM JSON DONE  (45.96s)
+  Parsed : {
+  "entities": [
+    "NovaAI",
+    "Lucas Ferreira"
+  ],
+  "relations": [
+    "co-founded by"
+  ],
+  "values": []
+}
+[08:20:13.098] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (45.97s):
+    [130]  NovaAI | co_founded_by | Dr. Mara Chen
+    [130]  NovaAI | co_founded_by | Lucas Ferreira
+    [128]  NovaAI | has_cfo | Priya Nambiar
+    [121]  NovaAI | has_ceo | Dr. Mara Chen
+    [120]  NovaAI | ownership_type | privately held
+    [119]  NovaAI | has_coo | James Whitfield
+    [118]  NovaAI | founded_in_year | 2021
+    [118]  NovaAI | founded_in_location | San Francisco, California
+    [118]  NovaAI | health_benefits_provider | Anthem Blue Cross
+    [100]  NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105
+[08:20:13.129] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: NovaAI was co-founded by Lucas Ferreira.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 130)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 130)
+- NovaAI | has_cfo | Priya Nambiar  (relevance score: 128)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 121)
+- NovaAI | ownership_type | privately held  (relevance score: 120)
+- NovaAI | has_coo | James Whitfield  (relevance score: 119)
+- NovaAI | founded_in_year | 2021  (rele
+  ... [+940 chars truncated]
+[08:20:13.129] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: NovaAI was co-founded by Lucas Ferreira.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 130)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 130)
+- NovaAI | has_cfo | Priya Nambiar  (relevance score: 128)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 121)
+- NovaAI | ownership_type | privately held  (relevance score: 120)
+- NovaAI | has_coo | James Whitfield  (relevance score: 119)
+- NovaAI | founded_in_year | 2021  (relevance score: 118)
+- NovaAI | founded_in_location | San Francisco, California  (relevance score: 118)
+  ... [+840 chars truncated]
+[08:21:59.756] [DEBUG] [V1RAG] LLM DONE  (106.63s)
+  Response:
+    ```json
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "reasoning": "The triple 'NovaAI | co_founded_by | Lucas Ferreira' directly confirms that Lucas Ferreira was a co-founder of NovaAI."
+    }
+    ```
+[08:21:59.757] [DEBUG] [V1RAG] LLM JSON DONE  (106.63s)
+  Parsed : {
+  "verdict": "SUPPORTED",
+  "confidence": 1.0,
+  "reasoning": "The triple 'NovaAI | co_founded_by | Lucas Ferreira' directly confirms that Lucas Ferreira was a co-founder of NovaAI."
+}
+[08:21:59.757] [INFO ] 
+[08:21:59.758] [INFO ] ── RAW ANSWER ──
+[08:21:59.758] [INFO ]     NovaAI was founded in 2021. It was co-founded by Dr. Mara Chen and Lucas Ferreira.
+[08:21:59.758] [INFO ] 
+[08:21:59.758] [INFO ] ── CLAIMS EXTRACTED  (3) ──
+[08:21:59.758] [INFO ]    1. NovaAI was founded in 2021.
+[08:21:59.758] [INFO ]    2. NovaAI was co-founded by Dr. Mara Chen.
+[08:21:59.758] [INFO ]    3. NovaAI was co-founded by Lucas Ferreira.
+[08:21:59.758] [INFO ] 
+[08:21:59.758] [INFO ] ── VERIFICATION RESULTS ──
+[08:21:59.758] [INFO ]   [SUPPORTED    ] (conf=1.00)  "NovaAI was founded in 2021."
+[08:21:59.758] [DEBUG]     Reasoning : The triple 'NovaAI | founded_in_year | 2021' directly confirms the claim.
+[08:21:59.758] [DEBUG]     Evidence  : NovaAI | founded_in_year | 2021
+[08:21:59.758] [INFO ]   [SUPPORTED    ] (conf=1.00)  "NovaAI was co-founded by Dr. Mara Chen."
+[08:21:59.758] [DEBUG]     Reasoning : The triple 'NovaAI | co_founded_by | Dr. Mara Chen' directly confirms the claim.
+[08:21:59.758] [DEBUG]     Evidence  : NovaAI | co_founded_by | Dr. Mara Chen
+[08:21:59.758] [INFO ]   [SUPPORTED    ] (conf=1.00)  "NovaAI was co-founded by Lucas Ferreira."
+[08:21:59.758] [DEBUG]     Reasoning : The triple 'NovaAI | co_founded_by | Lucas Ferreira' directly confirms that Lucas Ferreira was a co-founder of NovaAI.
+[08:21:59.758] [DEBUG]     Evidence  : NovaAI | co_founded_by | Dr. Mara Chen
+[08:21:59.758] [INFO ] 
+[08:21:59.758] [INFO ] ── REPAIR: not needed (no contradictions) ──
+[08:21:59.758] [INFO ] 
+[08:21:59.758] [INFO ] ── EVALUATION ──
+[08:21:59.758] [INFO ]   Ground truth  : NovaAI was founded in 2021 by Dr. Mara Chen and Lucas Ferreira.
+[08:21:59.758] [INFO ]   Key facts     : ['2021', 'Dr. Mara Chen', 'Lucas Ferreira']
+[08:21:59.758] [INFO ]   KFR           : 1.000 (3/3 facts found) ✓
+[08:21:59.758] [INFO ]   Exact match   : False
+[08:21:59.758] [INFO ]   Latency       : 898.80s
+[08:21:59.758] [INFO ] 
+[08:21:59.758] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[08:21:59.758] [INFO ] Question 2/5  [q02]  category=company_overview  difficulty=medium
+[08:21:59.758] [INFO ]   Q: What is NovaAI's current valuation, and how was it achieved?
+[08:21:59.758] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[08:21:59.758] [INFO ] [V1RAG] Running pipeline...
+[08:21:59.758] [DEBUG] [ENTITY_LINKER] Lookup  claim="What is NovaAI's current valuation, and how was it achieved?"  method=llm
+[08:21:59.758] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What is NovaAI's current valuation, and how was it achieved?"
+[08:21:59.758] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's current valuation, and how was it achieved?"
+[08:22:32.629] [DEBUG] [V1RAG] LLM DONE  (32.87s)
+  Response:
+    ```json
+    {
+      "entities": ["NovaAI"],
+      "relations": ["current valuation", "achieved"],
+      "values": []
+    }
+    ```
+[08:22:32.629] [DEBUG] [V1RAG] LLM JSON DONE  (32.87s)
+  Parsed : {
+  "entities": [
+    "NovaAI"
+  ],
+  "relations": [
+    "current valuation",
+    "achieved"
+  ],
+  "values": []
+}
+[08:22:32.637] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (32.88s):
+    [130]  NovaAI | valuation | $1.4B
+    [122]  NovaAI | valuation_achieved_via | Series C round
+    [122]  NovaAI | performance_review_cycle | bi-annual
+    [117]  NovaAI | founded_in_location | San Francisco, California
+    [117]  NovaAI | has_cto | Lucas Ferreira
+    [116]  NovaAI | performance_rating_level_5 | Unsatisfactory
+    [100]  NovaAI | founded_in_year | 2021
+    [100]  NovaAI | co_founded_by | Dr. Mara Chen
+    [100]  NovaAI | co_founded_by | Lucas Ferreira
+    [100]  NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105
+[08:23:10.416] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: What is NovaAI's current valuation, and how was it achieved?
+
+Answer: Based on the internal facts:
+
+NovaAI's current valuation is **$1.4 billion**.
+
+This valuation was achieved via a **Series C round**, which was led by **Horizon Ventures** and closed in **November 2025**.
+
+Extract up to 15 atomic, verifiable factual claims from this answer (prioritise specific numbers, names, dates). Return valid JSON only.
+[08:24:17.283] [DEBUG] [V1RAG] LLM DONE  (66.87s)
+  Response:
+    ```json
+    {
+        "claims": [
+            {
+                "text": "NovaAI's current valuation is $1.4 billion.",
+                "source_span": "NovaAI's current valuation is **$1.4 billion**."
+            },
+            {
+                "text": "NovaAI's valuation was achieved via a Series C round.",
+                "source_span": "This valuation was achieved via a **Series C round**"
+            },
+            {
+                "text": "NovaAI's Series C round was led by Horizon Ventures.",
+                "source_span": "which was led by **Horizon Ventures**"
+            },
+            {
+                "text": "NovaAI's Series C round closed in November 2025.",
+                "source_span": "and closed in **November 2025**."
+            }
+        ]
+    }
+    ```
+[08:24:17.284] [DEBUG] [ENTITY_LINKER] Lookup  claim="NovaAI's current valuation is $1.4 billion."  method=llm
+[08:24:17.284] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "NovaAI's current valuation is $1.4 billion."
+[08:24:17.284] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "NovaAI's current valuation is $1.4 billion."
+[08:24:44.312] [DEBUG] [V1RAG] LLM DONE  (27.03s)
+  Response:
+    ```json
+    {
+      "entities": ["NovaAI"],
+      "relations": ["valuation"],
+      "values": ["$1.4 billion", "1.4B"]
+    }
+    ```
+[08:24:44.312] [DEBUG] [V1RAG] LLM JSON DONE  (27.03s)
+  Parsed : {
+  "entities": [
+    "NovaAI"
+  ],
+  "relations": [
+    "valuation"
+  ],
+  "values": [
+    "$1.4 billion",
+    "1.4B"
+  ]
+}
+[08:24:44.319] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (27.04s):
+    [130]  NovaAI | valuation | $1.4B
+    [122]  NovaAI | valuation_achieved_via | Series C round
+    [122]  NovaAI | performance_review_cycle | bi-annual
+    [100]  NovaAI | founded_in_year | 2021
+    [100]  NovaAI | co_founded_by | Dr. Mara Chen
+    [100]  NovaAI | co_founded_by | Lucas Ferreira
+    [100]  NovaAI | founded_in_location | San Francisco, California
+    [100]  NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105
+    [100]  NovaAI | employee_count | 312 full-time employees (as of Q1 2026)
+    [100]  NovaAI | has_office_in | San Francisco
+[08:24:44.353] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: NovaAI's current valuation is $1.4 billion.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | valuation | $1.4B  (relevance score: 130)
+- NovaAI | valuation_achieved_via | Series C round  (relevance score: 122)
+- NovaAI | performance_review_cycle | bi-annual  (relevance score: 122)
+- NovaAI | founded_in_year | 2021  (relevance score: 100)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 100)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 100)
+- NovaAI | founded_in_loc
+  ... [+1138 chars truncated]
+[08:24:44.353] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: NovaAI's current valuation is $1.4 billion.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | valuation | $1.4B  (relevance score: 130)
+- NovaAI | valuation_achieved_via | Series C round  (relevance score: 122)
+- NovaAI | performance_review_cycle | bi-annual  (relevance score: 122)
+- NovaAI | founded_in_year | 2021  (relevance score: 100)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 100)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 100)
+- NovaAI | founded_in_location | San Francisco, California  (relevance score: 100)
+- NovaAI | headquartered_at | 450 Market S
+  ... [+1038 chars truncated]
+[08:28:51.206] [DEBUG] [V1RAG] LLM DONE  (246.85s)
+  Response:
+    ```json
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "reasoning": "The triple 'NovaAI | valuation | $1.4B' directly confirms the claim that NovaAI's current valuation is $1.4 billion."
+    }
+    ```
+[08:28:51.208] [DEBUG] [V1RAG] LLM JSON DONE  (246.85s)
+  Parsed : {
+  "verdict": "SUPPORTED",
+  "confidence": 1.0,
+  "reasoning": "The triple 'NovaAI | valuation | $1.4B' directly confirms the claim that NovaAI's current valuation is $1.4 billion."
+}
+[08:28:51.208] [DEBUG] [ENTITY_LINKER] Lookup  claim="NovaAI's valuation was achieved via a Series C round."  method=llm
+[08:28:51.209] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "NovaAI's valuation was achieved via a Series C round."
+[08:28:51.209] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "NovaAI's valuation was achieved via a Series C round."
+[08:30:06.548] [DEBUG] [V1RAG] LLM DONE  (75.34s)
+  Response:
+    {
+      "entities": ["NovaAI"],
+      "relations": ["valuation was achieved via", "Series C round"],
+      "values": []
+    }
+[08:30:06.550] [DEBUG] [V1RAG] LLM JSON DONE  (75.34s)
+  Parsed : {
+  "entities": [
+    "NovaAI"
+  ],
+  "relations": [
+    "valuation was achieved via",
+    "Series C round"
+  ],
+  "values": []
+}
+[08:30:06.557] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (75.35s):
+    [130]  NovaAI | series_c_date | November 2025
+    [128]  NovaAI | valuation_achieved_via | Series C round
+    [123]  NovaAI | series_c_led_by | Horizon Ventures
+    [120]  NovaAI | co_founded_by | Dr. Mara Chen
+    [120]  NovaAI | co_founded_by | Lucas Ferreira
+    [119]  NovaAI | primary_cloud_provider | AWS
+    [118]  NovaAI | secondary_cloud_provider | GCP
+    [118]  NovaAI | ground_transport_limit_per_day | $150
+    [117]  NovaAI | performance_review_cycle | bi-annual
+    [117]  NovaAI | valuation | $1.4B
+[08:30:06.588] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: NovaAI's valuation was achieved via a Series C round.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | series_c_date | November 2025  (relevance score: 130)
+- NovaAI | valuation_achieved_via | Series C round  (relevance score: 128)
+- NovaAI | series_c_led_by | Horizon Ventures  (relevance score: 123)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 120)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 120)
+- NovaAI | primary_cloud_provider | AWS  (relevance score: 119)
+  ... [+971 chars truncated]
+[08:30:06.588] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: NovaAI's valuation was achieved via a Series C round.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | series_c_date | November 2025  (relevance score: 130)
+- NovaAI | valuation_achieved_via | Series C round  (relevance score: 128)
+- NovaAI | series_c_led_by | Horizon Ventures  (relevance score: 123)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 120)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 120)
+- NovaAI | primary_cloud_provider | AWS  (relevance score: 119)
+- NovaAI | secondary_cloud_provider | GCP  (relevance score: 118)
+- NovaAI | ground_transport_limit
+  ... [+871 chars truncated]
+[08:32:47.855] [DEBUG] [V1RAG] LLM DONE  (161.27s)
+  Response:
+    ```json
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "reasoning": "The triple 'NovaAI | valuation_achieved_via | Series C round' directly confirms the claim."
+    }
+    ```
+[08:32:47.855] [DEBUG] [V1RAG] LLM JSON DONE  (161.27s)
+  Parsed : {
+  "verdict": "SUPPORTED",
+  "confidence": 1.0,
+  "reasoning": "The triple 'NovaAI | valuation_achieved_via | Series C round' directly confirms the claim."
+}
+[08:32:47.856] [DEBUG] [ENTITY_LINKER] Lookup  claim="NovaAI's Series C round was led by Horizon Ventures."  method=llm
+[08:32:47.856] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "NovaAI's Series C round was led by Horizon Ventures."
+[08:32:47.856] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "NovaAI's Series C round was led by Horizon Ventures."
+[08:34:28.518] [DEBUG] [V1RAG] LLM DONE  (100.66s)
+  Response:
+    {
+      "entities": ["NovaAI", "Horizon Ventures"],
+      "relations": ["Series C round", "led by"],
+      "values": ["C"]
+    }
+[08:34:28.519] [DEBUG] [V1RAG] LLM JSON DONE  (100.66s)
+  Parsed : {
+  "entities": [
+    "NovaAI",
+    "Horizon Ventures"
+  ],
+  "relations": [
+    "Series C round",
+    "led by"
+  ],
+  "values": [
+    "C"
+  ]
+}
+[08:34:28.527] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (100.67s):
+    [130]  NovaAI | series_c_date | November 2025
+    [123]  NovaAI | series_c_led_by | Horizon Ventures
+    [123]  NovaAI | has_ceo | Dr. Mara Chen
+    [121]  NovaAI | ownership_type | privately held
+    [120]  NovaAI | co_founded_by | Dr. Mara Chen
+    [120]  NovaAI | co_founded_by | Lucas Ferreira
+    [119]  NovaAI | primary_cloud_provider | AWS
+    [119]  NovaAI | health_benefits_provider | Anthem Blue Cross
+    [118]  NovaAI | secondary_cloud_provider | GCP
+    [118]  NovaAI | ground_transport_limit_per_day | $150
+[08:34:28.554] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: NovaAI's Series C round was led by Horizon Ventures.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | series_c_date | November 2025  (relevance score: 130)
+- NovaAI | series_c_led_by | Horizon Ventures  (relevance score: 123)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 123)
+- NovaAI | ownership_type | privately held  (relevance score: 121)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 120)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 120)
+- NovaAI | pr
+  ... [+763 chars truncated]
+[08:34:28.554] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: NovaAI's Series C round was led by Horizon Ventures.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | series_c_date | November 2025  (relevance score: 130)
+- NovaAI | series_c_led_by | Horizon Ventures  (relevance score: 123)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 123)
+- NovaAI | ownership_type | privately held  (relevance score: 121)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 120)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 120)
+- NovaAI | primary_cloud_provider | AWS  (relevance score: 119)
+- NovaAI | health_benefits_provider | Anthem Blue
+  ... [+663 chars truncated]
+[08:35:35.131] [DEBUG] [V1RAG] LLM DONE  (66.58s)
+  Response:
+    ```json
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "reasoning": "The triple 'NovaAI | series_c_led_by | Horizon Ventures' directly confirms that Horizon Ventures led NovaAI's Series C round."
+    }
+    ```
+[08:35:35.133] [DEBUG] [V1RAG] LLM JSON DONE  (66.58s)
+  Parsed : {
+  "verdict": "SUPPORTED",
+  "confidence": 1.0,
+  "reasoning": "The triple 'NovaAI | series_c_led_by | Horizon Ventures' directly confirms that Horizon Ventures led NovaAI's Series C round."
+}
+[08:35:35.133] [DEBUG] [ENTITY_LINKER] Lookup  claim="NovaAI's Series C round closed in November 2025."  method=llm
+[08:35:35.133] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "NovaAI's Series C round closed in November 2025."
+[08:35:35.133] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "NovaAI's Series C round closed in November 2025."
+[08:36:31.397] [DEBUG] [V1RAG] LLM DONE  (56.26s)
+  Response:
+    ```json
+    {
+      "entities": ["NovaAI"],
+      "relations": ["Series C round closed"],
+      "values": ["November 2025"]
+    }
+    ```
+[08:36:31.397] [DEBUG] [V1RAG] LLM JSON DONE  (56.26s)
+  Parsed : {
+  "entities": [
+    "NovaAI"
+  ],
+  "relations": [
+    "Series C round closed"
+  ],
+  "values": [
+    "November 2025"
+  ]
+}
+[08:36:31.404] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (56.27s):
+    [125]  NovaAI | series_c_date | November 2025
+    [122]  NovaAI | series_c_led_by | Horizon Ventures
+    [119]  NovaAI | secondary_cloud_provider | GCP
+    [119]  NovaAI | primary_cloud_provider | AWS
+    [117]  NovaAI | co_founded_by | Dr. Mara Chen
+    [117]  NovaAI | co_founded_by | Lucas Ferreira
+    [117]  NovaAI | off_cycle_promotion_requires | CEO approval (VP+ level)
+    [116]  NovaAI | has_coo | James Whitfield
+    [116]  NovaAI | performance_review_cycle | bi-annual
+    [100]  NovaAI | founded_in_year | 2021
+[08:36:31.437] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: NovaAI's Series C round closed in November 2025.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | series_c_date | November 2025  (relevance score: 125)
+- NovaAI | series_c_led_by | Horizon Ventures  (relevance score: 122)
+- NovaAI | secondary_cloud_provider | GCP  (relevance score: 119)
+- NovaAI | primary_cloud_provider | AWS  (relevance score: 119)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 117)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 117)
+- NovaAI | of
+  ... [+1284 chars truncated]
+[08:36:31.437] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: NovaAI's Series C round closed in November 2025.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | series_c_date | November 2025  (relevance score: 125)
+- NovaAI | series_c_led_by | Horizon Ventures  (relevance score: 122)
+- NovaAI | secondary_cloud_provider | GCP  (relevance score: 119)
+- NovaAI | primary_cloud_provider | AWS  (relevance score: 119)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 117)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 117)
+- NovaAI | off_cycle_promotion_requires | CEO approval (VP+ level)  (relevance score: 117)
+- NovaAI | has_coo | J
+  ... [+1184 chars truncated]
+[08:37:24.379] [DEBUG] [V1RAG] LLM DONE  (52.94s)
+  Response:
+    ```json
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "reasoning": "The triple 'NovaAI | series_c_date | November 2025' directly confirms the claim that NovaAI's Series C round closed in November 2025."
+    }
+    ```
+[08:37:24.379] [DEBUG] [V1RAG] LLM JSON DONE  (52.94s)
+  Parsed : {
+  "verdict": "SUPPORTED",
+  "confidence": 1.0,
+  "reasoning": "The triple 'NovaAI | series_c_date | November 2025' directly confirms the claim that NovaAI's Series C round closed in November 2025."
+}
+[08:37:24.380] [INFO ] 
+[08:37:24.380] [INFO ] ── RAW ANSWER ──
+[08:37:24.380] [INFO ]     Based on the internal facts:
+    
+    NovaAI's current valuation is **$1.4 billion**.
+    
+    This valuation was achieved via a **Series C round**, which was led by **Horizon Ventures** and closed in **November 2025**.
+[08:37:24.380] [INFO ] 
+[08:37:24.380] [INFO ] ── CLAIMS EXTRACTED  (4) ──
+[08:37:24.380] [INFO ]    1. NovaAI's current valuation is $1.4 billion.
+[08:37:24.380] [INFO ]    2. NovaAI's valuation was achieved via a Series C round.
+[08:37:24.380] [INFO ]    3. NovaAI's Series C round was led by Horizon Ventures.
+[08:37:24.380] [INFO ]    4. NovaAI's Series C round closed in November 2025.
+[08:37:24.380] [INFO ] 
+[08:37:24.380] [INFO ] ── VERIFICATION RESULTS ──
+[08:37:24.380] [INFO ]   [SUPPORTED    ] (conf=1.00)  "NovaAI's current valuation is $1.4 billion."
+[08:37:24.380] [DEBUG]     Reasoning : The triple 'NovaAI | valuation | $1.4B' directly confirms the claim that NovaAI's current valuation is $1.4 billion.
+[08:37:24.380] [DEBUG]     Evidence  : NovaAI | valuation | $1.4B
+[08:37:24.380] [INFO ]   [SUPPORTED    ] (conf=1.00)  "NovaAI's valuation was achieved via a Series C round."
+[08:37:24.380] [DEBUG]     Reasoning : The triple 'NovaAI | valuation_achieved_via | Series C round' directly confirms the claim.
+[08:37:24.380] [DEBUG]     Evidence  : NovaAI | series_c_date | November 2025
+[08:37:24.380] [INFO ]   [SUPPORTED    ] (conf=1.00)  "NovaAI's Series C round was led by Horizon Ventures."
+[08:37:24.380] [DEBUG]     Reasoning : The triple 'NovaAI | series_c_led_by | Horizon Ventures' directly confirms that Horizon Ventures led NovaAI's Series C round.
+[08:37:24.380] [DEBUG]     Evidence  : NovaAI | series_c_date | November 2025
+[08:37:24.380] [INFO ]   [SUPPORTED    ] (conf=1.00)  "NovaAI's Series C round closed in November 2025."
+[08:37:24.380] [DEBUG]     Reasoning : The triple 'NovaAI | series_c_date | November 2025' directly confirms the claim that NovaAI's Series C round closed in November 2025.
+[08:37:24.380] [DEBUG]     Evidence  : NovaAI | series_c_date | November 2025
+[08:37:24.380] [INFO ] 
+[08:37:24.380] [INFO ] ── REPAIR: not needed (no contradictions) ──
+[08:37:24.380] [INFO ] 
+[08:37:24.380] [INFO ] ── EVALUATION ──
+[08:37:24.380] [INFO ]   Ground truth  : NovaAI reached a $1.4B valuation through its Series C round, which was completed in November 2025 and led by Horizon Ventures. Total funding stands at $210M.
+[08:37:24.380] [INFO ]   Key facts     : ['$1.4B', 'Series C', 'November 2025', 'Horizon Ventures', '$210M']
+[08:37:24.380] [INFO ]   KFR           : 0.600 (3/5 facts found) ✗
+[08:37:24.380] [WARNING]   Missing facts : ['$1.4B', '$210M']
+[08:37:24.380] [INFO ]   Exact match   : False
+[08:37:24.380] [INFO ]   Latency       : 924.62s
+[08:37:24.380] [INFO ] 
+[08:37:24.380] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[08:37:24.381] [INFO ] Question 3/5  [q03]  category=company_overview  difficulty=medium
+[08:37:24.381] [INFO ]   Q: How many employees does NovaAI have and where are its offices?
+[08:37:24.381] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[08:37:24.381] [INFO ] [V1RAG] Running pipeline...
+[08:37:24.381] [DEBUG] [ENTITY_LINKER] Lookup  claim="How many employees does NovaAI have and where are its offices?"  method=llm
+[08:37:24.381] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "How many employees does NovaAI have and where are its offices?"
+[08:37:24.381] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "How many employees does NovaAI have and where are its offices?"
+[08:38:37.965] [DEBUG] [V1RAG] LLM DONE  (73.58s)
+  Response:
+    ```json
+    {
+      "entities": ["NovaAI"],
+      "relations": ["employees", "offices"],
+      "values": []
+    }
+    ```
+[08:38:37.967] [DEBUG] [V1RAG] LLM JSON DONE  (73.59s)
+  Parsed : {
+  "entities": [
+    "NovaAI"
+  ],
+  "relations": [
+    "employees",
+    "offices"
+  ],
+  "values": []
+}
+[08:38:37.974] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (73.59s):
+    [123]  NovaAI | employee_count | 312 full-time employees (as of Q1 2026)
+    [123]  NovaAI | has_office_in | San Francisco
+    [123]  NovaAI | has_office_in | London
+    [119]  NovaAI | work_model | hybrid-first
+    [119]  NovaAI | new_hire_review_designation | Too New to Rate (within 90 days of cycle)
+    [118]  NovaAI | annual_LD_budget_per_employee | $2,500
+    [117]  NovaAI | performance_rating_scale | 5-point
+    [117]  NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105
+    [117]  NovaAI | required_in_office_days | Tuesday and Thursday
+    [117]  NovaAI | employee_premium_coverage_percent | 90%
+[08:39:23.634] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: How many employees does NovaAI have and where are its offices?
+
+Answer: Based on the internal knowledge base:
+
+NovaAI has **312 full-time employees** as of Q1 2026.
+
+The company has offices in:
+- **San Francisco** (headquarters at 450 Market Street, Suite 1200, San Francisco, CA 94105)
+- **London** (office opened in 2023)
+
+Extract up to 15 atomic, verifiable factual claims from this answer (prioritise specific numbers, names, dates). Return valid JSON only.
+[08:40:28.389] [DEBUG] [V1RAG] LLM DONE  (64.75s)
+  Response:
+    ```json
+    {
+        "claims": [
+            {
+                "text": "NovaAI has 312 full-time employees as of Q1 2026.",
+                "source_span": "NovaAI has **312 full-time employees** as of Q1 2026."
+            },
+            {
+                "text": "NovaAI has offices in San Francisco.",
+                "source_span": "**San Francisco** (headquarters at 450 Market Street, Suite 1200, San Francisco, CA 94105)"
+            },
+            {
+                "text": "NovaAI has its headquarters at 450 Market Street, Suite 1200, San Francisco, CA 94105.",
+                "source_span": "headquarters at 450 Market Street, Suite 1200, San Francisco, CA 94105"
+            },
+            {
+                "text": "NovaAI has offices in London.",
+                "source_span": "**London** (office opened in 2023)"
+            },
+            {
+                "text
+      ... [+117 chars truncated]
+[08:40:28.390] [DEBUG] [ENTITY_LINKER] Lookup  claim="NovaAI has 312 full-time employees as of Q1 2026."  method=llm
+[08:40:28.391] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "NovaAI has 312 full-time employees as of Q1 2026."
+[08:40:28.391] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "NovaAI has 312 full-time employees as of Q1 2026."
+[08:42:01.538] [DEBUG] [V1RAG] LLM DONE  (93.15s)
+  Response:
+    ```json
+    {
+      "entities": ["NovaAI"],
+      "relations": ["has", "full-time employees", "as of"],
+      "values": ["312", "Q1 2026"]
+    }
+    ```
+[08:42:01.540] [DEBUG] [V1RAG] LLM JSON DONE  (93.15s)
+  Parsed : {
+  "entities": [
+    "NovaAI"
+  ],
+  "relations": [
+    "has",
+    "full-time employees",
+    "as of"
+  ],
+  "values": [
+    "312",
+    "Q1 2026"
+  ]
+}
+[08:42:01.547] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (93.16s):
+    [120]  NovaAI | employee_count | 312 full-time employees (as of Q1 2026)
+    [120]  NovaAI | new_hire_review_designation | Too New to Rate (within 90 days of cycle)
+    [119]  NovaAI | valuation_achieved_via | Series C round
+    [119]  NovaAI | employee_premium_coverage_percent | 90%
+    [118]  NovaAI | has_ceo | Dr. Mara Chen
+    [118]  NovaAI | has_cto | Lucas Ferreira
+    [118]  NovaAI | has_cfo | Priya Nambiar
+    [118]  NovaAI | has_coo | James Whitfield
+    [118]  NovaAI | has_cro | Dominique Leblanc
+    [118]  NovaAI | annual_LD_budget_per_employee | $2,500
+[08:42:01.574] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: NovaAI has 312 full-time employees as of Q1 2026.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | employee_count | 312 full-time employees (as of Q1 2026)  (relevance score: 120)
+- NovaAI | new_hire_review_designation | Too New to Rate (within 90 days of cycle)  (relevance score: 120)
+- NovaAI | valuation_achieved_via | Series C round  (relevance score: 119)
+- NovaAI | employee_premium_coverage_percent | 90%  (relevance score: 119)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 118)
+
+  ... [+1612 chars truncated]
+[08:42:01.574] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: NovaAI has 312 full-time employees as of Q1 2026.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | employee_count | 312 full-time employees (as of Q1 2026)  (relevance score: 120)
+- NovaAI | new_hire_review_designation | Too New to Rate (within 90 days of cycle)  (relevance score: 120)
+- NovaAI | valuation_achieved_via | Series C round  (relevance score: 119)
+- NovaAI | employee_premium_coverage_percent | 90%  (relevance score: 119)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 118)
+- NovaAI | has_cto | Lucas Ferreira  (relevance score: 118)
+- NovaAI | has_cfo | Priya Nambiar  (rel
+  ... [+1512 chars truncated]
+[08:43:10.660] [DEBUG] [V1RAG] LLM DONE  (69.09s)
+  Response:
+    {"verdict": "SUPPORTED", "confidence": 1.0, "reasoning": "The triple 'NovaAI | employee_count | 312 full-time employees (as of Q1 2026)' directly confirms the claim."}
+[08:43:10.660] [DEBUG] [V1RAG] LLM JSON DONE  (69.09s)
+  Parsed : {
+  "verdict": "SUPPORTED",
+  "confidence": 1.0,
+  "reasoning": "The triple 'NovaAI | employee_count | 312 full-time employees (as of Q1 2026)' directly confirms the claim."
+}
+[08:43:10.660] [DEBUG] [ENTITY_LINKER] Lookup  claim="NovaAI has offices in San Francisco."  method=llm
+[08:43:10.660] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "NovaAI has offices in San Francisco."
+[08:43:10.661] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "NovaAI has offices in San Francisco."
+[08:45:20.197] [DEBUG] [V1RAG] LLM DONE  (129.54s)
+  Response:
+    {
+      "entities": ["NovaAI", "San Francisco"],
+      "relations": ["offices in"],
+      "values": []
+    }
+[08:45:20.199] [DEBUG] [V1RAG] LLM JSON DONE  (129.54s)
+  Parsed : {
+  "entities": [
+    "NovaAI",
+    "San Francisco"
+  ],
+  "relations": [
+    "offices in"
+  ],
+  "values": []
+}
+[08:45:20.207] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (129.55s):
+    [128]  NovaAI | has_office_in | San Francisco
+    [128]  NovaAI | has_office_in | London
+    [123]  NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105
+    [123]  NovaAI | required_in_office_days | Tuesday and Thursday
+    [123]  Dr. Mara Chen | office | San Francisco
+    [123]  Lucas Ferreira | office | San Francisco
+    [123]  Priya Nambiar | office | San Francisco
+    [123]  James Whitfield | office | San Francisco
+    [123]  Sofia Andersson | office | San Francisco
+    [123]  Dominique Leblanc | office | San Francisco
+[08:45:20.239] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: NovaAI has offices in San Francisco.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | has_office_in | San Francisco  (relevance score: 128)
+- NovaAI | has_office_in | London  (relevance score: 128)
+- NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105  (relevance score: 123)
+- NovaAI | required_in_office_days | Tuesday and Thursday  (relevance score: 123)
+- Dr. Mara Chen | office | San Francisco  (relevance score: 123)
+- Lucas Ferreira | office | San Francisco 
+  ... [+1858 chars truncated]
+[08:45:20.239] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: NovaAI has offices in San Francisco.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | has_office_in | San Francisco  (relevance score: 128)
+- NovaAI | has_office_in | London  (relevance score: 128)
+- NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105  (relevance score: 123)
+- NovaAI | required_in_office_days | Tuesday and Thursday  (relevance score: 123)
+- Dr. Mara Chen | office | San Francisco  (relevance score: 123)
+- Lucas Ferreira | office | San Francisco  (relevance score: 123)
+- Priya Nambiar | office | San Francisco  (relevance score: 123)
+- James Whi
+  ... [+1758 chars truncated]
+[08:48:19.096] [DEBUG] [V1RAG] LLM DONE  (178.86s)
+  Response:
+    ```json
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "reasoning": "The triple 'NovaAI | has_office_in | San Francisco' directly confirms the claim."
+    }
+    ```
+[08:48:19.098] [DEBUG] [V1RAG] LLM JSON DONE  (178.86s)
+  Parsed : {
+  "verdict": "SUPPORTED",
+  "confidence": 1.0,
+  "reasoning": "The triple 'NovaAI | has_office_in | San Francisco' directly confirms the claim."
+}
+[08:48:19.098] [DEBUG] [ENTITY_LINKER] Lookup  claim="NovaAI has its headquarters at 450 Market Street, Suite 1200, San Francisco, CA 94105."  method=llm
+[08:48:19.098] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "NovaAI has its headquarters at 450 Market Street, Suite 1200, San Francisco, CA 94105."
+[08:48:19.098] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "NovaAI has its headquarters at 450 Market Street, Suite 1200, San Francisco, CA 94105."
+[08:49:08.653] [DEBUG] [V1RAG] LLM DONE  (49.55s)
+  Response:
+    ```json
+    {
+      "entities": ["NovaAI", "San Francisco"],
+      "relations": ["headquarters at"],
+      "values": ["450", "1200", "94105"]
+    }
+    ```
+[08:49:08.653] [DEBUG] [V1RAG] LLM JSON DONE  (49.55s)
+  Parsed : {
+  "entities": [
+    "NovaAI",
+    "San Francisco"
+  ],
+  "relations": [
+    "headquarters at"
+  ],
+  "values": [
+    "450",
+    "1200",
+    "94105"
+  ]
+}
+[08:49:08.663] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (49.57s):
+    [127]  NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105
+    [121]  NovaAI | founded_in_location | San Francisco, California
+    [100]  NovaAI | founded_in_year | 2021
+    [100]  NovaAI | co_founded_by | Dr. Mara Chen
+    [100]  NovaAI | co_founded_by | Lucas Ferreira
+    [100]  NovaAI | employee_count | 312 full-time employees (as of Q1 2026)
+    [100]  NovaAI | has_office_in | San Francisco
+    [100]  NovaAI | has_office_in | London
+    [100]  NovaAI | london_office_opened | 2023
+    [100]  NovaAI | singapore_office_opened | 2024
+[08:49:08.696] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: NovaAI has its headquarters at 450 Market Street, Suite 1200, San Francisco, CA 94105.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105  (relevance score: 127)
+- NovaAI | founded_in_location | San Francisco, California  (relevance score: 121)
+- NovaAI | founded_in_year | 2021  (relevance score: 100)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 100)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance sc
+  ... [+1202 chars truncated]
+[08:49:08.696] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: NovaAI has its headquarters at 450 Market Street, Suite 1200, San Francisco, CA 94105.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105  (relevance score: 127)
+- NovaAI | founded_in_location | San Francisco, California  (relevance score: 121)
+- NovaAI | founded_in_year | 2021  (relevance score: 100)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 100)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 100)
+- NovaAI | employee_count | 312 full-time employees (as of Q1 2026)  (relevance score: 100
+  ... [+1102 chars truncated]
+[08:50:48.730] [DEBUG] [V1RAG] LLM DONE  (100.03s)
+  Response:
+    ```json
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "reasoning": "The triple 'NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105' directly confirms the claim."
+    }
+    ```
+[08:50:48.731] [DEBUG] [V1RAG] LLM JSON DONE  (100.04s)
+  Parsed : {
+  "verdict": "SUPPORTED",
+  "confidence": 1.0,
+  "reasoning": "The triple 'NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105' directly confirms the claim."
+}
+[08:50:48.731] [DEBUG] [ENTITY_LINKER] Lookup  claim="NovaAI has offices in London."  method=llm
+[08:50:48.732] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "NovaAI has offices in London."
+[08:50:48.732] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "NovaAI has offices in London."
+[08:51:58.709] [DEBUG] [V1RAG] LLM DONE  (69.98s)
+  Response:
+    {
+      "entities": ["NovaAI", "London"],
+      "relations": ["offices in"],
+      "values": []
+    }
+[08:51:58.710] [DEBUG] [V1RAG] LLM JSON DONE  (69.98s)
+  Parsed : {
+  "entities": [
+    "NovaAI",
+    "London"
+  ],
+  "relations": [
+    "offices in"
+  ],
+  "values": []
+}
+[08:51:58.716] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (69.98s):
+    [128]  NovaAI | has_office_in | San Francisco
+    [128]  NovaAI | has_office_in | London
+    [123]  NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105
+    [123]  NovaAI | required_in_office_days | Tuesday and Thursday
+    [123]  Oliver Haines | office | London
+    [123]  Lena Park | office | London
+    [123]  James Okafor | office | London
+    [119]  NovaAI | work_model | hybrid-first
+    [119]  NovaAI | home_office_equipment_stipend | $1,500 one-time upon hire
+    [116]  NovaAI | has_cfo | Priya Nambiar
+[08:51:58.748] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: NovaAI has offices in London.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | has_office_in | San Francisco  (relevance score: 128)
+- NovaAI | has_office_in | London  (relevance score: 128)
+- NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105  (relevance score: 123)
+- NovaAI | required_in_office_days | Tuesday and Thursday  (relevance score: 123)
+- Oliver Haines | office | London  (relevance score: 123)
+- Lena Park | office | London  (relevance score: 123)
+- 
+  ... [+1560 chars truncated]
+[08:51:58.748] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: NovaAI has offices in London.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | has_office_in | San Francisco  (relevance score: 128)
+- NovaAI | has_office_in | London  (relevance score: 128)
+- NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105  (relevance score: 123)
+- NovaAI | required_in_office_days | Tuesday and Thursday  (relevance score: 123)
+- Oliver Haines | office | London  (relevance score: 123)
+- Lena Park | office | London  (relevance score: 123)
+- James Okafor | office | London  (relevance score: 123)
+- NovaAI | work_model | hybrid-first  (releva
+  ... [+1460 chars truncated]
+[09:02:46.874] [DEBUG] [V1RAG] LLM DONE  (648.13s)
+  Response:
+    {"verdict": "SUPPORTED", "confidence": 1.0, "reasoning": "The triple 'NovaAI | has_office_in | London' directly confirms the claim."}
+[09:02:46.876] [DEBUG] [V1RAG] LLM JSON DONE  (648.13s)
+  Parsed : {
+  "verdict": "SUPPORTED",
+  "confidence": 1.0,
+  "reasoning": "The triple 'NovaAI | has_office_in | London' directly confirms the claim."
+}
+[09:02:46.876] [DEBUG] [ENTITY_LINKER] Lookup  claim="NovaAI's London office opened in 2023."  method=llm
+[09:02:46.877] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "NovaAI's London office opened in 2023."
+[09:02:46.877] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "NovaAI's London office opened in 2023."
+[09:03:33.005] [DEBUG] [V1RAG] LLM DONE  (46.13s)
+  Response:
+    ```json
+    {
+      "entities": ["NovaAI", "London"],
+      "relations": ["opened"],
+      "values": ["2023"]
+    }
+    ```
+[09:03:33.006] [DEBUG] [V1RAG] LLM JSON DONE  (46.13s)
+  Parsed : {
+  "entities": [
+    "NovaAI",
+    "London"
+  ],
+  "relations": [
+    "opened"
+  ],
+  "values": [
+    "2023"
+  ]
+}
+[09:03:33.119] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (46.24s):
+    [117]  NovaAI | ownership_type | privately held
+    [116]  NovaAI | london_office_opened | 2023
+    [100]  NovaAI | founded_in_year | 2021
+    [100]  NovaAI | co_founded_by | Dr. Mara Chen
+    [100]  NovaAI | co_founded_by | Lucas Ferreira
+    [100]  NovaAI | founded_in_location | San Francisco, California
+    [100]  NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105
+    [100]  NovaAI | employee_count | 312 full-time employees (as of Q1 2026)
+    [100]  NovaAI | has_office_in | San Francisco
+    [100]  NovaAI | has_office_in | London
+[09:03:33.136] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: NovaAI's London office opened in 2023.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | ownership_type | privately held  (relevance score: 117)
+- NovaAI | london_office_opened | 2023  (relevance score: 116)
+- NovaAI | founded_in_year | 2021  (relevance score: 100)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 100)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 100)
+- NovaAI | founded_in_location | San Francisco, California  (relevance score: 100)
+- NovaAI | headqu
+  ... [+1025 chars truncated]
+[09:03:33.136] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: NovaAI's London office opened in 2023.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | ownership_type | privately held  (relevance score: 117)
+- NovaAI | london_office_opened | 2023  (relevance score: 116)
+- NovaAI | founded_in_year | 2021  (relevance score: 100)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 100)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 100)
+- NovaAI | founded_in_location | San Francisco, California  (relevance score: 100)
+- NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105  (relevance score: 100)
+- NovaAI
+  ... [+925 chars truncated]
+[09:04:58.825] [DEBUG] [V1RAG] LLM DONE  (85.69s)
+  Response:
+    ```json
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "reasoning": "The triple 'NovaAI | london_office_opened | 2023' directly confirms that NovaAI's London office opened in 2023."
+    }
+    ```
+[09:04:58.826] [DEBUG] [V1RAG] LLM JSON DONE  (85.69s)
+  Parsed : {
+  "verdict": "SUPPORTED",
+  "confidence": 1.0,
+  "reasoning": "The triple 'NovaAI | london_office_opened | 2023' directly confirms that NovaAI's London office opened in 2023."
+}
+[09:04:58.826] [INFO ] 
+[09:04:58.826] [INFO ] ── RAW ANSWER ──
+[09:04:58.826] [INFO ]     Based on the internal knowledge base:
+    
+    NovaAI has **312 full-time employees** as of Q1 2026.
+    
+    The company has offices in:
+    - **San Francisco** (headquarters at 450 Market Street, Suite 1200, San Francisco, CA 94105)
+    - **London** (office opened in 2023)
+[09:04:58.826] [INFO ] 
+[09:04:58.826] [INFO ] ── CLAIMS EXTRACTED  (5) ──
+[09:04:58.827] [INFO ]    1. NovaAI has 312 full-time employees as of Q1 2026.
+[09:04:58.827] [INFO ]    2. NovaAI has offices in San Francisco.
+[09:04:58.827] [INFO ]    3. NovaAI has its headquarters at 450 Market Street, Suite 1200, San Francisco, CA 94105.
+[09:04:58.827] [INFO ]    4. NovaAI has offices in London.
+[09:04:58.828] [INFO ]    5. NovaAI's London office opened in 2023.
+[09:04:58.828] [INFO ] 
+[09:04:58.828] [INFO ] ── VERIFICATION RESULTS ──
+[09:04:58.828] [INFO ]   [SUPPORTED    ] (conf=1.00)  "NovaAI has 312 full-time employees as of Q1 2026."
+[09:04:58.828] [DEBUG]     Reasoning : The triple 'NovaAI | employee_count | 312 full-time employees (as of Q1 2026)' directly confirms the claim.
+[09:04:58.828] [DEBUG]     Evidence  : NovaAI | employee_count | 312 full-time employees (as of Q1 2026)
+[09:04:58.828] [INFO ]   [SUPPORTED    ] (conf=1.00)  "NovaAI has offices in San Francisco."
+[09:04:58.828] [DEBUG]     Reasoning : The triple 'NovaAI | has_office_in | San Francisco' directly confirms the claim.
+[09:04:58.828] [DEBUG]     Evidence  : NovaAI | has_office_in | San Francisco
+[09:04:58.828] [INFO ]   [SUPPORTED    ] (conf=1.00)  "NovaAI has its headquarters at 450 Market Street, Suite 1200, San Francisco, CA 
+  ... [+6 chars truncated]"
+[09:04:58.829] [DEBUG]     Reasoning : The triple 'NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105' directly confirms the claim.
+[09:04:58.829] [DEBUG]     Evidence  : NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105
+[09:04:58.829] [INFO ]   [SUPPORTED    ] (conf=1.00)  "NovaAI has offices in London."
+[09:04:58.829] [DEBUG]     Reasoning : The triple 'NovaAI | has_office_in | London' directly confirms the claim.
+[09:04:58.829] [DEBUG]     Evidence  : NovaAI | has_office_in | San Francisco
+[09:04:58.829] [INFO ]   [SUPPORTED    ] (conf=1.00)  "NovaAI's London office opened in 2023."
+[09:04:58.829] [DEBUG]     Reasoning : The triple 'NovaAI | london_office_opened | 2023' directly confirms that NovaAI's London office opened in 2023.
+[09:04:58.829] [DEBUG]     Evidence  : NovaAI | ownership_type | privately held
+[09:04:58.829] [INFO ] 
+[09:04:58.829] [INFO ] ── REPAIR: not needed (no contradictions) ──
+[09:04:58.829] [INFO ] 
+[09:04:58.829] [INFO ] ── EVALUATION ──
+[09:04:58.829] [INFO ]   Ground truth  : NovaAI has 312 full-time employees as of Q1 2026. The company has offices in San Francisco, London (opened 2023), and Singapore (opened 2024).
+[09:04:58.829] [INFO ]   Key facts     : ['312', 'San Francisco', 'London', 'Singapore', '2023', '2024']
+[09:04:58.829] [INFO ]   KFR           : 0.667 (4/6 facts found) ✗
+[09:04:58.830] [WARNING]   Missing facts : ['Singapore', '2024']
+[09:04:58.830] [INFO ]   Exact match   : False
+[09:04:58.830] [INFO ]   Latency       : 1654.45s
+[09:04:58.830] [INFO ] 
+[09:04:58.830] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:04:58.830] [INFO ] Question 4/5  [q04]  category=company_overview  difficulty=easy
+[09:04:58.830] [INFO ]   Q: What are NovaAI's primary market verticals?
+[09:04:58.830] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:04:58.830] [INFO ] [V1RAG] Running pipeline...
+[09:04:58.830] [DEBUG] [ENTITY_LINKER] Lookup  claim="What are NovaAI's primary market verticals?"  method=llm
+[09:04:58.831] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What are NovaAI's primary market verticals?"
+[09:04:58.831] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What are NovaAI's primary market verticals?"
+[09:06:22.511] [DEBUG] [V1RAG] LLM DONE  (83.68s)
+  Response:
+    {
+      "entities": ["NovaAI"],
+      "relations": ["primary market verticals"],
+      "values": []
+    }
+[09:06:22.512] [DEBUG] [V1RAG] LLM JSON DONE  (83.68s)
+  Parsed : {
+  "entities": [
+    "NovaAI"
+  ],
+  "relations": [
+    "primary market verticals"
+  ],
+  "values": []
+}
+[09:06:22.516] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (83.69s):
+    [124]  NovaAI | primary_vertical | financial services
+    [124]  NovaAI | primary_vertical | healthcare
+    [116]  NovaAI | primary_cloud_provider | AWS
+    [100]  NovaAI | founded_in_year | 2021
+    [100]  NovaAI | co_founded_by | Dr. Mara Chen
+    [100]  NovaAI | co_founded_by | Lucas Ferreira
+    [100]  NovaAI | founded_in_location | San Francisco, California
+    [100]  NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105
+    [100]  NovaAI | employee_count | 312 full-time employees (as of Q1 2026)
+    [100]  NovaAI | has_office_in | San Francisco
+[09:07:12.537] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: What are NovaAI's primary market verticals?
+
+Answer: Based on the verified facts, NovaAI's primary market verticals are **financial services** and **healthcare**.
+
+Extract up to 15 atomic, verifiable factual claims from this answer (prioritise specific numbers, names, dates). Return valid JSON only.
+[09:07:58.745] [DEBUG] [V1RAG] LLM DONE  (46.21s)
+  Response:
+    ```json
+    {
+        "claims": [
+            {
+                "text": "NovaAI's primary market verticals are financial services and healthcare.",
+                "source_span": "NovaAI's primary market verticals are **financial services** and **healthcare**."
+            }
+        ]
+    }
+    ```
+[09:07:58.746] [DEBUG] [ENTITY_LINKER] Lookup  claim="NovaAI's primary market verticals are financial services and healthcare."  method=llm
+[09:07:58.747] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "NovaAI's primary market verticals are financial services and healthcare."
+[09:07:58.747] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "NovaAI's primary market verticals are financial services and healthcare."
+[09:08:35.904] [DEBUG] [V1RAG] LLM DONE  (37.16s)
+  Response:
+    {
+      "entities": ["NovaAI"],
+      "relations": ["primary market verticals"],
+      "values": []
+    }
+[09:08:35.940] [DEBUG] [V1RAG] LLM JSON DONE  (37.19s)
+  Parsed : {
+  "entities": [
+    "NovaAI"
+  ],
+  "relations": [
+    "primary market verticals"
+  ],
+  "values": []
+}
+[09:08:35.947] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (37.20s):
+    [124]  NovaAI | primary_vertical | financial services
+    [124]  NovaAI | primary_vertical | healthcare
+    [116]  NovaAI | primary_cloud_provider | AWS
+    [100]  NovaAI | founded_in_year | 2021
+    [100]  NovaAI | co_founded_by | Dr. Mara Chen
+    [100]  NovaAI | co_founded_by | Lucas Ferreira
+    [100]  NovaAI | founded_in_location | San Francisco, California
+    [100]  NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105
+    [100]  NovaAI | employee_count | 312 full-time employees (as of Q1 2026)
+    [100]  NovaAI | has_office_in | San Francisco
+[09:08:35.975] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: NovaAI's primary market verticals are financial services and healthcare.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | primary_vertical | financial services  (relevance score: 124)
+- NovaAI | primary_vertical | healthcare  (relevance score: 124)
+- NovaAI | primary_cloud_provider | AWS  (relevance score: 116)
+- NovaAI | founded_in_year | 2021  (relevance score: 100)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 100)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score:
+  ... [+1052 chars truncated]
+[09:08:35.975] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: NovaAI's primary market verticals are financial services and healthcare.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | primary_vertical | financial services  (relevance score: 124)
+- NovaAI | primary_vertical | healthcare  (relevance score: 124)
+- NovaAI | primary_cloud_provider | AWS  (relevance score: 116)
+- NovaAI | founded_in_year | 2021  (relevance score: 100)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 100)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 100)
+- NovaAI | founded_in_location | San Francisco, California  (relevance score: 100)
+- NovaAI | 
+  ... [+952 chars truncated]
+[09:09:15.134] [DEBUG] [V1RAG] LLM DONE  (39.16s)
+  Response:
+    ```json
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "reasoning": "The claim that NovaAI's primary market verticals are financial services and healthcare is directly confirmed by two triples stating 'NovaAI | primary_vertical | financial services' and 'NovaAI | primary_vertical | healthcare'."
+    }
+    ```
+[09:09:15.135] [DEBUG] [V1RAG] LLM JSON DONE  (39.16s)
+  Parsed : {
+  "verdict": "SUPPORTED",
+  "confidence": 1.0,
+  "reasoning": "The claim that NovaAI's primary market verticals are financial services and healthcare is directly confirmed by two triples stating 'NovaAI | primary_vertical | financial services' and 'NovaAI | primary_vertical | healthcare'."
+}
+[09:09:15.135] [INFO ] 
+[09:09:15.135] [INFO ] ── RAW ANSWER ──
+[09:09:15.135] [INFO ]     Based on the verified facts, NovaAI's primary market verticals are **financial services** and **healthcare**.
+[09:09:15.136] [INFO ] 
+[09:09:15.136] [INFO ] ── CLAIMS EXTRACTED  (1) ──
+[09:09:15.136] [INFO ]    1. NovaAI's primary market verticals are financial services and healthcare.
+[09:09:15.136] [INFO ] 
+[09:09:15.136] [INFO ] ── VERIFICATION RESULTS ──
+[09:09:15.136] [INFO ]   [SUPPORTED    ] (conf=1.00)  "NovaAI's primary market verticals are financial services and healthcare."
+[09:09:15.136] [DEBUG]     Reasoning : The claim that NovaAI's primary market verticals are financial services and healthcare is directly confirmed by two triples stating 'NovaAI | primary_vertical | financial services' and 'NovaAI | primary_vertical | healthcare'.
+[09:09:15.136] [DEBUG]     Evidence  : NovaAI | primary_vertical | financial services
+[09:09:15.136] [INFO ] 
+[09:09:15.136] [INFO ] ── REPAIR: not needed (no contradictions) ──
+[09:09:15.137] [INFO ] 
+[09:09:15.137] [INFO ] ── EVALUATION ──
+[09:09:15.137] [INFO ]   Ground truth  : NovaAI's primary market verticals are financial services, healthcare, and logistics.
+[09:09:15.137] [INFO ]   Key facts     : ['financial services', 'healthcare', 'logistics']
+[09:09:15.137] [INFO ]   KFR           : 0.667 (2/3 facts found) ✗
+[09:09:15.137] [WARNING]   Missing facts : ['logistics']
+[09:09:15.137] [INFO ]   Exact match   : False
+[09:09:15.137] [INFO ]   Latency       : 256.31s
+[09:09:15.137] [INFO ] 
+[09:09:15.137] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:09:15.137] [INFO ] Question 5/5  [q05]  category=leadership  difficulty=easy
+[09:09:15.137] [INFO ]   Q: Who is the CEO of NovaAI and when did she join the company?
+[09:09:15.137] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:09:15.137] [INFO ] [V1RAG] Running pipeline...
+[09:09:15.138] [DEBUG] [ENTITY_LINKER] Lookup  claim="Who is the CEO of NovaAI and when did she join the company?"  method=llm
+[09:09:15.138] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Who is the CEO of NovaAI and when did she join the company?"
+[09:09:15.138] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is the CEO of NovaAI and when did she join the company?"
+[09:10:08.074] [DEBUG] [V1RAG] LLM DONE  (52.94s)
+  Response:
+    {
+      "entities": ["NovaAI"],
+      "relations": ["CEO of", "join the company"],
+      "values": []
+    }
+[09:10:08.076] [DEBUG] [V1RAG] LLM JSON DONE  (52.94s)
+  Parsed : {
+  "entities": [
+    "NovaAI"
+  ],
+  "relations": [
+    "CEO of",
+    "join the company"
+  ],
+  "values": []
+}
+[09:10:08.084] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (52.95s):
+    [120]  NovaAI | ownership_type | privately held
+    [119]  NovaAI | has_ceo | Dr. Mara Chen
+    [119]  NovaAI | paid_company_holidays_per_year | 11
+    [118]  NovaAI | valuation | $1.4B
+    [118]  NovaAI | 401k_match_percent | 4% of salary (dollar-for-dollar)
+    [116]  NovaAI | co_founded_by | Dr. Mara Chen
+    [116]  NovaAI | co_founded_by | Lucas Ferreira
+    [100]  NovaAI | founded_in_year | 2021
+    [100]  NovaAI | founded_in_location | San Francisco, California
+    [100]  NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105
+[09:10:46.823] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a precise fact-extraction assistant. Your job is to decompose a text answer into the most specific, verifiable factual claims.
+
+Each claim must:
+- Assert exactly ONE fact
+- Be self-contained — include the full subject (do NOT use pronouns like "it", "they", "he", "she", "this", "that")
+- Be stated as a positive assertion (not a question or hypothesis)
+- Be directly extractable from the giv
+  ... [+491 chars truncated]
+  User   : Question: Who is the CEO of NovaAI and when did she join the company?
+
+Answer: Based on the provided facts:
+
+The CEO of NovaAI is **Dr. Mara Chen**. She joined the company in **January 2021**, which was also the company's founding month.
+
+Extract up to 15 atomic, verifiable factual claims from this answer (prioritise specific numbers, names, dates). Return valid JSON only.
+[09:11:47.371] [DEBUG] [V1RAG] LLM DONE  (60.55s)
+  Response:
+    ```json
+    {
+        "claims": [
+            {
+                "text": "The CEO of NovaAI is Dr. Mara Chen.",
+                "source_span": "The CEO of NovaAI is **Dr. Mara Chen**."
+            },
+            {
+                "text": "Dr. Mara Chen joined NovaAI in January 2021.",
+                "source_span": "She joined the company in **January 2021**"
+            },
+            {
+                "text": "January 2021 was the founding month of NovaAI.",
+                "source_span": "which was also the company's founding month."
+            }
+        ]
+    }
+    ```
+[09:11:47.372] [DEBUG] [ENTITY_LINKER] Lookup  claim="The CEO of NovaAI is Dr. Mara Chen."  method=llm
+[09:11:47.372] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "The CEO of NovaAI is Dr. Mara Chen."
+[09:11:47.373] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "The CEO of NovaAI is Dr. Mara Chen."
+[09:12:28.656] [DEBUG] [V1RAG] LLM DONE  (41.28s)
+  Response:
+    {
+      "entities": ["NovaAI", "Dr. Mara Chen"],
+      "relations": ["CEO of"],
+      "values": []
+    }
+[09:12:28.657] [DEBUG] [V1RAG] LLM JSON DONE  (41.28s)
+  Parsed : {
+  "entities": [
+    "NovaAI",
+    "Dr. Mara Chen"
+  ],
+  "relations": [
+    "CEO of"
+  ],
+  "values": []
+}
+[09:12:28.664] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (41.29s):
+    [119]  NovaAI | has_ceo | Dr. Mara Chen
+    [100]  NovaAI | founded_in_year | 2021
+    [100]  NovaAI | co_founded_by | Dr. Mara Chen
+    [100]  NovaAI | co_founded_by | Lucas Ferreira
+    [100]  NovaAI | founded_in_location | San Francisco, California
+    [100]  NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105
+    [100]  NovaAI | employee_count | 312 full-time employees (as of Q1 2026)
+    [100]  NovaAI | has_office_in | San Francisco
+    [100]  NovaAI | has_office_in | London
+    [100]  NovaAI | london_office_opened | 2023
+[09:12:28.694] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: The CEO of NovaAI is Dr. Mara Chen.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 119)
+- NovaAI | founded_in_year | 2021  (relevance score: 100)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 100)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 100)
+- NovaAI | founded_in_location | San Francisco, California  (relevance score: 100)
+- NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105  (rele
+  ... [+955 chars truncated]
+[09:12:28.694] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: The CEO of NovaAI is Dr. Mara Chen.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 119)
+- NovaAI | founded_in_year | 2021  (relevance score: 100)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 100)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 100)
+- NovaAI | founded_in_location | San Francisco, California  (relevance score: 100)
+- NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105  (relevance score: 100)
+- NovaAI | employee_count | 312 full-time employees (as of Q1 2026)  (relevance sc
+  ... [+855 chars truncated]
+[09:13:16.520] [DEBUG] [V1RAG] LLM DONE  (47.83s)
+  Response:
+    {"verdict": "SUPPORTED", "confidence": 1.0, "reasoning": "The triple 'NovaAI | has_ceo | Dr. Mara Chen' directly confirms the claim."}
+[09:13:16.521] [DEBUG] [V1RAG] LLM JSON DONE  (47.83s)
+  Parsed : {
+  "verdict": "SUPPORTED",
+  "confidence": 1.0,
+  "reasoning": "The triple 'NovaAI | has_ceo | Dr. Mara Chen' directly confirms the claim."
+}
+[09:13:16.521] [DEBUG] [ENTITY_LINKER] Lookup  claim="Dr. Mara Chen joined NovaAI in January 2021."  method=llm
+[09:13:16.522] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Dr. Mara Chen joined NovaAI in January 2021."
+[09:13:16.522] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Dr. Mara Chen joined NovaAI in January 2021."
+[09:14:39.774] [DEBUG] [V1RAG] LLM DONE  (83.25s)
+  Response:
+    {
+      "entities": ["Dr. Mara Chen", "NovaAI"],
+      "relations": ["joined"],
+      "values": ["January 2021", "2021"]
+    }
+[09:14:39.775] [DEBUG] [V1RAG] LLM JSON DONE  (83.25s)
+  Parsed : {
+  "entities": [
+    "Dr. Mara Chen",
+    "NovaAI"
+  ],
+  "relations": [
+    "joined"
+  ],
+  "values": [
+    "January 2021",
+    "2021"
+  ]
+}
+[09:14:39.783] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (83.26s):
+    [117]  NovaAI | ownership_type | privately held
+    [100]  NovaAI | co_founded_by | Dr. Mara Chen
+    [100]  NovaAI | has_ceo | Dr. Mara Chen
+    [100]  Dr. Mara Chen | start_date | January 2021
+    [100]  Dr. Mara Chen | office | San Francisco
+    [100]  NovaAI | founded_in_year | 2021
+    [100]  NovaAI | co_founded_by | Lucas Ferreira
+    [100]  NovaAI | founded_in_location | San Francisco, California
+    [100]  NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105
+    [100]  NovaAI | employee_count | 312 full-time employees (as of Q1 2026)
+[09:14:39.814] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: Dr. Mara Chen joined NovaAI in January 2021.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | ownership_type | privately held  (relevance score: 117)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 100)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 100)
+- Dr. Mara Chen | start_date | January 2021  (relevance score: 100)
+- Dr. Mara Chen | office | San Francisco  (relevance score: 100)
+- NovaAI | founded_in_year | 2021  (relevance score: 100)
+- NovaAI | co_founded_by | Luca
+  ... [+793 chars truncated]
+[09:14:39.814] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: Dr. Mara Chen joined NovaAI in January 2021.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | ownership_type | privately held  (relevance score: 117)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 100)
+- NovaAI | has_ceo | Dr. Mara Chen  (relevance score: 100)
+- Dr. Mara Chen | start_date | January 2021  (relevance score: 100)
+- Dr. Mara Chen | office | San Francisco  (relevance score: 100)
+- NovaAI | founded_in_year | 2021  (relevance score: 100)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 100)
+- NovaAI | founded_in_location | San Francisco, California  (rele
+  ... [+693 chars truncated]
+[09:15:14.415] [DEBUG] [V1RAG] LLM DONE  (34.60s)
+  Response:
+    {"verdict": "SUPPORTED", "confidence": 1.0, "reasoning": "The triple 'Dr. Mara Chen | start_date | January 2021' directly confirms the claim."}
+[09:15:14.415] [DEBUG] [V1RAG] LLM JSON DONE  (34.60s)
+  Parsed : {
+  "verdict": "SUPPORTED",
+  "confidence": 1.0,
+  "reasoning": "The triple 'Dr. Mara Chen | start_date | January 2021' directly confirms the claim."
+}
+[09:15:14.415] [DEBUG] [ENTITY_LINKER] Lookup  claim="January 2021 was the founding month of NovaAI."  method=llm
+[09:15:14.416] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "January 2021 was the founding month of NovaAI."
+[09:15:14.416] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "January 2021 was the founding month of NovaAI."
+[09:15:48.177] [DEBUG] [V1RAG] LLM DONE  (33.76s)
+  Response:
+    ```json
+    {
+      "entities": ["NovaAI"],
+      "relations": ["founding month"],
+      "values": ["January 2021", "2021"]
+    }
+    ```
+[09:15:48.179] [DEBUG] [V1RAG] LLM JSON DONE  (33.76s)
+  Parsed : {
+  "entities": [
+    "NovaAI"
+  ],
+  "relations": [
+    "founding month"
+  ],
+  "values": [
+    "January 2021",
+    "2021"
+  ]
+}
+[09:15:48.184] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (33.77s):
+    [122]  NovaAI | total_funding | $210M
+    [120]  NovaAI | co_founded_by | Dr. Mara Chen
+    [120]  NovaAI | co_founded_by | Lucas Ferreira
+    [120]  NovaAI | series_c_led_by | Horizon Ventures
+    [118]  NovaAI | founded_in_location | San Francisco, California
+    [117]  NovaAI | founded_in_year | 2021
+    [117]  NovaAI | secondary_cloud_provider | GCP
+    [116]  NovaAI | ld_budget_refresh_date | January 1
+    [100]  NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105
+    [100]  NovaAI | employee_count | 312 full-time employees (as of Q1 2026)
+[09:15:48.211] [DEBUG] [V1RAG] LLM JSON CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+-
+  ... [+2501 chars truncated]
+  User   : Claim: January 2021 was the founding month of NovaAI.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | total_funding | $210M  (relevance score: 122)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 120)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 120)
+- NovaAI | series_c_led_by | Horizon Ventures  (relevance score: 120)
+- NovaAI | founded_in_location | San Francisco, California  (relevance score: 118)
+- NovaAI | founded_in_year | 2021  (relevance score: 117)
+- NovaAI | s
+  ... [+997 chars truncated]
+[09:15:48.211] [DEBUG] [V1RAG] LLM CALL  model=deepseek-ai/deepseek-v3.2
+  System : You are a rigorous fact-checking assistant for a company knowledge base.
+
+You will be given a factual claim and relevant knowledge graph triples from NovaAI's internal database.
+Evaluate whether the claim is supported, contradicted, or unverifiable based ONLY on the provided triples.
+
+Definitions:
+- SUPPORTED: The claim is directly and unambiguously confirmed by one or more triples.
+- CONTRADICTED
+  ... [+2401 chars truncated]
+  User   : Claim: January 2021 was the founding month of NovaAI.
+
+Relevant Knowledge Graph Triples:
+- NovaAI | total_funding | $210M  (relevance score: 122)
+- NovaAI | co_founded_by | Dr. Mara Chen  (relevance score: 120)
+- NovaAI | co_founded_by | Lucas Ferreira  (relevance score: 120)
+- NovaAI | series_c_led_by | Horizon Ventures  (relevance score: 120)
+- NovaAI | founded_in_location | San Francisco, California  (relevance score: 118)
+- NovaAI | founded_in_year | 2021  (relevance score: 117)
+- NovaAI | secondary_cloud_provider | GCP  (relevance score: 117)
+- NovaAI | ld_budget_refresh_date | January 1 
+  ... [+897 chars truncated]
+[09:17:45.430] [DEBUG] [V1RAG] LLM DONE  (117.22s)
+  Response:
+    ```json
+    {
+      "verdict": "SUPPORTED",
+      "confidence": 1.0,
+      "reasoning": "The triple 'NovaAI | founded_in_year | 2021' confirms the founding year, and the triples 'Dr. Mara Chen | start_date | January 2021' and 'Lucas Ferreira | start_date | January 2021' confirm both co-founders started in January 2021, directly supporting the claim that January 2021 was the founding month."
+    }
+    ```
+[09:17:45.431] [DEBUG] [V1RAG] LLM JSON DONE  (117.22s)
+  Parsed : {
+  "verdict": "SUPPORTED",
+  "confidence": 1.0,
+  "reasoning": "The triple 'NovaAI | founded_in_year | 2021' confirms the founding year, and the triples 'Dr. Mara Chen | start_date | January 2021' and 'Lucas Ferreira | start_date | January 2021' confirm both co-founders started in January 2021, directly supporting the claim that January 2021 was the founding month."
+}
+[09:17:45.431] [INFO ] 
+[09:17:45.431] [INFO ] ── RAW ANSWER ──
+[09:17:45.431] [INFO ]     Based on the provided facts:
+    
+    The CEO of NovaAI is **Dr. Mara Chen**. She joined the company in **January 2021**, which was also the company's founding month.
+[09:17:45.431] [INFO ] 
+[09:17:45.431] [INFO ] ── CLAIMS EXTRACTED  (3) ──
+[09:17:45.431] [INFO ]    1. The CEO of NovaAI is Dr. Mara Chen.
+[09:17:45.431] [INFO ]    2. Dr. Mara Chen joined NovaAI in January 2021.
+[09:17:45.431] [INFO ]    3. January 2021 was the founding month of NovaAI.
+[09:17:45.432] [INFO ] 
+[09:17:45.432] [INFO ] ── VERIFICATION RESULTS ──
+[09:17:45.432] [INFO ]   [SUPPORTED    ] (conf=1.00)  "The CEO of NovaAI is Dr. Mara Chen."
+[09:17:45.432] [DEBUG]     Reasoning : The triple 'NovaAI | has_ceo | Dr. Mara Chen' directly confirms the claim.
+[09:17:45.432] [DEBUG]     Evidence  : NovaAI | has_ceo | Dr. Mara Chen
+[09:17:45.432] [INFO ]   [SUPPORTED    ] (conf=1.00)  "Dr. Mara Chen joined NovaAI in January 2021."
+[09:17:45.432] [DEBUG]     Reasoning : The triple 'Dr. Mara Chen | start_date | January 2021' directly confirms the claim.
+[09:17:45.432] [DEBUG]     Evidence  : NovaAI | ownership_type | privately held
+[09:17:45.432] [INFO ]   [SUPPORTED    ] (conf=1.00)  "January 2021 was the founding month of NovaAI."
+[09:17:45.432] [DEBUG]     Reasoning : The triple 'NovaAI | founded_in_year | 2021' confirms the founding year, and the triples 'Dr. Mara Chen | start_date | January 2021' and 'Lucas Ferreira | start_date | January 2021' confirm both co-founders started in January 2021, directly supporting the claim that January 2021 was the founding month.
+[09:17:45.432] [DEBUG]     Evidence  : NovaAI | total_funding | $210M
+[09:17:45.432] [INFO ] 
+[09:17:45.432] [INFO ] ── REPAIR: not needed (no contradictions) ──
+[09:17:45.432] [INFO ] 
+[09:17:45.432] [INFO ] ── EVALUATION ──
+[09:17:45.432] [INFO ]   Ground truth  : Dr. Mara Chen is the CEO and co-founder of NovaAI. She joined in January 2021 when the company was founded and is based in San Francisco.
+[09:17:45.432] [INFO ]   Key facts     : ['Dr. Mara Chen', 'CEO', 'January 2021', 'San Francisco']
+[09:17:45.432] [INFO ]   KFR           : 0.750 (3/4 facts found) ✗
+[09:17:45.432] [WARNING]   Missing facts : ['San Francisco']
+[09:17:45.432] [INFO ]   Exact match   : False
+[09:17:45.432] [INFO ]   Latency       : 510.29s
+[09:17:45.432] [INFO ] 
+[09:17:45.433] [INFO ] ════════════════════════════════════════════════════════════════════════
+[09:17:45.433] [INFO ]   SUMMARY — V1RAG
+[09:17:45.433] [INFO ] ════════════════════════════════════════════════════════════════════════
+[09:17:45.433] [INFO ]   Questions     : 5
+[09:17:45.433] [INFO ]   Correct       : 1/5  (20.0%)
+[09:17:45.433] [INFO ]   Avg KFR       : 0.737
+[09:17:45.433] [INFO ]   Hallucinations: 0/5 questions had contradicted claims
+[09:17:45.433] [INFO ]   Avg latency   : 848.89s
+[09:17:45.433] [INFO ] 
+[09:17:45.433] [INFO ]   ID     Category             Diff     KFR     OK?   Hallucs  Latency
+[09:17:45.433] [INFO ]   --------------------------------------------------------------
+[09:17:45.433] [INFO ]   q01    company_overview     easy     1.000   ✓     no       898.8s
+[09:17:45.433] [INFO ]   q02    company_overview     medium   0.600   ✗     no       924.6s
+[09:17:45.433] [INFO ]   q03    company_overview     medium   0.667   ✗     no       1654.4s
+[09:17:45.433] [INFO ]   q04    company_overview     easy     0.667   ✗     no       256.3s
+[09:17:45.433] [INFO ]   q05    leadership           easy     0.750   ✗     no       510.3s
+[09:17:45.433] [INFO ] 
+[09:17:45.437] [INFO ] Results saved → /Users/StartupUser/Documents/GitHub/kg-claim-verifier/results/deepseek-ai-deepseek-v3_2/v1rag_results.json

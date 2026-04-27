@@ -1,0 +1,2398 @@
+{
+  "variant": "v1rag",
+  "model": "deepseek-ai/deepseek-v3.2",
+  "run_timestamp": "2026-04-22T05:37:35",
+  "aggregate_metrics": {
+    "total_questions": 5,
+    "accuracy": 0.2,
+    "avg_kfr": 0.737,
+    "hallucination_rate": 0.0,
+    "avg_claims_per_answer": 3.2,
+    "verdict_distribution": {
+      "SUPPORTED": 1.0,
+      "CONTRADICTED": 0.0,
+      "UNVERIFIABLE": 0.0
+    },
+    "avg_latency_seconds": 848.89,
+    "median_latency_seconds": 898.8,
+    "p95_latency_seconds": 1654.44,
+    "by_category": {
+      "company_overview": {
+        "accuracy": 0.25,
+        "avg_kfr": 0.734,
+        "n": 4
+      },
+      "leadership": {
+        "accuracy": 0.0,
+        "avg_kfr": 0.75,
+        "n": 1
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "accuracy": 0.333,
+        "avg_kfr": 0.806,
+        "n": 3
+      },
+      "medium": {
+        "accuracy": 0.0,
+        "avg_kfr": 0.633,
+        "n": 2
+      }
+    }
+  },
+  "questions": [
+    {
+      "id": "q01",
+      "category": "company_overview",
+      "difficulty": "easy",
+      "question": "When was NovaAI founded and who co-founded it?",
+      "ground_truth_answer": "NovaAI was founded in 2021 by Dr. Mara Chen and Lucas Ferreira.",
+      "key_facts": [
+        "2021",
+        "Dr. Mara Chen",
+        "Lucas Ferreira"
+      ],
+      "variant": "v1rag",
+      "raw_answer": "NovaAI was founded in 2021. It was co-founded by Dr. Mara Chen and Lucas Ferreira.",
+      "final_answer": "NovaAI was founded in 2021. It was co-founded by Dr. Mara Chen and Lucas Ferreira.",
+      "claims": [
+        "NovaAI was founded in 2021.",
+        "NovaAI was co-founded by Dr. Mara Chen.",
+        "NovaAI was co-founded by Lucas Ferreira."
+      ],
+      "verification_results": [
+        {
+          "claim": "NovaAI was founded in 2021.",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 130
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_location",
+              "object": "San Francisco, California",
+              "score": 130
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 125
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 125
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cfo",
+              "object": "Priya Nambiar",
+              "score": 118
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "series_c_led_by",
+              "object": "Horizon Ventures",
+              "score": 118
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "fully_remote_approval_requires",
+              "object": "direct manager, department VP, and Claudia Torres",
+              "score": 117
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "headquartered_at",
+              "object": "450 Market Street, Suite 1200, San Francisco, CA 94105",
+              "score": 117
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "employee_count",
+              "object": "312 full-time employees (as of Q1 2026)",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_office_in",
+              "object": "San Francisco",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "joined_NovaAI",
+              "object": "2022",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "also_oversees",
+              "object": "Legal",
+              "score": 100
+            },
+            {
+              "subject": "Engineering",
+              "relation": "headcount",
+              "object": "118 engineers (as of Q1 2026)",
+              "score": 62
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_ceo",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            },
+            {
+              "subject": "Claudia Torres",
+              "relation": "department",
+              "object": "People Operations",
+              "score": 100
+            },
+            {
+              "subject": "Claudia Torres",
+              "relation": "title",
+              "object": "Head of People Operations",
+              "score": 82
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cto",
+              "object": "Lucas Ferreira",
+              "score": 100
+            }
+          ],
+          "reasoning": "The triple 'NovaAI | founded_in_year | 2021' directly confirms the claim."
+        },
+        {
+          "claim": "NovaAI was co-founded by Dr. Mara Chen.",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 130
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 130
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cfo",
+              "object": "Priya Nambiar",
+              "score": 128
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_ceo",
+              "object": "Dr. Mara Chen",
+              "score": 121
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "ownership_type",
+              "object": "privately held",
+              "score": 120
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_coo",
+              "object": "James Whitfield",
+              "score": 119
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 118
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_location",
+              "object": "San Francisco, California",
+              "score": 118
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "health_benefits_provider",
+              "object": "Anthem Blue Cross",
+              "score": 118
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "headquartered_at",
+              "object": "450 Market Street, Suite 1200, San Francisco, CA 94105",
+              "score": 100
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "joined_NovaAI",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "start_date",
+              "object": "February 2023",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "joined_NovaAI",
+              "object": "2022",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "also_oversees",
+              "object": "Legal",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cto",
+              "object": "Lucas Ferreira",
+              "score": 100
+            }
+          ],
+          "reasoning": "The triple 'NovaAI | co_founded_by | Dr. Mara Chen' directly confirms the claim."
+        },
+        {
+          "claim": "NovaAI was co-founded by Lucas Ferreira.",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 130
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 130
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cfo",
+              "object": "Priya Nambiar",
+              "score": 128
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_ceo",
+              "object": "Dr. Mara Chen",
+              "score": 121
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "ownership_type",
+              "object": "privately held",
+              "score": 120
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_coo",
+              "object": "James Whitfield",
+              "score": 119
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 118
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_location",
+              "object": "San Francisco, California",
+              "score": 118
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "health_benefits_provider",
+              "object": "Anthem Blue Cross",
+              "score": 118
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "headquartered_at",
+              "object": "450 Market Street, Suite 1200, San Francisco, CA 94105",
+              "score": 100
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "joined_NovaAI",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "start_date",
+              "object": "February 2023",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "joined_NovaAI",
+              "object": "2022",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "also_oversees",
+              "object": "Legal",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cto",
+              "object": "Lucas Ferreira",
+              "score": 100
+            }
+          ],
+          "reasoning": "The triple 'NovaAI | co_founded_by | Lucas Ferreira' directly confirms that Lucas Ferreira was a co-founder of NovaAI."
+        }
+      ],
+      "had_hallucinations": false,
+      "reflections_used": null,
+      "latency_seconds": 898.801,
+      "exact_match": false,
+      "key_fact_recall": 1.0,
+      "is_correct": true,
+      "key_facts_found": 3,
+      "key_facts_total": 3,
+      "facts_missing": []
+    },
+    {
+      "id": "q02",
+      "category": "company_overview",
+      "difficulty": "medium",
+      "question": "What is NovaAI's current valuation, and how was it achieved?",
+      "ground_truth_answer": "NovaAI reached a $1.4B valuation through its Series C round, which was completed in November 2025 and led by Horizon Ventures. Total funding stands at $210M.",
+      "key_facts": [
+        "$1.4B",
+        "Series C",
+        "November 2025",
+        "Horizon Ventures",
+        "$210M"
+      ],
+      "variant": "v1rag",
+      "raw_answer": "Based on the internal facts:\n\nNovaAI's current valuation is **$1.4 billion**.\n\nThis valuation was achieved via a **Series C round**, which was led by **Horizon Ventures** and closed in **November 2025**.",
+      "final_answer": "Based on the internal facts:\n\nNovaAI's current valuation is **$1.4 billion**.\n\nThis valuation was achieved via a **Series C round**, which was led by **Horizon Ventures** and closed in **November 2025**.",
+      "claims": [
+        "NovaAI's current valuation is $1.4 billion.",
+        "NovaAI's valuation was achieved via a Series C round.",
+        "NovaAI's Series C round was led by Horizon Ventures.",
+        "NovaAI's Series C round closed in November 2025."
+      ],
+      "verification_results": [
+        {
+          "claim": "NovaAI's current valuation is $1.4 billion.",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaAI",
+              "relation": "valuation",
+              "object": "$1.4B",
+              "score": 130
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "valuation_achieved_via",
+              "object": "Series C round",
+              "score": 122
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "performance_review_cycle",
+              "object": "bi-annual",
+              "score": 122
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_location",
+              "object": "San Francisco, California",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "headquartered_at",
+              "object": "450 Market Street, Suite 1200, San Francisco, CA 94105",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "employee_count",
+              "object": "312 full-time employees (as of Q1 2026)",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_office_in",
+              "object": "San Francisco",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "series_c_date",
+              "object": "November 2025",
+              "score": 73
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "series_c_led_by",
+              "object": "Horizon Ventures",
+              "score": 73
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cto",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "Engineering",
+              "relation": "headcount",
+              "object": "118 engineers (as of Q1 2026)",
+              "score": 62
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_ceo",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "annual_review_calibration_month",
+              "object": "January",
+              "score": 80
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "annual_review_results_deadline",
+              "object": "January 31",
+              "score": 80
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            }
+          ],
+          "reasoning": "The triple 'NovaAI | valuation | $1.4B' directly confirms the claim that NovaAI's current valuation is $1.4 billion."
+        },
+        {
+          "claim": "NovaAI's valuation was achieved via a Series C round.",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaAI",
+              "relation": "series_c_date",
+              "object": "November 2025",
+              "score": 130
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "valuation_achieved_via",
+              "object": "Series C round",
+              "score": 128
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "series_c_led_by",
+              "object": "Horizon Ventures",
+              "score": 123
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 120
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 120
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "primary_cloud_provider",
+              "object": "AWS",
+              "score": 119
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "secondary_cloud_provider",
+              "object": "GCP",
+              "score": 118
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "ground_transport_limit_per_day",
+              "object": "$150",
+              "score": 118
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "performance_review_cycle",
+              "object": "bi-annual",
+              "score": 117
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "valuation",
+              "object": "$1.4B",
+              "score": 117
+            },
+            {
+              "subject": "NovaPilot Enterprise",
+              "relation": "includes_feature",
+              "object": "private cloud deployment (AWS or Azure)",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cto",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "Claudia Torres",
+              "relation": "start_date",
+              "object": "November 2021",
+              "score": 76
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_ceo",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "annual_review_calibration_month",
+              "object": "January",
+              "score": 80
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "annual_review_results_deadline",
+              "object": "January 31",
+              "score": 80
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 100
+            }
+          ],
+          "reasoning": "The triple 'NovaAI | valuation_achieved_via | Series C round' directly confirms the claim."
+        },
+        {
+          "claim": "NovaAI's Series C round was led by Horizon Ventures.",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaAI",
+              "relation": "series_c_date",
+              "object": "November 2025",
+              "score": 130
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "series_c_led_by",
+              "object": "Horizon Ventures",
+              "score": 123
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_ceo",
+              "object": "Dr. Mara Chen",
+              "score": 123
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "ownership_type",
+              "object": "privately held",
+              "score": 121
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 120
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 120
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "primary_cloud_provider",
+              "object": "AWS",
+              "score": 119
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "health_benefits_provider",
+              "object": "Anthem Blue Cross",
+              "score": 119
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "secondary_cloud_provider",
+              "object": "GCP",
+              "score": 118
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "ground_transport_limit_per_day",
+              "object": "$150",
+              "score": 118
+            },
+            {
+              "subject": "NovaPilot Enterprise",
+              "relation": "includes_feature",
+              "object": "private cloud deployment (AWS or Azure)",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cto",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "Claudia Torres",
+              "relation": "start_date",
+              "object": "November 2021",
+              "score": 76
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 100
+            }
+          ],
+          "reasoning": "The triple 'NovaAI | series_c_led_by | Horizon Ventures' directly confirms that Horizon Ventures led NovaAI's Series C round."
+        },
+        {
+          "claim": "NovaAI's Series C round closed in November 2025.",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaAI",
+              "relation": "series_c_date",
+              "object": "November 2025",
+              "score": 125
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "series_c_led_by",
+              "object": "Horizon Ventures",
+              "score": 122
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "secondary_cloud_provider",
+              "object": "GCP",
+              "score": 119
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "primary_cloud_provider",
+              "object": "AWS",
+              "score": 119
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 117
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 117
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "off_cycle_promotion_requires",
+              "object": "CEO approval (VP+ level)",
+              "score": 117
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_coo",
+              "object": "James Whitfield",
+              "score": 116
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "performance_review_cycle",
+              "object": "bi-annual",
+              "score": 116
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 100
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "joined_NovaAI",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "start_date",
+              "object": "February 2023",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Enterprise",
+              "relation": "includes_feature",
+              "object": "private cloud deployment (AWS or Azure)",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cto",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "Claudia Torres",
+              "relation": "start_date",
+              "object": "November 2021",
+              "score": 76
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_ceo",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "annual_review_calibration_month",
+              "object": "January",
+              "score": 80
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "annual_review_results_deadline",
+              "object": "January 31",
+              "score": 80
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "fully_remote_approval_requires",
+              "object": "direct manager, department VP, and Claudia Torres",
+              "score": 69
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "business_class_permitted_with_approval",
+              "object": "flights 6 hours or more (VP+ approval)",
+              "score": 69
+            }
+          ],
+          "reasoning": "The triple 'NovaAI | series_c_date | November 2025' directly confirms the claim that NovaAI's Series C round closed in November 2025."
+        }
+      ],
+      "had_hallucinations": false,
+      "reflections_used": null,
+      "latency_seconds": 924.621,
+      "exact_match": false,
+      "key_fact_recall": 0.6,
+      "is_correct": false,
+      "key_facts_found": 3,
+      "key_facts_total": 5,
+      "facts_missing": [
+        "$1.4B",
+        "$210M"
+      ]
+    },
+    {
+      "id": "q03",
+      "category": "company_overview",
+      "difficulty": "medium",
+      "question": "How many employees does NovaAI have and where are its offices?",
+      "ground_truth_answer": "NovaAI has 312 full-time employees as of Q1 2026. The company has offices in San Francisco, London (opened 2023), and Singapore (opened 2024).",
+      "key_facts": [
+        "312",
+        "San Francisco",
+        "London",
+        "Singapore",
+        "2023",
+        "2024"
+      ],
+      "variant": "v1rag",
+      "raw_answer": "Based on the internal knowledge base:\n\nNovaAI has **312 full-time employees** as of Q1 2026.\n\nThe company has offices in:\n- **San Francisco** (headquarters at 450 Market Street, Suite 1200, San Francisco, CA 94105)\n- **London** (office opened in 2023)",
+      "final_answer": "Based on the internal knowledge base:\n\nNovaAI has **312 full-time employees** as of Q1 2026.\n\nThe company has offices in:\n- **San Francisco** (headquarters at 450 Market Street, Suite 1200, San Francisco, CA 94105)\n- **London** (office opened in 2023)",
+      "claims": [
+        "NovaAI has 312 full-time employees as of Q1 2026.",
+        "NovaAI has offices in San Francisco.",
+        "NovaAI has its headquarters at 450 Market Street, Suite 1200, San Francisco, CA 94105.",
+        "NovaAI has offices in London.",
+        "NovaAI's London office opened in 2023."
+      ],
+      "verification_results": [
+        {
+          "claim": "NovaAI has 312 full-time employees as of Q1 2026.",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaAI",
+              "relation": "employee_count",
+              "object": "312 full-time employees (as of Q1 2026)",
+              "score": 120
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "new_hire_review_designation",
+              "object": "Too New to Rate (within 90 days of cycle)",
+              "score": 120
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "valuation_achieved_via",
+              "object": "Series C round",
+              "score": 119
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "employee_premium_coverage_percent",
+              "object": "90%",
+              "score": 119
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_ceo",
+              "object": "Dr. Mara Chen",
+              "score": 118
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cto",
+              "object": "Lucas Ferreira",
+              "score": 118
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cfo",
+              "object": "Priya Nambiar",
+              "score": 118
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_coo",
+              "object": "James Whitfield",
+              "score": 118
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cro",
+              "object": "Dominique Leblanc",
+              "score": 118
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "annual_LD_budget_per_employee",
+              "object": "$2,500",
+              "score": 118
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "pip_initiation_window",
+              "object": "within 30 days of rating",
+              "score": 56
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "series_c_date",
+              "object": "November 2025",
+              "score": 73
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "series_c_led_by",
+              "object": "Horizon Ventures",
+              "score": 73
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "joined_NovaAI",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "start_date",
+              "object": "February 2023",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "Dominique Leblanc",
+              "relation": "title",
+              "object": "CRO",
+              "score": 100
+            },
+            {
+              "subject": "Dominique Leblanc",
+              "relation": "department",
+              "object": "Sales",
+              "score": 100
+            },
+            {
+              "subject": "Engineering",
+              "relation": "headcount",
+              "object": "118 engineers (as of Q1 2026)",
+              "score": 62
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "joined_NovaAI",
+              "object": "2022",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "also_oversees",
+              "object": "Legal",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "price",
+              "object": "$2,500/month",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "automation_runs_per_month",
+              "object": "500,000",
+              "score": 75
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "minimum_tenure_for_formal_rating",
+              "object": "90 days",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 100
+            }
+          ],
+          "reasoning": "The triple 'NovaAI | employee_count | 312 full-time employees (as of Q1 2026)' directly confirms the claim."
+        },
+        {
+          "claim": "NovaAI has offices in San Francisco.",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaAI",
+              "relation": "has_office_in",
+              "object": "San Francisco",
+              "score": 128
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_office_in",
+              "object": "London",
+              "score": 128
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "headquartered_at",
+              "object": "450 Market Street, Suite 1200, San Francisco, CA 94105",
+              "score": 123
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "required_in_office_days",
+              "object": "Tuesday and Thursday",
+              "score": 123
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 123
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 123
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 123
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 123
+            },
+            {
+              "subject": "Sofia Andersson",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 123
+            },
+            {
+              "subject": "Dominique Leblanc",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 123
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_coo",
+              "object": "James Whitfield",
+              "score": 100
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "joined_NovaAI",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "start_date",
+              "object": "February 2023",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "vp_of_engineering",
+              "object": "Sofia Andersson",
+              "score": 100
+            },
+            {
+              "subject": "Sofia Andersson",
+              "relation": "title",
+              "object": "VP of Engineering",
+              "score": 100
+            },
+            {
+              "subject": "Sofia Andersson",
+              "relation": "department",
+              "object": "Engineering",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cto",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "tech_talk_frequency",
+              "object": "every other Thursday",
+              "score": 57
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "london_office_opened",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "Oliver Haines",
+              "relation": "office",
+              "object": "London",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cfo",
+              "object": "Priya Nambiar",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "joined_NovaAI",
+              "object": "2022",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "also_oversees",
+              "object": "Legal",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cro",
+              "object": "Dominique Leblanc",
+              "score": 100
+            },
+            {
+              "subject": "Dominique Leblanc",
+              "relation": "title",
+              "object": "CRO",
+              "score": 100
+            },
+            {
+              "subject": "Dominique Leblanc",
+              "relation": "department",
+              "object": "Sales",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_ceo",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_location",
+              "object": "San Francisco, California",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 100
+            }
+          ],
+          "reasoning": "The triple 'NovaAI | has_office_in | San Francisco' directly confirms the claim."
+        },
+        {
+          "claim": "NovaAI has its headquarters at 450 Market Street, Suite 1200, San Francisco, CA 94105.",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaAI",
+              "relation": "headquartered_at",
+              "object": "450 Market Street, Suite 1200, San Francisco, CA 94105",
+              "score": 127
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_location",
+              "object": "San Francisco, California",
+              "score": 121
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "employee_count",
+              "object": "312 full-time employees (as of Q1 2026)",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_office_in",
+              "object": "San Francisco",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_office_in",
+              "object": "London",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "london_office_opened",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "singapore_office_opened",
+              "object": "2024",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "joined_NovaAI",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "Derek Shin",
+              "relation": "joined_NovaAI_inhouse",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cto",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "Oliver Haines",
+              "relation": "office",
+              "object": "London",
+              "score": 100
+            },
+            {
+              "subject": "Engineering",
+              "relation": "headcount",
+              "object": "118 engineers (as of Q1 2026)",
+              "score": 62
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_ceo",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "NovaBridge",
+              "relation": "released_in",
+              "object": "March 2024",
+              "score": 100
+            },
+            {
+              "subject": "Marcus Webb",
+              "relation": "start_date",
+              "object": "January 2024",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            }
+          ],
+          "reasoning": "The triple 'NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105' directly confirms the claim."
+        },
+        {
+          "claim": "NovaAI has offices in London.",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaAI",
+              "relation": "has_office_in",
+              "object": "San Francisco",
+              "score": 128
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_office_in",
+              "object": "London",
+              "score": 128
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "headquartered_at",
+              "object": "450 Market Street, Suite 1200, San Francisco, CA 94105",
+              "score": 123
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "required_in_office_days",
+              "object": "Tuesday and Thursday",
+              "score": 123
+            },
+            {
+              "subject": "Oliver Haines",
+              "relation": "office",
+              "object": "London",
+              "score": 123
+            },
+            {
+              "subject": "Lena Park",
+              "relation": "office",
+              "object": "London",
+              "score": 123
+            },
+            {
+              "subject": "James Okafor",
+              "relation": "office",
+              "object": "London",
+              "score": 123
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "work_model",
+              "object": "hybrid-first",
+              "score": 119
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "home_office_equipment_stipend",
+              "object": "$1,500 one-time upon hire",
+              "score": 119
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cfo",
+              "object": "Priya Nambiar",
+              "score": 116
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "tech_talk_frequency",
+              "object": "every other Thursday",
+              "score": 57
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "london_office_opened",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "joined_NovaAI",
+              "object": "2022",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "also_oversees",
+              "object": "Legal",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "vp_of_product",
+              "object": "Oliver Haines",
+              "score": 100
+            },
+            {
+              "subject": "Oliver Haines",
+              "relation": "title",
+              "object": "VP of Product",
+              "score": 100
+            },
+            {
+              "subject": "Oliver Haines",
+              "relation": "department",
+              "object": "Product",
+              "score": 100
+            },
+            {
+              "subject": "UX/Design",
+              "relation": "led_by",
+              "object": "Lena Park",
+              "score": 100
+            },
+            {
+              "subject": "Lena Park",
+              "relation": "title",
+              "object": "Head of Design",
+              "score": 100
+            },
+            {
+              "subject": "Lena Park",
+              "relation": "start_date",
+              "object": "June 2022",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens",
+              "relation": "pm_owner",
+              "object": "James Okafor",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard",
+              "relation": "pm_owner",
+              "object": "James Okafor",
+              "score": 100
+            },
+            {
+              "subject": "James Okafor",
+              "relation": "start_date",
+              "object": "September 2023",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_location",
+              "object": "San Francisco, California",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 100
+            }
+          ],
+          "reasoning": "The triple 'NovaAI | has_office_in | London' directly confirms the claim."
+        },
+        {
+          "claim": "NovaAI's London office opened in 2023.",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaAI",
+              "relation": "ownership_type",
+              "object": "privately held",
+              "score": 117
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "london_office_opened",
+              "object": "2023",
+              "score": 116
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_location",
+              "object": "San Francisco, California",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "headquartered_at",
+              "object": "450 Market Street, Suite 1200, San Francisco, CA 94105",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "employee_count",
+              "object": "312 full-time employees (as of Q1 2026)",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_office_in",
+              "object": "San Francisco",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_office_in",
+              "object": "London",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "joined_NovaAI",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "Derek Shin",
+              "relation": "joined_NovaAI_inhouse",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cto",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "Oliver Haines",
+              "relation": "office",
+              "object": "London",
+              "score": 100
+            },
+            {
+              "subject": "Engineering",
+              "relation": "headcount",
+              "object": "118 engineers (as of Q1 2026)",
+              "score": 62
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_ceo",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            }
+          ],
+          "reasoning": "The triple 'NovaAI | london_office_opened | 2023' directly confirms that NovaAI's London office opened in 2023."
+        }
+      ],
+      "had_hallucinations": false,
+      "reflections_used": null,
+      "latency_seconds": 1654.445,
+      "exact_match": false,
+      "key_fact_recall": 0.667,
+      "is_correct": false,
+      "key_facts_found": 4,
+      "key_facts_total": 6,
+      "facts_missing": [
+        "Singapore",
+        "2024"
+      ]
+    },
+    {
+      "id": "q04",
+      "category": "company_overview",
+      "difficulty": "easy",
+      "question": "What are NovaAI's primary market verticals?",
+      "ground_truth_answer": "NovaAI's primary market verticals are financial services, healthcare, and logistics.",
+      "key_facts": [
+        "financial services",
+        "healthcare",
+        "logistics"
+      ],
+      "variant": "v1rag",
+      "raw_answer": "Based on the verified facts, NovaAI's primary market verticals are **financial services** and **healthcare**.",
+      "final_answer": "Based on the verified facts, NovaAI's primary market verticals are **financial services** and **healthcare**.",
+      "claims": [
+        "NovaAI's primary market verticals are financial services and healthcare."
+      ],
+      "verification_results": [
+        {
+          "claim": "NovaAI's primary market verticals are financial services and healthcare.",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaAI",
+              "relation": "primary_vertical",
+              "object": "financial services",
+              "score": 124
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "primary_vertical",
+              "object": "healthcare",
+              "score": 124
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "primary_cloud_provider",
+              "object": "AWS",
+              "score": 116
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_location",
+              "object": "San Francisco, California",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "headquartered_at",
+              "object": "450 Market Street, Suite 1200, San Francisco, CA 94105",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "employee_count",
+              "object": "312 full-time employees (as of Q1 2026)",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_office_in",
+              "object": "San Francisco",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Enterprise",
+              "relation": "includes_feature",
+              "object": "private cloud deployment (AWS or Azure)",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cto",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "Ananya Bose",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 56
+            },
+            {
+              "subject": "Engineering",
+              "relation": "headcount",
+              "object": "118 engineers (as of Q1 2026)",
+              "score": 62
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_ceo",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            }
+          ],
+          "reasoning": "The claim that NovaAI's primary market verticals are financial services and healthcare is directly confirmed by two triples stating 'NovaAI | primary_vertical | financial services' and 'NovaAI | primary_vertical | healthcare'."
+        }
+      ],
+      "had_hallucinations": false,
+      "reflections_used": null,
+      "latency_seconds": 256.305,
+      "exact_match": false,
+      "key_fact_recall": 0.667,
+      "is_correct": false,
+      "key_facts_found": 2,
+      "key_facts_total": 3,
+      "facts_missing": [
+        "logistics"
+      ]
+    },
+    {
+      "id": "q05",
+      "category": "leadership",
+      "difficulty": "easy",
+      "question": "Who is the CEO of NovaAI and when did she join the company?",
+      "ground_truth_answer": "Dr. Mara Chen is the CEO and co-founder of NovaAI. She joined in January 2021 when the company was founded and is based in San Francisco.",
+      "key_facts": [
+        "Dr. Mara Chen",
+        "CEO",
+        "January 2021",
+        "San Francisco"
+      ],
+      "variant": "v1rag",
+      "raw_answer": "Based on the provided facts:\n\nThe CEO of NovaAI is **Dr. Mara Chen**. She joined the company in **January 2021**, which was also the company's founding month.",
+      "final_answer": "Based on the provided facts:\n\nThe CEO of NovaAI is **Dr. Mara Chen**. She joined the company in **January 2021**, which was also the company's founding month.",
+      "claims": [
+        "The CEO of NovaAI is Dr. Mara Chen.",
+        "Dr. Mara Chen joined NovaAI in January 2021.",
+        "January 2021 was the founding month of NovaAI."
+      ],
+      "verification_results": [
+        {
+          "claim": "The CEO of NovaAI is Dr. Mara Chen.",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaAI",
+              "relation": "has_ceo",
+              "object": "Dr. Mara Chen",
+              "score": 119
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_location",
+              "object": "San Francisco, California",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "headquartered_at",
+              "object": "450 Market Street, Suite 1200, San Francisco, CA 94105",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "employee_count",
+              "object": "312 full-time employees (as of Q1 2026)",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_office_in",
+              "object": "San Francisco",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_office_in",
+              "object": "London",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "london_office_opened",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "joined_NovaAI",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "Derek Shin",
+              "relation": "joined_NovaAI_inhouse",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "Oliver Haines",
+              "relation": "office",
+              "object": "London",
+              "score": 100
+            },
+            {
+              "subject": "Engineering",
+              "relation": "headcount",
+              "object": "118 engineers (as of Q1 2026)",
+              "score": 62
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cto",
+              "object": "Lucas Ferreira",
+              "score": 100
+            }
+          ],
+          "reasoning": "The triple 'NovaAI | has_ceo | Dr. Mara Chen' directly confirms the claim."
+        },
+        {
+          "claim": "Dr. Mara Chen joined NovaAI in January 2021.",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaAI",
+              "relation": "ownership_type",
+              "object": "privately held",
+              "score": 117
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_ceo",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_location",
+              "object": "San Francisco, California",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "headquartered_at",
+              "object": "450 Market Street, Suite 1200, San Francisco, CA 94105",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "employee_count",
+              "object": "312 full-time employees (as of Q1 2026)",
+              "score": 100
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cto",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "Engineering",
+              "relation": "headcount",
+              "object": "118 engineers (as of Q1 2026)",
+              "score": 62
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "fiscal_year",
+              "object": "January 1 to December 31",
+              "score": 74
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_office_in",
+              "object": "San Francisco",
+              "score": 100
+            }
+          ],
+          "reasoning": "The triple 'Dr. Mara Chen | start_date | January 2021' directly confirms the claim."
+        },
+        {
+          "claim": "January 2021 was the founding month of NovaAI.",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaAI",
+              "relation": "total_funding",
+              "object": "$210M",
+              "score": 122
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 120
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 120
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "series_c_led_by",
+              "object": "Horizon Ventures",
+              "score": 120
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_location",
+              "object": "San Francisco, California",
+              "score": 118
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 117
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "secondary_cloud_provider",
+              "object": "GCP",
+              "score": 117
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "ld_budget_refresh_date",
+              "object": "January 1",
+              "score": 116
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "headquartered_at",
+              "object": "450 Market Street, Suite 1200, San Francisco, CA 94105",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "employee_count",
+              "object": "312 full-time employees (as of Q1 2026)",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "Engineering",
+              "relation": "headcount",
+              "object": "118 engineers (as of Q1 2026)",
+              "score": 62
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_ceo",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "fiscal_year",
+              "object": "January 1 to December 31",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard",
+              "relation": "certification_date",
+              "object": "January 2026",
+              "score": 88
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cto",
+              "object": "Lucas Ferreira",
+              "score": 100
+            }
+          ],
+          "reasoning": "The triple 'NovaAI | founded_in_year | 2021' confirms the founding year, and the triples 'Dr. Mara Chen | start_date | January 2021' and 'Lucas Ferreira | start_date | January 2021' confirm both co-founders started in January 2021, directly supporting the claim that January 2021 was the founding month."
+        }
+      ],
+      "had_hallucinations": false,
+      "reflections_used": null,
+      "latency_seconds": 510.293,
+      "exact_match": false,
+      "key_fact_recall": 0.75,
+      "is_correct": false,
+      "key_facts_found": 3,
+      "key_facts_total": 4,
+      "facts_missing": [
+        "San Francisco"
+      ]
+    }
+  ]
+}

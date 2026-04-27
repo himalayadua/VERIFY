@@ -1,0 +1,1938 @@
+[10:57:54.418] [INFO ] ════════════════════════════════════════════════════════════════════════
+[10:57:54.418] [INFO ]   KG-BACKED CLAIM VERIFIER — EXPERIMENT RUN
+[10:57:54.418] [INFO ] ════════════════════════════════════════════════════════════════════════
+[10:57:54.418] [INFO ]   Model     : google/gemma-3n-e4b-it
+[10:57:54.418] [INFO ]   Variant   : V0
+[10:57:54.418] [INFO ]   Questions : 45
+[10:57:54.418] [INFO ]   KG triples: 262
+[10:57:54.418] [INFO ]   Started   : 2026-04-22 10:57:54
+[10:57:54.418] [INFO ]   Log file  : /Users/StartupUser/Documents/GitHub/kg-claim-verifier/results/google-gemma-3n-e4b-it/logs/v0_20260422_105754.log
+[10:57:54.418] [INFO ] 
+[10:57:54.418] [INFO ] ════════════════════════════════════════════════════════════════════════
+[10:57:54.418] [INFO ]   VARIANT: V0  |  45 questions  |  model: google/gemma-3n-e4b-it
+[10:57:54.418] [INFO ] ════════════════════════════════════════════════════════════════════════
+[10:57:54.418] [INFO ] Pipeline : V0Pipeline
+[10:57:54.418] [INFO ] 
+[10:57:54.418] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:57:54.418] [INFO ] Question 1/45  [q01]  category=company_overview  difficulty=easy
+[10:57:54.418] [INFO ]   Q: When was NovaAI founded and who co-founded it?
+[10:57:54.418] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:57:54.418] [INFO ] [V0] Running pipeline...
+[10:57:57.900] [INFO ] 
+[10:57:57.901] [INFO ] ── RAW ANSWER ──
+[10:57:57.901] [INFO ]     NovaAI was founded in **2021** by **David Chow, Edward Tian, and Pei Pei Matei**. 
+    
+    You can find this information on the NovaAI website: [https://www.nova.ai/about](https://www.nova.ai/about)
+[10:57:57.901] [INFO ] 
+[10:57:57.901] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[10:57:57.901] [INFO ]     NovaAI was founded in **2021** by **David Chow, Edward Tian, and Pei Pei Matei**. 
+    
+    You can find this information on the NovaAI website: [https://www.nova.ai/about](https://www.nova.ai/about)
+[10:57:57.901] [INFO ] 
+[10:57:57.901] [INFO ] ── EVALUATION ──
+[10:57:57.901] [INFO ]   Ground truth  : NovaAI was founded in 2021 by Dr. Mara Chen and Lucas Ferreira.
+[10:57:57.901] [INFO ]   Key facts     : ['2021', 'Dr. Mara Chen', 'Lucas Ferreira']
+[10:57:57.901] [INFO ]   KFR           : 0.333 (1/3 facts found) ✗
+[10:57:57.901] [WARNING]   Missing facts : ['Dr. Mara Chen', 'Lucas Ferreira']
+[10:57:57.901] [INFO ]   Exact match   : False
+[10:57:57.901] [INFO ]   Latency       : 3.48s
+[10:57:57.901] [INFO ] 
+[10:57:57.901] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:57:57.901] [INFO ] Question 2/45  [q02]  category=company_overview  difficulty=medium
+[10:57:57.901] [INFO ]   Q: What is NovaAI's current valuation, and how was it achieved?
+[10:57:57.901] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:57:57.901] [INFO ] [V0] Running pipeline...
+[10:58:08.438] [INFO ] 
+[10:58:08.439] [INFO ] ── RAW ANSWER ──
+[10:58:08.439] [INFO ]     Okay, here's the information I have regarding NovaAI's current valuation and how it was achieved.
+    
+    **NovaAI's current valuation is $1.8 billion.**
+    
+    This valuation was achieved in **February 2024** following a Series D funding round. 
+    
+    The funding round was led by **Lightspeed Venture Partners** with participation from **Intel Capital** and **Radical AI**. The total amount raised in this Series D round was **$185 million**.
+    
+    This brings NovaAI's total funding to date to **$445 million** since its founding in 2021.
+    
+    The valuation increase reflects NovaAI's strong growth and advancements in its AI platform, particularly its focus on enterprise AI solutions. They've seen significant traction with companies looking to build and deploy AI applications.
+    
+    
+    
+    You can find more details about this funding round in press releases and articles published by reputable financial news sources like TechCrunch, Bloomberg, and VentureBeat.
+[10:58:08.439] [INFO ] 
+[10:58:08.439] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[10:58:08.439] [INFO ]     Okay, here's the information I have regarding NovaAI's current valuation and how it was achieved.
+    
+    **NovaAI's current valuation is $1.8 billion.**
+    
+    This valuation was achieved in **February 2024** following a Series D funding round. 
+    
+    The funding round was led by **Lightspeed Venture Partners** with participation from **Intel Capital** and **Radical AI**. The total amount raised in this Series D round was **$185 million**.
+    
+    This brings NovaAI's total funding to date to **$445 million** since its founding in 2021.
+    
+    The valuation increase reflects NovaAI's strong growth and advancements in its AI platform, particularly its focus on enterprise AI solutions. They've seen significant traction with companies looking to build and deploy AI applications.
+    
+    
+    
+    You can find more details about this funding round in press releases and articles published by reputable financial news sources like TechCrunch, Bloomberg, and VentureBeat.
+[10:58:08.439] [INFO ] 
+[10:58:08.440] [INFO ] ── EVALUATION ──
+[10:58:08.440] [INFO ]   Ground truth  : NovaAI reached a $1.4B valuation through its Series C round, which was completed in November 2025 and led by Horizon Ventures. Total funding stands at $210M.
+[10:58:08.440] [INFO ]   Key facts     : ['$1.4B', 'Series C', 'November 2025', 'Horizon Ventures', '$210M']
+[10:58:08.440] [INFO ]   KFR           : 0.200 (1/5 facts found) ✗
+[10:58:08.440] [WARNING]   Missing facts : ['$1.4B', 'November 2025', 'Horizon Ventures', '$210M']
+[10:58:08.440] [INFO ]   Exact match   : False
+[10:58:08.440] [INFO ]   Latency       : 10.54s
+[10:58:08.440] [INFO ] 
+[10:58:08.440] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:58:08.440] [INFO ] Question 3/45  [q03]  category=company_overview  difficulty=medium
+[10:58:08.440] [INFO ]   Q: How many employees does NovaAI have and where are its offices?
+[10:58:08.440] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:58:08.440] [INFO ] [V0] Running pipeline...
+[10:58:15.964] [INFO ] 
+[10:58:15.965] [INFO ] ── RAW ANSWER ──
+[10:58:15.965] [INFO ]     Okay, here's the information I have on NovaAI's employee count and office locations:
+    
+    As of late 2023/early 2024, NovaAI has approximately **300 employees**. 
+    
+    Our main offices are located in:
+    
+    *   **San Francisco, California:** This is our headquarters.
+    *   **New York, New York:** We have a significant presence here.
+    *   **London, United Kingdom:** We have an office to serve our European clients.
+    
+    
+    
+    Please note that these numbers can fluctuate slightly. For the most up-to-date information, you can refer to internal company resources or contact HR directly.
+[10:58:15.965] [INFO ] 
+[10:58:15.965] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[10:58:15.965] [INFO ]     Okay, here's the information I have on NovaAI's employee count and office locations:
+    
+    As of late 2023/early 2024, NovaAI has approximately **300 employees**. 
+    
+    Our main offices are located in:
+    
+    *   **San Francisco, California:** This is our headquarters.
+    *   **New York, New York:** We have a significant presence here.
+    *   **London, United Kingdom:** We have an office to serve our European clients.
+    
+    
+    
+    Please note that these numbers can fluctuate slightly. For the most up-to-date information, you can refer to internal company resources or contact HR directly.
+[10:58:15.966] [INFO ] 
+[10:58:15.966] [INFO ] ── EVALUATION ──
+[10:58:15.966] [INFO ]   Ground truth  : NovaAI has 312 full-time employees as of Q1 2026. The company has offices in San Francisco, London (opened 2023), and Singapore (opened 2024).
+[10:58:15.966] [INFO ]   Key facts     : ['312', 'San Francisco', 'London', 'Singapore', '2023', '2024']
+[10:58:15.966] [INFO ]   KFR           : 0.667 (4/6 facts found) ✗
+[10:58:15.966] [WARNING]   Missing facts : ['312', 'Singapore']
+[10:58:15.966] [INFO ]   Exact match   : False
+[10:58:15.966] [INFO ]   Latency       : 7.52s
+[10:58:15.966] [INFO ] 
+[10:58:15.966] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:58:15.966] [INFO ] Question 4/45  [q04]  category=company_overview  difficulty=easy
+[10:58:15.966] [INFO ]   Q: What are NovaAI's primary market verticals?
+[10:58:15.966] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:58:15.966] [INFO ] [V0] Running pipeline...
+[10:58:24.879] [INFO ] 
+[10:58:24.879] [INFO ] ── RAW ANSWER ──
+[10:58:24.879] [INFO ]     NovaAI's primary market verticals are:
+    
+    *   **Healthcare:** This includes applications for drug discovery, clinical trial optimization, medical imaging analysis, and personalized medicine.
+    *   **Financial Services:** NovaAI provides solutions for fraud detection, risk management, algorithmic trading, and customer service automation within the financial sector.
+    *   **Retail:** Applications focus on personalized recommendations, supply chain optimization, demand forecasting, and customer experience enhancement.
+    *   **Manufacturing:** NovaAI offers solutions for predictive maintenance, quality control, process optimization, and supply chain resilience in manufacturing environments.
+    *   **Cybersecurity:** NovaAI provides AI-powered threat detection, vulnerability assessment, and incident response solutions.
+    
+    
+    
+    You can find more detailed information on our website: [https://nova.ai/industries/](https://nova.ai/industries/)
+[10:58:24.879] [INFO ] 
+[10:58:24.879] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[10:58:24.879] [INFO ]     NovaAI's primary market verticals are:
+    
+    *   **Healthcare:** This includes applications for drug discovery, clinical trial optimization, medical imaging analysis, and personalized medicine.
+    *   **Financial Services:** NovaAI provides solutions for fraud detection, risk management, algorithmic trading, and customer service automation within the financial sector.
+    *   **Retail:** Applications focus on personalized recommendations, supply chain optimization, demand forecasting, and customer experience enhancement.
+    *   **Manufacturing:** NovaAI offers solutions for predictive maintenance, quality control, process optimization, and supply chain resilience in manufacturing environments.
+    *   **Cybersecurity:** NovaAI provides AI-powered threat detection, vulnerability assessment, and incident response solutions.
+    
+    
+    
+    You can find more detailed information on our website: [https://nova.ai/industries/](https://nova.ai/industries/)
+[10:58:24.879] [INFO ] 
+[10:58:24.879] [INFO ] ── EVALUATION ──
+[10:58:24.879] [INFO ]   Ground truth  : NovaAI's primary market verticals are financial services, healthcare, and logistics.
+[10:58:24.879] [INFO ]   Key facts     : ['financial services', 'healthcare', 'logistics']
+[10:58:24.879] [INFO ]   KFR           : 0.667 (2/3 facts found) ✗
+[10:58:24.879] [WARNING]   Missing facts : ['logistics']
+[10:58:24.879] [INFO ]   Exact match   : False
+[10:58:24.879] [INFO ]   Latency       : 8.91s
+[10:58:24.879] [INFO ] 
+[10:58:24.879] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:58:24.879] [INFO ] Question 5/45  [q05]  category=leadership  difficulty=easy
+[10:58:24.880] [INFO ]   Q: Who is the CEO of NovaAI and when did she join the company?
+[10:58:24.880] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:58:24.880] [INFO ] [V0] Running pipeline...
+[10:58:26.363] [INFO ] 
+[10:58:26.364] [INFO ] ── RAW ANSWER ──
+[10:58:26.364] [INFO ]     The CEO of NovaAI is **Dawn Song**. She joined the company in **2023**.
+[10:58:26.364] [INFO ] 
+[10:58:26.364] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[10:58:26.364] [INFO ]     The CEO of NovaAI is **Dawn Song**. She joined the company in **2023**.
+[10:58:26.364] [INFO ] 
+[10:58:26.364] [INFO ] ── EVALUATION ──
+[10:58:26.364] [INFO ]   Ground truth  : Dr. Mara Chen is the CEO and co-founder of NovaAI. She joined in January 2021 when the company was founded and is based in San Francisco.
+[10:58:26.364] [INFO ]   Key facts     : ['Dr. Mara Chen', 'CEO', 'January 2021', 'San Francisco']
+[10:58:26.364] [INFO ]   KFR           : 0.250 (1/4 facts found) ✗
+[10:58:26.364] [WARNING]   Missing facts : ['Dr. Mara Chen', 'January 2021', 'San Francisco']
+[10:58:26.364] [INFO ]   Exact match   : False
+[10:58:26.364] [INFO ]   Latency       : 1.48s
+[10:58:26.365] [INFO ] 
+[10:58:26.365] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:58:26.365] [INFO ] Question 6/45  [q06]  category=leadership  difficulty=medium
+[10:58:26.365] [INFO ]   Q: Who leads the Engineering department and what are its sub-teams?
+[10:58:26.365] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:58:26.365] [INFO ] [V0] Running pipeline...
+[10:58:37.833] [INFO ] 
+[10:58:37.833] [INFO ] ── RAW ANSWER ──
+[10:58:37.833] [INFO ]     Okay, here's the information regarding the leadership and sub-teams of the Engineering department at NovaAI, as of today, November 2nd, 2023.
+    
+    The Engineering department is led by **Dr. Anya Sharma, VP of Engineering**.
+    
+    The Engineering department is structured into the following sub-teams:
+    
+    *   **Core AI Team:** This team focuses on the foundational AI models and algorithms that power NovaAI's products.
+    *   **Infrastructure Team:** Responsible for the cloud infrastructure, systems, and tools that support the entire engineering organization and product deployments.
+    *   **Product Integration Team:** This team focuses on integrating NovaAI's AI models into our various product offerings.
+    *   **Research Team:** Conducts cutting-edge research in AI and machine learning to explore new capabilities and technologies for future products.
+    *   **DevOps Team:** Manages the continuous integration and continuous deployment (CI/CD) pipelines to ensure efficient and reliable software delivery.
+    
+    
+    
+    I hope this information is helpful! Let me know if you have any other questions.
+[10:58:37.834] [INFO ] 
+[10:58:37.834] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[10:58:37.834] [INFO ]     Okay, here's the information regarding the leadership and sub-teams of the Engineering department at NovaAI, as of today, November 2nd, 2023.
+    
+    The Engineering department is led by **Dr. Anya Sharma, VP of Engineering**.
+    
+    The Engineering department is structured into the following sub-teams:
+    
+    *   **Core AI Team:** This team focuses on the foundational AI models and algorithms that power NovaAI's products.
+    *   **Infrastructure Team:** Responsible for the cloud infrastructure, systems, and tools that support the entire engineering organization and product deployments.
+    *   **Product Integration Team:** This team focuses on integrating NovaAI's AI models into our various product offerings.
+    *   **Research Team:** Conducts cutting-edge research in AI and machine learning to explore new capabilities and technologies for future products.
+    *   **DevOps Team:** Manages the continuous integration and continuous deployment (CI/CD) pipelines to ensure efficient and reliable software delivery.
+    
+    
+    
+    I hope this information is helpful! Let me know if you have any other questions.
+[10:58:37.835] [INFO ] 
+[10:58:37.835] [INFO ] ── EVALUATION ──
+[10:58:37.835] [INFO ]   Ground truth  : Sofia Andersson is the VP of Engineering. Engineering has four sub-teams: Platform Infrastructure (led by Raj Mehta), ML Systems (led by Dr. Yuki Tanaka), Product Engineering (led by Carlos Rivera), and Security Engineering (led by Ananya Bose).
+[10:58:37.835] [INFO ]   Key facts     : ['Sofia Andersson', 'Platform Infrastructure', 'ML Systems', 'Product Engineering', 'Security Engineering']
+[10:58:37.835] [INFO ]   KFR           : 0.400 (2/5 facts found) ✗
+[10:58:37.835] [WARNING]   Missing facts : ['Sofia Andersson', 'Platform Infrastructure', 'Security Engineering']
+[10:58:37.835] [INFO ]   Exact match   : False
+[10:58:37.835] [INFO ]   Latency       : 11.47s
+[10:58:37.835] [INFO ] 
+[10:58:37.835] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:58:37.835] [INFO ] Question 7/45  [q07]  category=leadership  difficulty=medium
+[10:58:37.835] [INFO ]   Q: Who is NovaAI's General Counsel and what is their background?
+[10:58:37.836] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:58:37.836] [INFO ] [V0] Running pipeline...
+[10:58:45.387] [INFO ] 
+[10:58:45.388] [INFO ] ── RAW ANSWER ──
+[10:58:45.388] [INFO ]     NovaAI's General Counsel is **Sarah Chen**. 
+    
+    According to her LinkedIn profile, Sarah Chen has extensive experience in legal matters, particularly in the technology sector. Before joining NovaAI, she was the General Counsel at **Scale AI**. Prior to that, she held senior legal roles at **Google** and **Intel**. She holds a **JD from Stanford Law School** and a **BS in Computer Science from the University of California, Berkeley**. 
+    
+    You can find more details about her background here: [https://www.linkedin.com/in/sarah-chen-lg/](https://www.linkedin.com/in/sarah-chen-lg/)
+[10:58:45.388] [INFO ] 
+[10:58:45.388] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[10:58:45.389] [INFO ]     NovaAI's General Counsel is **Sarah Chen**. 
+    
+    According to her LinkedIn profile, Sarah Chen has extensive experience in legal matters, particularly in the technology sector. Before joining NovaAI, she was the General Counsel at **Scale AI**. Prior to that, she held senior legal roles at **Google** and **Intel**. She holds a **JD from Stanford Law School** and a **BS in Computer Science from the University of California, Berkeley**. 
+    
+    You can find more details about her background here: [https://www.linkedin.com/in/sarah-chen-lg/](https://www.linkedin.com/in/sarah-chen-lg/)
+[10:58:45.389] [INFO ] 
+[10:58:45.389] [INFO ] ── EVALUATION ──
+[10:58:45.389] [INFO ]   Ground truth  : Derek Shin is NovaAI's General Counsel. He joined the company in-house in May 2023 and previously worked at Cooley LLP. Legal is also overseen by CFO Priya Nambiar.
+[10:58:45.389] [INFO ]   Key facts     : ['Derek Shin', 'General Counsel', 'May 2023', 'Cooley LLP', 'Priya Nambiar']
+[10:58:45.389] [INFO ]   KFR           : 0.200 (1/5 facts found) ✗
+[10:58:45.389] [WARNING]   Missing facts : ['Derek Shin', 'May 2023', 'Cooley LLP', 'Priya Nambiar']
+[10:58:45.389] [INFO ]   Exact match   : False
+[10:58:45.389] [INFO ]   Latency       : 7.55s
+[10:58:45.389] [INFO ] 
+[10:58:45.389] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:58:45.390] [INFO ] Question 8/45  [q08]  category=leadership  difficulty=medium
+[10:58:45.390] [INFO ]   Q: What is Marcus Webb's role, location, and FY2026 quota?
+[10:58:45.390] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:58:45.390] [INFO ] [V0] Running pipeline...
+[10:58:49.198] [INFO ] 
+[10:58:49.198] [INFO ] ── RAW ANSWER ──
+[10:58:49.198] [INFO ]     Okay, here's the information I have on Marcus Webb:
+    
+    *   **Role:** Director of Product Marketing
+    *   **Location:** San Francisco, CA
+    *   **FY2026 Quota:** $12.5 Million
+    
+    I hope this is helpful! Let me know if you have any other questions.
+[10:58:49.198] [INFO ] 
+[10:58:49.198] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[10:58:49.198] [INFO ]     Okay, here's the information I have on Marcus Webb:
+    
+    *   **Role:** Director of Product Marketing
+    *   **Location:** San Francisco, CA
+    *   **FY2026 Quota:** $12.5 Million
+    
+    I hope this is helpful! Let me know if you have any other questions.
+[10:58:49.198] [INFO ] 
+[10:58:49.198] [INFO ] ── EVALUATION ──
+[10:58:49.198] [INFO ]   Ground truth  : Marcus Webb is the Enterprise Sales team lead. He is based in New York with an approved fully remote work arrangement. His FY2026 quota is $18M.
+[10:58:49.198] [INFO ]   Key facts     : ['Marcus Webb', 'Enterprise Sales', 'New York', 'fully remote', '$18M']
+[10:58:49.198] [INFO ]   KFR           : 0.200 (1/5 facts found) ✗
+[10:58:49.198] [WARNING]   Missing facts : ['Enterprise Sales', 'New York', 'fully remote', '$18M']
+[10:58:49.198] [INFO ]   Exact match   : False
+[10:58:49.198] [INFO ]   Latency       : 3.81s
+[10:58:49.198] [INFO ] 
+[10:58:49.198] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:58:49.198] [INFO ] Question 9/45  [q09]  category=products_pricing  difficulty=easy
+[10:58:49.198] [INFO ]   Q: What is the price of the NovaPilot Starter plan and what does it include?
+[10:58:49.198] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:58:49.198] [INFO ] [V0] Running pipeline...
+[10:59:01.064] [INFO ] 
+[10:59:01.064] [INFO ] ── RAW ANSWER ──
+[10:59:01.064] [INFO ]     Okay, here's the information regarding the NovaPilot Starter plan as of today, November 2, 2023:
+    
+    **Price:** The NovaPilot Starter plan is priced at **$29 per month**.
+    
+    **What it includes:**
+    
+    *   **10,000 Credits:** You receive 10,000 NovaPilot credits each month. These credits are used to power your AI workflows.
+    *   **Access to Core Models:** You have access to NovaAI's core suite of AI models, including:
+        *   NovaGen (for text generation)
+        *   NovaCode (for code generation)
+        *   NovaVision (for image processing)
+    *   **Priority Support:** Access to our standard support channels.
+    *   **Basic Analytics:** Basic usage analytics to track your credit consumption.
+    
+    You can find more detailed information, including a full feature list and comparisons to other plans, on the NovaAI website here: [https://nova.ai/pricing](https://nova.ai/pricing)
+[10:59:01.064] [INFO ] 
+[10:59:01.064] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[10:59:01.065] [INFO ]     Okay, here's the information regarding the NovaPilot Starter plan as of today, November 2, 2023:
+    
+    **Price:** The NovaPilot Starter plan is priced at **$29 per month**.
+    
+    **What it includes:**
+    
+    *   **10,000 Credits:** You receive 10,000 NovaPilot credits each month. These credits are used to power your AI workflows.
+    *   **Access to Core Models:** You have access to NovaAI's core suite of AI models, including:
+        *   NovaGen (for text generation)
+        *   NovaCode (for code generation)
+        *   NovaVision (for image processing)
+    *   **Priority Support:** Access to our standard support channels.
+    *   **Basic Analytics:** Basic usage analytics to track your credit consumption.
+    
+    You can find more detailed information, including a full feature list and comparisons to other plans, on the NovaAI website here: [https://nova.ai/pricing](https://nova.ai/pricing)
+[10:59:01.065] [INFO ] 
+[10:59:01.065] [INFO ] ── EVALUATION ──
+[10:59:01.065] [INFO ]   Ground truth  : The NovaPilot Starter plan costs $2,500/month. It includes up to 10 users and 50,000 automation runs per month.
+[10:59:01.065] [INFO ]   Key facts     : ['$2,500/month', '10 users', '50,000']
+[10:59:01.065] [INFO ]   KFR           : 0.333 (1/3 facts found) ✗
+[10:59:01.065] [WARNING]   Missing facts : ['$2,500/month', '10 users']
+[10:59:01.065] [INFO ]   Exact match   : False
+[10:59:01.065] [INFO ]   Latency       : 11.87s
+[10:59:01.065] [INFO ] 
+[10:59:01.065] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:59:01.065] [INFO ] Question 10/45  [q10]  category=products_pricing  difficulty=easy
+[10:59:01.065] [INFO ]   Q: What is the price of the NovaPilot Growth plan?
+[10:59:01.065] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:59:01.065] [INFO ] [V0] Running pipeline...
+[10:59:04.474] [INFO ] 
+[10:59:04.474] [INFO ] ── RAW ANSWER ──
+[10:59:04.474] [INFO ]     The NovaPilot Growth plan is priced at **$199 per user, per month**, billed annually. 
+    
+    You can find more detailed pricing information on our website here: [https://nova.ai/nova-pilot/pricing/](https://nova.ai/nova-pilot/pricing/)
+[10:59:04.474] [INFO ] 
+[10:59:04.474] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[10:59:04.475] [INFO ]     The NovaPilot Growth plan is priced at **$199 per user, per month**, billed annually. 
+    
+    You can find more detailed pricing information on our website here: [https://nova.ai/nova-pilot/pricing/](https://nova.ai/nova-pilot/pricing/)
+[10:59:04.475] [INFO ] 
+[10:59:04.475] [INFO ] ── EVALUATION ──
+[10:59:04.475] [INFO ]   Ground truth  : The NovaPilot Growth plan costs $8,000/month. It supports up to 50 users, 500,000 automation runs per month, and includes audit logs.
+[10:59:04.475] [INFO ]   Key facts     : ['$8,000/month', '50 users', '500,000', 'audit logs']
+[10:59:04.475] [INFO ]   KFR           : 0.000 (0/4 facts found) ✗
+[10:59:04.475] [WARNING]   Missing facts : ['$8,000/month', '50 users', '500,000', 'audit logs']
+[10:59:04.475] [INFO ]   Exact match   : False
+[10:59:04.475] [INFO ]   Latency       : 3.41s
+[10:59:04.475] [INFO ] 
+[10:59:04.475] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:59:04.475] [INFO ] Question 11/45  [q11]  category=products_pricing  difficulty=medium
+[10:59:04.475] [INFO ]   Q: What features does NovaPilot Enterprise include and what is its price range?
+[10:59:04.476] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:59:04.476] [INFO ] [V0] Running pipeline...
+[10:59:31.488] [INFO ] 
+[10:59:31.488] [INFO ] ── RAW ANSWER ──
+[10:59:31.488] [INFO ]     Okay, here's a breakdown of NovaPilot Enterprise features and pricing, based on the information available to me as of today, November 2nd, 2023.
+    
+    **NovaPilot Enterprise Features:**
+    
+    NovaPilot Enterprise is designed for larger organizations and offers enhanced capabilities compared to the standard NovaPilot. Here's a detailed look at its key features:
+    
+    *   **Advanced Data Security & Compliance:**
+        *   **Data Encryption:** End-to-end encryption for data at rest and in transit.
+        *   **Role-Based Access Control (RBAC):** Granular control over user permissions and data access.
+        *   **Compliance Certifications:**  Supports compliance with SOC 2, HIPAA, and GDPR (specific certifications may vary depending on the region and customer needs).
+        *   **Audit Logging:** Comprehensive audit trails of all user activity and data access.
+    *   **Scalability & Performance:**
+        *   **High Availability:** Designed for 99.99% uptime.
+        *   **Scalable Infrastructure:**  Handles large volumes of data and users.
+        *   **Optimized Performance:**  Engineered for fast processing and efficient workflows.
+    *   **Collaboration & Workflow Automation:**
+        *   **Team Collaboration Tools:** Enhanced features for team communication and project management.
+        *   **Customizable Workflows:**  Ability to create and automate complex workflows tailored to specific business processes.
+        *   **Integration with Enterprise Systems:** Seamless integration with popular CRM, ERP, and other business applications (e.g., Salesforce, SAP).
+    *   **AI Model Customization & Fine-tuning:**
+        *   **Custom Model Training:** Ability to train AI models on proprietary data.
+        *   **Fine-tuning Capabilities:**  Fine-tune existing NovaAI models for specific use cases.
+        *   **Model Versioning:**  Track and manage different versions of AI models.
+    *   **Dedicated Support:**
+        *   **Priority Support:**  Dedicated support team with guaranteed response times.
+        *   **Account Management:**  Dedicated account manager for strategic guidance and support.
+        *   **Onboarding & Training:**  Comprehensive onboarding and training programs for new users.
+    
+    **Pricing Range:**
+    
+    NovaPilot Enterprise pricing is **customized** based on several factors, including:
+    
+    *   **Number of Users:** The total number of users who will be accessing the platform.
+    *
+[10:59:31.488] [INFO ] 
+[10:59:31.489] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[10:59:31.489] [INFO ]     Okay, here's a breakdown of NovaPilot Enterprise features and pricing, based on the information available to me as of today, November 2nd, 2023.
+    
+    **NovaPilot Enterprise Features:**
+    
+    NovaPilot Enterprise is designed for larger organizations and offers enhanced capabilities compared to the standard NovaPilot. Here's a detailed look at its key features:
+    
+    *   **Advanced Data Security & Compliance:**
+        *   **Data Encryption:** End-to-end encryption for data at rest and in transit.
+        *   **Role-Based Access Control (RBAC):** Granular control over user permissions and data access.
+        *   **Compliance Certifications:**  Supports compliance with SOC 2, HIPAA, and GDPR (specific certifications may vary depending on the region and customer needs).
+        *   **Audit Logging:** Comprehensive audit trails of all user activity and data access.
+    *   **Scalability & Performance:**
+        *   **High Availability:** Designed for 99.99% uptime.
+        *   **Scalable Infrastructure:**  Handles large volumes of data and users.
+        *   **Optimized Performance:**  Engineered for fast processing and efficient workflows.
+    *   **Collaboration & Workflow Automation:**
+        *   **Team Collaboration Tools:** Enhanced features for team communication and project management.
+        *   **Customizable Workflows:**  Ability to create and automate complex workflows tailored to specific business processes.
+        *   **Integration with Enterprise Systems:** Seamless integration with popular CRM, ERP, and other business applications (e.g., Salesforce, SAP).
+    *   **AI Model Customization & Fine-tuning:**
+        *   **Custom Model Training:** Ability to train AI models on proprietary data.
+        *   **Fine-tuning Capabilities:**  Fine-tune existing NovaAI models for specific use cases.
+        *   **Model Versioning:**  Track and manage different versions of AI models.
+    *   **Dedicated Support:**
+        *   **Priority Support:**  Dedicated support team with guaranteed response times.
+        *   **Account Management:**  Dedicated account manager for strategic guidance and support.
+        *   **Onboarding & Training:**  Comprehensive onboarding and training programs for new users.
+    
+    **Pricing Range:**
+    
+    NovaPilot Enterprise pricing is **customized** based on several factors, including:
+    
+    *   **Number of Users:** The total number of users who will be accessing the platform.
+    *
+[10:59:31.489] [INFO ] 
+[10:59:31.489] [INFO ] ── EVALUATION ──
+[10:59:31.489] [INFO ]   Ground truth  : NovaPilot Enterprise is priced at $30,000–$120,000/month. It includes unlimited users, a dedicated CSM, 99.95% SLA uptime, private cloud deployment on AWS or Azure, and HIPAA-compliant data handling.
+[10:59:31.489] [INFO ]   Key facts     : ['$30,000', '$120,000', 'unlimited users', 'dedicated CSM', '99.95%', 'HIPAA']
+[10:59:31.489] [INFO ]   KFR           : 0.167 (1/6 facts found) ✗
+[10:59:31.489] [WARNING]   Missing facts : ['$30,000', '$120,000', 'unlimited users', 'dedicated CSM', '99.95%']
+[10:59:31.489] [INFO ]   Exact match   : False
+[10:59:31.489] [INFO ]   Latency       : 27.01s
+[10:59:31.489] [INFO ] 
+[10:59:31.489] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:59:31.489] [INFO ] Question 12/45  [q12]  category=products_pricing  difficulty=easy
+[10:59:31.489] [INFO ]   Q: When was NovaPilot launched and what is it?
+[10:59:31.489] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:59:31.490] [INFO ] [V0] Running pipeline...
+[10:59:41.986] [INFO ] 
+[10:59:41.987] [INFO ] ── RAW ANSWER ──
+[10:59:41.987] [INFO ]     NovaPilot was officially launched on **November 8, 2023**. 
+    
+    It is NovaAI's **AI-powered platform designed to streamline and automate the entire AI development lifecycle**. 
+    
+    Here's a more detailed breakdown of what NovaPilot is:
+    
+    *   **End-to-End Platform:** It covers everything from data preparation and model training to deployment, monitoring, and governance.
+    *   **Focus on Efficiency:** NovaPilot aims to significantly reduce the time and resources required to build and deploy AI models.
+    *   **Key Features:** It includes features like automated data labeling, hyperparameter optimization, model versioning, and real-time performance monitoring.
+    *   **Target Audience:** It's designed for data scientists, machine learning engineers, and AI teams across various industries.
+    
+    You can find more information on NovaPilot on the NovaAI website: [https://nova.ai/nova-pilot/](https://nova.ai/nova-pilot/)
+[10:59:41.987] [INFO ] 
+[10:59:41.987] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[10:59:41.987] [INFO ]     NovaPilot was officially launched on **November 8, 2023**. 
+    
+    It is NovaAI's **AI-powered platform designed to streamline and automate the entire AI development lifecycle**. 
+    
+    Here's a more detailed breakdown of what NovaPilot is:
+    
+    *   **End-to-End Platform:** It covers everything from data preparation and model training to deployment, monitoring, and governance.
+    *   **Focus on Efficiency:** NovaPilot aims to significantly reduce the time and resources required to build and deploy AI models.
+    *   **Key Features:** It includes features like automated data labeling, hyperparameter optimization, model versioning, and real-time performance monitoring.
+    *   **Target Audience:** It's designed for data scientists, machine learning engineers, and AI teams across various industries.
+    
+    You can find more information on NovaPilot on the NovaAI website: [https://nova.ai/nova-pilot/](https://nova.ai/nova-pilot/)
+[10:59:41.987] [INFO ] 
+[10:59:41.987] [INFO ] ── EVALUATION ──
+[10:59:41.988] [INFO ]   Ground truth  : NovaPilot is NovaAI's flagship product, launched in Q3 2022. It is an AI workflow automation platform that integrates with 120+ third-party tools including Salesforce, SAP, and ServiceNow.
+[10:59:41.988] [INFO ]   Key facts     : ['Q3 2022', 'flagship', '120+', 'Salesforce', 'SAP', 'ServiceNow']
+[10:59:41.988] [INFO ]   KFR           : 0.000 (0/6 facts found) ✗
+[10:59:41.988] [WARNING]   Missing facts : ['Q3 2022', 'flagship', '120+', 'Salesforce', 'SAP', 'ServiceNow']
+[10:59:41.988] [INFO ]   Exact match   : False
+[10:59:41.988] [INFO ]   Latency       : 10.50s
+[10:59:41.988] [INFO ] 
+[10:59:41.988] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:59:41.988] [INFO ] Question 13/45  [q13]  category=products_pricing  difficulty=medium
+[10:59:41.988] [INFO ]   Q: Compare the NovaLens Professional and Business pricing tiers.
+[10:59:41.988] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10:59:41.988] [INFO ] [V0] Running pipeline...
+[11:00:08.888] [INFO ] 
+[11:00:08.888] [INFO ] ── RAW ANSWER ──
+[11:00:08.888] [INFO ]     Okay, here's a comparison of the NovaLens Professional and Business pricing tiers as of today, October 26, 2023. Please note that pricing is subject to change, so it's always best to confirm the most up-to-date information on the NovaAI website.
+    
+    **NovaLens Professional**
+    
+    *   **Price:** $499/month
+    *   **Ideal For:** Individual professionals, freelancers, and small teams needing advanced features for content creation and analysis.
+    *   **Key Features:**
+        *   All features of the NovaLens Basic tier.
+        *   **Priority Support:** Dedicated support channel with faster response times.
+        *   **Increased API Usage:** Higher API call limits for developers.
+        *   **Advanced Analytics:** More detailed insights into content performance.
+        *   **Content Scheduling:** Ability to schedule content publishing across multiple platforms.
+        *   **Team Collaboration Tools:** Enhanced features for team members to work together on projects.
+    *   **Number of Users:** Supports up to 5 users.
+    
+    **NovaLens Business**
+    
+    *   **Price:** $1499/month
+    *   **Ideal For:** Medium-sized businesses and larger teams requiring comprehensive features, scalability, and dedicated support.
+    *   **Key Features:**
+        *   All features of the NovaLens Professional tier.
+        *   **Dedicated Account Manager:** A dedicated point of contact for account management and support.
+        *   **Customizable Reporting:** Ability to create custom reports tailored to specific business needs.
+        *   **Enhanced Security Features:** Advanced security protocols and compliance options.
+        *   **Unlimited API Usage:** No restrictions on API calls.
+        *   **Role-Based Access Control:** Granular control over user permissions.
+        *   **Integration with CRM Systems:** Seamless integration with popular CRM platforms (e.g., Salesforce, HubSpot).
+    *   **Number of Users:** Supports up to 25 users.
+    
+    **Key Differences Summarized:**
+    
+    | Feature             | NovaLens Professional | NovaLens Business |
+    | ------------------- | --------------------- | ------------------ |
+    | Price               | $499/month            | $1499/month         |
+    | Support             | Priority              | Dedicated Account Manager |
+    | API Usage           | Increased Limits      | Unlimited          |
+    | Users               | Up to 5               | Up to 2
+[11:00:08.888] [INFO ] 
+[11:00:08.888] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:00:08.889] [INFO ]     Okay, here's a comparison of the NovaLens Professional and Business pricing tiers as of today, October 26, 2023. Please note that pricing is subject to change, so it's always best to confirm the most up-to-date information on the NovaAI website.
+    
+    **NovaLens Professional**
+    
+    *   **Price:** $499/month
+    *   **Ideal For:** Individual professionals, freelancers, and small teams needing advanced features for content creation and analysis.
+    *   **Key Features:**
+        *   All features of the NovaLens Basic tier.
+        *   **Priority Support:** Dedicated support channel with faster response times.
+        *   **Increased API Usage:** Higher API call limits for developers.
+        *   **Advanced Analytics:** More detailed insights into content performance.
+        *   **Content Scheduling:** Ability to schedule content publishing across multiple platforms.
+        *   **Team Collaboration Tools:** Enhanced features for team members to work together on projects.
+    *   **Number of Users:** Supports up to 5 users.
+    
+    **NovaLens Business**
+    
+    *   **Price:** $1499/month
+    *   **Ideal For:** Medium-sized businesses and larger teams requiring comprehensive features, scalability, and dedicated support.
+    *   **Key Features:**
+        *   All features of the NovaLens Professional tier.
+        *   **Dedicated Account Manager:** A dedicated point of contact for account management and support.
+        *   **Customizable Reporting:** Ability to create custom reports tailored to specific business needs.
+        *   **Enhanced Security Features:** Advanced security protocols and compliance options.
+        *   **Unlimited API Usage:** No restrictions on API calls.
+        *   **Role-Based Access Control:** Granular control over user permissions.
+        *   **Integration with CRM Systems:** Seamless integration with popular CRM platforms (e.g., Salesforce, HubSpot).
+    *   **Number of Users:** Supports up to 25 users.
+    
+    **Key Differences Summarized:**
+    
+    | Feature             | NovaLens Professional | NovaLens Business |
+    | ------------------- | --------------------- | ------------------ |
+    | Price               | $499/month            | $1499/month         |
+    | Support             | Priority              | Dedicated Account Manager |
+    | API Usage           | Increased Limits      | Unlimited          |
+    | Users               | Up to 5               | Up to 2
+[11:00:08.889] [INFO ] 
+[11:00:08.889] [INFO ] ── EVALUATION ──
+[11:00:08.889] [INFO ]   Ground truth  : NovaLens Professional costs $4,000/month and supports 5 users, 3 data connectors, and monthly model refresh. NovaLens Business costs $12,000/month and supports 20 users, 15 data connectors, weekly model refresh, and custom dashboards.
+[11:00:08.889] [INFO ]   Key facts     : ['$4,000/month', '5 users', '3', 'monthly', '$12,000/month', '20 users', '15', 'weekly', 'custom dashboards']
+[11:00:08.889] [INFO ]   KFR           : 0.222 (2/9 facts found) ✗
+[11:00:08.889] [WARNING]   Missing facts : ['$4,000/month', '3', 'monthly', '$12,000/month', '15', 'weekly', 'custom dashboards']
+[11:00:08.889] [INFO ]   Exact match   : False
+[11:00:08.889] [INFO ]   Latency       : 26.90s
+[11:00:08.889] [INFO ] 
+[11:00:08.890] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:00:08.890] [INFO ] Question 14/45  [q14]  category=products_pricing  difficulty=easy
+[11:00:08.890] [INFO ]   Q: What data connectors does NovaLens support?
+[11:00:08.890] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:00:08.890] [INFO ] [V0] Running pipeline...
+[11:00:35.968] [INFO ] 
+[11:00:35.968] [INFO ] ── RAW ANSWER ──
+[11:00:35.968] [INFO ]     Okay, here's a breakdown of the data connectors currently supported by NovaLens, as of today, November 2nd, 2023.
+    
+    NovaLens supports a wide range of data connectors, categorized for clarity. Here's a list, with some key details:
+    
+    **1. Databases:**
+    
+    *   **Snowflake:**  Yes.  NovaLens has native support for Snowflake, allowing direct querying and visualization of Snowflake data.
+    *   **BigQuery:** Yes. Direct connection and querying capabilities.
+    *   **Amazon Redshift:** Yes.  Supports Redshift data sources.
+    *   **PostgreSQL:** Yes.  Supports PostgreSQL databases.
+    *   **MySQL:** Yes. Supports MySQL databases.
+    *   **Microsoft SQL Server:** Yes. Supports SQL Server databases.
+    *   **MongoDB:** Yes. Supports MongoDB databases.
+    
+    **2. Cloud Storage:**
+    
+    *   **Amazon S3:** Yes.  Connects to S3 buckets for data analysis.
+    *   **Google Cloud Storage (GCS):** Yes.  Connects to GCS buckets.
+    *   **Azure Blob Storage:** Yes. Connects to Azure Blob Storage.
+    
+    **3. Data Warehouses:**
+    
+    *   **Databricks:** Yes.  Supports data from Databricks Lakehouses.
+    *   **Amazon Athena:** Yes. Connects to data stored in S3 and queried with Athena.
+    
+    **4. APIs & SaaS Applications:**
+    
+    *   **Google Analytics:** Yes.  Connects to Google Analytics data.
+    *   **Salesforce:** Yes. Connects to Salesforce data.
+    *   **Marketo:** Yes. Connects to Marketo data.
+    *   **HubSpot:** Yes. Connects to HubSpot data.
+    *   **Adobe Analytics:** Yes. Connects to Adobe Analytics data.
+    *   **Other REST APIs:**  Yes. NovaLens allows for custom connectors via REST APIs.  This requires some technical configuration.
+    
+    **5. Other Connectors:**
+    
+    *   **CSV/Parquet Files:** Yes.  NovaLens can import data directly from CSV and Parquet files.
+    *   **JSON Files:** Yes. NovaLens can import data directly from JSON files.
+    
+    **Important Notes:**
+    
+    *   **Connector Updates:**  We are continuously adding new connectors. Check the NovaLens documentation ([https://docs.nova.ai/](https://docs.nova.ai/)) for the most up-
+[11:00:35.968] [INFO ] 
+[11:00:35.968] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:00:35.969] [INFO ]     Okay, here's a breakdown of the data connectors currently supported by NovaLens, as of today, November 2nd, 2023.
+    
+    NovaLens supports a wide range of data connectors, categorized for clarity. Here's a list, with some key details:
+    
+    **1. Databases:**
+    
+    *   **Snowflake:**  Yes.  NovaLens has native support for Snowflake, allowing direct querying and visualization of Snowflake data.
+    *   **BigQuery:** Yes. Direct connection and querying capabilities.
+    *   **Amazon Redshift:** Yes.  Supports Redshift data sources.
+    *   **PostgreSQL:** Yes.  Supports PostgreSQL databases.
+    *   **MySQL:** Yes. Supports MySQL databases.
+    *   **Microsoft SQL Server:** Yes. Supports SQL Server databases.
+    *   **MongoDB:** Yes. Supports MongoDB databases.
+    
+    **2. Cloud Storage:**
+    
+    *   **Amazon S3:** Yes.  Connects to S3 buckets for data analysis.
+    *   **Google Cloud Storage (GCS):** Yes.  Connects to GCS buckets.
+    *   **Azure Blob Storage:** Yes. Connects to Azure Blob Storage.
+    
+    **3. Data Warehouses:**
+    
+    *   **Databricks:** Yes.  Supports data from Databricks Lakehouses.
+    *   **Amazon Athena:** Yes. Connects to data stored in S3 and queried with Athena.
+    
+    **4. APIs & SaaS Applications:**
+    
+    *   **Google Analytics:** Yes.  Connects to Google Analytics data.
+    *   **Salesforce:** Yes. Connects to Salesforce data.
+    *   **Marketo:** Yes. Connects to Marketo data.
+    *   **HubSpot:** Yes. Connects to HubSpot data.
+    *   **Adobe Analytics:** Yes. Connects to Adobe Analytics data.
+    *   **Other REST APIs:**  Yes. NovaLens allows for custom connectors via REST APIs.  This requires some technical configuration.
+    
+    **5. Other Connectors:**
+    
+    *   **CSV/Parquet Files:** Yes.  NovaLens can import data directly from CSV and Parquet files.
+    *   **JSON Files:** Yes. NovaLens can import data directly from JSON files.
+    
+    **Important Notes:**
+    
+    *   **Connector Updates:**  We are continuously adding new connectors. Check the NovaLens documentation ([https://docs.nova.ai/](https://docs.nova.ai/)) for the most up-
+[11:00:35.969] [INFO ] 
+[11:00:35.969] [INFO ] ── EVALUATION ──
+[11:00:35.969] [INFO ]   Ground truth  : NovaLens supports connectors for Snowflake, Databricks, BigQuery, Redshift, and PostgreSQL.
+[11:00:35.969] [INFO ]   Key facts     : ['Snowflake', 'Databricks', 'BigQuery', 'Redshift', 'PostgreSQL']
+[11:00:35.970] [INFO ]   KFR           : 1.000 (5/5 facts found) ✓
+[11:00:35.970] [INFO ]   Exact match   : False
+[11:00:35.970] [INFO ]   Latency       : 27.08s
+[11:00:35.970] [INFO ] 
+[11:00:35.970] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:00:35.970] [INFO ] Question 15/45  [q15]  category=products_pricing  difficulty=medium
+[11:00:35.970] [INFO ]   Q: What is the price and model monitoring limit for NovaGuard Advanced?
+[11:00:35.970] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:00:35.970] [INFO ] [V0] Running pipeline...
+[11:00:52.746] [INFO ] 
+[11:00:52.746] [INFO ] ── RAW ANSWER ──
+[11:00:52.746] [INFO ]     Okay, here's the information regarding NovaGuard Advanced pricing and model monitoring limits as of today, November 2, 2023.
+    
+    **NovaGuard Advanced Pricing:**
+    
+    The pricing for NovaGuard Advanced is custom and depends on your specific needs and usage. Therefore, I cannot provide a fixed price. 
+    
+    To get a quote, you'll need to contact our sales team directly. You can do so by:
+    
+    *   **Email:** sales@nova.ai
+    *   **Through the NovaAI website:** [https://nova.ai/contact](https://nova.ai/contact)
+    
+    **Model Monitoring Limits:**
+    
+    The model monitoring limits for NovaGuard Advanced are also customized based on the number of models you want to monitor and the volume of data you need to analyze. 
+    
+    Here's a general overview, but please note that these are subject to change and can be adjusted during the sales process:
+    
+    *   **Number of Models:** The number of models you can monitor concurrently varies depending on the agreement.
+    *   **Data Volume:** The amount of data you can monitor per month is a key factor in pricing. This is typically measured in tokens or requests. 
+    
+    **To get precise details on the model monitoring limits for your specific use case, please contact our sales team.** They can discuss your requirements and provide a tailored proposal.
+    
+    
+    
+    **Important Note:** Pricing and feature availability are subject to change. Always refer to the official NovaAI website or contact our sales team for the most up-to-date information.
+[11:00:52.746] [INFO ] 
+[11:00:52.746] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:00:52.746] [INFO ]     Okay, here's the information regarding NovaGuard Advanced pricing and model monitoring limits as of today, November 2, 2023.
+    
+    **NovaGuard Advanced Pricing:**
+    
+    The pricing for NovaGuard Advanced is custom and depends on your specific needs and usage. Therefore, I cannot provide a fixed price. 
+    
+    To get a quote, you'll need to contact our sales team directly. You can do so by:
+    
+    *   **Email:** sales@nova.ai
+    *   **Through the NovaAI website:** [https://nova.ai/contact](https://nova.ai/contact)
+    
+    **Model Monitoring Limits:**
+    
+    The model monitoring limits for NovaGuard Advanced are also customized based on the number of models you want to monitor and the volume of data you need to analyze. 
+    
+    Here's a general overview, but please note that these are subject to change and can be adjusted during the sales process:
+    
+    *   **Number of Models:** The number of models you can monitor concurrently varies depending on the agreement.
+    *   **Data Volume:** The amount of data you can monitor per month is a key factor in pricing. This is typically measured in tokens or requests. 
+    
+    **To get precise details on the model monitoring limits for your specific use case, please contact our sales team.** They can discuss your requirements and provide a tailored proposal.
+    
+    
+    
+    **Important Note:** Pricing and feature availability are subject to change. Always refer to the official NovaAI website or contact our sales team for the most up-to-date information.
+[11:00:52.746] [INFO ] 
+[11:00:52.746] [INFO ] ── EVALUATION ──
+[11:00:52.746] [INFO ]   Ground truth  : NovaGuard Advanced costs $9,500/month and can monitor up to 20 AI models. It includes daily reports and Slack/PagerDuty integration, and is available via self-serve.
+[11:00:52.746] [INFO ]   Key facts     : ['$9,500/month', '20', 'daily', 'Slack/PagerDuty', 'self-serve']
+[11:00:52.746] [INFO ]   KFR           : 0.000 (0/5 facts found) ✗
+[11:00:52.746] [WARNING]   Missing facts : ['$9,500/month', '20', 'daily', 'Slack/PagerDuty', 'self-serve']
+[11:00:52.746] [INFO ]   Exact match   : False
+[11:00:52.746] [INFO ]   Latency       : 16.78s
+[11:00:52.746] [INFO ] 
+[11:00:52.746] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:00:52.746] [INFO ] Question 16/45  [q16]  category=products_pricing  difficulty=easy
+[11:00:52.746] [INFO ]   Q: What is the price and model limit for NovaGuard Standard?
+[11:00:52.746] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:00:52.747] [INFO ] [V0] Running pipeline...
+[11:00:59.752] [INFO ] 
+[11:00:59.752] [INFO ] ── RAW ANSWER ──
+[11:00:59.752] [INFO ]     Okay, here's the information regarding NovaGuard Standard's pricing and model limit as of today, November 2nd, 2023.
+    
+    **NovaGuard Standard:**
+    
+    *   **Price:** $199/month
+    *   **Model Limit:** 3,000 token context window.
+    
+    You can find more detailed information on NovaGuard Standard and its features on the NovaAI website: [https://nova.ai/security/novaguard](https://nova.ai/security/novaguard)
+    
+    I hope this is helpful! Let me know if you have any other questions.
+[11:00:59.752] [INFO ] 
+[11:00:59.752] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:00:59.752] [INFO ]     Okay, here's the information regarding NovaGuard Standard's pricing and model limit as of today, November 2nd, 2023.
+    
+    **NovaGuard Standard:**
+    
+    *   **Price:** $199/month
+    *   **Model Limit:** 3,000 token context window.
+    
+    You can find more detailed information on NovaGuard Standard and its features on the NovaAI website: [https://nova.ai/security/novaguard](https://nova.ai/security/novaguard)
+    
+    I hope this is helpful! Let me know if you have any other questions.
+[11:00:59.752] [INFO ] 
+[11:00:59.752] [INFO ] ── EVALUATION ──
+[11:00:59.752] [INFO ]   Ground truth  : NovaGuard Standard costs $3,000/month and can monitor up to 3 AI models. It includes weekly reports and email alerts, and is available via self-serve.
+[11:00:59.752] [INFO ]   Key facts     : ['$3,000/month', '3', 'weekly', 'email alerts', 'self-serve']
+[11:00:59.752] [INFO ]   KFR           : 0.200 (1/5 facts found) ✗
+[11:00:59.752] [WARNING]   Missing facts : ['3', 'weekly', 'email alerts', 'self-serve']
+[11:00:59.752] [INFO ]   Exact match   : False
+[11:00:59.752] [INFO ]   Latency       : 7.01s
+[11:00:59.752] [INFO ] 
+[11:00:59.752] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:00:59.752] [INFO ] Question 17/45  [q17]  category=products_pricing  difficulty=easy
+[11:00:59.752] [INFO ]   Q: What license is NovaBridge released under and how many GitHub stars does it have?
+[11:00:59.752] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:00:59.752] [INFO ] [V0] Running pipeline...
+[11:01:05.799] [INFO ] 
+[11:01:05.799] [INFO ] ── RAW ANSWER ──
+[11:01:05.799] [INFO ]     Okay, here's the information about NovaBridge's license and GitHub stars:
+    
+    NovaBridge is released under the **Apache 2.0 license**.
+    
+    As of today, November 2, 2023, NovaBridge has **178 GitHub stars**. You can find it here: [https://github.com/nova-ai/novabridge](https://github.com/nova-ai/novabridge)
+    
+    
+    
+    I hope this is helpful! Let me know if you have any other questions.
+[11:01:05.799] [INFO ] 
+[11:01:05.799] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:01:05.800] [INFO ]     Okay, here's the information about NovaBridge's license and GitHub stars:
+    
+    NovaBridge is released under the **Apache 2.0 license**.
+    
+    As of today, November 2, 2023, NovaBridge has **178 GitHub stars**. You can find it here: [https://github.com/nova-ai/novabridge](https://github.com/nova-ai/novabridge)
+    
+    
+    
+    I hope this is helpful! Let me know if you have any other questions.
+[11:01:05.800] [INFO ] 
+[11:01:05.800] [INFO ] ── EVALUATION ──
+[11:01:05.800] [INFO ]   Ground truth  : NovaBridge is open-source and released under the Apache 2.0 license. It has over 4,200 GitHub stars and approximately 800 contributors. The base version is free.
+[11:01:05.800] [INFO ]   Key facts     : ['Apache 2.0', '4,200+', '~800', 'free']
+[11:01:05.800] [INFO ]   KFR           : 0.250 (1/4 facts found) ✗
+[11:01:05.800] [WARNING]   Missing facts : ['4,200+', '~800', 'free']
+[11:01:05.801] [INFO ]   Exact match   : False
+[11:01:05.801] [INFO ]   Latency       : 6.05s
+[11:01:05.801] [INFO ] 
+[11:01:05.801] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:01:05.801] [INFO ] Question 18/45  [q18]  category=hr_policy  difficulty=medium
+[11:01:05.801] [INFO ]   Q: What is NovaAI's PTO policy?
+[11:01:05.801] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:01:05.801] [INFO ] [V0] Running pipeline...
+[11:01:33.118] [INFO ] 
+[11:01:33.118] [INFO ] ── RAW ANSWER ──
+[11:01:33.118] [INFO ]     Okay, here's the information regarding NovaAI's Paid Time Off (PTO) policy as of today, October 26, 2023.
+    
+    **NovaAI's PTO Policy**
+    
+    NovaAI offers a comprehensive PTO policy designed to support employee well-being and work-life balance. Here's a breakdown:
+    
+    *   **Accrual:** PTO is accrued bi-weekly, based on years of service. The accrual rates are as follows:
+        *   **0-2 years of service:** 10 days per year (approximately 0.417 days per pay period)
+        *   **3-5 years of service:** 15 days per year (approximately 0.625 days per pay period)
+        *   **6+ years of service:** 20 days per year (approximately 0.833 days per pay period)
+    
+    *   **Carryover:** Employees can carry over a maximum of 5 days of unused PTO from one year to the next.
+    
+    *   **Requesting PTO:** PTO requests should be submitted through the company's HR system, BambooHR, at least two weeks in advance whenever possible. This allows for proper scheduling and coverage.
+    
+    *   **Blackout Periods:** There are occasional blackout periods during peak business times (e.g., end of fiscal year, major product launches) when PTO requests may be limited or denied. These periods are communicated by the relevant department heads and HR.
+    
+    *   **PTO for Holidays:** NovaAI observes the following paid holidays:
+        *   New Year's Day (January 1st)
+        *   Martin Luther King, Jr. Day (Third Monday in January)
+        *   Presidents' Day (Third Monday in February)
+        *   Memorial Day (Last Monday in May)
+        *   Juneteenth (June 19th)
+        *   Independence Day (July 4th)
+        *   Labor Day (First Monday in September)
+        *   Columbus Day (Second Monday in October)
+        *   Veterans Day (November 11th)
+        *   Thanksgiving Day (Fourth Thursday in November)
+        *   Christmas Day (December 25th)
+        *   New Year's Eve (December 31st)
+    
+    *   **PTO Payout Upon Termination:** Upon termination of employment, accrued and unused PTO will be paid
+[11:01:33.119] [INFO ] 
+[11:01:33.119] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:01:33.119] [INFO ]     Okay, here's the information regarding NovaAI's Paid Time Off (PTO) policy as of today, October 26, 2023.
+    
+    **NovaAI's PTO Policy**
+    
+    NovaAI offers a comprehensive PTO policy designed to support employee well-being and work-life balance. Here's a breakdown:
+    
+    *   **Accrual:** PTO is accrued bi-weekly, based on years of service. The accrual rates are as follows:
+        *   **0-2 years of service:** 10 days per year (approximately 0.417 days per pay period)
+        *   **3-5 years of service:** 15 days per year (approximately 0.625 days per pay period)
+        *   **6+ years of service:** 20 days per year (approximately 0.833 days per pay period)
+    
+    *   **Carryover:** Employees can carry over a maximum of 5 days of unused PTO from one year to the next.
+    
+    *   **Requesting PTO:** PTO requests should be submitted through the company's HR system, BambooHR, at least two weeks in advance whenever possible. This allows for proper scheduling and coverage.
+    
+    *   **Blackout Periods:** There are occasional blackout periods during peak business times (e.g., end of fiscal year, major product launches) when PTO requests may be limited or denied. These periods are communicated by the relevant department heads and HR.
+    
+    *   **PTO for Holidays:** NovaAI observes the following paid holidays:
+        *   New Year's Day (January 1st)
+        *   Martin Luther King, Jr. Day (Third Monday in January)
+        *   Presidents' Day (Third Monday in February)
+        *   Memorial Day (Last Monday in May)
+        *   Juneteenth (June 19th)
+        *   Independence Day (July 4th)
+        *   Labor Day (First Monday in September)
+        *   Columbus Day (Second Monday in October)
+        *   Veterans Day (November 11th)
+        *   Thanksgiving Day (Fourth Thursday in November)
+        *   Christmas Day (December 25th)
+        *   New Year's Eve (December 31st)
+    
+    *   **PTO Payout Upon Termination:** Upon termination of employment, accrued and unused PTO will be paid
+[11:01:33.120] [INFO ] 
+[11:01:33.120] [INFO ] ── EVALUATION ──
+[11:01:33.120] [INFO ]   Ground truth  : NovaAI has a flexible/unlimited PTO policy. Employees must take a minimum of 15 days per year. PTO requests of 3 or more days must be submitted in Workday at least 5 business days in advance. Sick leave is tracked separately from PTO. NovaAI also provides 11 paid company holidays per year.
+[11:01:33.120] [INFO ]   Key facts     : ['flexible/unlimited', '15 days', '5 business days', 'Workday', 'separately', '11']
+[11:01:33.120] [INFO ]   KFR           : 0.333 (2/6 facts found) ✗
+[11:01:33.120] [WARNING]   Missing facts : ['flexible/unlimited', 'Workday', 'separately', '11']
+[11:01:33.120] [INFO ]   Exact match   : False
+[11:01:33.120] [INFO ]   Latency       : 27.32s
+[11:01:33.120] [INFO ] 
+[11:01:33.120] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:01:33.120] [INFO ] Question 19/45  [q19]  category=hr_policy  difficulty=medium
+[11:01:33.120] [INFO ]   Q: What are NovaAI's in-office requirements for San Francisco employees?
+[11:01:33.120] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:01:33.120] [INFO ] [V0] Running pipeline...
+[11:01:50.432] [INFO ] 
+[11:01:50.432] [INFO ] ── RAW ANSWER ──
+[11:01:50.432] [INFO ]     Okay, here's the information regarding in-office requirements for NovaAI employees based in San Francisco, as of today, November 2, 2023.
+    
+    **NovaAI's current policy for San Francisco-based employees is a hybrid model with a minimum of 3 days per week in the office.**
+    
+    Here's a more detailed breakdown:
+    
+    *   **Minimum In-Office Days:** Employees are required to be physically present in the San Francisco office a minimum of **3 days per week**.
+    *   **Team Coordination:** The specific days for in-office presence are determined in coordination with each team lead to ensure adequate team coverage and collaboration.
+    *   **Flexibility:** While 3 days are required, there is flexibility in *which* days those are, subject to team needs and manager approval.
+    *   **Workspace:** NovaAI has office spaces located at [Insert NovaAI San Francisco Office Address Here - *I do not have access to real-time internal information, so you'll need to fill this in with the correct address*].
+    *   **Policy Documentation:** The full details of this policy are outlined in the NovaAI Employee Handbook, specifically under the "Work Arrangements" section. You can access the handbook here: [Insert Link to Employee Handbook Here - *I do not have access to real-time internal information, so you'll need to fill this in with the correct link*].
+    
+    **Important Note:** Policies can be subject to change. It's always best to refer to the most up-to-date version of the Employee Handbook or consult with your manager for the most current information.
+[11:01:50.432] [INFO ] 
+[11:01:50.432] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:01:50.432] [INFO ]     Okay, here's the information regarding in-office requirements for NovaAI employees based in San Francisco, as of today, November 2, 2023.
+    
+    **NovaAI's current policy for San Francisco-based employees is a hybrid model with a minimum of 3 days per week in the office.**
+    
+    Here's a more detailed breakdown:
+    
+    *   **Minimum In-Office Days:** Employees are required to be physically present in the San Francisco office a minimum of **3 days per week**.
+    *   **Team Coordination:** The specific days for in-office presence are determined in coordination with each team lead to ensure adequate team coverage and collaboration.
+    *   **Flexibility:** While 3 days are required, there is flexibility in *which* days those are, subject to team needs and manager approval.
+    *   **Workspace:** NovaAI has office spaces located at [Insert NovaAI San Francisco Office Address Here - *I do not have access to real-time internal information, so you'll need to fill this in with the correct address*].
+    *   **Policy Documentation:** The full details of this policy are outlined in the NovaAI Employee Handbook, specifically under the "Work Arrangements" section. You can access the handbook here: [Insert Link to Employee Handbook Here - *I do not have access to real-time internal information, so you'll need to fill this in with the correct link*].
+    
+    **Important Note:** Policies can be subject to change. It's always best to refer to the most up-to-date version of the Employee Handbook or consult with your manager for the most current information.
+[11:01:50.432] [INFO ] 
+[11:01:50.433] [INFO ] ── EVALUATION ──
+[11:01:50.433] [INFO ]   Ground truth  : NovaAI is hybrid-first. San Francisco-based employees are required to be in the office on Tuesday and Thursday each week. Fully remote arrangements require approval from the direct manager, department VP, and Claudia Torres, and are reviewed annually.
+[11:01:50.433] [INFO ]   Key facts     : ['hybrid-first', 'Tuesday', 'Thursday', 'Claudia Torres', 'annually']
+[11:01:50.433] [INFO ]   KFR           : 0.000 (0/5 facts found) ✗
+[11:01:50.433] [WARNING]   Missing facts : ['hybrid-first', 'Tuesday', 'Thursday', 'Claudia Torres', 'annually']
+[11:01:50.433] [INFO ]   Exact match   : False
+[11:01:50.433] [INFO ]   Latency       : 17.31s
+[11:01:50.433] [INFO ] 
+[11:01:50.433] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:01:50.433] [INFO ] Question 20/45  [q20]  category=hr_policy  difficulty=medium
+[11:01:50.433] [INFO ]   Q: What are the expense limits for hotel stays and how must expenses be submitted?
+[11:01:50.433] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:01:50.433] [INFO ] [V0] Running pipeline...
+[11:02:14.418] [INFO ] 
+[11:02:14.419] [INFO ] ── RAW ANSWER ──
+[11:02:14.419] [INFO ]     Okay, here's the information regarding expense limits for hotel stays and expense submission at NovaAI.
+    
+    **Hotel Expense Limits:**
+    
+    As of today, October 26, 2023, the standard expense limit for hotel stays is **$250 per night**. 
+    
+    *   **For travel within the continental US:** The limit is $250 per night.
+    *   **For travel outside the continental US:** The limit is $350 per night.
+    
+    **Expense Submission Process:**
+    
+    All expenses, including hotel stays, must be submitted through the **Expensify** system. Here's a breakdown of the process:
+    
+    1.  **Record Expenses in Expensify:**  You need to enter your hotel expenses into Expensify as soon as possible after the trip. Be sure to include:
+        *   Date of stay
+        *   Hotel Name and Address
+        *   Total amount charged
+        *   Purpose of the trip (e.g., client meeting, conference, etc.)
+        *   Any relevant notes.
+    2.  **Attach Receipt:**  A clear, legible receipt is **required** for all hotel expenses.  The receipt should show the hotel name, address, dates of stay, and the total amount paid.
+    3.  **Submit for Approval:** Once the expense is entered and the receipt is attached, submit it through Expensify for approval by your manager.
+    4.  **Submission Deadline:** All expense reports should be submitted within **60 days** of the end of the travel.
+    
+    **Important Notes:**
+    
+    *   Any expenses exceeding the stated limits require pre-approval from your manager.
+    *   NovaAI's expense policy can be found on the internal company wiki at [Insert Link to NovaAI Expense Policy Wiki Here - *Please replace this with the actual link*].
+    *   Please ensure all expenses comply with NovaAI's expense policy.
+    
+    If you have any further questions or need assistance with Expensify, please reach out to the Finance team at [Insert Finance Team Email Address Here - *Please replace this with the actual email address*].
+[11:02:14.419] [INFO ] 
+[11:02:14.419] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:02:14.419] [INFO ]     Okay, here's the information regarding expense limits for hotel stays and expense submission at NovaAI.
+    
+    **Hotel Expense Limits:**
+    
+    As of today, October 26, 2023, the standard expense limit for hotel stays is **$250 per night**. 
+    
+    *   **For travel within the continental US:** The limit is $250 per night.
+    *   **For travel outside the continental US:** The limit is $350 per night.
+    
+    **Expense Submission Process:**
+    
+    All expenses, including hotel stays, must be submitted through the **Expensify** system. Here's a breakdown of the process:
+    
+    1.  **Record Expenses in Expensify:**  You need to enter your hotel expenses into Expensify as soon as possible after the trip. Be sure to include:
+        *   Date of stay
+        *   Hotel Name and Address
+        *   Total amount charged
+        *   Purpose of the trip (e.g., client meeting, conference, etc.)
+        *   Any relevant notes.
+    2.  **Attach Receipt:**  A clear, legible receipt is **required** for all hotel expenses.  The receipt should show the hotel name, address, dates of stay, and the total amount paid.
+    3.  **Submit for Approval:** Once the expense is entered and the receipt is attached, submit it through Expensify for approval by your manager.
+    4.  **Submission Deadline:** All expense reports should be submitted within **60 days** of the end of the travel.
+    
+    **Important Notes:**
+    
+    *   Any expenses exceeding the stated limits require pre-approval from your manager.
+    *   NovaAI's expense policy can be found on the internal company wiki at [Insert Link to NovaAI Expense Policy Wiki Here - *Please replace this with the actual link*].
+    *   Please ensure all expenses comply with NovaAI's expense policy.
+    
+    If you have any further questions or need assistance with Expensify, please reach out to the Finance team at [Insert Finance Team Email Address Here - *Please replace this with the actual email address*].
+[11:02:14.420] [INFO ] 
+[11:02:14.420] [INFO ] ── EVALUATION ──
+[11:02:14.420] [INFO ]   Ground truth  : The hotel limit is $350/night in major cities (SF, NYC, London) and $250/night in other cities. All expenses must be submitted through Expensify within 30 days of the expense date. Receipts are required for expenses over $25.
+[11:02:14.420] [INFO ]   Key facts     : ['$350/night', 'SF, NYC, London', '$250/night', 'Expensify', '30 days', '$25']
+[11:02:14.420] [INFO ]   KFR           : 0.667 (4/6 facts found) ✗
+[11:02:14.420] [WARNING]   Missing facts : ['SF, NYC, London', '$25']
+[11:02:14.420] [INFO ]   Exact match   : False
+[11:02:14.420] [INFO ]   Latency       : 23.99s
+[11:02:14.420] [INFO ] 
+[11:02:14.420] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:02:14.420] [INFO ] Question 21/45  [q21]  category=hr_policy  difficulty=hard
+[11:02:14.420] [INFO ]   Q: How does NovaAI's performance review cycle work?
+[11:02:14.420] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:02:14.420] [INFO ] [V0] Running pipeline...
+[11:02:40.722] [INFO ] 
+[11:02:40.724] [INFO ] ── RAW ANSWER ──
+[11:02:40.724] [INFO ]     Okay, here's a breakdown of NovaAI's performance review cycle. Please note that while I strive for accuracy, policies can evolve, so this is based on the most current information available to me as of today, October 26, 2023.
+    
+    **NovaAI's Performance Review Cycle**
+    
+    NovaAI uses a **twice-yearly performance review cycle**. Here's a detailed look at the process:
+    
+    **1. Goal Setting (Beginning of Cycle - typically January/February):**
+    
+    *   **Annual Goal Alignment:** At the start of each performance cycle (usually January/February), employees collaborate with their managers to set SMART (Specific, Measurable, Achievable, Relevant, Time-bound) goals. These goals are aligned with both individual career development and overall team/company objectives.
+    *   **Goal Documentation:** These goals are documented in the performance management system (details below).
+    
+    **2. Ongoing Check-ins (Throughout the Cycle - Monthly/Bi-Monthly):**
+    
+    *   **Regular 1:1s:** Managers are expected to have regular, informal check-ins (typically monthly or bi-monthly) with their direct reports. These are focused on progress towards goals, addressing roadblocks, providing feedback, and offering support. These are *not* formal performance reviews, but rather ongoing coaching and development conversations.
+    
+    **3. Mid-Cycle Review (Around June):**
+    
+    *   **Formal Progress Review:** A more formal review takes place around June. This is a mid-cycle check-in where progress towards goals is assessed.
+    *   **Feedback Exchange:** Both the employee and manager provide feedback on performance, highlighting successes and areas for improvement.
+    *   **Goal Adjustment (if needed):** If necessary, goals can be adjusted based on changing priorities or circumstances.
+    
+    **4. Year-End Performance Review (Around October/November):**
+    
+    *   **Formal Performance Evaluation:** The comprehensive year-end performance review occurs around October/November. This is the most formal part of the cycle.
+    *   **Self-Assessment:** Employees complete a self-assessment, reflecting on their accomplishments, challenges, and overall performance against their goals.
+    *   **Manager Assessment:** Managers complete a performance assessment, evaluating the employee's performance based on the goals, observed behaviors, and overall contributions.
+    *   **Performance Rating:** A performance rating is assigned, typically using a scale (the specific scale may vary slightly by department, but it generally ranges from
+[11:02:40.725] [INFO ] 
+[11:02:40.725] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:02:40.725] [INFO ]     Okay, here's a breakdown of NovaAI's performance review cycle. Please note that while I strive for accuracy, policies can evolve, so this is based on the most current information available to me as of today, October 26, 2023.
+    
+    **NovaAI's Performance Review Cycle**
+    
+    NovaAI uses a **twice-yearly performance review cycle**. Here's a detailed look at the process:
+    
+    **1. Goal Setting (Beginning of Cycle - typically January/February):**
+    
+    *   **Annual Goal Alignment:** At the start of each performance cycle (usually January/February), employees collaborate with their managers to set SMART (Specific, Measurable, Achievable, Relevant, Time-bound) goals. These goals are aligned with both individual career development and overall team/company objectives.
+    *   **Goal Documentation:** These goals are documented in the performance management system (details below).
+    
+    **2. Ongoing Check-ins (Throughout the Cycle - Monthly/Bi-Monthly):**
+    
+    *   **Regular 1:1s:** Managers are expected to have regular, informal check-ins (typically monthly or bi-monthly) with their direct reports. These are focused on progress towards goals, addressing roadblocks, providing feedback, and offering support. These are *not* formal performance reviews, but rather ongoing coaching and development conversations.
+    
+    **3. Mid-Cycle Review (Around June):**
+    
+    *   **Formal Progress Review:** A more formal review takes place around June. This is a mid-cycle check-in where progress towards goals is assessed.
+    *   **Feedback Exchange:** Both the employee and manager provide feedback on performance, highlighting successes and areas for improvement.
+    *   **Goal Adjustment (if needed):** If necessary, goals can be adjusted based on changing priorities or circumstances.
+    
+    **4. Year-End Performance Review (Around October/November):**
+    
+    *   **Formal Performance Evaluation:** The comprehensive year-end performance review occurs around October/November. This is the most formal part of the cycle.
+    *   **Self-Assessment:** Employees complete a self-assessment, reflecting on their accomplishments, challenges, and overall performance against their goals.
+    *   **Manager Assessment:** Managers complete a performance assessment, evaluating the employee's performance based on the goals, observed behaviors, and overall contributions.
+    *   **Performance Rating:** A performance rating is assigned, typically using a scale (the specific scale may vary slightly by department, but it generally ranges from
+[11:02:40.725] [INFO ] 
+[11:02:40.725] [INFO ] ── EVALUATION ──
+[11:02:40.725] [INFO ]   Ground truth  : NovaAI runs a bi-annual performance review cycle. The mid-year review calibration happens in July with results delivered by July 31. The annual review calibration is in January with results by January 31. Ratings use a 5-point scale (Exceptional, Exceeds Expectations, Meets Expectations, Developing, Unsatisfactory). A rating of Developing or below triggers a PIP within 30 days.
+[11:02:40.726] [INFO ]   Key facts     : ['bi-annual', 'July', 'July 31', 'January', 'January 31', '5-point', 'Developing', '30 days']
+[11:02:40.726] [INFO ]   KFR           : 0.375 (3/8 facts found) ✗
+[11:02:40.726] [WARNING]   Missing facts : ['July', 'July 31', '5-point', 'Developing', '30 days']
+[11:02:40.726] [INFO ]   Exact match   : False
+[11:02:40.726] [INFO ]   Latency       : 26.30s
+[11:02:40.726] [INFO ] 
+[11:02:40.726] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:02:40.726] [INFO ] Question 22/45  [q22]  category=hr_policy  difficulty=medium
+[11:02:40.726] [INFO ]   Q: What is NovaAI's airfare booking policy?
+[11:02:40.726] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:02:40.726] [INFO ] [V0] Running pipeline...
+[11:03:07.493] [INFO ] 
+[11:03:07.495] [INFO ] ── RAW ANSWER ──
+[11:03:07.495] [INFO ]     Okay, here's the information on NovaAI's airfare booking policy as of today, October 26, 2023. Please note that policies can be subject to change, so it's always a good idea to double-check the most up-to-date version on the internal HR portal.
+    
+    **NovaAI Airfare Booking Policy**
+    
+    NovaAI utilizes **Traveloke** for all employee airfare bookings. Here's a breakdown of the key aspects:
+    
+    *   **Booking Window:** Employees are encouraged to book flights **at least 30 days** prior to the scheduled departure date.
+    *   **Preferred Airlines:** NovaAI has negotiated preferred rates with **United Airlines** and **Delta Air Lines**. Employees should prioritize booking with these airlines whenever possible.
+    *   **Booking Process:**
+        *   Access Traveloke through the internal link on the company intranet: [Insert Internal Link Here - *Please note: I do not have access to internal links. You will need to insert the correct link here.*]
+        *   Enter your travel details (departure city, destination, dates, etc.).
+        *   Traveloke will display available flights from the preferred airlines.
+        *   Select the most cost-effective and suitable flight option.
+        *   **Always select the "Economy" class unless otherwise approved by your manager.**
+    *   **Expense Limits:**
+        *   **Economy Class:** The maximum allowable airfare for economy class is **$1,200** for domestic flights and **$2,500** for international flights.
+        *   **Business Class:** Business class travel requires **prior approval from your manager and the Finance Department.** The maximum allowable airfare for business class is **$4,000** for domestic flights and **$8,000** for international flights.
+    *   **Flight Changes/Cancellations:**
+        *   Any flight changes or cancellations must be made **through Traveloke.**
+        *   **Change fees** may apply depending on the airline and fare class.
+        *   **Cancellation fees** may apply depending on the airline and fare class.
+        *   **Emergency cancellations** due to unforeseen circumstances (illness, family emergency) should be reported to your manager and the HR department immediately. Documentation (e.g., doctor's note) may be required.
+    *   **Travel Agent Support:** For complex travel arrangements or assistance with
+[11:03:07.495] [INFO ] 
+[11:03:07.495] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:03:07.495] [INFO ]     Okay, here's the information on NovaAI's airfare booking policy as of today, October 26, 2023. Please note that policies can be subject to change, so it's always a good idea to double-check the most up-to-date version on the internal HR portal.
+    
+    **NovaAI Airfare Booking Policy**
+    
+    NovaAI utilizes **Traveloke** for all employee airfare bookings. Here's a breakdown of the key aspects:
+    
+    *   **Booking Window:** Employees are encouraged to book flights **at least 30 days** prior to the scheduled departure date.
+    *   **Preferred Airlines:** NovaAI has negotiated preferred rates with **United Airlines** and **Delta Air Lines**. Employees should prioritize booking with these airlines whenever possible.
+    *   **Booking Process:**
+        *   Access Traveloke through the internal link on the company intranet: [Insert Internal Link Here - *Please note: I do not have access to internal links. You will need to insert the correct link here.*]
+        *   Enter your travel details (departure city, destination, dates, etc.).
+        *   Traveloke will display available flights from the preferred airlines.
+        *   Select the most cost-effective and suitable flight option.
+        *   **Always select the "Economy" class unless otherwise approved by your manager.**
+    *   **Expense Limits:**
+        *   **Economy Class:** The maximum allowable airfare for economy class is **$1,200** for domestic flights and **$2,500** for international flights.
+        *   **Business Class:** Business class travel requires **prior approval from your manager and the Finance Department.** The maximum allowable airfare for business class is **$4,000** for domestic flights and **$8,000** for international flights.
+    *   **Flight Changes/Cancellations:**
+        *   Any flight changes or cancellations must be made **through Traveloke.**
+        *   **Change fees** may apply depending on the airline and fare class.
+        *   **Cancellation fees** may apply depending on the airline and fare class.
+        *   **Emergency cancellations** due to unforeseen circumstances (illness, family emergency) should be reported to your manager and the HR department immediately. Documentation (e.g., doctor's note) may be required.
+    *   **Travel Agent Support:** For complex travel arrangements or assistance with
+[11:03:07.495] [INFO ] 
+[11:03:07.496] [INFO ] ── EVALUATION ──
+[11:03:07.496] [INFO ]   Ground truth  : Airfare must be booked through TravelPerk. Economy class is required for flights under 6 hours. Business class is permitted for flights of 6 hours or more with VP+ approval. Expenses over $5,000 require CFO (Priya Nambiar) approval.
+[11:03:07.496] [INFO ]   Key facts     : ['TravelPerk', 'economy', 'under 6 hours', 'business class', '6 hours or more', '$5,000', 'CFO']
+[11:03:07.496] [INFO ]   KFR           : 0.429 (3/7 facts found) ✗
+[11:03:07.496] [WARNING]   Missing facts : ['TravelPerk', 'under 6 hours', '6 hours or more', 'CFO']
+[11:03:07.496] [INFO ]   Exact match   : False
+[11:03:07.496] [INFO ]   Latency       : 26.77s
+[11:03:07.496] [INFO ] 
+[11:03:07.496] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:03:07.496] [INFO ] Question 23/45  [q23]  category=benefits  difficulty=easy
+[11:03:07.496] [INFO ]   Q: What is NovaAI's parental leave policy?
+[11:03:07.496] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:03:07.496] [INFO ] [V0] Running pipeline...
+[11:03:33.332] [INFO ] 
+[11:03:33.332] [INFO ] ── RAW ANSWER ──
+[11:03:33.333] [INFO ]     Okay, here's the information on NovaAI's parental leave policy as of today, October 26, 2023. Please note that policies can be subject to change, so it's always a good idea to refer to the official HR documentation for the most up-to-date details.
+    
+    **NovaAI's Parental Leave Policy**
+    
+    NovaAI offers paid parental leave to support employees welcoming a new child. Here's a breakdown:
+    
+    *   **Eligibility:** The policy applies to all regular full-time and part-time employees who have been employed with NovaAI for at least 12 months.
+    *   **Leave Duration:**
+        *   **Birth Parent:** 12 weeks of fully paid leave.
+        *   **Adoption Parent:** 12 weeks of fully paid leave.
+        *   **Both Parents:** Employees are eligible for a combined total of 12 weeks of fully paid leave to share between them.
+    *   **Pay:** Employees receive 100% of their regular salary during the leave period.
+    *   **Benefits:** While on parental leave, employees continue to accrue benefits as outlined in the company's benefits plan. This includes health insurance, retirement contributions, etc.
+    *   **Coordination with Other Leave:** Parental leave can be taken in conjunction with other types of leave, such as sick leave or vacation time, as per company policy and applicable laws.
+    *   **How to Apply:** Employees must submit a parental leave request to their manager and HR at least 30 days in advance of the anticipated leave start date. The request should be submitted through the company's HR system, Workday.
+    *   **Legal Compliance:** NovaAI's parental leave policy is designed to comply with all applicable federal, state, and local laws, including the Family and Medical Leave Act (FMLA) and any relevant state or local laws that provide additional leave benefits.
+    
+    **Where to find the full policy:**
+    
+    You can find the complete and official NovaAI Parental Leave Policy document on the company's internal HR portal, Workday. You can search for "Parental Leave Policy" within Workday.
+    
+    **Disclaimer:** *I am an AI assistant and this information is for general guidance only. Please consult the official NovaAI HR documentation or contact the HR department for definitive and personalized information.*
+[11:03:33.333] [INFO ] 
+[11:03:33.333] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:03:33.333] [INFO ]     Okay, here's the information on NovaAI's parental leave policy as of today, October 26, 2023. Please note that policies can be subject to change, so it's always a good idea to refer to the official HR documentation for the most up-to-date details.
+    
+    **NovaAI's Parental Leave Policy**
+    
+    NovaAI offers paid parental leave to support employees welcoming a new child. Here's a breakdown:
+    
+    *   **Eligibility:** The policy applies to all regular full-time and part-time employees who have been employed with NovaAI for at least 12 months.
+    *   **Leave Duration:**
+        *   **Birth Parent:** 12 weeks of fully paid leave.
+        *   **Adoption Parent:** 12 weeks of fully paid leave.
+        *   **Both Parents:** Employees are eligible for a combined total of 12 weeks of fully paid leave to share between them.
+    *   **Pay:** Employees receive 100% of their regular salary during the leave period.
+    *   **Benefits:** While on parental leave, employees continue to accrue benefits as outlined in the company's benefits plan. This includes health insurance, retirement contributions, etc.
+    *   **Coordination with Other Leave:** Parental leave can be taken in conjunction with other types of leave, such as sick leave or vacation time, as per company policy and applicable laws.
+    *   **How to Apply:** Employees must submit a parental leave request to their manager and HR at least 30 days in advance of the anticipated leave start date. The request should be submitted through the company's HR system, Workday.
+    *   **Legal Compliance:** NovaAI's parental leave policy is designed to comply with all applicable federal, state, and local laws, including the Family and Medical Leave Act (FMLA) and any relevant state or local laws that provide additional leave benefits.
+    
+    **Where to find the full policy:**
+    
+    You can find the complete and official NovaAI Parental Leave Policy document on the company's internal HR portal, Workday. You can search for "Parental Leave Policy" within Workday.
+    
+    **Disclaimer:** *I am an AI assistant and this information is for general guidance only. Please consult the official NovaAI HR documentation or contact the HR department for definitive and personalized information.*
+[11:03:33.334] [INFO ] 
+[11:03:33.335] [INFO ] ── EVALUATION ──
+[11:03:33.335] [INFO ]   Ground truth  : NovaAI provides 16 weeks of fully paid parental leave for all parents regardless of gender, including both birthing and non-birthing parents.
+[11:03:33.335] [INFO ]   Key facts     : ['16 weeks', 'fully paid', 'all parents', 'regardless of gender']
+[11:03:33.335] [INFO ]   KFR           : 0.750 (3/4 facts found) ✗
+[11:03:33.335] [WARNING]   Missing facts : ['regardless of gender']
+[11:03:33.335] [INFO ]   Exact match   : False
+[11:03:33.335] [INFO ]   Latency       : 25.84s
+[11:03:33.335] [INFO ] 
+[11:03:33.336] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:03:33.336] [INFO ] Question 24/45  [q24]  category=benefits  difficulty=easy
+[11:03:33.336] [INFO ]   Q: What is the 401(k) match at NovaAI and when are employees eligible?
+[11:03:33.337] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:03:33.337] [INFO ] [V0] Running pipeline...
+[11:03:38.681] [INFO ] 
+[11:03:38.681] [INFO ] ── RAW ANSWER ──
+[11:03:38.681] [INFO ]     Okay, here's the information regarding the NovaAI 401(k) match and eligibility:
+    
+    **401(k) Match:** NovaAI matches 50% of employee contributions up to 6% of their salary.
+    
+    **Eligibility:** Employees are eligible to participate in the NovaAI 401(k) plan after 3 months of continuous employment. 
+    
+    I hope this is helpful! Let me know if you have any other questions.
+[11:03:38.681] [INFO ] 
+[11:03:38.681] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:03:38.681] [INFO ]     Okay, here's the information regarding the NovaAI 401(k) match and eligibility:
+    
+    **401(k) Match:** NovaAI matches 50% of employee contributions up to 6% of their salary.
+    
+    **Eligibility:** Employees are eligible to participate in the NovaAI 401(k) plan after 3 months of continuous employment. 
+    
+    I hope this is helpful! Let me know if you have any other questions.
+[11:03:38.681] [INFO ] 
+[11:03:38.682] [INFO ] ── EVALUATION ──
+[11:03:38.682] [INFO ]   Ground truth  : NovaAI matches 4% of salary dollar-for-dollar on 401(k) contributions. There is a 6-month eligibility waiting period before employees can participate.
+[11:03:38.682] [INFO ]   Key facts     : ['4%', 'dollar-for-dollar', '6 months']
+[11:03:38.682] [INFO ]   KFR           : 0.333 (1/3 facts found) ✗
+[11:03:38.682] [WARNING]   Missing facts : ['4%', 'dollar-for-dollar']
+[11:03:38.682] [INFO ]   Exact match   : False
+[11:03:38.682] [INFO ]   Latency       : 5.34s
+[11:03:38.682] [INFO ] 
+[11:03:38.682] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:03:38.682] [INFO ] Question 25/45  [q25]  category=benefits  difficulty=medium
+[11:03:38.682] [INFO ]   Q: What is the annual L&D budget per employee and how does it work?
+[11:03:38.682] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:03:38.682] [INFO ] [V0] Running pipeline...
+[11:04:05.853] [INFO ] 
+[11:04:05.854] [INFO ] ── RAW ANSWER ──
+[11:04:05.854] [INFO ]     Okay, here's the information regarding NovaAI's annual Learning & Development (L&D) budget per employee and how it functions.
+    
+    **Annual L&D Budget Per Employee:**
+    
+    As of October 26, 2023, NovaAI's annual L&D budget is approximately **$5,000 per employee**.
+    
+    **How the L&D Budget Works:**
+    
+    The L&D program is designed to support employee growth and development across various skill areas. Here's a breakdown of how the budget is allocated and utilized:
+    
+    1.  **Individual Allocation:** Each employee receives an individual L&D budget of $5,000 per year. This budget is intended to be used for a variety of learning activities.
+    
+    2.  **Eligible Learning Activities:** The budget can be used for a wide range of activities, including:
+        *   **Online Courses:** Access to platforms like Coursera, LinkedIn Learning, and specialized industry platforms.
+        *   **Conferences & Workshops:** Attendance at relevant industry conferences and workshops (subject to manager approval and budget availability).
+        *   **Books & Publications:** Purchase of books, journals, and other learning materials.
+        *   **Certifications:** Costs associated with professional certifications relevant to the employee's role and career goals.
+        *   **Internal Training Programs:** Participation in NovaAI's internal training programs and workshops.
+        *   **Tuition Reimbursement:** For relevant courses or degree programs (subject to specific eligibility criteria and approval).
+    
+    3.  **Approval Process:**
+        *   Employees are encouraged to discuss their learning and development goals with their managers during regular performance reviews and check-ins.
+        *   Employees submit a proposal outlining their planned learning activities, estimated costs, and how the activities will benefit their role and the company.
+        *   Managers review the proposals to ensure alignment with team and company objectives and budget availability.
+        *   The proposal is then submitted to the L&D department for final approval.
+    
+    4.  **Tracking & Reporting:**
+        *   The L&D department tracks employee spending on L&D activities.
+        *   Employees are required to submit receipts and documentation for all expenses.
+        *   The L&D department uses this data to monitor the effectiveness of the L&D program and identify areas for improvement.
+    
+    5. **Budget Carryover:** Any unused portion of the L&D budget at
+[11:04:05.854] [INFO ] 
+[11:04:05.854] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:04:05.854] [INFO ]     Okay, here's the information regarding NovaAI's annual Learning & Development (L&D) budget per employee and how it functions.
+    
+    **Annual L&D Budget Per Employee:**
+    
+    As of October 26, 2023, NovaAI's annual L&D budget is approximately **$5,000 per employee**.
+    
+    **How the L&D Budget Works:**
+    
+    The L&D program is designed to support employee growth and development across various skill areas. Here's a breakdown of how the budget is allocated and utilized:
+    
+    1.  **Individual Allocation:** Each employee receives an individual L&D budget of $5,000 per year. This budget is intended to be used for a variety of learning activities.
+    
+    2.  **Eligible Learning Activities:** The budget can be used for a wide range of activities, including:
+        *   **Online Courses:** Access to platforms like Coursera, LinkedIn Learning, and specialized industry platforms.
+        *   **Conferences & Workshops:** Attendance at relevant industry conferences and workshops (subject to manager approval and budget availability).
+        *   **Books & Publications:** Purchase of books, journals, and other learning materials.
+        *   **Certifications:** Costs associated with professional certifications relevant to the employee's role and career goals.
+        *   **Internal Training Programs:** Participation in NovaAI's internal training programs and workshops.
+        *   **Tuition Reimbursement:** For relevant courses or degree programs (subject to specific eligibility criteria and approval).
+    
+    3.  **Approval Process:**
+        *   Employees are encouraged to discuss their learning and development goals with their managers during regular performance reviews and check-ins.
+        *   Employees submit a proposal outlining their planned learning activities, estimated costs, and how the activities will benefit their role and the company.
+        *   Managers review the proposals to ensure alignment with team and company objectives and budget availability.
+        *   The proposal is then submitted to the L&D department for final approval.
+    
+    4.  **Tracking & Reporting:**
+        *   The L&D department tracks employee spending on L&D activities.
+        *   Employees are required to submit receipts and documentation for all expenses.
+        *   The L&D department uses this data to monitor the effectiveness of the L&D program and identify areas for improvement.
+    
+    5. **Budget Carryover:** Any unused portion of the L&D budget at
+[11:04:05.855] [INFO ] 
+[11:04:05.855] [INFO ] ── EVALUATION ──
+[11:04:05.855] [INFO ]   Ground truth  : Each employee receives a $2,500 annual L&D budget, refreshed on January 1. Unused budget does not roll over. Requests must be submitted via the Workday L&D portal.
+[11:04:05.855] [INFO ]   Key facts     : ['$2,500', 'January 1', 'does not roll over', 'Workday']
+[11:04:05.855] [INFO ]   KFR           : 0.000 (0/4 facts found) ✗
+[11:04:05.855] [WARNING]   Missing facts : ['$2,500', 'January 1', 'does not roll over', 'Workday']
+[11:04:05.855] [INFO ]   Exact match   : False
+[11:04:05.855] [INFO ]   Latency       : 27.17s
+[11:04:05.855] [INFO ] 
+[11:04:05.855] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:04:05.855] [INFO ] Question 26/45  [q26]  category=leadership  difficulty=easy
+[11:04:05.855] [INFO ]   Q: Who is NovaAI's Chief Operating Officer?
+[11:04:05.855] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:04:05.855] [INFO ] [V0] Running pipeline...
+[11:04:08.474] [INFO ] 
+[11:04:08.474] [INFO ] ── RAW ANSWER ──
+[11:04:08.475] [INFO ]     NovaAI's Chief Operating Officer is **Michael Chen**. 
+    
+    This information is publicly available on the NovaAI website: [https://www.nova.ai/leadership](https://www.nova.ai/leadership)
+[11:04:08.475] [INFO ] 
+[11:04:08.475] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:04:08.475] [INFO ]     NovaAI's Chief Operating Officer is **Michael Chen**. 
+    
+    This information is publicly available on the NovaAI website: [https://www.nova.ai/leadership](https://www.nova.ai/leadership)
+[11:04:08.475] [INFO ] 
+[11:04:08.475] [INFO ] ── EVALUATION ──
+[11:04:08.475] [INFO ]   Ground truth  : James Whitfield is NovaAI's Chief Operating Officer.
+[11:04:08.475] [INFO ]   Key facts     : ['James Whitfield', 'COO']
+[11:04:08.475] [INFO ]   KFR           : 0.000 (0/2 facts found) ✗
+[11:04:08.475] [WARNING]   Missing facts : ['James Whitfield', 'COO']
+[11:04:08.475] [INFO ]   Exact match   : False
+[11:04:08.475] [INFO ]   Latency       : 2.62s
+[11:04:08.475] [INFO ] 
+[11:04:08.475] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:04:08.476] [INFO ] Question 27/45  [q27]  category=benefits  difficulty=easy
+[11:04:08.476] [INFO ]   Q: Which platform does NovaAI use for equity management?
+[11:04:08.476] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:04:08.476] [INFO ] [V0] Running pipeline...
+[11:04:12.121] [INFO ] 
+[11:04:12.122] [INFO ] ── RAW ANSWER ──
+[11:04:12.122] [INFO ]     NovaAI uses **Equity Matrix** for equity management. 
+    
+    You can find more information about Equity Matrix in the internal documentation located on the NovaAI Wiki: [https://internal.novaai.com/wiki/Equity_Matrix](https://internal.novaai.com/wiki/Equity_Matrix)
+[11:04:12.122] [INFO ] 
+[11:04:12.122] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:04:12.122] [INFO ]     NovaAI uses **Equity Matrix** for equity management. 
+    
+    You can find more information about Equity Matrix in the internal documentation located on the NovaAI Wiki: [https://internal.novaai.com/wiki/Equity_Matrix](https://internal.novaai.com/wiki/Equity_Matrix)
+[11:04:12.122] [INFO ] 
+[11:04:12.123] [INFO ] ── EVALUATION ──
+[11:04:12.123] [INFO ]   Ground truth  : NovaAI uses Carta as its equity management platform.
+[11:04:12.123] [INFO ]   Key facts     : ['Carta', 'equity management']
+[11:04:12.123] [INFO ]   KFR           : 0.500 (1/2 facts found) ✗
+[11:04:12.123] [WARNING]   Missing facts : ['Carta']
+[11:04:12.123] [INFO ]   Exact match   : False
+[11:04:12.123] [INFO ]   Latency       : 3.65s
+[11:04:12.123] [INFO ] 
+[11:04:12.123] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:04:12.123] [INFO ] Question 28/45  [q28]  category=company_overview  difficulty=easy
+[11:04:12.123] [INFO ]   Q: What is the street address of NovaAI's headquarters?
+[11:04:12.123] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:04:12.123] [INFO ] [V0] Running pipeline...
+[11:04:14.404] [INFO ] 
+[11:04:14.404] [INFO ] ── RAW ANSWER ──
+[11:04:14.404] [INFO ]     NovaAI's headquarters is located at:
+    
+    **1111 University Ave, Ste 300
+    Palo Alto, CA 94301**
+[11:04:14.404] [INFO ] 
+[11:04:14.405] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:04:14.405] [INFO ]     NovaAI's headquarters is located at:
+    
+    **1111 University Ave, Ste 300
+    Palo Alto, CA 94301**
+[11:04:14.405] [INFO ] 
+[11:04:14.405] [INFO ] ── EVALUATION ──
+[11:04:14.405] [INFO ]   Ground truth  : NovaAI's headquarters is at 450 Market Street, Suite 1200, with ZIP code 94105.
+[11:04:14.405] [INFO ]   Key facts     : ['450 Market Street', 'Suite 1200', '94105']
+[11:04:14.405] [INFO ]   KFR           : 0.000 (0/3 facts found) ✗
+[11:04:14.405] [WARNING]   Missing facts : ['450 Market Street', 'Suite 1200', '94105']
+[11:04:14.405] [INFO ]   Exact match   : False
+[11:04:14.405] [INFO ]   Latency       : 2.28s
+[11:04:14.405] [INFO ] 
+[11:04:14.405] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:04:14.405] [INFO ] Question 29/45  [q29]  category=benefits  difficulty=easy
+[11:04:14.405] [INFO ]   Q: Which provider administers NovaAI's health benefits?
+[11:04:14.405] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:04:14.405] [INFO ] [V0] Running pipeline...
+[11:04:17.743] [INFO ] 
+[11:04:17.743] [INFO ] ── RAW ANSWER ──
+[11:04:17.743] [INFO ]     NovaAI's health benefits are administered by **Benefitfocus**. 
+    
+    You can find more information about our benefits on the internal NovaAI intranet at [link to internal benefits page - *This would be a real link if I had access to NovaAI's internal systems*].
+[11:04:17.743] [INFO ] 
+[11:04:17.744] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:04:17.744] [INFO ]     NovaAI's health benefits are administered by **Benefitfocus**. 
+    
+    You can find more information about our benefits on the internal NovaAI intranet at [link to internal benefits page - *This would be a real link if I had access to NovaAI's internal systems*].
+[11:04:17.744] [INFO ] 
+[11:04:17.744] [INFO ] ── EVALUATION ──
+[11:04:17.744] [INFO ]   Ground truth  : Anthem Blue Cross administers NovaAI's health benefits.
+[11:04:17.744] [INFO ]   Key facts     : ['Anthem Blue Cross', 'health benefits provider']
+[11:04:17.744] [INFO ]   KFR           : 0.000 (0/2 facts found) ✗
+[11:04:17.744] [WARNING]   Missing facts : ['Anthem Blue Cross', 'health benefits provider']
+[11:04:17.745] [INFO ]   Exact match   : False
+[11:04:17.745] [INFO ]   Latency       : 3.34s
+[11:04:17.745] [INFO ] 
+[11:04:17.745] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:04:17.745] [INFO ] Question 30/45  [q30]  category=products_pricing  difficulty=easy
+[11:04:17.745] [INFO ]   Q: When was NovaGuard launched?
+[11:04:17.745] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:04:17.745] [INFO ] [V0] Running pipeline...
+[11:04:21.162] [INFO ] 
+[11:04:21.163] [INFO ] ── RAW ANSWER ──
+[11:04:21.163] [INFO ]     NovaGuard was officially launched on **March 14, 2023**. 
+    
+    You can find more details about its launch in the internal documentation available on the NovaAI Wiki: [Insert Link to NovaGuard Launch Documentation Here - *Please replace this with the actual link*].
+[11:04:21.163] [INFO ] 
+[11:04:21.163] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:04:21.163] [INFO ]     NovaGuard was officially launched on **March 14, 2023**. 
+    
+    You can find more details about its launch in the internal documentation available on the NovaAI Wiki: [Insert Link to NovaGuard Launch Documentation Here - *Please replace this with the actual link*].
+[11:04:21.163] [INFO ] 
+[11:04:21.163] [INFO ] ── EVALUATION ──
+[11:04:21.163] [INFO ]   Ground truth  : NovaGuard was launched in Q4 2023.
+[11:04:21.163] [INFO ]   Key facts     : ['NovaGuard', 'Q4 2023']
+[11:04:21.163] [INFO ]   KFR           : 1.000 (2/2 facts found) ✓
+[11:04:21.163] [INFO ]   Exact match   : False
+[11:04:21.163] [INFO ]   Latency       : 3.42s
+[11:04:21.163] [INFO ] 
+[11:04:21.163] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:04:21.163] [INFO ] Question 31/45  [q31]  category=products_pricing  difficulty=easy
+[11:04:21.163] [INFO ]   Q: When was NovaBridge released?
+[11:04:21.163] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:04:21.163] [INFO ] [V0] Running pipeline...
+[11:04:25.342] [INFO ] 
+[11:04:25.343] [INFO ] ── RAW ANSWER ──
+[11:04:25.343] [INFO ]     NovaBridge was officially released on **October 26, 2023**. 
+    
+    You can find more details about the release in the NovaAI product announcement blog post: [https://www.nova.ai/blog/novabridge-release/](https://www.nova.ai/blog/novabridge-release/)
+[11:04:25.343] [INFO ] 
+[11:04:25.343] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:04:25.343] [INFO ]     NovaBridge was officially released on **October 26, 2023**. 
+    
+    You can find more details about the release in the NovaAI product announcement blog post: [https://www.nova.ai/blog/novabridge-release/](https://www.nova.ai/blog/novabridge-release/)
+[11:04:25.343] [INFO ] 
+[11:04:25.343] [INFO ] ── EVALUATION ──
+[11:04:25.343] [INFO ]   Ground truth  : NovaBridge was released in March 2024.
+[11:04:25.343] [INFO ]   Key facts     : ['NovaBridge', 'March 2024']
+[11:04:25.343] [INFO ]   KFR           : 0.500 (1/2 facts found) ✗
+[11:04:25.343] [WARNING]   Missing facts : ['March 2024']
+[11:04:25.343] [INFO ]   Exact match   : False
+[11:04:25.343] [INFO ]   Latency       : 4.18s
+[11:04:25.343] [INFO ] 
+[11:04:25.343] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:04:25.343] [INFO ] Question 32/45  [q32]  category=company_overview  difficulty=easy
+[11:04:25.344] [INFO ]   Q: Which cloud provider does NovaAI use as its secondary provider?
+[11:04:25.344] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:04:25.344] [INFO ] [V0] Running pipeline...
+[11:04:29.147] [INFO ] 
+[11:04:29.147] [INFO ] ── RAW ANSWER ──
+[11:04:29.147] [INFO ]     NovaAI uses **Google Cloud Platform (GCP)** as its secondary cloud provider. 
+    
+    This was confirmed in a recent internal document shared on **October 26, 2023**, outlining our disaster recovery and business continuity plan. The document details the specific services within GCP that are utilized for backup and failover purposes.
+[11:04:29.147] [INFO ] 
+[11:04:29.147] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:04:29.147] [INFO ]     NovaAI uses **Google Cloud Platform (GCP)** as its secondary cloud provider. 
+    
+    This was confirmed in a recent internal document shared on **October 26, 2023**, outlining our disaster recovery and business continuity plan. The document details the specific services within GCP that are utilized for backup and failover purposes.
+[11:04:29.147] [INFO ] 
+[11:04:29.147] [INFO ] ── EVALUATION ──
+[11:04:29.148] [INFO ]   Ground truth  : GCP is NovaAI's secondary cloud provider.
+[11:04:29.148] [INFO ]   Key facts     : ['GCP', 'secondary cloud']
+[11:04:29.148] [INFO ]   KFR           : 1.000 (2/2 facts found) ✓
+[11:04:29.148] [INFO ]   Exact match   : False
+[11:04:29.148] [INFO ]   Latency       : 3.80s
+[11:04:29.148] [INFO ] 
+[11:04:29.148] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:04:29.148] [INFO ] Question 33/45  [q33]  category=benefits  difficulty=easy
+[11:04:29.148] [INFO ]   Q: What is NovaAI's on-call compensation rate?
+[11:04:29.148] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:04:29.148] [INFO ] [V0] Running pipeline...
+[11:04:35.717] [INFO ] 
+[11:04:35.717] [INFO ] ── RAW ANSWER ──
+[11:04:35.717] [INFO ]     Okay, here's the information regarding NovaAI's on-call compensation rate.
+    
+    As of today, October 26, 2023, NovaAI's on-call compensation rate is **$50 per hour** for engineers. This rate applies to all engineers participating in the on-call rotation. 
+    
+    Please note that this information is based on the current policy and is subject to change. For the most up-to-date and official details, please refer to the NovaAI internal documentation on compensation or reach out to the HR department directly.
+[11:04:35.717] [INFO ] 
+[11:04:35.717] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:04:35.717] [INFO ]     Okay, here's the information regarding NovaAI's on-call compensation rate.
+    
+    As of today, October 26, 2023, NovaAI's on-call compensation rate is **$50 per hour** for engineers. This rate applies to all engineers participating in the on-call rotation. 
+    
+    Please note that this information is based on the current policy and is subject to change. For the most up-to-date and official details, please refer to the NovaAI internal documentation on compensation or reach out to the HR department directly.
+[11:04:35.717] [INFO ] 
+[11:04:35.717] [INFO ] ── EVALUATION ──
+[11:04:35.717] [INFO ]   Ground truth  : NovaAI pays an additional $300 per week for on-call duty.
+[11:04:35.717] [INFO ]   Key facts     : ['$300/week', 'on-call']
+[11:04:35.718] [INFO ]   KFR           : 0.500 (1/2 facts found) ✗
+[11:04:35.718] [WARNING]   Missing facts : ['$300/week']
+[11:04:35.718] [INFO ]   Exact match   : False
+[11:04:35.718] [INFO ]   Latency       : 6.57s
+[11:04:35.718] [INFO ] 
+[11:04:35.718] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:04:35.718] [INFO ] Question 34/45  [q34]  category=benefits  difficulty=easy
+[11:04:35.718] [INFO ]   Q: What is NovaAI's home office equipment stipend for new hires?
+[11:04:35.718] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:04:35.718] [INFO ] [V0] Running pipeline...
+[11:04:45.116] [INFO ] 
+[11:04:45.116] [INFO ] ── RAW ANSWER ──
+[11:04:45.116] [INFO ]     Okay, here's the information regarding NovaAI's home office equipment stipend for new hires.
+    
+    As of today, October 26, 2023, NovaAI offers a **$1,000 stipend** to all new hires to help set up their home office. This stipend is intended to cover the costs of essential equipment like a monitor, keyboard, mouse, chair, and other necessary items. 
+    
+    You can find more detailed information about this policy in the NovaAI Employee Handbook, specifically under the "Remote Work & Home Office" section. You can access the handbook here: [Insert Link to Employee Handbook Here - *Please note: I do not have access to internal NovaAI systems to provide a live link. You'll need to insert the correct link here.*]
+    
+    If you have any further questions, please don't hesitate to ask!
+[11:04:45.116] [INFO ] 
+[11:04:45.116] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:04:45.116] [INFO ]     Okay, here's the information regarding NovaAI's home office equipment stipend for new hires.
+    
+    As of today, October 26, 2023, NovaAI offers a **$1,000 stipend** to all new hires to help set up their home office. This stipend is intended to cover the costs of essential equipment like a monitor, keyboard, mouse, chair, and other necessary items. 
+    
+    You can find more detailed information about this policy in the NovaAI Employee Handbook, specifically under the "Remote Work & Home Office" section. You can access the handbook here: [Insert Link to Employee Handbook Here - *Please note: I do not have access to internal NovaAI systems to provide a live link. You'll need to insert the correct link here.*]
+    
+    If you have any further questions, please don't hesitate to ask!
+[11:04:45.117] [INFO ] 
+[11:04:45.117] [INFO ] ── EVALUATION ──
+[11:04:45.117] [INFO ]   Ground truth  : NovaAI provides a $1,500 one-time home office equipment stipend upon hire.
+[11:04:45.117] [INFO ]   Key facts     : ['$1,500', 'one-time', 'upon hire']
+[11:04:45.117] [INFO ]   KFR           : 0.000 (0/3 facts found) ✗
+[11:04:45.117] [WARNING]   Missing facts : ['$1,500', 'one-time', 'upon hire']
+[11:04:45.117] [INFO ]   Exact match   : False
+[11:04:45.117] [INFO ]   Latency       : 9.40s
+[11:04:45.117] [INFO ] 
+[11:04:45.117] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:04:45.117] [INFO ] Question 35/45  [q35]  category=benefits  difficulty=easy
+[11:04:45.117] [INFO ]   Q: What health benefits coverage does NovaAI provide?
+[11:04:45.117] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:04:45.117] [INFO ] [V0] Running pipeline...
+[11:05:11.998] [INFO ] 
+[11:05:11.998] [INFO ] ── RAW ANSWER ──
+[11:05:11.999] [INFO ]     Okay, here's a breakdown of the health benefits coverage NovaAI provides to its employees. Please note that benefits can change, so this information is current as of today, November 2, 2023.
+    
+    **Medical, Dental, and Vision Insurance:**
+    
+    NovaAI offers a comprehensive benefits package through [Insurance Provider Name - *This information is confidential and I do not have access to it. You would need to consult HR for the exact provider name*].  Coverage is effective on the 1st of the month following 30 days of employment.
+    
+    *   **Medical:** We offer multiple medical plan options, including:
+        *   **HMO:** [Brief description of HMO plan - e.g., Requires a primary care physician and referrals to specialists.]
+        *   **PPO:** [Brief description of PPO plan - e.g., Allows you to see specialists without a referral, but costs may be higher.]
+        *   **HDHP (High-Deductible Health Plan) with HSA:** [Brief description of HDHP plan - e.g., Lower monthly premiums, but a higher deductible.  Eligible for contributions to a Health Savings Account.]
+        *   *Specific plan details (deductibles, copays, out-of-pocket maximums) vary depending on the plan selected. These details are available on the benefits portal.*
+    *   **Dental:**  We offer a dental plan with coverage for preventative, basic, and major services.  [Brief description of dental coverage - e.g., Includes annual cleanings, exams, and coverage for fillings and crowns.]
+    *   **Vision:**  We offer a vision plan with coverage for eye exams, glasses, and contacts. [Brief description of vision coverage - e.g., Includes allowances for frames and lenses.]
+    
+    **Other Benefits:**
+    
+    In addition to medical, dental, and vision, NovaAI also provides:
+    
+    *   **Employee Assistance Program (EAP):**  [EAP Provider Name - *This information is confidential and I do not have access to it. You would need to consult HR for the exact provider name*] - Offers confidential counseling and support services for employees and their families.
+    *   **Life Insurance:** Basic life insurance is provided at no cost to employees. Supplemental life insurance options are available.
+    *   **Disability Insurance:** Short-term and long-term disability insurance are offered to protect your income in case of illness or injury.
+[11:05:11.999] [INFO ] 
+[11:05:11.999] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:05:11.999] [INFO ]     Okay, here's a breakdown of the health benefits coverage NovaAI provides to its employees. Please note that benefits can change, so this information is current as of today, November 2, 2023.
+    
+    **Medical, Dental, and Vision Insurance:**
+    
+    NovaAI offers a comprehensive benefits package through [Insurance Provider Name - *This information is confidential and I do not have access to it. You would need to consult HR for the exact provider name*].  Coverage is effective on the 1st of the month following 30 days of employment.
+    
+    *   **Medical:** We offer multiple medical plan options, including:
+        *   **HMO:** [Brief description of HMO plan - e.g., Requires a primary care physician and referrals to specialists.]
+        *   **PPO:** [Brief description of PPO plan - e.g., Allows you to see specialists without a referral, but costs may be higher.]
+        *   **HDHP (High-Deductible Health Plan) with HSA:** [Brief description of HDHP plan - e.g., Lower monthly premiums, but a higher deductible.  Eligible for contributions to a Health Savings Account.]
+        *   *Specific plan details (deductibles, copays, out-of-pocket maximums) vary depending on the plan selected. These details are available on the benefits portal.*
+    *   **Dental:**  We offer a dental plan with coverage for preventative, basic, and major services.  [Brief description of dental coverage - e.g., Includes annual cleanings, exams, and coverage for fillings and crowns.]
+    *   **Vision:**  We offer a vision plan with coverage for eye exams, glasses, and contacts. [Brief description of vision coverage - e.g., Includes allowances for frames and lenses.]
+    
+    **Other Benefits:**
+    
+    In addition to medical, dental, and vision, NovaAI also provides:
+    
+    *   **Employee Assistance Program (EAP):**  [EAP Provider Name - *This information is confidential and I do not have access to it. You would need to consult HR for the exact provider name*] - Offers confidential counseling and support services for employees and their families.
+    *   **Life Insurance:** Basic life insurance is provided at no cost to employees. Supplemental life insurance options are available.
+    *   **Disability Insurance:** Short-term and long-term disability insurance are offered to protect your income in case of illness or injury.
+[11:05:11.999] [INFO ] 
+[11:05:12.000] [INFO ] ── EVALUATION ──
+[11:05:12.000] [INFO ]   Ground truth  : NovaAI provides medical, dental, and vision health benefits coverage.
+[11:05:12.000] [INFO ]   Key facts     : ['medical', 'dental', 'vision']
+[11:05:12.000] [INFO ]   KFR           : 1.000 (3/3 facts found) ✓
+[11:05:12.000] [INFO ]   Exact match   : False
+[11:05:12.000] [INFO ]   Latency       : 26.88s
+[11:05:12.000] [INFO ] 
+[11:05:12.000] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:05:12.000] [INFO ] Question 36/45  [q36]  category=products_pricing  difficulty=hard
+[11:05:12.000] [INFO ]   Q: Who is the PM owner of NovaAI's flagship product?
+[11:05:12.000] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:05:12.001] [INFO ] [V0] Running pipeline...
+[11:05:15.038] [INFO ] 
+[11:05:15.038] [INFO ] ── RAW ANSWER ──
+[11:05:15.038] [INFO ]     The PM owner of NovaAI's flagship product, **NovaStudio**, is **Sarah Chen**. 
+    
+    This information is based on internal organizational charts and project leadership documentation as of today, November 2nd, 2023.
+[11:05:15.038] [INFO ] 
+[11:05:15.039] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:05:15.039] [INFO ]     The PM owner of NovaAI's flagship product, **NovaStudio**, is **Sarah Chen**. 
+    
+    This information is based on internal organizational charts and project leadership documentation as of today, November 2nd, 2023.
+[11:05:15.039] [INFO ] 
+[11:05:15.039] [INFO ] ── EVALUATION ──
+[11:05:15.039] [INFO ]   Ground truth  : Fatima Al-Rashid is the PM owner of NovaPilot, NovaAI's flagship product.
+[11:05:15.039] [INFO ]   Key facts     : ['Fatima Al-Rashid', 'NovaPilot']
+[11:05:15.039] [INFO ]   KFR           : 0.000 (0/2 facts found) ✗
+[11:05:15.039] [WARNING]   Missing facts : ['Fatima Al-Rashid', 'NovaPilot']
+[11:05:15.039] [INFO ]   Exact match   : False
+[11:05:15.039] [INFO ]   Latency       : 3.04s
+[11:05:15.039] [INFO ] 
+[11:05:15.039] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:05:15.039] [INFO ] Question 37/45  [q37]  category=leadership  difficulty=hard
+[11:05:15.040] [INFO ]   Q: Who leads the UX/Design team, and when did they join NovaAI?
+[11:05:15.040] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:05:15.040] [INFO ] [V0] Running pipeline...
+[11:05:16.997] [INFO ] 
+[11:05:16.997] [INFO ] ── RAW ANSWER ──
+[11:05:16.997] [INFO ]     The UX/Design team at NovaAI is led by **Sarah Chen**. She joined NovaAI on **March 14, 2022**.
+[11:05:16.997] [INFO ] 
+[11:05:16.997] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:05:16.997] [INFO ]     The UX/Design team at NovaAI is led by **Sarah Chen**. She joined NovaAI on **March 14, 2022**.
+[11:05:16.997] [INFO ] 
+[11:05:16.998] [INFO ] ── EVALUATION ──
+[11:05:16.998] [INFO ]   Ground truth  : Lena Park leads the UX/Design team and joined NovaAI in June 2022.
+[11:05:16.998] [INFO ]   Key facts     : ['Lena Park', 'UX/Design', 'June 2022']
+[11:05:16.998] [INFO ]   KFR           : 0.333 (1/3 facts found) ✗
+[11:05:16.998] [WARNING]   Missing facts : ['Lena Park', 'June 2022']
+[11:05:16.998] [INFO ]   Exact match   : False
+[11:05:16.998] [INFO ]   Latency       : 1.96s
+[11:05:16.998] [INFO ] 
+[11:05:16.998] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:05:16.998] [INFO ] Question 38/45  [q38]  category=leadership  difficulty=hard
+[11:05:16.998] [INFO ]   Q: Who leads the SMB Sales team, and what is their FY2026 quota?
+[11:05:16.998] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:05:16.998] [INFO ] [V0] Running pipeline...
+[11:05:21.388] [INFO ] 
+[11:05:21.388] [INFO ] ── RAW ANSWER ──
+[11:05:21.388] [INFO ]     Okay, here's the information regarding the SMB Sales team leadership and FY2026 quota.
+    
+    The SMB Sales team is led by **Sarah Chen**, who is the Director of SMB Sales.
+    
+    Their FY2026 quota is **$45 million USD**.
+    
+    
+    
+    I hope this is helpful! Let me know if you have any other questions.
+[11:05:21.388] [INFO ] 
+[11:05:21.388] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:05:21.389] [INFO ]     Okay, here's the information regarding the SMB Sales team leadership and FY2026 quota.
+    
+    The SMB Sales team is led by **Sarah Chen**, who is the Director of SMB Sales.
+    
+    Their FY2026 quota is **$45 million USD**.
+    
+    
+    
+    I hope this is helpful! Let me know if you have any other questions.
+[11:05:21.389] [INFO ] 
+[11:05:21.389] [INFO ] ── EVALUATION ──
+[11:05:21.389] [INFO ]   Ground truth  : Tanya Osei leads the SMB Sales team, and her FY2026 quota is $6M.
+[11:05:21.389] [INFO ]   Key facts     : ['Tanya Osei', 'SMB Sales', '$6M']
+[11:05:21.389] [INFO ]   KFR           : 0.333 (1/3 facts found) ✗
+[11:05:21.389] [WARNING]   Missing facts : ['Tanya Osei', '$6M']
+[11:05:21.389] [INFO ]   Exact match   : False
+[11:05:21.389] [INFO ]   Latency       : 4.39s
+[11:05:21.389] [INFO ] 
+[11:05:21.389] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:05:21.389] [INFO ] Question 39/45  [q39]  category=leadership  difficulty=hard
+[11:05:21.389] [INFO ]   Q: When did NovaAI's Chief Revenue Officer join the company?
+[11:05:21.389] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:05:21.389] [INFO ] [V0] Running pipeline...
+[11:05:23.215] [INFO ] 
+[11:05:23.215] [INFO ] ── RAW ANSWER ──
+[11:05:23.215] [INFO ]     NovaAI's Chief Revenue Officer, **Sarah Jones**, joined the company on **March 14, 2023**.
+[11:05:23.215] [INFO ] 
+[11:05:23.215] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:05:23.215] [INFO ]     NovaAI's Chief Revenue Officer, **Sarah Jones**, joined the company on **March 14, 2023**.
+[11:05:23.215] [INFO ] 
+[11:05:23.215] [INFO ] ── EVALUATION ──
+[11:05:23.215] [INFO ]   Ground truth  : Dominique Leblanc, NovaAI's Chief Revenue Officer, joined the company in June 2022.
+[11:05:23.216] [INFO ]   Key facts     : ['Dominique Leblanc', 'CRO', 'June 2022']
+[11:05:23.216] [INFO ]   KFR           : 0.000 (0/3 facts found) ✗
+[11:05:23.216] [WARNING]   Missing facts : ['Dominique Leblanc', 'CRO', 'June 2022']
+[11:05:23.216] [INFO ]   Exact match   : False
+[11:05:23.216] [INFO ]   Latency       : 1.83s
+[11:05:23.216] [INFO ] 
+[11:05:23.216] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:05:23.216] [INFO ] Question 40/45  [q40]  category=leadership  difficulty=hard
+[11:05:23.216] [INFO ]   Q: When did NovaAI's VP of Marketing join the company?
+[11:05:23.216] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:05:23.216] [INFO ] [V0] Running pipeline...
+[11:05:27.441] [INFO ] 
+[11:05:27.442] [INFO ] ── RAW ANSWER ──
+[11:05:27.442] [INFO ]     According to my records, NovaAI's VP of Marketing, **Sarah Chen**, joined the company on **March 14, 2022**. 
+    
+    You can find this information on the NovaAI company website in the "Leadership" section: [https://www.nova.ai/leadership/](https://www.nova.ai/leadership/)
+[11:05:27.442] [INFO ] 
+[11:05:27.442] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:05:27.442] [INFO ]     According to my records, NovaAI's VP of Marketing, **Sarah Chen**, joined the company on **March 14, 2022**. 
+    
+    You can find this information on the NovaAI company website in the "Leadership" section: [https://www.nova.ai/leadership/](https://www.nova.ai/leadership/)
+[11:05:27.442] [INFO ] 
+[11:05:27.443] [INFO ] ── EVALUATION ──
+[11:05:27.443] [INFO ]   Ground truth  : Rachel Huang, NovaAI's VP of Marketing, joined the company in January 2023.
+[11:05:27.443] [INFO ]   Key facts     : ['Rachel Huang', 'VP of Marketing', 'January 2023']
+[11:05:27.443] [INFO ]   KFR           : 0.333 (1/3 facts found) ✗
+[11:05:27.443] [WARNING]   Missing facts : ['Rachel Huang', 'January 2023']
+[11:05:27.443] [INFO ]   Exact match   : False
+[11:05:27.443] [INFO ]   Latency       : 4.23s
+[11:05:27.443] [INFO ] 
+[11:05:27.443] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:05:27.443] [INFO ] Question 41/45  [q41]  category=leadership  difficulty=hard
+[11:05:27.443] [INFO ]   Q: Who is NovaBridge's Developer Relations Lead, and to whom do they report?
+[11:05:27.443] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:05:27.443] [INFO ] [V0] Running pipeline...
+[11:05:29.324] [INFO ] 
+[11:05:29.324] [INFO ] ── RAW ANSWER ──
+[11:05:29.325] [INFO ]     The Developer Relations Lead for NovaBridge is **Kelsey Ramsey**. 
+    
+    She reports to **Sarah Chen**, who is the Director of Developer Relations.
+[11:05:29.325] [INFO ] 
+[11:05:29.325] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:05:29.325] [INFO ]     The Developer Relations Lead for NovaBridge is **Kelsey Ramsey**. 
+    
+    She reports to **Sarah Chen**, who is the Director of Developer Relations.
+[11:05:29.325] [INFO ] 
+[11:05:29.325] [INFO ] ── EVALUATION ──
+[11:05:29.325] [INFO ]   Ground truth  : Priya Osei is NovaBridge's Developer Relations Lead, and she reports to the VP of Marketing.
+[11:05:29.325] [INFO ]   Key facts     : ['Priya Osei', 'Developer Relations Lead', 'reports to VP of Marketing']
+[11:05:29.326] [INFO ]   KFR           : 0.333 (1/3 facts found) ✗
+[11:05:29.326] [WARNING]   Missing facts : ['Priya Osei', 'reports to VP of Marketing']
+[11:05:29.326] [INFO ]   Exact match   : False
+[11:05:29.326] [INFO ]   Latency       : 1.88s
+[11:05:29.326] [INFO ] 
+[11:05:29.326] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:05:29.326] [INFO ] Question 42/45  [q42]  category=leadership  difficulty=hard
+[11:05:29.326] [INFO ]   Q: When did NovaAI's VP of Product join the company?
+[11:05:29.326] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:05:29.326] [INFO ] [V0] Running pipeline...
+[11:05:33.368] [INFO ] 
+[11:05:33.369] [INFO ] ── RAW ANSWER ──
+[11:05:33.369] [INFO ]     According to my information, Dr. Emily Carter joined NovaAI as our VP of Product on **March 14, 2022**. 
+    
+    You can find this information on the NovaAI website's "Leadership" page: [https://www.nova.ai/leadership/](https://www.nova.ai/leadership/)
+[11:05:33.370] [INFO ] 
+[11:05:33.370] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:05:33.370] [INFO ]     According to my information, Dr. Emily Carter joined NovaAI as our VP of Product on **March 14, 2022**. 
+    
+    You can find this information on the NovaAI website's "Leadership" page: [https://www.nova.ai/leadership/](https://www.nova.ai/leadership/)
+[11:05:33.370] [INFO ] 
+[11:05:33.370] [INFO ] ── EVALUATION ──
+[11:05:33.371] [INFO ]   Ground truth  : Oliver Haines, NovaAI's VP of Product, joined the company in March 2022.
+[11:05:33.371] [INFO ]   Key facts     : ['Oliver Haines', 'VP of Product', 'March 2022']
+[11:05:33.371] [INFO ]   KFR           : 0.667 (2/3 facts found) ✗
+[11:05:33.371] [WARNING]   Missing facts : ['Oliver Haines']
+[11:05:33.371] [INFO ]   Exact match   : False
+[11:05:33.371] [INFO ]   Latency       : 4.04s
+[11:05:33.371] [INFO ] 
+[11:05:33.371] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:05:33.371] [INFO ] Question 43/45  [q43]  category=leadership  difficulty=hard
+[11:05:33.372] [INFO ]   Q: What is the FY2026 NRR target of the department led by NovaAI's VP of Customer Success?
+[11:05:33.372] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:05:33.372] [INFO ] [V0] Running pipeline...
+[11:05:36.849] [INFO ] 
+[11:05:36.849] [INFO ] ── RAW ANSWER ──
+[11:05:36.849] [INFO ]     The FY2026 NRR target for the department led by NovaAI's VP of Customer Success is **35%**. 
+    
+    This information was shared during the All Hands meeting on **February 15, 2024**, by the VP of Finance, Sarah Chen.
+[11:05:36.849] [INFO ] 
+[11:05:36.849] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:05:36.849] [INFO ]     The FY2026 NRR target for the department led by NovaAI's VP of Customer Success is **35%**. 
+    
+    This information was shared during the All Hands meeting on **February 15, 2024**, by the VP of Finance, Sarah Chen.
+[11:05:36.849] [INFO ] 
+[11:05:36.849] [INFO ] ── EVALUATION ──
+[11:05:36.849] [INFO ]   Ground truth  : Customer Success, the department led by VP of Customer Success Amara Diallo, has an FY2026 NRR target of 118%.
+[11:05:36.850] [INFO ]   Key facts     : ['Amara Diallo', 'Customer Success', '118%', 'NRR']
+[11:05:36.850] [INFO ]   KFR           : 0.500 (2/4 facts found) ✗
+[11:05:36.850] [WARNING]   Missing facts : ['Amara Diallo', '118%']
+[11:05:36.850] [INFO ]   Exact match   : False
+[11:05:36.850] [INFO ]   Latency       : 3.48s
+[11:05:36.850] [INFO ] 
+[11:05:36.850] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:05:36.850] [INFO ] Question 44/45  [q44]  category=products_pricing  difficulty=hard
+[11:05:36.850] [INFO ]   Q: Which product has a roadmap for real-time streaming via Kafka, and what type of product is it?
+[11:05:36.850] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:05:36.850] [INFO ] [V0] Running pipeline...
+[11:05:41.864] [INFO ] 
+[11:05:41.865] [INFO ] ── RAW ANSWER ──
+[11:05:41.865] [INFO ]     The product with a roadmap for real-time streaming via Kafka is **NovaStream**. 
+    
+    NovaStream is a **data streaming platform**. You can find details about their roadmap, including the Kafka integration, in their public documentation and potentially through contacting the NovaStream team directly. 
+    
+    You can find more information here: [https://nova.ai/products/novastream/](https://nova.ai/products/novastream/)
+[11:05:41.865] [INFO ] 
+[11:05:41.865] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:05:41.865] [INFO ]     The product with a roadmap for real-time streaming via Kafka is **NovaStream**. 
+    
+    NovaStream is a **data streaming platform**. You can find details about their roadmap, including the Kafka integration, in their public documentation and potentially through contacting the NovaStream team directly. 
+    
+    You can find more information here: [https://nova.ai/products/novastream/](https://nova.ai/products/novastream/)
+[11:05:41.866] [INFO ] 
+[11:05:41.866] [INFO ] ── EVALUATION ──
+[11:05:41.866] [INFO ]   Ground truth  : NovaLens has a roadmap for real-time streaming via Kafka, and it is a Predictive Analytics Engine.
+[11:05:41.866] [INFO ]   Key facts     : ['NovaLens', 'real-time streaming via Kafka', 'Predictive Analytics Engine']
+[11:05:41.866] [INFO ]   KFR           : 0.333 (1/3 facts found) ✗
+[11:05:41.866] [WARNING]   Missing facts : ['NovaLens', 'Predictive Analytics Engine']
+[11:05:41.866] [INFO ]   Exact match   : False
+[11:05:41.866] [INFO ]   Latency       : 5.01s
+[11:05:41.866] [INFO ] 
+[11:05:41.866] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:05:41.866] [INFO ] Question 45/45  [q45]  category=leadership  difficulty=hard
+[11:05:41.866] [INFO ]   Q: Who leads the Solutions Engineering team, and when did they join NovaAI?
+[11:05:41.866] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11:05:41.866] [INFO ] [V0] Running pipeline...
+[11:05:43.709] [INFO ] 
+[11:05:43.710] [INFO ] ── RAW ANSWER ──
+[11:05:43.710] [INFO ]     The Solutions Engineering team is led by **David Lee**. He joined NovaAI on **March 15, 2022**.
+[11:05:43.710] [INFO ] 
+[11:05:43.710] [INFO ] ── FINAL ANSWER (V0 — no verification) ──
+[11:05:43.710] [INFO ]     The Solutions Engineering team is led by **David Lee**. He joined NovaAI on **March 15, 2022**.
+[11:05:43.711] [INFO ] 
+[11:05:43.711] [INFO ] ── EVALUATION ──
+[11:05:43.711] [INFO ]   Ground truth  : Wei Zhang leads the Solutions Engineering team and joined NovaAI in April 2023.
+[11:05:43.711] [INFO ]   Key facts     : ['Wei Zhang', 'Solutions Engineering', 'April 2023']
+[11:05:43.711] [INFO ]   KFR           : 0.333 (1/3 facts found) ✗
+[11:05:43.711] [WARNING]   Missing facts : ['Wei Zhang', 'April 2023']
+[11:05:43.711] [INFO ]   Exact match   : False
+[11:05:43.711] [INFO ]   Latency       : 1.84s
+[11:05:43.711] [INFO ] 
+[11:05:43.711] [INFO ] ════════════════════════════════════════════════════════════════════════
+[11:05:43.711] [INFO ]   SUMMARY — V0
+[11:05:43.712] [INFO ] ════════════════════════════════════════════════════════════════════════
+[11:05:43.712] [INFO ]   Questions     : 45
+[11:05:43.712] [INFO ]   Correct       : 4/45  (8.9%)
+[11:05:43.712] [INFO ]   Avg KFR       : 0.348
+[11:05:43.712] [INFO ]   Avg latency   : 10.43s
+[11:05:43.712] [INFO ] 
+[11:05:43.712] [INFO ]   ID     Category             Diff     KFR     OK?   Hallucs  Latency
+[11:05:43.712] [INFO ]   --------------------------------------------------------------
+[11:05:43.712] [INFO ]   q01    company_overview     easy     0.333   ✗     N/A      3.5s
+[11:05:43.712] [INFO ]   q02    company_overview     medium   0.200   ✗     N/A      10.5s
+[11:05:43.712] [INFO ]   q03    company_overview     medium   0.667   ✗     N/A      7.5s
+[11:05:43.712] [INFO ]   q04    company_overview     easy     0.667   ✗     N/A      8.9s
+[11:05:43.712] [INFO ]   q05    leadership           easy     0.250   ✗     N/A      1.5s
+[11:05:43.712] [INFO ]   q06    leadership           medium   0.400   ✗     N/A      11.5s
+[11:05:43.712] [INFO ]   q07    leadership           medium   0.200   ✗     N/A      7.6s
+[11:05:43.712] [INFO ]   q08    leadership           medium   0.200   ✗     N/A      3.8s
+[11:05:43.712] [INFO ]   q09    products_pricing     easy     0.333   ✗     N/A      11.9s
+[11:05:43.712] [INFO ]   q10    products_pricing     easy     0.000   ✗     N/A      3.4s
+[11:05:43.712] [INFO ]   q11    products_pricing     medium   0.167   ✗     N/A      27.0s
+[11:05:43.713] [INFO ]   q12    products_pricing     easy     0.000   ✗     N/A      10.5s
+[11:05:43.713] [INFO ]   q13    products_pricing     medium   0.222   ✗     N/A      26.9s
+[11:05:43.713] [INFO ]   q14    products_pricing     easy     1.000   ✓     N/A      27.1s
+[11:05:43.713] [INFO ]   q15    products_pricing     medium   0.000   ✗     N/A      16.8s
+[11:05:43.713] [INFO ]   q16    products_pricing     easy     0.200   ✗     N/A      7.0s
+[11:05:43.713] [INFO ]   q17    products_pricing     easy     0.250   ✗     N/A      6.0s
+[11:05:43.713] [INFO ]   q18    hr_policy            medium   0.333   ✗     N/A      27.3s
+[11:05:43.713] [INFO ]   q19    hr_policy            medium   0.000   ✗     N/A      17.3s
+[11:05:43.713] [INFO ]   q20    hr_policy            medium   0.667   ✗     N/A      24.0s
+[11:05:43.713] [INFO ]   q21    hr_policy            hard     0.375   ✗     N/A      26.3s
+[11:05:43.713] [INFO ]   q22    hr_policy            medium   0.429   ✗     N/A      26.8s
+[11:05:43.713] [INFO ]   q23    benefits             easy     0.750   ✗     N/A      25.8s
+[11:05:43.713] [INFO ]   q24    benefits             easy     0.333   ✗     N/A      5.3s
+[11:05:43.713] [INFO ]   q25    benefits             medium   0.000   ✗     N/A      27.2s
+[11:05:43.713] [INFO ]   q26    leadership           easy     0.000   ✗     N/A      2.6s
+[11:05:43.713] [INFO ]   q27    benefits             easy     0.500   ✗     N/A      3.6s
+[11:05:43.713] [INFO ]   q28    company_overview     easy     0.000   ✗     N/A      2.3s
+[11:05:43.713] [INFO ]   q29    benefits             easy     0.000   ✗     N/A      3.3s
+[11:05:43.713] [INFO ]   q30    products_pricing     easy     1.000   ✓     N/A      3.4s
+[11:05:43.713] [INFO ]   q31    products_pricing     easy     0.500   ✗     N/A      4.2s
+[11:05:43.713] [INFO ]   q32    company_overview     easy     1.000   ✓     N/A      3.8s
+[11:05:43.714] [INFO ]   q33    benefits             easy     0.500   ✗     N/A      6.6s
+[11:05:43.714] [INFO ]   q34    benefits             easy     0.000   ✗     N/A      9.4s
+[11:05:43.714] [INFO ]   q35    benefits             easy     1.000   ✓     N/A      26.9s
+[11:05:43.714] [INFO ]   q36    products_pricing     hard     0.000   ✗     N/A      3.0s
+[11:05:43.714] [INFO ]   q37    leadership           hard     0.333   ✗     N/A      2.0s
+[11:05:43.714] [INFO ]   q38    leadership           hard     0.333   ✗     N/A      4.4s
+[11:05:43.714] [INFO ]   q39    leadership           hard     0.000   ✗     N/A      1.8s
+[11:05:43.714] [INFO ]   q40    leadership           hard     0.333   ✗     N/A      4.2s
+[11:05:43.714] [INFO ]   q41    leadership           hard     0.333   ✗     N/A      1.9s
+[11:05:43.714] [INFO ]   q42    leadership           hard     0.667   ✗     N/A      4.0s
+[11:05:43.714] [INFO ]   q43    leadership           hard     0.500   ✗     N/A      3.5s
+[11:05:43.714] [INFO ]   q44    products_pricing     hard     0.333   ✗     N/A      5.0s
+[11:05:43.714] [INFO ]   q45    leadership           hard     0.333   ✗     N/A      1.8s
+[11:05:43.714] [INFO ] 
+[11:05:43.717] [INFO ] Results saved → /Users/StartupUser/Documents/GitHub/kg-claim-verifier/results/google-gemma-3n-e4b-it/v0_results.json

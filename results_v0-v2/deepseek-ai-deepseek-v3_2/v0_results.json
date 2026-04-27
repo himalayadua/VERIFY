@@ -1,0 +1,198 @@
+{
+  "variant": "v0",
+  "model": "deepseek-ai/deepseek-v3.2",
+  "run_timestamp": "2026-04-22T05:37:35",
+  "aggregate_metrics": {
+    "total_questions": 5,
+    "accuracy": 0.0,
+    "avg_kfr": 0.317,
+    "hallucination_rate": null,
+    "avg_claims_per_answer": null,
+    "verdict_distribution": null,
+    "avg_latency_seconds": 99.54,
+    "median_latency_seconds": 31.8,
+    "p95_latency_seconds": 340.37,
+    "by_category": {
+      "company_overview": {
+        "accuracy": 0.0,
+        "avg_kfr": 0.333,
+        "n": 4
+      },
+      "leadership": {
+        "accuracy": 0.0,
+        "avg_kfr": 0.25,
+        "n": 1
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "accuracy": 0.0,
+        "avg_kfr": 0.417,
+        "n": 3
+      },
+      "medium": {
+        "accuracy": 0.0,
+        "avg_kfr": 0.167,
+        "n": 2
+      }
+    }
+  },
+  "questions": [
+    {
+      "id": "q01",
+      "category": "company_overview",
+      "difficulty": "easy",
+      "question": "When was NovaAI founded and who co-founded it?",
+      "ground_truth_answer": "NovaAI was founded in 2021 by Dr. Mara Chen and Lucas Ferreira.",
+      "key_facts": [
+        "2021",
+        "Dr. Mara Chen",
+        "Lucas Ferreira"
+      ],
+      "variant": "v0",
+      "raw_answer": "NovaAI was founded in **2021** and co-founded by **Maksym Tatariants** and **Dmytro Kniaziev**.",
+      "final_answer": "NovaAI was founded in **2021** and co-founded by **Maksym Tatariants** and **Dmytro Kniaziev**.",
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 31.798,
+      "exact_match": false,
+      "key_fact_recall": 0.333,
+      "is_correct": false,
+      "key_facts_found": 1,
+      "key_facts_total": 3,
+      "facts_missing": [
+        "Dr. Mara Chen",
+        "Lucas Ferreira"
+      ]
+    },
+    {
+      "id": "q02",
+      "category": "company_overview",
+      "difficulty": "medium",
+      "question": "What is NovaAI's current valuation, and how was it achieved?",
+      "ground_truth_answer": "NovaAI reached a $1.4B valuation through its Series C round, which was completed in November 2025 and led by Horizon Ventures. Total funding stands at $210M.",
+      "key_facts": [
+        "$1.4B",
+        "Series C",
+        "November 2025",
+        "Horizon Ventures",
+        "$210M"
+      ],
+      "variant": "v0",
+      "raw_answer": "Based on my current knowledge, I do not have access to NovaAI's precise, up-to-date valuation figures or the specific details of how it was achieved. Valuation is typically determined through private funding rounds, financial performance, and market analysis, and such information is often confidential or subject to change.\n\nFor the most accurate and current information regarding NovaAI's valuation, I recommend consulting official company announcements, recent press releases, or trusted financial news sources.",
+      "final_answer": "Based on my current knowledge, I do not have access to NovaAI's precise, up-to-date valuation figures or the specific details of how it was achieved. Valuation is typically determined through private funding rounds, financial performance, and market analysis, and such information is often confidential or subject to change.\n\nFor the most accurate and current information regarding NovaAI's valuation, I recommend consulting official company announcements, recent press releases, or trusted financial news sources.",
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 340.371,
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 5,
+      "facts_missing": [
+        "$1.4B",
+        "Series C",
+        "November 2025",
+        "Horizon Ventures",
+        "$210M"
+      ]
+    },
+    {
+      "id": "q03",
+      "category": "company_overview",
+      "difficulty": "medium",
+      "question": "How many employees does NovaAI have and where are its offices?",
+      "ground_truth_answer": "NovaAI has 312 full-time employees as of Q1 2026. The company has offices in San Francisco, London (opened 2023), and Singapore (opened 2024).",
+      "key_facts": [
+        "312",
+        "San Francisco",
+        "London",
+        "Singapore",
+        "2023",
+        "2024"
+      ],
+      "variant": "v0",
+      "raw_answer": "NovaAI currently has **approximately 120 employees**.  \n\nOur offices are located in:  \n- **San Francisco, California** (HQ)  \n- **Austin, Texas**  \n- **London, UK**  \n\nPlease note that these figures are based on the latest available internal data and may change over time. If you need the most up-to-date or official numbers, I recommend checking with HR or the internal company directory.",
+      "final_answer": "NovaAI currently has **approximately 120 employees**.  \n\nOur offices are located in:  \n- **San Francisco, California** (HQ)  \n- **Austin, Texas**  \n- **London, UK**  \n\nPlease note that these figures are based on the latest available internal data and may change over time. If you need the most up-to-date or official numbers, I recommend checking with HR or the internal company directory.",
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 28.812,
+      "exact_match": false,
+      "key_fact_recall": 0.333,
+      "is_correct": false,
+      "key_facts_found": 2,
+      "key_facts_total": 6,
+      "facts_missing": [
+        "312",
+        "Singapore",
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "id": "q04",
+      "category": "company_overview",
+      "difficulty": "easy",
+      "question": "What are NovaAI's primary market verticals?",
+      "ground_truth_answer": "NovaAI's primary market verticals are financial services, healthcare, and logistics.",
+      "key_facts": [
+        "financial services",
+        "healthcare",
+        "logistics"
+      ],
+      "variant": "v0",
+      "raw_answer": "Based on internal documentation, NovaAI's primary market verticals are:\n\n1. **Financial Services & Banking** – Including fraud detection, algorithmic trading, and automated customer service.\n2. **Healthcare & Life Sciences** – Focused on medical imaging diagnostics, drug discovery, and patient data analysis.\n3. **Retail & E-commerce** – For personalized recommendations, inventory optimization, and customer sentiment analysis.\n4. **Manufacturing & Industrial** – Covering predictive maintenance, quality control, and supply chain optimization.\n5. **Public Sector & Smart Cities** – Including traffic management, public safety monitoring, and energy grid optimization.\n\nThese verticals were formally established in the 2023 strategic roadmap and reflect NovaAI's focus on high-compliance, high-impact industries where our enterprise AI solutions deliver measurable ROI.",
+      "final_answer": "Based on internal documentation, NovaAI's primary market verticals are:\n\n1. **Financial Services & Banking** – Including fraud detection, algorithmic trading, and automated customer service.\n2. **Healthcare & Life Sciences** – Focused on medical imaging diagnostics, drug discovery, and patient data analysis.\n3. **Retail & E-commerce** – For personalized recommendations, inventory optimization, and customer sentiment analysis.\n4. **Manufacturing & Industrial** – Covering predictive maintenance, quality control, and supply chain optimization.\n5. **Public Sector & Smart Cities** – Including traffic management, public safety monitoring, and energy grid optimization.\n\nThese verticals were formally established in the 2023 strategic roadmap and reflect NovaAI's focus on high-compliance, high-impact industries where our enterprise AI solutions deliver measurable ROI.",
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 86.235,
+      "exact_match": false,
+      "key_fact_recall": 0.667,
+      "is_correct": false,
+      "key_facts_found": 2,
+      "key_facts_total": 3,
+      "facts_missing": [
+        "logistics"
+      ]
+    },
+    {
+      "id": "q05",
+      "category": "leadership",
+      "difficulty": "easy",
+      "question": "Who is the CEO of NovaAI and when did she join the company?",
+      "ground_truth_answer": "Dr. Mara Chen is the CEO and co-founder of NovaAI. She joined in January 2021 when the company was founded and is based in San Francisco.",
+      "key_facts": [
+        "Dr. Mara Chen",
+        "CEO",
+        "January 2021",
+        "San Francisco"
+      ],
+      "variant": "v0",
+      "raw_answer": "The CEO of NovaAI is **Dr. Anya Petrova**. She joined the company on **March 15, 2022**.",
+      "final_answer": "The CEO of NovaAI is **Dr. Anya Petrova**. She joined the company on **March 15, 2022**.",
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 10.503,
+      "exact_match": false,
+      "key_fact_recall": 0.25,
+      "is_correct": false,
+      "key_facts_found": 1,
+      "key_facts_total": 4,
+      "facts_missing": [
+        "Dr. Mara Chen",
+        "January 2021",
+        "San Francisco"
+      ]
+    }
+  ]
+}

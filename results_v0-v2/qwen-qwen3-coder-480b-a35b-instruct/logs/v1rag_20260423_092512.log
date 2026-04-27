@@ -1,0 +1,2790 @@
+[09:35:15.113] [INFO ] ════════════════════════════════════════════════════════════════════════
+[09:35:15.114] [INFO ]   KG-BACKED CLAIM VERIFIER — EXPERIMENT RUN
+[09:35:15.114] [INFO ] ════════════════════════════════════════════════════════════════════════
+[09:35:15.114] [INFO ]   Model     : qwen/qwen3-coder-480b-a35b-instruct
+[09:35:15.114] [INFO ]   Variant   : V1RAG
+[09:35:15.114] [INFO ]   Questions : 45
+[09:35:15.114] [INFO ]   KG triples: 262
+[09:35:15.114] [INFO ]   Started   : 2026-04-23 09:35:15
+[09:35:15.114] [INFO ]   Log file  : /Users/StartupUser/Documents/GitHub/kg-claim-verifier/results/qwen-qwen3-coder-480b-a35b-instruct/logs/v1rag_20260423_092512.log
+[09:35:15.114] [INFO ] 
+[09:35:15.114] [INFO ] ════════════════════════════════════════════════════════════════════════
+[09:35:15.114] [INFO ]   VARIANT: V1RAG  |  45 questions  |  model: qwen/qwen3-coder-480b-a35b-instruct
+[09:35:15.114] [INFO ] ════════════════════════════════════════════════════════════════════════
+[09:35:15.114] [INFO ] Pipeline : V1RAGPipeline
+[09:35:15.114] [INFO ] 
+[09:35:15.114] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:35:15.114] [INFO ] Question 1/45  [q01]  category=company_overview  difficulty=easy
+[09:35:15.114] [INFO ]   Q: When was NovaAI founded and who co-founded it?
+[09:35:15.114] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:35:15.114] [INFO ] [V1RAG] Running pipeline...
+[09:35:15.114] [DEBUG] [ENTITY_LINKER] Lookup  claim="When was NovaAI founded and who co-founded it?"  method=llm
+[09:35:15.115] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "When was NovaAI founded and who co-founded it?"
+[09:35:15.115] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When was NovaAI founded and who co-founded it?"
+[09:35:17.617] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When was NovaAI founded and who co-founded it?"
+[09:35:21.283] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When was NovaAI founded and who co-founded it?"
+[09:35:22.898] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.78s):
+    [ 92]  NovaAI | co_founded_by | Dr. Mara Chen
+    [ 92]  NovaAI | co_founded_by | Lucas Ferreira
+    [ 78]  NovaAI | founded_in_year | 2021
+    [ 70]  NovaAI | founded_in_location | San Francisco, California
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+    [ 55]  NovaAI | valuation | $1.4B
+[09:35:30.269] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:35:30.273] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:35:30.274] [INFO ] Question 2/45  [q02]  category=company_overview  difficulty=medium
+[09:35:30.274] [INFO ]   Q: What is NovaAI's current valuation, and how was it achieved?
+[09:35:30.274] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:35:30.274] [INFO ] [V1RAG] Running pipeline...
+[09:35:30.274] [DEBUG] [ENTITY_LINKER] Lookup  claim="What is NovaAI's current valuation, and how was it achieved?"  method=llm
+[09:35:30.275] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What is NovaAI's current valuation, and how was it achieved?"
+[09:35:30.275] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's current valuation, and how was it achieved?"
+[09:35:32.773] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's current valuation, and how was it achieved?"
+[09:35:36.331] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's current valuation, and how was it achieved?"
+[09:35:37.699] [DEBUG] [ENTITY_LINKER] Found 7 triple(s) (7.42s):
+    [100]  NovaAI | valuation | $1.4B
+    [ 93]  NovaAI | valuation_achieved_via | Series C round
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+[09:35:45.232] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:35:45.234] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:35:45.234] [INFO ] Question 3/45  [q03]  category=company_overview  difficulty=medium
+[09:35:45.234] [INFO ]   Q: How many employees does NovaAI have and where are its offices?
+[09:35:45.235] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:35:45.235] [INFO ] [V1RAG] Running pipeline...
+[09:35:45.235] [DEBUG] [ENTITY_LINKER] Lookup  claim="How many employees does NovaAI have and where are its offices?"  method=llm
+[09:35:45.235] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "How many employees does NovaAI have and where are its offices?"
+[09:35:45.235] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "How many employees does NovaAI have and where are its offices?"
+[09:35:47.893] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "How many employees does NovaAI have and where are its offices?"
+[09:35:51.262] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "How many employees does NovaAI have and where are its offices?"
+[09:35:52.834] [DEBUG] [ENTITY_LINKER] Found 7 triple(s) (7.60s):
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+    [ 55]  NovaAI | valuation | $1.4B
+    [ 55]  NovaAI | required_in_office_days | Tuesday and Thursday
+[09:36:00.344] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:36:00.347] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:36:00.348] [INFO ] Question 4/45  [q04]  category=company_overview  difficulty=easy
+[09:36:00.348] [INFO ]   Q: What are NovaAI's primary market verticals?
+[09:36:00.348] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:36:00.348] [INFO ] [V1RAG] Running pipeline...
+[09:36:00.348] [DEBUG] [ENTITY_LINKER] Lookup  claim="What are NovaAI's primary market verticals?"  method=llm
+[09:36:00.348] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What are NovaAI's primary market verticals?"
+[09:36:00.348] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What are NovaAI's primary market verticals?"
+[09:36:02.872] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What are NovaAI's primary market verticals?"
+[09:36:06.314] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What are NovaAI's primary market verticals?"
+[09:36:07.662] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.31s):
+    [ 76]  NovaAI | primary_vertical | financial services
+    [ 76]  NovaAI | primary_vertical | healthcare
+    [ 76]  NovaAI | primary_vertical | logistics
+    [ 65]  NovaAI | primary_cloud_provider | AWS
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+    [ 59]  NovaAI | parental_leave_applies_to | all parents regardless of gender
+[09:36:15.150] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:36:15.153] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:36:15.153] [INFO ] Question 5/45  [q05]  category=leadership  difficulty=easy
+[09:36:15.153] [INFO ]   Q: Who is the CEO of NovaAI and when did she join the company?
+[09:36:15.153] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:36:15.153] [INFO ] [V1RAG] Running pipeline...
+[09:36:15.154] [DEBUG] [ENTITY_LINKER] Lookup  claim="Who is the CEO of NovaAI and when did she join the company?"  method=llm
+[09:36:15.154] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Who is the CEO of NovaAI and when did she join the company?"
+[09:36:15.154] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is the CEO of NovaAI and when did she join the company?"
+[09:36:17.782] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is the CEO of NovaAI and when did she join the company?"
+[09:36:21.385] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is the CEO of NovaAI and when did she join the company?"
+[09:36:22.872] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.72s):
+    [ 83]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 62]  NovaAI | vp_of_product | Oliver Haines
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+    [ 59]  NovaPilot | is_flagship_product_of | NovaAI
+    [ 58]  NovaAI | vp_of_marketing | Rachel Huang
+    [ 55]  NovaAI | valuation | $1.4B
+    [ 55]  NovaAI | vp_of_engineering | Sofia Andersson
+[09:36:30.376] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:36:30.379] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:36:30.379] [INFO ] Question 6/45  [q06]  category=leadership  difficulty=medium
+[09:36:30.379] [INFO ]   Q: Who leads the Engineering department and what are its sub-teams?
+[09:36:30.379] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:36:30.379] [INFO ] [V1RAG] Running pipeline...
+[09:36:30.379] [DEBUG] [ENTITY_LINKER] Lookup  claim="Who leads the Engineering department and what are its sub-teams?"  method=llm
+[09:36:30.380] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Who leads the Engineering department and what are its sub-teams?"
+[09:36:30.380] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who leads the Engineering department and what are its sub-teams?"
+[09:36:32.897] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who leads the Engineering department and what are its sub-teams?"
+[09:36:36.569] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who leads the Engineering department and what are its sub-teams?"
+[09:36:38.055] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.68s):
+    [100]  Sofia Andersson | department | Engineering
+    [ 77]  Engineering | has_sub_team | Platform Infrastructure
+    [ 77]  Engineering | has_sub_team | ML Systems
+    [ 77]  Engineering | has_sub_team | Product Engineering
+    [ 77]  Engineering | has_sub_team | Security Engineering
+    [ 77]  Dominique Leblanc | department | Sales
+    [ 71]  Oliver Haines | department | Product
+    [ 69]  Engineering | headcount | 118 engineers (as of Q1 2026)
+    [ 67]  Rachel Huang | department | Marketing
+    [ 65]  Sofia Andersson | title | VP of Engineering
+[09:36:45.502] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:36:45.504] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:36:45.504] [INFO ] Question 7/45  [q07]  category=leadership  difficulty=medium
+[09:36:45.504] [INFO ]   Q: Who is NovaAI's General Counsel and what is their background?
+[09:36:45.504] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:36:45.504] [INFO ] [V1RAG] Running pipeline...
+[09:36:45.504] [DEBUG] [ENTITY_LINKER] Lookup  claim="Who is NovaAI's General Counsel and what is their background?"  method=llm
+[09:36:45.505] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Who is NovaAI's General Counsel and what is their background?"
+[09:36:45.505] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is NovaAI's General Counsel and what is their background?"
+[09:36:48.043] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is NovaAI's General Counsel and what is their background?"
+[09:36:51.597] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is NovaAI's General Counsel and what is their background?"
+[09:36:53.201] [DEBUG] [ENTITY_LINKER] Found 7 triple(s) (7.70s):
+    [ 83]  Derek Shin | title | General Counsel
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+    [ 55]  NovaAI | valuation | $1.4B
+[09:37:01.168] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:37:01.174] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:37:01.174] [INFO ] Question 8/45  [q08]  category=leadership  difficulty=medium
+[09:37:01.174] [INFO ]   Q: What is Marcus Webb's role, location, and FY2026 quota?
+[09:37:01.174] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:37:01.174] [INFO ] [V1RAG] Running pipeline...
+[09:37:01.174] [DEBUG] [ENTITY_LINKER] Lookup  claim="What is Marcus Webb's role, location, and FY2026 quota?"  method=llm
+[09:37:01.175] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What is Marcus Webb's role, location, and FY2026 quota?"
+[09:37:01.175] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is Marcus Webb's role, location, and FY2026 quota?"
+[09:37:03.689] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is Marcus Webb's role, location, and FY2026 quota?"
+[09:37:07.135] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is Marcus Webb's role, location, and FY2026 quota?"
+[09:37:08.549] [DEBUG] [ENTITY_LINKER] Found 6 triple(s) (7.37s):
+    [100]  Marcus Webb | fy2026_quota | $18M
+    [ 89]  Tanya Osei | fy2026_quota | $6M
+    [ 76]  Marcus Webb | office | New York (remote)
+    [ 69]  Enterprise Sales | team_lead | Marcus Webb
+    [ 67]  Marcus Webb | start_date | January 2024
+    [ 56]  Marcus Webb | work_arrangement | approved fully remote
+[09:37:16.187] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:37:16.189] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:37:16.189] [INFO ] Question 9/45  [q09]  category=products_pricing  difficulty=easy
+[09:37:16.189] [INFO ]   Q: What is the price of the NovaPilot Starter plan and what does it include?
+[09:37:16.189] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:37:16.189] [INFO ] [V1RAG] Running pipeline...
+[09:37:16.190] [DEBUG] [ENTITY_LINKER] Lookup  claim="What is the price of the NovaPilot Starter plan and what does it include?"  method=llm
+[09:37:16.190] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What is the price of the NovaPilot Starter plan and what does it include?"
+[09:37:16.190] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the price of the NovaPilot Starter plan and what does it include?"
+[09:37:18.543] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the price of the NovaPilot Starter plan and what does it include?"
+[09:37:22.092] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the price of the NovaPilot Starter plan and what does it include?"
+[09:37:23.645] [DEBUG] [ENTITY_LINKER] Found 8 triple(s) (7.45s):
+    [100]  NovaPilot Starter | price | $2,500/month
+    [ 81]  NovaPilot Growth | price | $8,000/month
+    [ 76]  NovaPilot Starter | user_limit | 10 users
+    [ 67]  NovaPilot | pm_owner | Fatima Al-Rashid
+    [ 64]  NovaPilot | is_flagship_product_of | NovaAI
+    [ 64]  NovaPilot Enterprise | price_range | $30,000–$120,000/month
+    [ 60]  NovaPilot | launched_in | Q3 2022
+    [ 57]  NovaPilot Starter | automation_runs_per_month | 50,000
+[09:37:30.858] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:37:30.861] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:37:30.861] [INFO ] Question 10/45  [q10]  category=products_pricing  difficulty=easy
+[09:37:30.861] [INFO ]   Q: What is the price of the NovaPilot Growth plan?
+[09:37:30.861] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:37:30.861] [INFO ] [V1RAG] Running pipeline...
+[09:37:30.861] [DEBUG] [ENTITY_LINKER] Lookup  claim="What is the price of the NovaPilot Growth plan?"  method=llm
+[09:37:30.862] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What is the price of the NovaPilot Growth plan?"
+[09:37:30.862] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the price of the NovaPilot Growth plan?"
+[09:37:33.448] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the price of the NovaPilot Growth plan?"
+[09:37:37.036] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the price of the NovaPilot Growth plan?"
+[09:37:38.464] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.60s):
+    [100]  NovaPilot Growth | price | $8,000/month
+    [ 79]  NovaPilot Starter | price | $2,500/month
+    [ 74]  NovaPilot Growth | user_limit | 50 users
+    [ 67]  NovaPilot | pm_owner | Fatima Al-Rashid
+    [ 65]  NovaPilot | is_flagship_product_of | NovaAI
+    [ 65]  NovaPilot Growth | includes_feature | audit logs
+    [ 64]  NovaPilot Enterprise | price_range | $30,000–$120,000/month
+    [ 60]  NovaPilot | launched_in | Q3 2022
+    [ 60]  NovaPilot Growth | automation_runs_per_month | 500,000
+    [ 56]  NovaPilot | integrates_with | Salesforce
+[09:37:45.874] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:37:45.876] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:37:45.876] [INFO ] Question 11/45  [q11]  category=products_pricing  difficulty=medium
+[09:37:45.876] [INFO ]   Q: What features does NovaPilot Enterprise include and what is its price range?
+[09:37:45.876] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:37:45.876] [INFO ] [V1RAG] Running pipeline...
+[09:37:45.876] [DEBUG] [ENTITY_LINKER] Lookup  claim="What features does NovaPilot Enterprise include and what is its price range?"  method=llm
+[09:37:45.877] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What features does NovaPilot Enterprise include and what is its price range?"
+[09:37:45.877] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What features does NovaPilot Enterprise include and what is its price range?"
+[09:37:48.295] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What features does NovaPilot Enterprise include and what is its price range?"
+[09:37:51.707] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What features does NovaPilot Enterprise include and what is its price range?"
+[09:37:53.173] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.30s):
+    [100]  NovaPilot Enterprise | price_range | $30,000–$120,000/month
+    [ 81]  NovaPilot Growth | price | $8,000/month
+    [ 79]  NovaPilot Starter | price | $2,500/month
+    [ 78]  NovaPilot Enterprise | sla_uptime | 99.95%
+    [ 70]  NovaPilot Enterprise | includes_feature | unlimited users
+    [ 70]  NovaPilot Enterprise | includes_feature | dedicated CSM
+    [ 70]  NovaPilot Enterprise | includes_feature | private cloud deployment (AWS or Azure)
+    [ 70]  NovaPilot Enterprise | includes_feature | HIPAA-compliant data handling
+    [ 67]  NovaPilot | pm_owner | Fatima Al-Rashid
+    [ 66]  NovaLens Enterprise | includes_feature | unlimited connectors
+[09:38:00.712] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:38:00.714] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:38:00.715] [INFO ] Question 12/45  [q12]  category=products_pricing  difficulty=easy
+[09:38:00.715] [INFO ]   Q: When was NovaPilot launched and what is it?
+[09:38:00.715] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:38:00.715] [INFO ] [V1RAG] Running pipeline...
+[09:38:00.715] [DEBUG] [ENTITY_LINKER] Lookup  claim="When was NovaPilot launched and what is it?"  method=llm
+[09:38:00.716] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "When was NovaPilot launched and what is it?"
+[09:38:00.716] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When was NovaPilot launched and what is it?"
+[09:38:03.390] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When was NovaPilot launched and what is it?"
+[09:38:06.814] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When was NovaPilot launched and what is it?"
+[09:38:08.328] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.61s):
+    [ 92]  NovaPilot | launched_in | Q3 2022
+    [ 67]  NovaPilot | pm_owner | Fatima Al-Rashid
+    [ 59]  NovaLens | launched_in | Q1 2023
+    [ 59]  NovaGuard | launched_in | Q4 2023
+    [ 58]  NovaPilot Growth | price | $8,000/month
+    [ 57]  NovaPilot | integrates_with | Salesforce
+    [ 57]  NovaPilot | integrates_with | SAP
+    [ 57]  NovaPilot | integrates_with | ServiceNow
+    [ 56]  NovaPilot Starter | price | $2,500/month
+    [ 55]  NovaPilot | is_flagship_product_of | NovaAI
+[09:38:15.799] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:38:15.801] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:38:15.801] [INFO ] Question 13/45  [q13]  category=products_pricing  difficulty=medium
+[09:38:15.801] [INFO ]   Q: Compare the NovaLens Professional and Business pricing tiers.
+[09:38:15.801] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:38:15.801] [INFO ] [V1RAG] Running pipeline...
+[09:38:15.801] [DEBUG] [ENTITY_LINKER] Lookup  claim="Compare the NovaLens Professional and Business pricing tiers."  method=llm
+[09:38:15.802] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Compare the NovaLens Professional and Business pricing tiers."
+[09:38:15.802] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Compare the NovaLens Professional and Business pricing tiers."
+[09:38:18.257] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Compare the NovaLens Professional and Business pricing tiers."
+[09:38:21.747] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Compare the NovaLens Professional and Business pricing tiers."
+[09:38:23.266] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.46s):
+    [ 88]  NovaLens Professional | price | $4,000/month
+    [ 85]  NovaLens Business | price | $12,000/month
+    [ 79]  NovaLens Professional | user_limit | 5 users
+    [ 76]  NovaLens Business | user_limit | 20 users
+    [ 72]  NovaLens Professional | data_connectors | 3
+    [ 68]  NovaLens Business | data_connectors | 15
+    [ 67]  NovaLens Business | includes_feature | custom dashboards
+    [ 64]  NovaLens Professional | model_refresh_frequency | monthly
+    [ 64]  NovaLens | pm_owner | James Okafor
+    [ 59]  NovaLens Business | model_refresh_frequency | weekly
+[09:38:30.719] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:38:30.721] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:38:30.722] [INFO ] Question 14/45  [q14]  category=products_pricing  difficulty=easy
+[09:38:30.722] [INFO ]   Q: What data connectors does NovaLens support?
+[09:38:30.722] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:38:30.722] [INFO ] [V1RAG] Running pipeline...
+[09:38:30.722] [DEBUG] [ENTITY_LINKER] Lookup  claim="What data connectors does NovaLens support?"  method=llm
+[09:38:30.722] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What data connectors does NovaLens support?"
+[09:38:30.722] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What data connectors does NovaLens support?"
+[09:38:33.196] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What data connectors does NovaLens support?"
+[09:38:36.726] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What data connectors does NovaLens support?"
+[09:38:38.192] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.47s):
+    [ 94]  NovaLens Professional | data_connectors | 3
+    [ 91]  NovaLens Business | data_connectors | 15
+    [ 80]  NovaLens | supports_connector | Databricks
+    [ 75]  NovaLens | supports_connector | Snowflake
+    [ 75]  NovaLens | supports_connector | BigQuery
+    [ 75]  NovaLens | supports_connector | Redshift
+    [ 75]  NovaLens | supports_connector | PostgreSQL
+    [ 64]  NovaLens | pm_owner | James Okafor
+    [ 62]  NovaLens Enterprise | includes_feature | unlimited connectors
+    [ 58]  NovaLens Enterprise | includes_feature | bring-your-own-model support
+[09:38:45.832] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:38:45.836] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:38:45.836] [INFO ] Question 15/45  [q15]  category=products_pricing  difficulty=medium
+[09:38:45.836] [INFO ]   Q: What is the price and model monitoring limit for NovaGuard Advanced?
+[09:38:45.836] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:38:45.837] [INFO ] [V1RAG] Running pipeline...
+[09:38:45.837] [DEBUG] [ENTITY_LINKER] Lookup  claim="What is the price and model monitoring limit for NovaGuard Advanced?"  method=llm
+[09:38:45.837] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What is the price and model monitoring limit for NovaGuard Advanced?"
+[09:38:45.838] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the price and model monitoring limit for NovaGuard Advanced?"
+[09:38:48.282] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the price and model monitoring limit for NovaGuard Advanced?"
+[09:38:51.797] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the price and model monitoring limit for NovaGuard Advanced?"
+[09:38:53.428] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.59s):
+    [100]  NovaGuard Advanced | price | $9,500/month
+    [ 77]  NovaGuard Standard | price | $3,000/month
+    [ 74]  NovaGuard Advanced | monitored_models_limit | 20
+    [ 69]  NovaGuard Advanced | purchase_motion | self-serve
+    [ 68]  NovaGuard Advanced | report_frequency | daily
+    [ 68]  NovaGuard Advanced | includes_feature | Slack/PagerDuty integration
+    [ 67]  NovaGuard | pm_owner | James Okafor
+    [ 62]  NovaGuard Standard | monitored_models_limit | 3
+    [ 60]  NovaGuard | launched_in | Q4 2023
+    [ 58]  NovaGuard | product_type | AI Security & Compliance Monitor
+[09:39:00.915] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:39:00.917] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:39:00.917] [INFO ] Question 16/45  [q16]  category=products_pricing  difficulty=easy
+[09:39:00.917] [INFO ]   Q: What is the price and model limit for NovaGuard Standard?
+[09:39:00.917] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:39:00.917] [INFO ] [V1RAG] Running pipeline...
+[09:39:00.917] [DEBUG] [ENTITY_LINKER] Lookup  claim="What is the price and model limit for NovaGuard Standard?"  method=llm
+[09:39:00.917] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What is the price and model limit for NovaGuard Standard?"
+[09:39:00.917] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the price and model limit for NovaGuard Standard?"
+[09:39:03.428] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the price and model limit for NovaGuard Standard?"
+[09:39:06.886] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the price and model limit for NovaGuard Standard?"
+[09:39:08.353] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.44s):
+    [100]  NovaGuard Standard | price | $3,000/month
+    [ 77]  NovaGuard Advanced | price | $9,500/month
+    [ 74]  NovaGuard Standard | monitored_models_limit | 3
+    [ 69]  NovaGuard Standard | purchase_motion | self-serve
+    [ 68]  NovaGuard Standard | report_frequency | weekly
+    [ 68]  NovaGuard Standard | includes_feature | email alerts
+    [ 67]  NovaGuard | pm_owner | James Okafor
+    [ 62]  NovaGuard Advanced | monitored_models_limit | 20
+    [ 60]  NovaGuard | launched_in | Q4 2023
+    [ 58]  NovaGuard | product_type | AI Security & Compliance Monitor
+[09:39:15.784] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:39:15.786] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:39:15.787] [INFO ] Question 17/45  [q17]  category=products_pricing  difficulty=easy
+[09:39:15.787] [INFO ]   Q: What license is NovaBridge released under and how many GitHub stars does it have?
+[09:39:15.787] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:39:15.787] [INFO ] [V1RAG] Running pipeline...
+[09:39:15.787] [DEBUG] [ENTITY_LINKER] Lookup  claim="What license is NovaBridge released under and how many GitHub stars does it have?"  method=llm
+[09:39:15.788] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What license is NovaBridge released under and how many GitHub stars does it have?"
+[09:39:15.788] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What license is NovaBridge released under and how many GitHub stars does it have?"
+[09:39:18.320] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What license is NovaBridge released under and how many GitHub stars does it have?"
+[09:39:21.729] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What license is NovaBridge released under and how many GitHub stars does it have?"
+[09:39:23.346] [DEBUG] [ENTITY_LINKER] Found 6 triple(s) (7.56s):
+    [100]  NovaBridge | license | Apache 2.0
+    [100]  NovaBridge | github_stars | 4,200+
+    [ 93]  NovaBridge | released_in | March 2024
+    [ 67]  NovaBridge Pro | price | $1,200/month
+    [ 65]  NovaBridge | base_price | free (open-source)
+    [ 59]  NovaBridge | maintained_by | Platform Infrastructure team
+[09:39:30.762] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:39:30.764] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:39:30.765] [INFO ] Question 18/45  [q18]  category=hr_policy  difficulty=medium
+[09:39:30.765] [INFO ]   Q: What is NovaAI's PTO policy?
+[09:39:30.765] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:39:30.765] [INFO ] [V1RAG] Running pipeline...
+[09:39:30.765] [DEBUG] [ENTITY_LINKER] Lookup  claim="What is NovaAI's PTO policy?"  method=llm
+[09:39:30.765] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What is NovaAI's PTO policy?"
+[09:39:30.765] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's PTO policy?"
+[09:39:33.166] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's PTO policy?"
+[09:39:36.753] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's PTO policy?"
+[09:39:38.190] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.42s):
+    [ 87]  NovaAI | pto_policy_type | flexible/unlimited
+    [ 63]  NovaAI | has_cto | Lucas Ferreira
+    [ 62]  NovaAI | pto_submission_system | Workday
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+    [ 59]  NovaAI | pto_minimum_per_year | 15 days
+    [ 57]  NovaPilot | is_flagship_product_of | NovaAI
+    [ 56]  NovaAI | vp_of_product | Oliver Haines
+[09:39:45.623] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:39:45.625] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:39:45.625] [INFO ] Question 19/45  [q19]  category=hr_policy  difficulty=medium
+[09:39:45.625] [INFO ]   Q: What are NovaAI's in-office requirements for San Francisco employees?
+[09:39:45.626] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:39:45.626] [INFO ] [V1RAG] Running pipeline...
+[09:39:45.626] [DEBUG] [ENTITY_LINKER] Lookup  claim="What are NovaAI's in-office requirements for San Francisco employees?"  method=llm
+[09:39:45.626] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What are NovaAI's in-office requirements for San Francisco employees?"
+[09:39:45.626] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What are NovaAI's in-office requirements for San Francisco employees?"
+[09:39:48.075] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What are NovaAI's in-office requirements for San Francisco employees?"
+[09:39:51.578] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What are NovaAI's in-office requirements for San Francisco employees?"
+[09:39:53.000] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.37s):
+    [100]  Dr. Mara Chen | office | San Francisco
+    [100]  Lucas Ferreira | office | San Francisco
+    [100]  Priya Nambiar | office | San Francisco
+    [100]  James Whitfield | office | San Francisco
+    [100]  Sofia Andersson | office | San Francisco
+    [100]  Dominique Leblanc | office | San Francisco
+    [100]  Amara Diallo | office | San Francisco
+    [100]  Rachel Huang | office | San Francisco
+    [100]  Claudia Torres | office | San Francisco
+    [100]  Derek Shin | office | San Francisco
+[09:40:00.216] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:40:00.218] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:40:00.218] [INFO ] Question 20/45  [q20]  category=hr_policy  difficulty=medium
+[09:40:00.218] [INFO ]   Q: What are the expense limits for hotel stays and how must expenses be submitted?
+[09:40:00.218] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:40:00.218] [INFO ] [V1RAG] Running pipeline...
+[09:40:00.218] [DEBUG] [ENTITY_LINKER] Lookup  claim="What are the expense limits for hotel stays and how must expenses be submitted?"  method=llm
+[09:40:00.218] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What are the expense limits for hotel stays and how must expenses be submitted?"
+[09:40:00.218] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What are the expense limits for hotel stays and how must expenses be submitted?"
+[09:40:02.702] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What are the expense limits for hotel stays and how must expenses be submitted?"
+[09:40:06.082] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What are the expense limits for hotel stays and how must expenses be submitted?"
+[09:40:07.651] [DEBUG] [ENTITY_LINKER] No triples found (7.43s)
+[09:40:14.956] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:40:14.964] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:40:14.964] [INFO ] Question 21/45  [q21]  category=hr_policy  difficulty=hard
+[09:40:14.964] [INFO ]   Q: How does NovaAI's performance review cycle work?
+[09:40:14.964] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:40:14.964] [INFO ] [V1RAG] Running pipeline...
+[09:40:14.964] [DEBUG] [ENTITY_LINKER] Lookup  claim="How does NovaAI's performance review cycle work?"  method=llm
+[09:40:14.965] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "How does NovaAI's performance review cycle work?"
+[09:40:14.965] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "How does NovaAI's performance review cycle work?"
+[09:40:17.487] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "How does NovaAI's performance review cycle work?"
+[09:40:20.896] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "How does NovaAI's performance review cycle work?"
+[09:40:22.291] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.33s):
+    [100]  NovaAI | performance_review_cycle | bi-annual
+    [ 79]  NovaAI | work_model | hybrid-first
+    [ 73]  NovaAI | performance_rating_scale | 5-point
+    [ 71]  NovaAI | performance_rating_level_1 | Exceptional
+    [ 71]  NovaAI | performance_rating_level_2 | Exceeds Expectations
+    [ 71]  NovaAI | performance_rating_level_3 | Meets Expectations
+    [ 71]  NovaAI | performance_rating_level_4 | Developing
+    [ 71]  NovaAI | performance_rating_level_5 | Unsatisfactory
+    [ 64]  NovaAI | standard_promotion_cycle | annual review only
+    [ 63]  NovaAI | off_cycle_promotion_requires | CEO approval (VP+ level)
+[09:40:29.489] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:40:29.490] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:40:29.490] [INFO ] Question 22/45  [q22]  category=hr_policy  difficulty=medium
+[09:40:29.490] [INFO ]   Q: What is NovaAI's airfare booking policy?
+[09:40:29.490] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:40:29.490] [INFO ] [V1RAG] Running pipeline...
+[09:40:29.490] [DEBUG] [ENTITY_LINKER] Lookup  claim="What is NovaAI's airfare booking policy?"  method=llm
+[09:40:29.491] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What is NovaAI's airfare booking policy?"
+[09:40:29.491] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's airfare booking policy?"
+[09:40:32.000] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's airfare booking policy?"
+[09:40:35.576] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's airfare booking policy?"
+[09:40:37.106] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.62s):
+    [ 83]  NovaAI | airfare_booking_platform | TravelPerk
+    [ 74]  NovaAI | pto_policy_type | flexible/unlimited
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+    [ 56]  NovaPilot | is_flagship_product_of | NovaAI
+    [ 55]  NovaAI | has_office_in | San Francisco
+    [ 55]  NovaAI | valuation | $1.4B
+[09:40:44.501] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:40:44.504] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:40:44.504] [INFO ] Question 23/45  [q23]  category=benefits  difficulty=easy
+[09:40:44.504] [INFO ]   Q: What is NovaAI's parental leave policy?
+[09:40:44.504] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:40:44.504] [INFO ] [V1RAG] Running pipeline...
+[09:40:44.504] [DEBUG] [ENTITY_LINKER] Lookup  claim="What is NovaAI's parental leave policy?"  method=llm
+[09:40:44.504] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What is NovaAI's parental leave policy?"
+[09:40:44.505] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's parental leave policy?"
+[09:40:46.911] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's parental leave policy?"
+[09:40:50.476] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's parental leave policy?"
+[09:40:51.913] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.41s):
+    [ 82]  NovaAI | parental_leave_duration | 16 weeks fully paid
+    [ 80]  NovaAI | parental_leave_applies_to | all parents regardless of gender
+    [ 74]  NovaAI | pto_policy_type | flexible/unlimited
+    [ 65]  NovaAI | sick_leave_tracked | separately from PTO
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+    [ 56]  NovaAI | has_office_in | San Francisco
+[09:40:59.283] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:40:59.286] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:40:59.286] [INFO ] Question 24/45  [q24]  category=benefits  difficulty=easy
+[09:40:59.286] [INFO ]   Q: What is the 401(k) match at NovaAI and when are employees eligible?
+[09:40:59.286] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:40:59.286] [INFO ] [V1RAG] Running pipeline...
+[09:40:59.286] [DEBUG] [ENTITY_LINKER] Lookup  claim="What is the 401(k) match at NovaAI and when are employees eligible?"  method=llm
+[09:40:59.286] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What is the 401(k) match at NovaAI and when are employees eligible?"
+[09:40:59.286] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the 401(k) match at NovaAI and when are employees eligible?"
+[09:41:01.771] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the 401(k) match at NovaAI and when are employees eligible?"
+[09:41:05.324] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the 401(k) match at NovaAI and when are employees eligible?"
+[09:41:06.830] [DEBUG] [ENTITY_LINKER] Found 9 triple(s) (7.54s):
+    [ 65]  NovaAI | 401k_match_percent | 4% of salary (dollar-for-dollar)
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+    [ 56]  NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105
+    [ 55]  NovaAI | valuation | $1.4B
+    [ 55]  NovaAI | 401k_eligibility_waiting_period | 6 months
+[09:41:14.174] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:41:14.175] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:41:14.176] [INFO ] Question 25/45  [q25]  category=benefits  difficulty=medium
+[09:41:14.176] [INFO ]   Q: What is the annual L&D budget per employee and how does it work?
+[09:41:14.176] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:41:14.176] [INFO ] [V1RAG] Running pipeline...
+[09:41:14.176] [DEBUG] [ENTITY_LINKER] Lookup  claim="What is the annual L&D budget per employee and how does it work?"  method=llm
+[09:41:14.177] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What is the annual L&D budget per employee and how does it work?"
+[09:41:14.177] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the annual L&D budget per employee and how does it work?"
+[09:41:16.713] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the annual L&D budget per employee and how does it work?"
+[09:41:20.129] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the annual L&D budget per employee and how does it work?"
+[09:41:21.565] [DEBUG] [ENTITY_LINKER] Found 2 triple(s) (7.39s):
+    [ 85]  NovaAI | annual_LD_budget_per_employee | $2,500
+    [ 55]  NovaAI | employee_count | 312 full-time employees (as of Q1 2026)
+[09:41:28.865] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:41:28.869] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:41:28.869] [INFO ] Question 26/45  [q26]  category=leadership  difficulty=easy
+[09:41:28.869] [INFO ]   Q: Who is NovaAI's Chief Operating Officer?
+[09:41:28.869] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:41:28.869] [INFO ] [V1RAG] Running pipeline...
+[09:41:28.869] [DEBUG] [ENTITY_LINKER] Lookup  claim="Who is NovaAI's Chief Operating Officer?"  method=llm
+[09:41:28.870] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Who is NovaAI's Chief Operating Officer?"
+[09:41:28.870] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is NovaAI's Chief Operating Officer?"
+[09:41:31.415] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is NovaAI's Chief Operating Officer?"
+[09:41:34.903] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is NovaAI's Chief Operating Officer?"
+[09:41:36.463] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.59s):
+    [ 68]  NovaAI | head_of_people_operations | Claudia Torres
+    [ 64]  NovaAI | has_office_in | Singapore
+    [ 61]  NovaAI | singapore_office_opened | 2024
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | vp_of_product | Oliver Haines
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+    [ 60]  NovaAI | performance_rating_scale | 5-point
+[09:41:43.973] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:41:43.976] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:41:43.976] [INFO ] Question 27/45  [q27]  category=benefits  difficulty=easy
+[09:41:43.976] [INFO ]   Q: Which platform does NovaAI use for equity management?
+[09:41:43.976] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:41:43.976] [INFO ] [V1RAG] Running pipeline...
+[09:41:43.976] [DEBUG] [ENTITY_LINKER] Lookup  claim="Which platform does NovaAI use for equity management?"  method=llm
+[09:41:43.977] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Which platform does NovaAI use for equity management?"
+[09:41:43.977] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Which platform does NovaAI use for equity management?"
+[09:41:46.540] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Which platform does NovaAI use for equity management?"
+[09:41:50.157] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Which platform does NovaAI use for equity management?"
+[09:41:50.991] [DEBUG] [V1RAG] LLM DONE  (0.83s)
+  Response:
+    {"entities": ["NovaAI"], "relations": ["uses for equity management"], "values": []}
+[09:41:50.991] [DEBUG] [V1RAG] LLM JSON DONE  (7.01s)
+  Parsed : {
+  "entities": [
+    "NovaAI"
+  ],
+  "relations": [
+    "uses for equity management"
+  ],
+  "values": []
+}
+[09:41:50.994] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.02s):
+    [121]  NovaAI | equity_management_platform | Carta
+    [118]  NovaAI | equity_vesting_schedule | 4 years with 1-year cliff
+    [100]  NovaAI | founded_in_year | 2021
+    [100]  NovaAI | co_founded_by | Dr. Mara Chen
+    [100]  NovaAI | co_founded_by | Lucas Ferreira
+    [100]  NovaAI | founded_in_location | San Francisco, California
+    [100]  NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105
+    [100]  NovaAI | employee_count | 312 full-time employees (as of Q1 2026)
+    [100]  NovaAI | has_office_in | San Francisco
+    [100]  NovaAI | has_office_in | London
+[09:41:58.217] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:41:58.220] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:41:58.220] [INFO ] Question 28/45  [q28]  category=company_overview  difficulty=easy
+[09:41:58.220] [INFO ]   Q: What is the street address of NovaAI's headquarters?
+[09:41:58.220] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:41:58.220] [INFO ] [V1RAG] Running pipeline...
+[09:41:58.220] [DEBUG] [ENTITY_LINKER] Lookup  claim="What is the street address of NovaAI's headquarters?"  method=llm
+[09:41:58.221] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What is the street address of NovaAI's headquarters?"
+[09:41:58.221] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the street address of NovaAI's headquarters?"
+[09:42:00.598] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the street address of NovaAI's headquarters?"
+[09:42:04.273] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the street address of NovaAI's headquarters?"
+[09:42:05.761] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.54s):
+    [ 62]  NovaAI | vp_of_product | Oliver Haines
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+    [ 59]  NovaPilot | is_flagship_product_of | NovaAI
+    [ 58]  NovaAI | vp_of_marketing | Rachel Huang
+    [ 57]  NovaAI | headquartered_at | 450 Market Street, Suite 1200, San Francisco, CA 94105
+    [ 55]  NovaAI | valuation | $1.4B
+[09:42:13.280] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:42:13.283] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:42:13.284] [INFO ] Question 29/45  [q29]  category=benefits  difficulty=easy
+[09:42:13.284] [INFO ]   Q: Which provider administers NovaAI's health benefits?
+[09:42:13.284] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:42:13.284] [INFO ] [V1RAG] Running pipeline...
+[09:42:13.284] [DEBUG] [ENTITY_LINKER] Lookup  claim="Which provider administers NovaAI's health benefits?"  method=llm
+[09:42:13.284] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Which provider administers NovaAI's health benefits?"
+[09:42:13.284] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Which provider administers NovaAI's health benefits?"
+[09:42:15.818] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Which provider administers NovaAI's health benefits?"
+[09:42:19.303] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Which provider administers NovaAI's health benefits?"
+[09:42:21.072] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.79s):
+    [100]  NovaAI | health_benefits_provider | Anthem Blue Cross
+    [ 83]  NovaAI | health_benefits_coverage | medical, dental, and vision
+    [ 68]  NovaAI | primary_cloud_provider | AWS
+    [ 65]  NovaAI | secondary_cloud_provider | GCP
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+    [ 55]  NovaAI | valuation | $1.4B
+[09:42:28.390] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:42:28.392] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:42:28.392] [INFO ] Question 30/45  [q30]  category=products_pricing  difficulty=easy
+[09:42:28.392] [INFO ]   Q: When was NovaGuard launched?
+[09:42:28.392] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:42:28.392] [INFO ] [V1RAG] Running pipeline...
+[09:42:28.392] [DEBUG] [ENTITY_LINKER] Lookup  claim="When was NovaGuard launched?"  method=llm
+[09:42:28.393] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "When was NovaGuard launched?"
+[09:42:28.393] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When was NovaGuard launched?"
+[09:42:30.993] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When was NovaGuard launched?"
+[09:42:34.400] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When was NovaGuard launched?"
+[09:42:35.731] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.34s):
+    [ 92]  NovaGuard | launched_in | Q4 2023
+    [ 67]  NovaGuard Advanced | price | $9,500/month
+    [ 67]  NovaGuard | pm_owner | James Okafor
+    [ 64]  NovaLens | launched_in | Q1 2023
+    [ 62]  NovaGuard Advanced | purchase_motion | self-serve
+    [ 61]  NovaGuard Advanced | includes_feature | Slack/PagerDuty integration
+    [ 59]  NovaPilot | launched_in | Q3 2022
+    [ 59]  NovaGuard Standard | price | $3,000/month
+    [ 59]  NovaGuard Advanced | report_frequency | daily
+    [ 58]  NovaGuard | product_type | AI Security & Compliance Monitor
+[09:42:43.222] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:42:43.224] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:42:43.225] [INFO ] Question 31/45  [q31]  category=products_pricing  difficulty=easy
+[09:42:43.225] [INFO ]   Q: When was NovaBridge released?
+[09:42:43.225] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:42:43.225] [INFO ] [V1RAG] Running pipeline...
+[09:42:43.225] [DEBUG] [ENTITY_LINKER] Lookup  claim="When was NovaBridge released?"  method=llm
+[09:42:43.225] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "When was NovaBridge released?"
+[09:42:43.225] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When was NovaBridge released?"
+[09:42:45.646] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When was NovaBridge released?"
+[09:42:49.219] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When was NovaBridge released?"
+[09:42:50.730] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.51s):
+    [ 93]  NovaBridge | released_in | March 2024
+    [ 71]  NovaBridge | license | Apache 2.0
+    [ 67]  NovaBridge Pro | price | $1,200/month
+    [ 65]  NovaBridge | base_price | free (open-source)
+    [ 61]  NovaBridge | github_stars | 4,200+
+    [ 60]  NovaBridge | developer_relations_lead | Priya Osei
+    [ 59]  NovaBridge | maintained_by | Platform Infrastructure team
+    [ 58]  NovaBridge Pro | includes_feature | SLA-backed support
+    [ 58]  NovaBridge Pro | includes_feature | private forums
+    [ 58]  NovaBridge Pro | includes_feature | quarterly architecture reviews
+[09:42:58.076] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:42:58.079] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:42:58.079] [INFO ] Question 32/45  [q32]  category=company_overview  difficulty=easy
+[09:42:58.079] [INFO ]   Q: Which cloud provider does NovaAI use as its secondary provider?
+[09:42:58.079] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:42:58.079] [INFO ] [V1RAG] Running pipeline...
+[09:42:58.079] [DEBUG] [ENTITY_LINKER] Lookup  claim="Which cloud provider does NovaAI use as its secondary provider?"  method=llm
+[09:42:58.080] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Which cloud provider does NovaAI use as its secondary provider?"
+[09:42:58.080] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Which cloud provider does NovaAI use as its secondary provider?"
+[09:43:00.471] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Which cloud provider does NovaAI use as its secondary provider?"
+[09:43:04.017] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Which cloud provider does NovaAI use as its secondary provider?"
+[09:43:05.416] [DEBUG] [ENTITY_LINKER] Found 9 triple(s) (7.34s):
+    [100]  NovaAI | secondary_cloud_provider | GCP
+    [ 84]  NovaAI | primary_cloud_provider | AWS
+    [ 65]  NovaAI | health_benefits_provider | Anthem Blue Cross
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+    [ 55]  NovaAI | valuation | $1.4B
+[09:43:13.006] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:43:13.008] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:43:13.008] [INFO ] Question 33/45  [q33]  category=benefits  difficulty=easy
+[09:43:13.008] [INFO ]   Q: What is NovaAI's on-call compensation rate?
+[09:43:13.008] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:43:13.008] [INFO ] [V1RAG] Running pipeline...
+[09:43:13.008] [DEBUG] [ENTITY_LINKER] Lookup  claim="What is NovaAI's on-call compensation rate?"  method=llm
+[09:43:13.009] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What is NovaAI's on-call compensation rate?"
+[09:43:13.009] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's on-call compensation rate?"
+[09:43:15.621] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's on-call compensation rate?"
+[09:43:19.185] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's on-call compensation rate?"
+[09:43:20.749] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.74s):
+    [100]  NovaAI | on_call_compensation | $300/week additional
+    [ 72]  NovaAI | on_call_managed_by | Platform Infrastructure team
+    [ 61]  NovaAI | mid_year_review_calibration_month | July
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+    [ 58]  NovaAI | annual_review_calibration_month | January
+    [ 58]  NovaAI | new_hire_review_designation | Too New to Rate (within 90 days of cycle)
+[09:43:28.417] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:43:28.420] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:43:28.420] [INFO ] Question 34/45  [q34]  category=benefits  difficulty=easy
+[09:43:28.420] [INFO ]   Q: What is NovaAI's home office equipment stipend for new hires?
+[09:43:28.420] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:43:28.420] [INFO ] [V1RAG] Running pipeline...
+[09:43:28.420] [DEBUG] [ENTITY_LINKER] Lookup  claim="What is NovaAI's home office equipment stipend for new hires?"  method=llm
+[09:43:28.421] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What is NovaAI's home office equipment stipend for new hires?"
+[09:43:28.421] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's home office equipment stipend for new hires?"
+[09:43:31.055] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's home office equipment stipend for new hires?"
+[09:43:34.488] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is NovaAI's home office equipment stipend for new hires?"
+[09:43:35.861] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.44s):
+    [100]  NovaAI | home_office_equipment_stipend | $1,500 one-time upon hire
+    [ 79]  NovaAI | has_office_in | San Francisco
+    [ 79]  NovaAI | has_office_in | London
+    [ 79]  NovaAI | has_office_in | Singapore
+    [ 76]  NovaAI | equipment_stipend_refresh_period | every 3 years
+    [ 65]  NovaAI | london_office_opened | 2023
+    [ 63]  Oliver Haines | office | London
+    [ 63]  Lena Park | office | London
+    [ 63]  James Okafor | office | London
+    [ 62]  Marcus Webb | office | New York (remote)
+[09:43:42.971] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:43:42.973] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:43:42.973] [INFO ] Question 35/45  [q35]  category=benefits  difficulty=easy
+[09:43:42.973] [INFO ]   Q: What health benefits coverage does NovaAI provide?
+[09:43:42.973] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:43:42.973] [INFO ] [V1RAG] Running pipeline...
+[09:43:42.973] [DEBUG] [ENTITY_LINKER] Lookup  claim="What health benefits coverage does NovaAI provide?"  method=llm
+[09:43:42.974] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What health benefits coverage does NovaAI provide?"
+[09:43:42.975] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What health benefits coverage does NovaAI provide?"
+[09:43:45.460] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What health benefits coverage does NovaAI provide?"
+[09:43:48.791] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What health benefits coverage does NovaAI provide?"
+[09:43:50.242] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.27s):
+    [100]  NovaAI | health_benefits_coverage | medical, dental, and vision
+    [ 83]  NovaAI | health_benefits_provider | Anthem Blue Cross
+    [ 62]  NovaAI | dependent_premium_coverage_percent | 70%
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+    [ 58]  NovaAI | employee_premium_coverage_percent | 90%
+    [ 55]  NovaAI | valuation | $1.4B
+[09:43:57.598] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:43:57.600] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:43:57.600] [INFO ] Question 36/45  [q36]  category=products_pricing  difficulty=hard
+[09:43:57.600] [INFO ]   Q: Who is the PM owner of NovaAI's flagship product?
+[09:43:57.600] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:43:57.600] [INFO ] [V1RAG] Running pipeline...
+[09:43:57.600] [DEBUG] [ENTITY_LINKER] Lookup  claim="Who is the PM owner of NovaAI's flagship product?"  method=llm
+[09:43:57.601] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Who is the PM owner of NovaAI's flagship product?"
+[09:43:57.601] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is the PM owner of NovaAI's flagship product?"
+[09:44:00.203] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is the PM owner of NovaAI's flagship product?"
+[09:44:03.615] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is the PM owner of NovaAI's flagship product?"
+[09:44:05.133] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.53s):
+    [100]  NovaPilot | is_flagship_product_of | NovaAI
+    [ 92]  NovaAI | vp_of_product | Oliver Haines
+    [ 69]  Oliver Haines | title | VP of Product
+    [ 64]  NovaLens | pm_owner | James Okafor
+    [ 62]  NovaPilot | pm_owner | Fatima Al-Rashid
+    [ 62]  NovaGuard | pm_owner | James Okafor
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+[09:44:12.418] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:44:12.419] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:44:12.419] [INFO ] Question 37/45  [q37]  category=leadership  difficulty=hard
+[09:44:12.420] [INFO ]   Q: Who leads the UX/Design team, and when did they join NovaAI?
+[09:44:12.420] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:44:12.420] [INFO ] [V1RAG] Running pipeline...
+[09:44:12.420] [DEBUG] [ENTITY_LINKER] Lookup  claim="Who leads the UX/Design team, and when did they join NovaAI?"  method=llm
+[09:44:12.420] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Who leads the UX/Design team, and when did they join NovaAI?"
+[09:44:12.420] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who leads the UX/Design team, and when did they join NovaAI?"
+[09:44:14.976] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who leads the UX/Design team, and when did they join NovaAI?"
+[09:44:18.500] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who leads the UX/Design team, and when did they join NovaAI?"
+[09:44:20.033] [DEBUG] [ENTITY_LINKER] Found 9 triple(s) (7.61s):
+    [ 72]  UX/Design | led_by | Lena Park
+    [ 69]  UX/Design | part_of | Product department
+    [ 69]  Design team | headcount | 6 designers
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+    [ 55]  NovaAI | valuation | $1.4B
+[09:44:27.296] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:44:27.300] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:44:27.300] [INFO ] Question 38/45  [q38]  category=leadership  difficulty=hard
+[09:44:27.300] [INFO ]   Q: Who leads the SMB Sales team, and what is their FY2026 quota?
+[09:44:27.300] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:44:27.300] [INFO ] [V1RAG] Running pipeline...
+[09:44:27.300] [DEBUG] [ENTITY_LINKER] Lookup  claim="Who leads the SMB Sales team, and what is their FY2026 quota?"  method=llm
+[09:44:27.301] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Who leads the SMB Sales team, and what is their FY2026 quota?"
+[09:44:27.301] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who leads the SMB Sales team, and what is their FY2026 quota?"
+[09:44:29.765] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who leads the SMB Sales team, and what is their FY2026 quota?"
+[09:44:33.364] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who leads the SMB Sales team, and what is their FY2026 quota?"
+[09:44:34.891] [DEBUG] [ENTITY_LINKER] Found 4 triple(s) (7.59s):
+    [ 89]  Tanya Osei | fy2026_quota | $6M
+    [ 86]  Marcus Webb | fy2026_quota | $18M
+    [ 85]  SMB Sales | team_lead | Tanya Osei
+    [ 56]  Enterprise Sales | team_lead | Marcus Webb
+[09:44:42.481] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:44:42.484] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:44:42.484] [INFO ] Question 39/45  [q39]  category=leadership  difficulty=hard
+[09:44:42.484] [INFO ]   Q: When did NovaAI's Chief Revenue Officer join the company?
+[09:44:42.484] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:44:42.484] [INFO ] [V1RAG] Running pipeline...
+[09:44:42.484] [DEBUG] [ENTITY_LINKER] Lookup  claim="When did NovaAI's Chief Revenue Officer join the company?"  method=llm
+[09:44:42.485] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "When did NovaAI's Chief Revenue Officer join the company?"
+[09:44:42.485] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When did NovaAI's Chief Revenue Officer join the company?"
+[09:44:44.963] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When did NovaAI's Chief Revenue Officer join the company?"
+[09:44:48.617] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When did NovaAI's Chief Revenue Officer join the company?"
+[09:44:50.151] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.67s):
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+    [ 58]  NovaAI | required_in_office_days | Tuesday and Thursday
+    [ 56]  NovaAI | has_office_in | San Francisco
+    [ 55]  NovaAI | london_office_opened | 2023
+    [ 55]  NovaAI | valuation | $1.4B
+    [ 55]  NovaAI | paid_company_holidays_per_year | 11
+[09:44:57.533] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:44:57.536] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:44:57.536] [INFO ] Question 40/45  [q40]  category=leadership  difficulty=hard
+[09:44:57.536] [INFO ]   Q: When did NovaAI's VP of Marketing join the company?
+[09:44:57.536] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:44:57.536] [INFO ] [V1RAG] Running pipeline...
+[09:44:57.536] [DEBUG] [ENTITY_LINKER] Lookup  claim="When did NovaAI's VP of Marketing join the company?"  method=llm
+[09:44:57.537] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "When did NovaAI's VP of Marketing join the company?"
+[09:44:57.537] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When did NovaAI's VP of Marketing join the company?"
+[09:45:00.039] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When did NovaAI's VP of Marketing join the company?"
+[09:45:03.598] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When did NovaAI's VP of Marketing join the company?"
+[09:45:04.977] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.44s):
+    [100]  NovaAI | vp_of_marketing | Rachel Huang
+    [ 83]  Rachel Huang | title | VP of Marketing
+    [ 75]  NovaAI | vp_of_product | Oliver Haines
+    [ 73]  Priya Osei | reports_to | VP of Marketing
+    [ 67]  NovaAI | vp_of_engineering | Sofia Andersson
+    [ 67]  Marketing | has_team | Demand Generation
+    [ 67]  Marketing | has_team | Content & Brand
+    [ 67]  Marketing | has_team | Product Marketing
+    [ 62]  Rachel Huang | department | Marketing
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+[09:45:12.429] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:45:12.431] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:45:12.431] [INFO ] Question 41/45  [q41]  category=leadership  difficulty=hard
+[09:45:12.431] [INFO ]   Q: Who is NovaBridge's Developer Relations Lead, and to whom do they report?
+[09:45:12.431] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:45:12.431] [INFO ] [V1RAG] Running pipeline...
+[09:45:12.431] [DEBUG] [ENTITY_LINKER] Lookup  claim="Who is NovaBridge's Developer Relations Lead, and to whom do they report?"  method=llm
+[09:45:12.432] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Who is NovaBridge's Developer Relations Lead, and to whom do they report?"
+[09:45:12.432] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is NovaBridge's Developer Relations Lead, and to whom do they report?"
+[09:45:14.766] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is NovaBridge's Developer Relations Lead, and to whom do they report?"
+[09:45:18.283] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who is NovaBridge's Developer Relations Lead, and to whom do they report?"
+[09:45:19.810] [DEBUG] [ENTITY_LINKER] Found 8 triple(s) (7.38s):
+    [100]  NovaBridge | developer_relations_lead | Priya Osei
+    [ 89]  Priya Osei | title | Developer Relations Lead
+    [ 71]  NovaBridge | license | Apache 2.0
+    [ 67]  NovaBridge Pro | price | $1,200/month
+    [ 65]  NovaBridge | base_price | free (open-source)
+    [ 62]  NovaBridge | released_in | March 2024
+    [ 61]  NovaBridge | github_stars | 4,200+
+    [ 59]  NovaBridge | maintained_by | Platform Infrastructure team
+[09:45:27.171] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:45:27.175] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:45:27.175] [INFO ] Question 42/45  [q42]  category=leadership  difficulty=hard
+[09:45:27.175] [INFO ]   Q: When did NovaAI's VP of Product join the company?
+[09:45:27.175] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:45:27.175] [INFO ] [V1RAG] Running pipeline...
+[09:45:27.175] [DEBUG] [ENTITY_LINKER] Lookup  claim="When did NovaAI's VP of Product join the company?"  method=llm
+[09:45:27.176] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "When did NovaAI's VP of Product join the company?"
+[09:45:27.176] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When did NovaAI's VP of Product join the company?"
+[09:45:29.551] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When did NovaAI's VP of Product join the company?"
+[09:45:33.148] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "When did NovaAI's VP of Product join the company?"
+[09:45:34.679] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.50s):
+    [100]  NovaAI | vp_of_product | Oliver Haines
+    [ 81]  Oliver Haines | title | VP of Product
+    [ 74]  NovaPilot | is_flagship_product_of | NovaAI
+    [ 71]  NovaAI | vp_of_marketing | Rachel Huang
+    [ 67]  NovaAI | vp_of_engineering | Sofia Andersson
+    [ 60]  NovaAI | has_ceo | Dr. Mara Chen
+    [ 60]  NovaAI | has_cto | Lucas Ferreira
+    [ 60]  NovaAI | has_cfo | Priya Nambiar
+    [ 60]  NovaAI | has_coo | James Whitfield
+    [ 60]  NovaAI | has_cro | Dominique Leblanc
+[09:45:41.840] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:45:41.842] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:45:41.843] [INFO ] Question 43/45  [q43]  category=leadership  difficulty=hard
+[09:45:41.843] [INFO ]   Q: What is the FY2026 NRR target of the department led by NovaAI's VP of Customer Success?
+[09:45:41.843] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:45:41.843] [INFO ] [V1RAG] Running pipeline...
+[09:45:41.844] [DEBUG] [ENTITY_LINKER] Lookup  claim="What is the FY2026 NRR target of the department led by NovaAI's VP of Customer Success?"  method=llm
+[09:45:41.844] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "What is the FY2026 NRR target of the department led by NovaAI's VP of Customer Success?"
+[09:45:41.844] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the FY2026 NRR target of the department led by NovaAI's VP of Customer Success?"
+[09:45:44.298] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the FY2026 NRR target of the department led by NovaAI's VP of Customer Success?"
+[09:45:47.909] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "What is the FY2026 NRR target of the department led by NovaAI's VP of Customer Success?"
+[09:45:49.251] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.41s):
+    [100]  NovaAI | vp_of_customer_success | Amara Diallo
+    [100]  Customer Success | fy2026_nrr_target | 118%
+    [100]  Amara Diallo | department | Customer Success
+    [ 88]  Amara Diallo | title | VP of Customer Success
+    [ 77]  Dominique Leblanc | department | Sales
+    [ 76]  Customer Success | csm_count | 22
+    [ 75]  NovaAI | vp_of_product | Oliver Haines
+    [ 74]  NovaAI | series_c_led_by | Horizon Ventures
+    [ 71]  NovaAI | vp_of_marketing | Rachel Huang
+    [ 71]  Oliver Haines | department | Product
+[09:45:56.682] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:45:56.686] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:45:56.687] [INFO ] Question 44/45  [q44]  category=products_pricing  difficulty=hard
+[09:45:56.687] [INFO ]   Q: Which product has a roadmap for real-time streaming via Kafka, and what type of product is it?
+[09:45:56.687] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:45:56.687] [INFO ] [V1RAG] Running pipeline...
+[09:45:56.687] [DEBUG] [ENTITY_LINKER] Lookup  claim="Which product has a roadmap for real-time streaming via Kafka, and what type of product is it?"  method=llm
+[09:45:56.688] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Which product has a roadmap for real-time streaming via Kafka, and what type of product is it?"
+[09:45:56.688] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Which product has a roadmap for real-time streaming via Kafka, and what type of product is it?"
+[09:45:59.129] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Which product has a roadmap for real-time streaming via Kafka, and what type of product is it?"
+[09:46:01.693] [DEBUG] [V1RAG] LLM DONE  (2.56s)
+  Response:
+    {
+      "entities": ["Kafka"],
+      "relations": ["has roadmap for", "is type of product"],
+      "values": []
+    }
+[09:46:01.694] [DEBUG] [V1RAG] LLM JSON DONE  (5.01s)
+  Parsed : {
+  "entities": [
+    "Kafka"
+  ],
+  "relations": [
+    "has roadmap for",
+    "is type of product"
+  ],
+  "values": []
+}
+[09:46:01.703] [DEBUG] [ENTITY_LINKER] Found 9 triple(s) (5.02s):
+    [ 73]  NovaLens | product_type | Predictive Analytics Engine
+    [ 71]  NovaLens | planned_feature_H2_2026 | real-time streaming via Kafka
+    [ 71]  NovaGuard | product_type | AI Security & Compliance Monitor
+    [ 69]  Oliver Haines | title | VP of Product
+    [ 67]  NovaAI | vp_of_product | Oliver Haines
+    [ 62]  NovaPilot | is_flagship_product_of | NovaAI
+    [ 59]  Marketing | has_team | Product Marketing
+    [ 56]  UX/Design | part_of | Product department
+    [ 56]  Oliver Haines | department | Product
+[09:46:09.065] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:46:09.068] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:46:09.069] [INFO ] Question 45/45  [q45]  category=leadership  difficulty=hard
+[09:46:09.069] [INFO ]   Q: Who leads the Solutions Engineering team, and when did they join NovaAI?
+[09:46:09.069] [INFO ] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[09:46:09.069] [INFO ] [V1RAG] Running pipeline...
+[09:46:09.069] [DEBUG] [ENTITY_LINKER] Lookup  claim="Who leads the Solutions Engineering team, and when did they join NovaAI?"  method=llm
+[09:46:09.070] [DEBUG] [V1RAG] LLM JSON CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its o
+  ... [+689 chars truncated]
+  User   : Claim: "Who leads the Solutions Engineering team, and when did they join NovaAI?"
+[09:46:09.070] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who leads the Solutions Engineering team, and when did they join NovaAI?"
+[09:46:11.411] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who leads the Solutions Engineering team, and when did they join NovaAI?"
+[09:46:14.930] [DEBUG] [V1RAG] LLM CALL  model=qwen/qwen3-coder-480b-a35b-instruct
+  System : You are an information extraction assistant. Extract from the claim:
+  - entities:  all named entities (people, products, companies, teams)
+  - relations: short relation phrases (e.g. 'founded in', 'priced at')
+  - values:    concrete NUMERIC or DATE-LIKE values that a KG triple might store as its object. Only include:
+                 * numbers and counts (e.g. '2500', '15 days')
+                
+  ... [+589 chars truncated]
+  User   : Claim: "Who leads the Solutions Engineering team, and when did they join NovaAI?"
+[09:46:16.404] [DEBUG] [ENTITY_LINKER] Found 10 triple(s) (7.33s):
+    [ 91]  Solutions Engineering | team_lead | Wei Zhang
+    [ 86]  NovaAI | vp_of_engineering | Sofia Andersson
+    [ 81]  Solutions Engineering | headcount | 8 solutions engineers
+    [ 80]  Engineering | has_sub_team | Platform Infrastructure
+    [ 80]  Engineering | has_sub_team | ML Systems
+    [ 80]  Engineering | has_sub_team | Product Engineering
+    [ 80]  Engineering | has_sub_team | Security Engineering
+    [ 71]  Product Engineering | team_lead | Carlos Rivera
+    [ 70]  Security Engineering | team_lead | Ananya Bose
+    [ 69]  Engineering | headcount | 118 engineers (as of Q1 2026)
+[09:46:23.618] [ERROR] [V1RAG] Pipeline FAILED: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+Traceback (most recent call last):
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/run_experiments.py", line 469, in _run_variant
+    result: PipelineResult = pipeline.run(question)
+                             ~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/pipeline.py", line 173, in run
+    raw_answer = call_llm(question, model=self.model, system_prompt=system_prompt)
+  File "/Users/StartupUser/Documents/GitHub/kg-claim-verifier/src/llm_client.py", line 147, in call_llm
+    raise RuntimeError(f"call_llm failed after {retries} attempts for model '{model}'")
+RuntimeError: call_llm failed after 3 attempts for model 'qwen/qwen3-coder-480b-a35b-instruct'
+[09:46:23.620] [INFO ] ════════════════════════════════════════════════════════════════════════
+[09:46:23.620] [INFO ]   SUMMARY — V1RAG
+[09:46:23.620] [INFO ] ════════════════════════════════════════════════════════════════════════
+[09:46:23.620] [INFO ]   Questions     : 45
+[09:46:23.620] [INFO ]   Correct       : 0/45  (0.0%)
+[09:46:23.620] [INFO ]   Avg KFR       : 0.000
+[09:46:23.620] [INFO ]   Avg latency   : 0.00s
+[09:46:23.620] [INFO ] 
+[09:46:23.620] [INFO ]   ID     Category             Diff     KFR     OK?   Hallucs  Latency
+[09:46:23.620] [INFO ]   --------------------------------------------------------------
+[09:46:23.620] [INFO ]   q01    company_overview     easy     0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q02    company_overview     medium   0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q03    company_overview     medium   0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q04    company_overview     easy     0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q05    leadership           easy     0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q06    leadership           medium   0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q07    leadership           medium   0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q08    leadership           medium   0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q09    products_pricing     easy     0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q10    products_pricing     easy     0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q11    products_pricing     medium   0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q12    products_pricing     easy     0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q13    products_pricing     medium   0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q14    products_pricing     easy     0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q15    products_pricing     medium   0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q16    products_pricing     easy     0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q17    products_pricing     easy     0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q18    hr_policy            medium   0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q19    hr_policy            medium   0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q20    hr_policy            medium   0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q21    hr_policy            hard     0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q22    hr_policy            medium   0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q23    benefits             easy     0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q24    benefits             easy     0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q25    benefits             medium   0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q26    leadership           easy     0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q27    benefits             easy     0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q28    company_overview     easy     0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q29    benefits             easy     0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q30    products_pricing     easy     0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q31    products_pricing     easy     0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q32    company_overview     easy     0.000   ✗     N/A      0.0s
+[09:46:23.621] [INFO ]   q33    benefits             easy     0.000   ✗     N/A      0.0s
+[09:46:23.622] [INFO ]   q34    benefits             easy     0.000   ✗     N/A      0.0s
+[09:46:23.622] [INFO ]   q35    benefits             easy     0.000   ✗     N/A      0.0s
+[09:46:23.622] [INFO ]   q36    products_pricing     hard     0.000   ✗     N/A      0.0s
+[09:46:23.622] [INFO ]   q37    leadership           hard     0.000   ✗     N/A      0.0s
+[09:46:23.622] [INFO ]   q38    leadership           hard     0.000   ✗     N/A      0.0s
+[09:46:23.622] [INFO ]   q39    leadership           hard     0.000   ✗     N/A      0.0s
+[09:46:23.622] [INFO ]   q40    leadership           hard     0.000   ✗     N/A      0.0s
+[09:46:23.622] [INFO ]   q41    leadership           hard     0.000   ✗     N/A      0.0s
+[09:46:23.622] [INFO ]   q42    leadership           hard     0.000   ✗     N/A      0.0s
+[09:46:23.622] [INFO ]   q43    leadership           hard     0.000   ✗     N/A      0.0s
+[09:46:23.622] [INFO ]   q44    products_pricing     hard     0.000   ✗     N/A      0.0s
+[09:46:23.622] [INFO ]   q45    leadership           hard     0.000   ✗     N/A      0.0s
+[09:46:23.622] [INFO ] 
+[09:46:23.624] [INFO ] Results saved → /Users/StartupUser/Documents/GitHub/kg-claim-verifier/results/qwen-qwen3-coder-480b-a35b-instruct/v1rag_results.json

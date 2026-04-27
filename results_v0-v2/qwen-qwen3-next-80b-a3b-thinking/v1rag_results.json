@@ -1,0 +1,4617 @@
+{
+  "variant": "v1rag",
+  "model": "qwen/qwen3-next-80b-a3b-thinking",
+  "run_timestamp": "2026-04-23T05:04:36",
+  "aggregate_metrics": {
+    "total_questions": 45,
+    "accuracy": 0.111,
+    "avg_kfr": 0.153,
+    "hallucination_rate": 0.0,
+    "avg_claims_per_answer": 2.3,
+    "verdict_distribution": {
+      "SUPPORTED": 0.391,
+      "CONTRADICTED": 0.0,
+      "UNVERIFIABLE": 0.609
+    },
+    "avg_latency_seconds": 29.27,
+    "median_latency_seconds": 0.0,
+    "p95_latency_seconds": 169.08,
+    "by_category": {
+      "company_overview": {
+        "accuracy": 0.0,
+        "avg_kfr": 0.0,
+        "n": 6
+      },
+      "leadership": {
+        "accuracy": 0.077,
+        "avg_kfr": 0.108,
+        "n": 13
+      },
+      "products_pricing": {
+        "accuracy": 0.308,
+        "avg_kfr": 0.412,
+        "n": 13
+      },
+      "hr_policy": {
+        "accuracy": 0.0,
+        "avg_kfr": 0.029,
+        "n": 5
+      },
+      "benefits": {
+        "accuracy": 0.0,
+        "avg_kfr": 0.0,
+        "n": 8
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "accuracy": 0.143,
+        "avg_kfr": 0.179,
+        "n": 21
+      },
+      "medium": {
+        "accuracy": 0.154,
+        "avg_kfr": 0.243,
+        "n": 13
+      },
+      "hard": {
+        "accuracy": 0.0,
+        "avg_kfr": 0.0,
+        "n": 11
+      }
+    }
+  },
+  "questions": [
+    {
+      "id": "q01",
+      "category": "company_overview",
+      "difficulty": "easy",
+      "question": "When was NovaAI founded and who co-founded it?",
+      "ground_truth_answer": "NovaAI was founded in 2021 by Dr. Mara Chen and Lucas Ferreira.",
+      "key_facts": [
+        "2021",
+        "Dr. Mara Chen",
+        "Lucas Ferreira"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 3,
+      "facts_missing": [
+        "2021",
+        "Dr. Mara Chen",
+        "Lucas Ferreira"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q02",
+      "category": "company_overview",
+      "difficulty": "medium",
+      "question": "What is NovaAI's current valuation, and how was it achieved?",
+      "ground_truth_answer": "NovaAI reached a $1.4B valuation through its Series C round, which was completed in November 2025 and led by Horizon Ventures. Total funding stands at $210M.",
+      "key_facts": [
+        "$1.4B",
+        "Series C",
+        "November 2025",
+        "Horizon Ventures",
+        "$210M"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 5,
+      "facts_missing": [
+        "$1.4B",
+        "Series C",
+        "November 2025",
+        "Horizon Ventures",
+        "$210M"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q03",
+      "category": "company_overview",
+      "difficulty": "medium",
+      "question": "How many employees does NovaAI have and where are its offices?",
+      "ground_truth_answer": "NovaAI has 312 full-time employees as of Q1 2026. The company has offices in San Francisco, London (opened 2023), and Singapore (opened 2024).",
+      "key_facts": [
+        "312",
+        "San Francisco",
+        "London",
+        "Singapore",
+        "2023",
+        "2024"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 6,
+      "facts_missing": [
+        "312",
+        "San Francisco",
+        "London",
+        "Singapore",
+        "2023",
+        "2024"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q04",
+      "category": "company_overview",
+      "difficulty": "easy",
+      "question": "What are NovaAI's primary market verticals?",
+      "ground_truth_answer": "NovaAI's primary market verticals are financial services, healthcare, and logistics.",
+      "key_facts": [
+        "financial services",
+        "healthcare",
+        "logistics"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 3,
+      "facts_missing": [
+        "financial services",
+        "healthcare",
+        "logistics"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q05",
+      "category": "leadership",
+      "difficulty": "easy",
+      "question": "Who is the CEO of NovaAI and when did she join the company?",
+      "ground_truth_answer": "Dr. Mara Chen is the CEO and co-founder of NovaAI. She joined in January 2021 when the company was founded and is based in San Francisco.",
+      "key_facts": [
+        "Dr. Mara Chen",
+        "CEO",
+        "January 2021",
+        "San Francisco"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 4,
+      "facts_missing": [
+        "Dr. Mara Chen",
+        "CEO",
+        "January 2021",
+        "San Francisco"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q06",
+      "category": "leadership",
+      "difficulty": "medium",
+      "question": "Who leads the Engineering department and what are its sub-teams?",
+      "ground_truth_answer": "Sofia Andersson is the VP of Engineering. Engineering has four sub-teams: Platform Infrastructure (led by Raj Mehta), ML Systems (led by Dr. Yuki Tanaka), Product Engineering (led by Carlos Rivera), and Security Engineering (led by Ananya Bose).",
+      "key_facts": [
+        "Sofia Andersson",
+        "Platform Infrastructure",
+        "ML Systems",
+        "Product Engineering",
+        "Security Engineering"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 5,
+      "facts_missing": [
+        "Sofia Andersson",
+        "Platform Infrastructure",
+        "ML Systems",
+        "Product Engineering",
+        "Security Engineering"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q07",
+      "category": "leadership",
+      "difficulty": "medium",
+      "question": "Who is NovaAI's General Counsel and what is their background?",
+      "ground_truth_answer": "Derek Shin is NovaAI's General Counsel. He joined the company in-house in May 2023 and previously worked at Cooley LLP. Legal is also overseen by CFO Priya Nambiar.",
+      "key_facts": [
+        "Derek Shin",
+        "General Counsel",
+        "May 2023",
+        "Cooley LLP",
+        "Priya Nambiar"
+      ],
+      "variant": "v1rag",
+      "raw_answer": "Derek Shin is NovaAI's General Counsel. According to the verified facts, he joined NovaAI in 2023 and previously worked at Cooley LLP. No additional details about his background (e.g., specific roles at Cooley LLP or education) are provided in the knowledge base.",
+      "final_answer": "Derek Shin is NovaAI's General Counsel. According to the verified facts, he joined NovaAI in 2023 and previously worked at Cooley LLP. No additional details about his background (e.g., specific roles at Cooley LLP or education) are provided in the knowledge base.",
+      "claims": [
+        "Derek Shin is NovaAI's General Counsel",
+        "According to the verified facts, he joined NovaAI in 2023 and previously worked at Cooley LLP",
+        "No additional details about his background (e.g., specific roles at Cooley LLP or education) are provided in the knowledge base"
+      ],
+      "verification_results": [
+        {
+          "claim": "Derek Shin is NovaAI's General Counsel",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "Derek Shin",
+              "relation": "title",
+              "object": "General Counsel",
+              "score": 90
+            },
+            {
+              "subject": "Derek Shin",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 74
+            },
+            {
+              "subject": "Derek Shin",
+              "relation": "joined_NovaAI_inhouse",
+              "object": "2023",
+              "score": 71
+            },
+            {
+              "subject": "Derek Shin",
+              "relation": "start_date",
+              "object": "May 2023",
+              "score": 65
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_ceo",
+              "object": "Dr. Mara Chen",
+              "score": 60
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cto",
+              "object": "Lucas Ferreira",
+              "score": 60
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cfo",
+              "object": "Priya Nambiar",
+              "score": 60
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_coo",
+              "object": "James Whitfield",
+              "score": 60
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cro",
+              "object": "Dominique Leblanc",
+              "score": 60
+            },
+            {
+              "subject": "Derek Shin",
+              "relation": "previously_at",
+              "object": "Cooley LLP",
+              "score": 59
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "london_office_opened",
+              "object": "2023",
+              "score": 67
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "joined_NovaAI",
+              "object": "2023",
+              "score": 67
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "joined_NovaAI",
+              "object": "2022",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "also_oversees",
+              "object": "Legal",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "start_date",
+              "object": "February 2023",
+              "score": 100
+            },
+            {
+              "subject": "Dominique Leblanc",
+              "relation": "title",
+              "object": "CRO",
+              "score": 100
+            },
+            {
+              "subject": "Dominique Leblanc",
+              "relation": "department",
+              "object": "Sales",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_location",
+              "object": "San Francisco, California",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "headquartered_at",
+              "object": "450 Market Street, Suite 1200, San Francisco, CA 94105",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_office_in",
+              "object": "San Francisco",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            }
+          ],
+          "reasoning": "The triple 'Derek Shin | title | General Counsel' directly confirms the claim with no conflicting information."
+        },
+        {
+          "claim": "According to the verified facts, he joined NovaAI in 2023 and previously worked at Cooley LLP",
+          "verdict": "UNVERIFIABLE",
+          "confidence": 0.0,
+          "evidence_triples": [
+            {
+              "subject": "James Whitfield",
+              "relation": "joined_NovaAI",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "Derek Shin",
+              "relation": "previously_at",
+              "object": "Cooley LLP",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "joined_NovaAI",
+              "object": "2022",
+              "score": 84
+            },
+            {
+              "subject": "Derek Shin",
+              "relation": "joined_NovaAI_inhouse",
+              "object": "2023",
+              "score": 82
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_office_in",
+              "object": "San Francisco",
+              "score": 62
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_office_in",
+              "object": "London",
+              "score": 62
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_office_in",
+              "object": "Singapore",
+              "score": 62
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_ceo",
+              "object": "Dr. Mara Chen",
+              "score": 60
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cto",
+              "object": "Lucas Ferreira",
+              "score": 60
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cfo",
+              "object": "Priya Nambiar",
+              "score": 60
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "london_office_opened",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "singapore_office_opened",
+              "object": "2024",
+              "score": 100
+            },
+            {
+              "subject": "Raj Mehta",
+              "relation": "office",
+              "object": "Singapore",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "also_oversees",
+              "object": "Legal",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_coo",
+              "object": "James Whitfield",
+              "score": 100
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "start_date",
+              "object": "February 2023",
+              "score": 100
+            },
+            {
+              "subject": "Derek Shin",
+              "relation": "title",
+              "object": "General Counsel",
+              "score": 100
+            },
+            {
+              "subject": "Oliver Haines",
+              "relation": "office",
+              "object": "London",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_location",
+              "object": "San Francisco, California",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "headquartered_at",
+              "object": "450 Market Street, Suite 1200, San Francisco, CA 94105",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "launched_in",
+              "object": "Q3 2022",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "start_date",
+              "object": "April 2022",
+              "score": 100
+            }
+          ],
+          "reasoning": "Verification call failed: call_llm_json failed to produce valid JSON after 3 attempts. Last error: Expecting value: line 1 column 1 (char 0)"
+        },
+        {
+          "claim": "No additional details about his background (e.g., specific roles at Cooley LLP or education) are provided in the knowledge base",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "Derek Shin",
+              "relation": "previously_at",
+              "object": "Cooley LLP",
+              "score": 70
+            },
+            {
+              "subject": "Derek Shin",
+              "relation": "title",
+              "object": "General Counsel",
+              "score": 100
+            },
+            {
+              "subject": "Derek Shin",
+              "relation": "joined_NovaAI_inhouse",
+              "object": "2023",
+              "score": 100
+            }
+          ],
+          "reasoning": "The triples confirm Derek Shin's previous association with Cooley LLP but provide no specific role details or education information, directly supporting the claim that no additional background details are provided."
+        }
+      ],
+      "had_hallucinations": false,
+      "reflections_used": null,
+      "latency_seconds": 176.636,
+      "exact_match": false,
+      "key_fact_recall": 0.6,
+      "is_correct": false,
+      "key_facts_found": 3,
+      "key_facts_total": 5,
+      "facts_missing": [
+        "May 2023",
+        "Priya Nambiar"
+      ]
+    },
+    {
+      "id": "q08",
+      "category": "leadership",
+      "difficulty": "medium",
+      "question": "What is Marcus Webb's role, location, and FY2026 quota?",
+      "ground_truth_answer": "Marcus Webb is the Enterprise Sales team lead. He is based in New York with an approved fully remote work arrangement. His FY2026 quota is $18M.",
+      "key_facts": [
+        "Marcus Webb",
+        "Enterprise Sales",
+        "New York",
+        "fully remote",
+        "$18M"
+      ],
+      "variant": "v1rag",
+      "raw_answer": "Marcus Webb's role is **Enterprise Sales Team Lead**, his location is **New York (remote)**, and his FY2026 quota is **$18M**. \n\nThis is confirmed by the following facts from the knowledge base:  \n- `Enterprise Sales | team_lead | Marcus Webb`  \n- `Marcus Webb | office | New York (remote)`  \n- `Marcus Webb | fy2026_quota | $18M`",
+      "final_answer": "Marcus Webb's role is **Enterprise Sales Team Lead**, his location is **New York (remote)**, and his FY2026 quota is **$18M**. \n\nThis is confirmed by the following facts from the knowledge base:  \n- `Enterprise Sales | team_lead | Marcus Webb`  \n- `Marcus Webb | office | New York (remote)`  \n- `Marcus Webb | fy2026_quota | $18M`",
+      "claims": [
+        "Marcus Webb's role is **Enterprise Sales Team Lead**, his location is **New York (remote)**, and his FY2026 quota is **$18M**",
+        "This is confirmed by the following facts from the knowledge base:  \n- `Enterprise Sales | team_lead | Marcus Webb`  \n- `Marcus Webb | office | New York (remote)`  \n- `Marcus Webb | fy2026_quota | $18M`"
+      ],
+      "verification_results": [
+        {
+          "claim": "Marcus Webb's role is **Enterprise Sales Team Lead**, his location is **New York (remote)**, and his FY2026 quota is **$18M**",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "Enterprise Sales",
+              "relation": "team_lead",
+              "object": "Marcus Webb",
+              "score": 100
+            },
+            {
+              "subject": "Marcus Webb",
+              "relation": "fy2026_quota",
+              "object": "$18M",
+              "score": 100
+            },
+            {
+              "subject": "Tanya Osei",
+              "relation": "fy2026_quota",
+              "object": "$6M",
+              "score": 89
+            },
+            {
+              "subject": "Marcus Webb",
+              "relation": "office",
+              "object": "New York (remote)",
+              "score": 89
+            },
+            {
+              "subject": "SMB Sales",
+              "relation": "team_lead",
+              "object": "Tanya Osei",
+              "score": 88
+            },
+            {
+              "subject": "Marcus Webb",
+              "relation": "start_date",
+              "object": "January 2024",
+              "score": 67
+            },
+            {
+              "subject": "Platform Infrastructure",
+              "relation": "team_lead",
+              "object": "Raj Mehta",
+              "score": 64
+            },
+            {
+              "subject": "Solutions Engineering",
+              "relation": "team_lead",
+              "object": "Wei Zhang",
+              "score": 64
+            },
+            {
+              "subject": "ML Systems",
+              "relation": "team_lead",
+              "object": "Dr. Yuki Tanaka",
+              "score": 62
+            },
+            {
+              "subject": "Security Engineering",
+              "relation": "team_lead",
+              "object": "Ananya Bose",
+              "score": 60
+            },
+            {
+              "subject": "Solutions Engineering",
+              "relation": "headcount",
+              "object": "8 solutions engineers",
+              "score": 100
+            },
+            {
+              "subject": "Engineering",
+              "relation": "headcount",
+              "object": "118 engineers (as of Q1 2026)",
+              "score": 71
+            },
+            {
+              "subject": "NovaGuard Enterprise",
+              "relation": "purchase_motion",
+              "object": "sales-assisted",
+              "score": 100
+            },
+            {
+              "subject": "Enterprise segment",
+              "relation": "threshold",
+              "object": "accounts at or above $50K ARR",
+              "score": 77
+            },
+            {
+              "subject": "NovaBridge",
+              "relation": "developer_relations_lead",
+              "object": "Priya Osei",
+              "score": 57
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "fiscal_year",
+              "object": "January 1 to December 31",
+              "score": 74
+            },
+            {
+              "subject": "NovaGuard",
+              "relation": "certification_date",
+              "object": "January 2026",
+              "score": 74
+            },
+            {
+              "subject": "Engineering",
+              "relation": "has_sub_team",
+              "object": "ML Systems",
+              "score": 100
+            },
+            {
+              "subject": "Engineering",
+              "relation": "has_sub_team",
+              "object": "Security Engineering",
+              "score": 100
+            },
+            {
+              "subject": "Marcus Webb",
+              "relation": "work_arrangement",
+              "object": "approved fully remote",
+              "score": 57
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "fully_remote_approval_requires",
+              "object": "direct manager, department VP, and Claudia Torres",
+              "score": 57
+            },
+            {
+              "subject": "Engineering",
+              "relation": "has_sub_team",
+              "object": "Platform Infrastructure",
+              "score": 100
+            },
+            {
+              "subject": "NovaBridge",
+              "relation": "maintained_by",
+              "object": "Platform Infrastructure team",
+              "score": 100
+            },
+            {
+              "subject": "Ananya Bose",
+              "relation": "responsible_for",
+              "object": "SOC 2 compliance and pen testing cycles",
+              "score": 100
+            },
+            {
+              "subject": "Ananya Bose",
+              "relation": "start_date",
+              "object": "March 2022",
+              "score": 100
+            },
+            {
+              "subject": "Raj Mehta",
+              "relation": "start_date",
+              "object": "July 2022",
+              "score": 100
+            },
+            {
+              "subject": "Raj Mehta",
+              "relation": "office",
+              "object": "Singapore",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Yuki Tanaka",
+              "relation": "start_date",
+              "object": "October 2021",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Yuki Tanaka",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 100
+            },
+            {
+              "subject": "Wei Zhang",
+              "relation": "start_date",
+              "object": "April 2023",
+              "score": 100
+            },
+            {
+              "subject": "Wei Zhang",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 100
+            }
+          ],
+          "reasoning": "All claim components are directly confirmed: 'Enterprise Sales | team_lead | Marcus Webb' validates role, 'Marcus Webb | office | New York (remote)' confirms location, and 'Marcus Webb | fy2026_quota | $18M' verifies quota."
+        },
+        {
+          "claim": "This is confirmed by the following facts from the knowledge base:  \n- `Enterprise Sales | team_lead | Marcus Webb`  \n- `Marcus Webb | office | New York (remote)`  \n- `Marcus Webb | fy2026_quota | $18M`",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "Enterprise Sales",
+              "relation": "team_lead",
+              "object": "Marcus Webb",
+              "score": 100
+            },
+            {
+              "subject": "Marcus Webb",
+              "relation": "fy2026_quota",
+              "object": "$18M",
+              "score": 100
+            },
+            {
+              "subject": "Marcus Webb",
+              "relation": "office",
+              "object": "New York (remote)",
+              "score": 100
+            },
+            {
+              "subject": "Tanya Osei",
+              "relation": "fy2026_quota",
+              "object": "$6M",
+              "score": 89
+            },
+            {
+              "subject": "SMB Sales",
+              "relation": "team_lead",
+              "object": "Tanya Osei",
+              "score": 88
+            },
+            {
+              "subject": "Marcus Webb",
+              "relation": "start_date",
+              "object": "January 2024",
+              "score": 67
+            },
+            {
+              "subject": "Platform Infrastructure",
+              "relation": "team_lead",
+              "object": "Raj Mehta",
+              "score": 64
+            },
+            {
+              "subject": "Solutions Engineering",
+              "relation": "team_lead",
+              "object": "Wei Zhang",
+              "score": 64
+            },
+            {
+              "subject": "Oliver Haines",
+              "relation": "office",
+              "object": "London",
+              "score": 63
+            },
+            {
+              "subject": "Lena Park",
+              "relation": "office",
+              "object": "London",
+              "score": 63
+            },
+            {
+              "subject": "Solutions Engineering",
+              "relation": "headcount",
+              "object": "8 solutions engineers",
+              "score": 100
+            },
+            {
+              "subject": "Engineering",
+              "relation": "headcount",
+              "object": "118 engineers (as of Q1 2026)",
+              "score": 71
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "vp_of_product",
+              "object": "Oliver Haines",
+              "score": 100
+            },
+            {
+              "subject": "Oliver Haines",
+              "relation": "title",
+              "object": "VP of Product",
+              "score": 100
+            },
+            {
+              "subject": "Oliver Haines",
+              "relation": "department",
+              "object": "Product",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Enterprise",
+              "relation": "purchase_motion",
+              "object": "sales-assisted",
+              "score": 100
+            },
+            {
+              "subject": "Enterprise segment",
+              "relation": "threshold",
+              "object": "accounts at or above $50K ARR",
+              "score": 77
+            },
+            {
+              "subject": "NovaBridge",
+              "relation": "developer_relations_lead",
+              "object": "Priya Osei",
+              "score": 57
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "fiscal_year",
+              "object": "January 1 to December 31",
+              "score": 74
+            },
+            {
+              "subject": "NovaGuard",
+              "relation": "certification_date",
+              "object": "January 2026",
+              "score": 74
+            },
+            {
+              "subject": "Marcus Webb",
+              "relation": "work_arrangement",
+              "object": "approved fully remote",
+              "score": 57
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "fully_remote_approval_requires",
+              "object": "direct manager, department VP, and Claudia Torres",
+              "score": 57
+            },
+            {
+              "subject": "Engineering",
+              "relation": "has_sub_team",
+              "object": "Platform Infrastructure",
+              "score": 100
+            },
+            {
+              "subject": "NovaBridge",
+              "relation": "maintained_by",
+              "object": "Platform Infrastructure team",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_office_in",
+              "object": "London",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "london_office_opened",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "Raj Mehta",
+              "relation": "start_date",
+              "object": "July 2022",
+              "score": 100
+            },
+            {
+              "subject": "Raj Mehta",
+              "relation": "office",
+              "object": "Singapore",
+              "score": 100
+            },
+            {
+              "subject": "UX/Design",
+              "relation": "led_by",
+              "object": "Lena Park",
+              "score": 100
+            },
+            {
+              "subject": "Lena Park",
+              "relation": "title",
+              "object": "Head of Design",
+              "score": 100
+            },
+            {
+              "subject": "Lena Park",
+              "relation": "start_date",
+              "object": "June 2022",
+              "score": 100
+            },
+            {
+              "subject": "Wei Zhang",
+              "relation": "start_date",
+              "object": "April 2023",
+              "score": 100
+            },
+            {
+              "subject": "Wei Zhang",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 100
+            }
+          ],
+          "reasoning": "All three facts stated in the claim (Enterprise Sales team_lead Marcus Webb, Marcus Webb's office location, and fy2026_quota) are explicitly confirmed by matching triples in the knowledge base with 100% relevance scores."
+        }
+      ],
+      "had_hallucinations": false,
+      "reflections_used": null,
+      "latency_seconds": 130.763,
+      "exact_match": false,
+      "key_fact_recall": 0.8,
+      "is_correct": true,
+      "key_facts_found": 4,
+      "key_facts_total": 5,
+      "facts_missing": [
+        "fully remote"
+      ]
+    },
+    {
+      "id": "q09",
+      "category": "products_pricing",
+      "difficulty": "easy",
+      "question": "What is the price of the NovaPilot Starter plan and what does it include?",
+      "ground_truth_answer": "The NovaPilot Starter plan costs $2,500/month. It includes up to 10 users and 50,000 automation runs per month.",
+      "key_facts": [
+        "$2,500/month",
+        "10 users",
+        "50,000"
+      ],
+      "variant": "v1rag",
+      "raw_answer": "The NovaPilot Starter plan costs **$2,500 per month** and includes:  \n- **Up to 10 users**  \n- **50,000 automation runs per month**  \n\nNo additional features specific to the Starter plan are listed in the provided facts beyond these details.",
+      "final_answer": "The NovaPilot Starter plan costs **$2,500 per month** and includes:  \n- **Up to 10 users**  \n- **50,000 automation runs per month**  \n\nNo additional features specific to the Starter plan are listed in the provided facts beyond these details.",
+      "claims": [
+        "The NovaPilot Starter plan costs **$2,500 per month** and includes:  \n- **Up to 10 users**  \n- **50,000 automation runs per month**  \n\nNo additional features specific to the Starter plan are listed in the provided facts beyond these details"
+      ],
+      "verification_results": [
+        {
+          "claim": "The NovaPilot Starter plan costs **$2,500 per month** and includes:  \n- **Up to 10 users**  \n- **50,000 automation runs per month**  \n\nNo additional features specific to the Starter plan are listed in the provided facts beyond these details",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "automation_runs_per_month",
+              "object": "50,000",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "automation_runs_per_month",
+              "object": "500,000",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "price",
+              "object": "$2,500/month",
+              "score": 91
+            },
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "user_limit",
+              "object": "10 users",
+              "score": 83
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "launched_in",
+              "object": "Q3 2022",
+              "score": 73
+            },
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "price",
+              "object": "$8,000/month",
+              "score": 72
+            },
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "includes_feature",
+              "object": "audit logs",
+              "score": 71
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "price",
+              "object": "$4,000/month",
+              "score": 69
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "price",
+              "object": "$3,000/month",
+              "score": 69
+            },
+            {
+              "subject": "NovaGuard Advanced",
+              "relation": "price",
+              "object": "$9,500/month",
+              "score": 69
+            },
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "user_limit",
+              "object": "50 users",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "monitored_models_limit",
+              "object": "3",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "report_frequency",
+              "object": "weekly",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Advanced",
+              "relation": "monitored_models_limit",
+              "object": "20",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Advanced",
+              "relation": "report_frequency",
+              "object": "daily",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "user_limit",
+              "object": "5 users",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "data_connectors",
+              "object": "3",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "is_flagship_product_of",
+              "object": "NovaAI",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "third_party_integrations_count",
+              "object": "120+",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "joined_NovaAI",
+              "object": "2022",
+              "score": 73
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "start_date",
+              "object": "April 2022",
+              "score": 73
+            },
+            {
+              "subject": "NovaPilot Enterprise",
+              "relation": "includes_feature",
+              "object": "unlimited users",
+              "score": 77
+            }
+          ],
+          "reasoning": "All claim elements (price $2,500/month, 10 users, 50,000 automation runs) are directly confirmed by the triples, and no additional Starter plan features are listed in the provided facts beyond these details."
+        }
+      ],
+      "had_hallucinations": false,
+      "reflections_used": null,
+      "latency_seconds": 110.757,
+      "exact_match": false,
+      "key_fact_recall": 1.0,
+      "is_correct": true,
+      "key_facts_found": 3,
+      "key_facts_total": 3,
+      "facts_missing": []
+    },
+    {
+      "id": "q10",
+      "category": "products_pricing",
+      "difficulty": "easy",
+      "question": "What is the price of the NovaPilot Growth plan?",
+      "ground_truth_answer": "The NovaPilot Growth plan costs $8,000/month. It supports up to 50 users, 500,000 automation runs per month, and includes audit logs.",
+      "key_facts": [
+        "$8,000/month",
+        "50 users",
+        "500,000",
+        "audit logs"
+      ],
+      "variant": "v1rag",
+      "raw_answer": "The price of the NovaPilot Growth plan is **$8,000/month**.",
+      "final_answer": "The price of the NovaPilot Growth plan is **$8,000/month**.",
+      "claims": [
+        "The price of the NovaPilot Growth plan is **$8,000/month**"
+      ],
+      "verification_results": [
+        {
+          "claim": "The price of the NovaPilot Growth plan is **$8,000/month**",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "price",
+              "object": "$8,000/month",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "price",
+              "object": "$4,000/month",
+              "score": 94
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "price",
+              "object": "$3,000/month",
+              "score": 94
+            },
+            {
+              "subject": "NovaLens Business",
+              "relation": "price",
+              "object": "$12,000/month",
+              "score": 91
+            },
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "price",
+              "object": "$2,500/month",
+              "score": 79
+            },
+            {
+              "subject": "NovaGuard Advanced",
+              "relation": "price",
+              "object": "$9,500/month",
+              "score": 79
+            },
+            {
+              "subject": "NovaBridge Pro",
+              "relation": "price",
+              "object": "$1,200/month",
+              "score": 79
+            },
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "user_limit",
+              "object": "50 users",
+              "score": 74
+            },
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "automation_runs_per_month",
+              "object": "500,000",
+              "score": 71
+            },
+            {
+              "subject": "NovaPilot Enterprise",
+              "relation": "price_range",
+              "object": "$30,000–$120,000/month",
+              "score": 70
+            },
+            {
+              "subject": "NovaLens Business",
+              "relation": "user_limit",
+              "object": "20 users",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Business",
+              "relation": "data_connectors",
+              "object": "15",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "automation_runs_per_month",
+              "object": "50,000",
+              "score": 90
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "monitored_models_limit",
+              "object": "3",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "report_frequency",
+              "object": "weekly",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Advanced",
+              "relation": "monitored_models_limit",
+              "object": "20",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Advanced",
+              "relation": "report_frequency",
+              "object": "daily",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Enterprise",
+              "relation": "includes_feature",
+              "object": "unlimited users",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Enterprise",
+              "relation": "includes_feature",
+              "object": "dedicated CSM",
+              "score": 100
+            },
+            {
+              "subject": "NovaBridge Pro",
+              "relation": "includes_feature",
+              "object": "SLA-backed support",
+              "score": 100
+            },
+            {
+              "subject": "NovaBridge Pro",
+              "relation": "includes_feature",
+              "object": "private forums",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "user_limit",
+              "object": "10 users",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "user_limit",
+              "object": "5 users",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "data_connectors",
+              "object": "3",
+              "score": 100
+            }
+          ],
+          "reasoning": "The triple 'NovaPilot Growth | price | $8,000/month' directly and exactly matches the claim with 100% relevance score."
+        }
+      ],
+      "had_hallucinations": false,
+      "reflections_used": null,
+      "latency_seconds": 93.696,
+      "exact_match": false,
+      "key_fact_recall": 0.25,
+      "is_correct": false,
+      "key_facts_found": 1,
+      "key_facts_total": 4,
+      "facts_missing": [
+        "50 users",
+        "500,000",
+        "audit logs"
+      ]
+    },
+    {
+      "id": "q11",
+      "category": "products_pricing",
+      "difficulty": "medium",
+      "question": "What features does NovaPilot Enterprise include and what is its price range?",
+      "ground_truth_answer": "NovaPilot Enterprise is priced at $30,000–$120,000/month. It includes unlimited users, a dedicated CSM, 99.95% SLA uptime, private cloud deployment on AWS or Azure, and HIPAA-compliant data handling.",
+      "key_facts": [
+        "$30,000",
+        "$120,000",
+        "unlimited users",
+        "dedicated CSM",
+        "99.95%",
+        "HIPAA"
+      ],
+      "variant": "v1rag",
+      "raw_answer": "NovaPilot Enterprise has a price range of **$30,000–$120,000/month**. Its included features are:  \n- Unlimited users  \n- Dedicated Customer Success Manager (CSM)  \n- Private cloud deployment (AWS or Azure)  \n- HIPAA-compliant data handling  \n\nThese details are explicitly documented in the internal knowledge base.",
+      "final_answer": "NovaPilot Enterprise has a price range of **$30,000–$120,000/month**. Its included features are:  \n- Unlimited users  \n- Dedicated Customer Success Manager (CSM)  \n- Private cloud deployment (AWS or Azure)  \n- HIPAA-compliant data handling  \n\nThese details are explicitly documented in the internal knowledge base.",
+      "claims": [
+        "NovaPilot Enterprise has a price range of **$30,000–$120,000/month**",
+        "Its included features are:  \n- Unlimited users  \n- Dedicated Customer Success Manager (CSM)  \n- Private cloud deployment (AWS or Azure)  \n- HIPAA-compliant data handling  \n\nThese details are explicitly documented in the internal knowledge base"
+      ],
+      "verification_results": [
+        {
+          "claim": "NovaPilot Enterprise has a price range of **$30,000–$120,000/month**",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaPilot Enterprise",
+              "relation": "price_range",
+              "object": "$30,000–$120,000/month",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "price",
+              "object": "$8,000/month",
+              "score": 94
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "price",
+              "object": "$4,000/month",
+              "score": 94
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "price",
+              "object": "$3,000/month",
+              "score": 94
+            },
+            {
+              "subject": "NovaLens Business",
+              "relation": "price",
+              "object": "$12,000/month",
+              "score": 91
+            },
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "price",
+              "object": "$2,500/month",
+              "score": 79
+            },
+            {
+              "subject": "NovaGuard Advanced",
+              "relation": "price",
+              "object": "$9,500/month",
+              "score": 79
+            },
+            {
+              "subject": "NovaBridge Pro",
+              "relation": "price",
+              "object": "$1,200/month",
+              "score": 79
+            },
+            {
+              "subject": "NovaPilot Enterprise",
+              "relation": "sla_uptime",
+              "object": "99.95%",
+              "score": 78
+            },
+            {
+              "subject": "NovaPilot Enterprise",
+              "relation": "includes_feature",
+              "object": "unlimited users",
+              "score": 70
+            },
+            {
+              "subject": "NovaLens Business",
+              "relation": "user_limit",
+              "object": "20 users",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Business",
+              "relation": "data_connectors",
+              "object": "15",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "automation_runs_per_month",
+              "object": "50,000",
+              "score": 90
+            },
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "user_limit",
+              "object": "50 users",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "automation_runs_per_month",
+              "object": "500,000",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "monitored_models_limit",
+              "object": "3",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "report_frequency",
+              "object": "weekly",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Advanced",
+              "relation": "monitored_models_limit",
+              "object": "20",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Advanced",
+              "relation": "report_frequency",
+              "object": "daily",
+              "score": 100
+            },
+            {
+              "subject": "NovaBridge Pro",
+              "relation": "includes_feature",
+              "object": "SLA-backed support",
+              "score": 100
+            },
+            {
+              "subject": "NovaBridge Pro",
+              "relation": "includes_feature",
+              "object": "private forums",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "user_limit",
+              "object": "10 users",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Enterprise",
+              "relation": "includes_feature",
+              "object": "unlimited connectors",
+              "score": 75
+            },
+            {
+              "subject": "NovaGuard Enterprise",
+              "relation": "includes_feature",
+              "object": "unlimited models",
+              "score": 75
+            },
+            {
+              "subject": "NovaPilot Enterprise",
+              "relation": "includes_feature",
+              "object": "dedicated CSM",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "user_limit",
+              "object": "5 users",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "data_connectors",
+              "object": "3",
+              "score": 100
+            }
+          ],
+          "reasoning": "The triple 'NovaPilot Enterprise | price_range | $30,000–$120,000/month' directly and exactly matches the claim's price range specification."
+        },
+        {
+          "claim": "Its included features are:  \n- Unlimited users  \n- Dedicated Customer Success Manager (CSM)  \n- Private cloud deployment (AWS or Azure)  \n- HIPAA-compliant data handling  \n\nThese details are explicitly documented in the internal knowledge base",
+          "verdict": "UNVERIFIABLE",
+          "confidence": 0.0,
+          "evidence_triples": [
+            {
+              "subject": "Customer Success",
+              "relation": "csm_count",
+              "object": "22",
+              "score": 87
+            },
+            {
+              "subject": "NovaPilot Enterprise",
+              "relation": "includes_feature",
+              "object": "private cloud deployment (AWS or Azure)",
+              "score": 81
+            },
+            {
+              "subject": "NovaPilot Enterprise",
+              "relation": "includes_feature",
+              "object": "HIPAA-compliant data handling",
+              "score": 77
+            },
+            {
+              "subject": "Amara Diallo",
+              "relation": "department",
+              "object": "Customer Success",
+              "score": 74
+            },
+            {
+              "subject": "Amara Diallo",
+              "relation": "title",
+              "object": "VP of Customer Success",
+              "score": 73
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "vp_of_customer_success",
+              "object": "Amara Diallo",
+              "score": 71
+            },
+            {
+              "subject": "Customer Success",
+              "relation": "avg_accounts_per_CSM",
+              "object": "~8",
+              "score": 70
+            },
+            {
+              "subject": "Customer Success",
+              "relation": "fy2026_nrr_target",
+              "object": "118%",
+              "score": 64
+            },
+            {
+              "subject": "NovaPilot Enterprise",
+              "relation": "includes_feature",
+              "object": "unlimited users",
+              "score": 64
+            },
+            {
+              "subject": "NovaPilot Enterprise",
+              "relation": "includes_feature",
+              "object": "dedicated CSM",
+              "score": 60
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "primary_cloud_provider",
+              "object": "AWS",
+              "score": 57
+            },
+            {
+              "subject": "Claudia Torres",
+              "relation": "department",
+              "object": "People Operations",
+              "score": 55
+            },
+            {
+              "subject": "Solutions Engineering",
+              "relation": "headcount",
+              "object": "8 solutions engineers",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "price",
+              "object": "$8,000/month",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "Engineering",
+              "relation": "headcount",
+              "object": "118 engineers (as of Q1 2026)",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Enterprise",
+              "relation": "includes_feature",
+              "object": "unlimited connectors",
+              "score": 75
+            },
+            {
+              "subject": "NovaGuard Enterprise",
+              "relation": "includes_feature",
+              "object": "unlimited models",
+              "score": 75
+            },
+            {
+              "subject": "NovaPilot Enterprise",
+              "relation": "price_range",
+              "object": "$30,000–$120,000/month",
+              "score": 100
+            }
+          ],
+          "reasoning": "Verification call failed: call_llm_json failed to produce valid JSON after 3 attempts. Last error: Expecting value: line 1 column 1 (char 0)"
+        }
+      ],
+      "had_hallucinations": false,
+      "reflections_used": null,
+      "latency_seconds": 144.36,
+      "exact_match": false,
+      "key_fact_recall": 0.833,
+      "is_correct": true,
+      "key_facts_found": 5,
+      "key_facts_total": 6,
+      "facts_missing": [
+        "99.95%"
+      ]
+    },
+    {
+      "id": "q12",
+      "category": "products_pricing",
+      "difficulty": "easy",
+      "question": "When was NovaPilot launched and what is it?",
+      "ground_truth_answer": "NovaPilot is NovaAI's flagship product, launched in Q3 2022. It is an AI workflow automation platform that integrates with 120+ third-party tools including Salesforce, SAP, and ServiceNow.",
+      "key_facts": [
+        "Q3 2022",
+        "flagship",
+        "120+",
+        "Salesforce",
+        "SAP",
+        "ServiceNow"
+      ],
+      "variant": "v1rag",
+      "raw_answer": "NovaPilot was launched in Q3 2022. It is NovaAI's flagship product, designed as an automation platform that integrates with Salesforce, SAP, ServiceNow, and over 120 third-party systems. It offers two pricing tiers:  \n- **NovaPilot Starter**: $2,500/month for up to 10 users and 50,000 automation runs per month.  \n- **NovaPilot Growth**: $8,000/month for up to 50 users and 500,000 automation runs per month.  \n\nThe product is managed by Fatima Al-Rashid (PM owner), who joined NovaAI in May 2022 and is based in San Francisco.",
+      "final_answer": "NovaPilot was launched in Q3 2022. It is NovaAI's flagship product, designed as an automation platform that integrates with Salesforce, SAP, ServiceNow, and over 120 third-party systems. It offers two pricing tiers:  \n- **NovaPilot Starter**: $2,500/month for up to 10 users and 50,000 automation runs per month.  \n- **NovaPilot Growth**: $8,000/month for up to 50 users and 500,000 automation runs per month.  \n\nThe product is managed by Fatima Al-Rashid (PM owner), who joined NovaAI in May 2022 and is based in San Francisco.",
+      "claims": [
+        "NovaPilot was launched in Q3 2022",
+        "It is NovaAI's flagship product, designed as an automation platform that integrates with Salesforce, SAP, ServiceNow, and over 120 third-party systems",
+        "It offers two pricing tiers:  \n- **NovaPilot Starter**: $2,500/month for up to 10 users and 50,000 automation runs per month",
+        "- **NovaPilot Growth**: $8,000/month for up to 50 users and 500,000 automation runs per month",
+        "The product is managed by Fatima Al-Rashid (PM owner), who joined NovaAI in May 2022 and is based in San Francisco"
+      ],
+      "verification_results": [
+        {
+          "claim": "NovaPilot was launched in Q3 2022",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaPilot",
+              "relation": "launched_in",
+              "object": "Q3 2022",
+              "score": 130
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "is_flagship_product_of",
+              "object": "NovaAI",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "third_party_integrations_count",
+              "object": "120+",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "integrates_with",
+              "object": "Salesforce",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "integrates_with",
+              "object": "SAP",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "pm_owner",
+              "object": "Fatima Al-Rashid",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "joined_NovaAI",
+              "object": "2022",
+              "score": 85
+            },
+            {
+              "subject": "Customer Success",
+              "relation": "csm_count",
+              "object": "22",
+              "score": 85
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "data_connectors",
+              "object": "3",
+              "score": 85
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "monitored_models_limit",
+              "object": "3",
+              "score": 85
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "price",
+              "object": "$3,000/month",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Enterprise",
+              "relation": "price_range",
+              "object": "$30,000–$120,000/month",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "vp_of_customer_success",
+              "object": "Amara Diallo",
+              "score": 100
+            },
+            {
+              "subject": "Customer Success",
+              "relation": "avg_accounts_per_CSM",
+              "object": "~8",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cfo",
+              "object": "Priya Nambiar",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "also_oversees",
+              "object": "Legal",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "report_frequency",
+              "object": "weekly",
+              "score": 100
+            },
+            {
+              "subject": "Fatima Al-Rashid",
+              "relation": "start_date",
+              "object": "May 2022",
+              "score": 100
+            },
+            {
+              "subject": "Fatima Al-Rashid",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "start_date",
+              "object": "April 2022",
+              "score": 73
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "price",
+              "object": "$4,000/month",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "user_limit",
+              "object": "5 users",
+              "score": 100
+            }
+          ],
+          "reasoning": "The triple 'NovaPilot | launched_in | Q3 2022' directly and unambiguously confirms the claim."
+        },
+        {
+          "claim": "It is NovaAI's flagship product, designed as an automation platform that integrates with Salesforce, SAP, ServiceNow, and over 120 third-party systems",
+          "verdict": "UNVERIFIABLE",
+          "confidence": 0.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaPilot",
+              "relation": "integrates_with",
+              "object": "Salesforce",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "integrates_with",
+              "object": "SAP",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "integrates_with",
+              "object": "ServiceNow",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "is_flagship_product_of",
+              "object": "NovaAI",
+              "score": 95
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "vp_of_product",
+              "object": "Oliver Haines",
+              "score": 82
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "airfare_booking_platform",
+              "object": "TravelPerk",
+              "score": 65
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "equity_management_platform",
+              "object": "Carta",
+              "score": 62
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "conduct_reporting_platform",
+              "object": "EthicsPoint",
+              "score": 62
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "third_party_integrations_count",
+              "object": "120+",
+              "score": 61
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "expense_submission_platform",
+              "object": "Expensify",
+              "score": 61
+            },
+            {
+              "subject": "Oliver Haines",
+              "relation": "title",
+              "object": "VP of Product",
+              "score": 100
+            },
+            {
+              "subject": "Oliver Haines",
+              "relation": "department",
+              "object": "Product",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Enterprise",
+              "relation": "price_range",
+              "object": "$30,000–$120,000/month",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "launched_in",
+              "object": "Q3 2022",
+              "score": 100
+            }
+          ],
+          "reasoning": "Verification call failed: call_llm_json failed to produce valid JSON after 3 attempts. Last error: Expecting value: line 1 column 1 (char 0)"
+        },
+        {
+          "claim": "It offers two pricing tiers:  \n- **NovaPilot Starter**: $2,500/month for up to 10 users and 50,000 automation runs per month",
+          "verdict": "UNVERIFIABLE",
+          "confidence": 0.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "automation_runs_per_month",
+              "object": "50,000",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "automation_runs_per_month",
+              "object": "500,000",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "price",
+              "object": "$2,500/month",
+              "score": 91
+            },
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "user_limit",
+              "object": "10 users",
+              "score": 83
+            },
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "price",
+              "object": "$8,000/month",
+              "score": 72
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "price",
+              "object": "$4,000/month",
+              "score": 69
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "price",
+              "object": "$3,000/month",
+              "score": 69
+            },
+            {
+              "subject": "NovaGuard Advanced",
+              "relation": "price",
+              "object": "$9,500/month",
+              "score": 69
+            },
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "user_limit",
+              "object": "50 users",
+              "score": 67
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "pm_owner",
+              "object": "Fatima Al-Rashid",
+              "score": 67
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "monitored_models_limit",
+              "object": "3",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "report_frequency",
+              "object": "weekly",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Advanced",
+              "relation": "monitored_models_limit",
+              "object": "20",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Advanced",
+              "relation": "report_frequency",
+              "object": "daily",
+              "score": 100
+            },
+            {
+              "subject": "Fatima Al-Rashid",
+              "relation": "start_date",
+              "object": "May 2022",
+              "score": 100
+            },
+            {
+              "subject": "Fatima Al-Rashid",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "user_limit",
+              "object": "5 users",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "data_connectors",
+              "object": "3",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "is_flagship_product_of",
+              "object": "NovaAI",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "launched_in",
+              "object": "Q3 2022",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "third_party_integrations_count",
+              "object": "120+",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Enterprise",
+              "relation": "includes_feature",
+              "object": "unlimited users",
+              "score": 77
+            }
+          ],
+          "reasoning": "Verification call failed: call_llm_json failed to produce valid JSON after 3 attempts. Last error: Expecting value: line 1 column 1 (char 0)"
+        },
+        {
+          "claim": "- **NovaPilot Growth**: $8,000/month for up to 50 users and 500,000 automation runs per month",
+          "verdict": "SUPPORTED",
+          "confidence": 1.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "automation_runs_per_month",
+              "object": "50,000",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "automation_runs_per_month",
+              "object": "500,000",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "price",
+              "object": "$8,000/month",
+              "score": 90
+            },
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "user_limit",
+              "object": "50 users",
+              "score": 82
+            },
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "price",
+              "object": "$2,500/month",
+              "score": 70
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "price",
+              "object": "$4,000/month",
+              "score": 69
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "price",
+              "object": "$3,000/month",
+              "score": 69
+            },
+            {
+              "subject": "NovaGuard Advanced",
+              "relation": "price",
+              "object": "$9,500/month",
+              "score": 69
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "pm_owner",
+              "object": "Fatima Al-Rashid",
+              "score": 67
+            },
+            {
+              "subject": "NovaLens Business",
+              "relation": "price",
+              "object": "$12,000/month",
+              "score": 67
+            },
+            {
+              "subject": "NovaLens Business",
+              "relation": "user_limit",
+              "object": "20 users",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Business",
+              "relation": "data_connectors",
+              "object": "15",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "monitored_models_limit",
+              "object": "3",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "report_frequency",
+              "object": "weekly",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Advanced",
+              "relation": "monitored_models_limit",
+              "object": "20",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Advanced",
+              "relation": "report_frequency",
+              "object": "daily",
+              "score": 100
+            },
+            {
+              "subject": "Fatima Al-Rashid",
+              "relation": "start_date",
+              "object": "May 2022",
+              "score": 100
+            },
+            {
+              "subject": "Fatima Al-Rashid",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "is_flagship_product_of",
+              "object": "NovaAI",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "launched_in",
+              "object": "Q3 2022",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "third_party_integrations_count",
+              "object": "120+",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "user_limit",
+              "object": "10 users",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Enterprise",
+              "relation": "includes_feature",
+              "object": "unlimited users",
+              "score": 77
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "user_limit",
+              "object": "5 users",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "data_connectors",
+              "object": "3",
+              "score": 100
+            }
+          ],
+          "reasoning": "The claim's price ($8,000/month), user limit (50 users), and automation runs (500,000/month) are all directly confirmed by the triples NovaPilot Growth | price | $8,000/month, NovaPilot Growth | user_limit | 50 users, and NovaPilot Growth | automation_runs_per_month | 500,000."
+        },
+        {
+          "claim": "The product is managed by Fatima Al-Rashid (PM owner), who joined NovaAI in May 2022 and is based in San Francisco",
+          "verdict": "UNVERIFIABLE",
+          "confidence": 0.0,
+          "evidence_triples": [
+            {
+              "subject": "Priya Nambiar",
+              "relation": "joined_NovaAI",
+              "object": "2022",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "pm_owner",
+              "object": "Fatima Al-Rashid",
+              "score": 100
+            },
+            {
+              "subject": "Fatima Al-Rashid",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 90
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "joined_NovaAI",
+              "object": "2023",
+              "score": 84
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "vp_of_product",
+              "object": "Oliver Haines",
+              "score": 82
+            },
+            {
+              "subject": "Fatima Al-Rashid",
+              "relation": "start_date",
+              "object": "May 2022",
+              "score": 82
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_office_in",
+              "object": "San Francisco",
+              "score": 81
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "on_call_managed_by",
+              "object": "Platform Infrastructure team",
+              "score": 81
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 79
+            },
+            {
+              "subject": "Oliver Haines",
+              "relation": "title",
+              "object": "VP of Product",
+              "score": 100
+            },
+            {
+              "subject": "Oliver Haines",
+              "relation": "department",
+              "object": "Product",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "london_office_opened",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "Derek Shin",
+              "relation": "joined_NovaAI_inhouse",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_ceo",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cfo",
+              "object": "Priya Nambiar",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "also_oversees",
+              "object": "Legal",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cto",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_coo",
+              "object": "James Whitfield",
+              "score": 100
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "start_date",
+              "object": "February 2023",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "is_flagship_product_of",
+              "object": "NovaAI",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "launched_in",
+              "object": "Q3 2022",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "third_party_integrations_count",
+              "object": "120+",
+              "score": 100
+            },
+            {
+              "subject": "Engineering",
+              "relation": "has_sub_team",
+              "object": "Platform Infrastructure",
+              "score": 100
+            },
+            {
+              "subject": "Platform Infrastructure",
+              "relation": "team_lead",
+              "object": "Raj Mehta",
+              "score": 100
+            },
+            {
+              "subject": "NovaBridge",
+              "relation": "maintained_by",
+              "object": "Platform Infrastructure team",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_location",
+              "object": "San Francisco, California",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "headquartered_at",
+              "object": "450 Market Street, Suite 1200, San Francisco, CA 94105",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "start_date",
+              "object": "April 2022",
+              "score": 100
+            }
+          ],
+          "reasoning": "Verification call failed: call_llm_json failed to produce valid JSON after 3 attempts. Last error: Expecting value: line 1 column 1 (char 0)"
+        }
+      ],
+      "had_hallucinations": false,
+      "reflections_used": null,
+      "latency_seconds": 303.555,
+      "exact_match": false,
+      "key_fact_recall": 1.0,
+      "is_correct": true,
+      "key_facts_found": 6,
+      "key_facts_total": 6,
+      "facts_missing": []
+    },
+    {
+      "id": "q13",
+      "category": "products_pricing",
+      "difficulty": "medium",
+      "question": "Compare the NovaLens Professional and Business pricing tiers.",
+      "ground_truth_answer": "NovaLens Professional costs $4,000/month and supports 5 users, 3 data connectors, and monthly model refresh. NovaLens Business costs $12,000/month and supports 20 users, 15 data connectors, weekly model refresh, and custom dashboards.",
+      "key_facts": [
+        "$4,000/month",
+        "5 users",
+        "3",
+        "monthly",
+        "$12,000/month",
+        "20 users",
+        "15",
+        "weekly",
+        "custom dashboards"
+      ],
+      "variant": "v1rag",
+      "raw_answer": "Here is a precise comparison of **NovaLens Professional** and **NovaLens Business** pricing tiers based on verified internal data:\n\n| Feature                     | NovaLens Professional       | NovaLens Business          |\n|-----------------------------|-----------------------------|----------------------------|\n| **Price**                   | $4,000/month                | $12,000/month              |\n| **User Limit**              | 5 users                     | 20 users                   |\n| **Data Connectors**         | 3                           | 15                         |\n| **Custom Dashboards**       | Not included                | Included                   |\n| **Model Refresh Frequency** | Monthly                     | Weekly                     |\n\n**Additional context**:  \n- Both tiers are part of **NovaLens**, a Predictive Analytics Engine launched in **Q1 2023**.  \n- The Product Manager (PM) owner for both tiers is **James Okafor** (started September 2023).  \n\nNo other differences (e.g., security features, support levels) are specified in the knowledge base for these tiers.",
+      "final_answer": "Here is a precise comparison of **NovaLens Professional** and **NovaLens Business** pricing tiers based on verified internal data:\n\n| Feature                     | NovaLens Professional       | NovaLens Business          |\n|-----------------------------|-----------------------------|----------------------------|\n| **Price**                   | $4,000/month                | $12,000/month              |\n| **User Limit**              | 5 users                     | 20 users                   |\n| **Data Connectors**         | 3                           | 15                         |\n| **Custom Dashboards**       | Not included                | Included                   |\n| **Model Refresh Frequency** | Monthly                     | Weekly                     |\n\n**Additional context**:  \n- Both tiers are part of **NovaLens**, a Predictive Analytics Engine launched in **Q1 2023**.  \n- The Product Manager (PM) owner for both tiers is **James Okafor** (started September 2023).  \n\nNo other differences (e.g., security features, support levels) are specified in the knowledge base for these tiers.",
+      "claims": [
+        "Here is a precise comparison of **NovaLens Professional** and **NovaLens Business** pricing tiers based on verified internal data:\n\n| Feature                     | NovaLens Professional       | NovaLens Business          |\n|-----------------------------|-----------------------------|----------------------------|\n| **Price**                   | $4,000/month                | $12,000/month              |\n| **User Limit**              | 5 users                     | 20 users                   |\n| **Data Connectors**         | 3                           | 15                         |\n| **Custom Dashboards**       | Not included                | Included                   |\n| **Model Refresh Frequency** | Monthly                     | Weekly                     |\n\n**Additional context**:  \n- Both tiers are part of **NovaLens**, a Predictive Analytics Engine launched in **Q1 2023**",
+        "- The Product Manager (PM) owner for both tiers is **James Okafor** (started September 2023)",
+        "No other differences (e.g., security features, support levels) are specified in the knowledge base for these tiers"
+      ],
+      "verification_results": [
+        {
+          "claim": "Here is a precise comparison of **NovaLens Professional** and **NovaLens Business** pricing tiers based on verified internal data:\n\n| Feature                     | NovaLens Professional       | NovaLens Business          |\n|-----------------------------|-----------------------------|----------------------------|\n| **Price**                   | $4,000/month                | $12,000/month              |\n| **User Limit**              | 5 users                     | 20 users                   |\n| **Data Connectors**         | 3                           | 15                         |\n| **Custom Dashboards**       | Not included                | Included                   |\n| **Model Refresh Frequency** | Monthly                     | Weekly                     |\n\n**Additional context**:  \n- Both tiers are part of **NovaLens**, a Predictive Analytics Engine launched in **Q1 2023**",
+          "verdict": "UNVERIFIABLE",
+          "confidence": 0.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaLens",
+              "relation": "launched_in",
+              "object": "Q1 2023",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "price",
+              "object": "$4,000/month",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "user_limit",
+              "object": "5 users",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "data_connectors",
+              "object": "3",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "model_refresh_frequency",
+              "object": "monthly",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Business",
+              "relation": "price",
+              "object": "$12,000/month",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Business",
+              "relation": "user_limit",
+              "object": "20 users",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Business",
+              "relation": "data_connectors",
+              "object": "15",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Business",
+              "relation": "model_refresh_frequency",
+              "object": "weekly",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "price",
+              "object": "$3,000/month",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "monitored_models_limit",
+              "object": "3",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "automation_runs_per_month",
+              "object": "50,000",
+              "score": 90
+            },
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "price",
+              "object": "$8,000/month",
+              "score": 90
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "pto_minimum_per_year",
+              "object": "15 days",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "report_frequency",
+              "object": "weekly",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "user_limit",
+              "object": "10 users",
+              "score": 77
+            },
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "user_limit",
+              "object": "50 users",
+              "score": 77
+            },
+            {
+              "subject": "NovaLens",
+              "relation": "product_type",
+              "object": "Predictive Analytics Engine",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "london_office_opened",
+              "object": "2023",
+              "score": 73
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "joined_NovaAI",
+              "object": "2023",
+              "score": 73
+            }
+          ],
+          "reasoning": "Verification call failed: call_llm_json failed to produce valid JSON after 3 attempts. Last error: Expecting value: line 1 column 1 (char 0)"
+        },
+        {
+          "claim": "- The Product Manager (PM) owner for both tiers is **James Okafor** (started September 2023)",
+          "verdict": "UNVERIFIABLE",
+          "confidence": 0.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaLens",
+              "relation": "pm_owner",
+              "object": "James Okafor",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard",
+              "relation": "pm_owner",
+              "object": "James Okafor",
+              "score": 100
+            },
+            {
+              "subject": "James Okafor",
+              "relation": "start_date",
+              "object": "September 2023",
+              "score": 83
+            },
+            {
+              "subject": "James Okafor",
+              "relation": "office",
+              "object": "London",
+              "score": 77
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "pm_owner",
+              "object": "Fatima Al-Rashid",
+              "score": 62
+            },
+            {
+              "subject": "Sanjay Iyer",
+              "relation": "title",
+              "object": "Product Marketing Manager for Enterprise",
+              "score": 58
+            },
+            {
+              "subject": "Oliver Haines",
+              "relation": "department",
+              "object": "Product",
+              "score": 56
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "vp_of_product",
+              "object": "Oliver Haines",
+              "score": 100
+            },
+            {
+              "subject": "Oliver Haines",
+              "relation": "title",
+              "object": "VP of Product",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard",
+              "relation": "launched_in",
+              "object": "Q4 2023",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard",
+              "relation": "product_type",
+              "object": "AI Security & Compliance Monitor",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "price",
+              "object": "$3,000/month",
+              "score": 100
+            },
+            {
+              "subject": "Amara Diallo",
+              "relation": "start_date",
+              "object": "September 2022",
+              "score": 78
+            },
+            {
+              "subject": "Derek Shin",
+              "relation": "start_date",
+              "object": "May 2023",
+              "score": 55
+            },
+            {
+              "subject": "Fatima Al-Rashid",
+              "relation": "start_date",
+              "object": "May 2022",
+              "score": 100
+            },
+            {
+              "subject": "Fatima Al-Rashid",
+              "relation": "office",
+              "object": "San Francisco",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_office_in",
+              "object": "London",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "london_office_opened",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "Oliver Haines",
+              "relation": "office",
+              "object": "London",
+              "score": 100
+            },
+            {
+              "subject": "Marketing",
+              "relation": "has_team",
+              "object": "Product Marketing",
+              "score": 79
+            },
+            {
+              "subject": "Marketing",
+              "relation": "has_team",
+              "object": "Demand Generation",
+              "score": 67
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "is_flagship_product_of",
+              "object": "NovaAI",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "launched_in",
+              "object": "Q3 2022",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot",
+              "relation": "third_party_integrations_count",
+              "object": "120+",
+              "score": 100
+            },
+            {
+              "subject": "Engineering",
+              "relation": "has_sub_team",
+              "object": "Product Engineering",
+              "score": 100
+            },
+            {
+              "subject": "Product Engineering",
+              "relation": "team_lead",
+              "object": "Carlos Rivera",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens",
+              "relation": "launched_in",
+              "object": "Q1 2023",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens",
+              "relation": "product_type",
+              "object": "Predictive Analytics Engine",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "price",
+              "object": "$4,000/month",
+              "score": 100
+            }
+          ],
+          "reasoning": "Verification call failed: call_llm_json failed to produce valid JSON after 3 attempts. Last error: call_llm failed after 1 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'"
+        },
+        {
+          "claim": "No other differences (e.g., security features, support levels) are specified in the knowledge base for these tiers",
+          "verdict": "UNVERIFIABLE",
+          "confidence": 0.0,
+          "evidence_triples": [],
+          "reasoning": "No relevant KG triples found for this claim."
+        }
+      ],
+      "had_hallucinations": false,
+      "reflections_used": null,
+      "latency_seconds": 169.078,
+      "exact_match": false,
+      "key_fact_recall": 0.778,
+      "is_correct": false,
+      "key_facts_found": 7,
+      "key_facts_total": 9,
+      "facts_missing": [
+        "3",
+        "15"
+      ]
+    },
+    {
+      "id": "q14",
+      "category": "products_pricing",
+      "difficulty": "easy",
+      "question": "What data connectors does NovaLens support?",
+      "ground_truth_answer": "NovaLens supports connectors for Snowflake, Databricks, BigQuery, Redshift, and PostgreSQL.",
+      "key_facts": [
+        "Snowflake",
+        "Databricks",
+        "BigQuery",
+        "Redshift",
+        "PostgreSQL"
+      ],
+      "variant": "v1rag",
+      "raw_answer": "NovaLens supports the following data connectors:  \n- Databricks  \n- Snowflake  \n- BigQuery  \n- Redshift  \n- PostgreSQL  \n\nThese are explicitly listed in the knowledge base under `NovaLens | supports_connector | [connector]`. Note that tier-specific details (e.g., NovaLens Professional supports 3 connectors, NovaLens Business supports 15, and NovaLens Enterprise includes \"unlimited connectors\") refer to the number of connectors available in each tier, but the specific connectors listed above are the confirmed supported options for the NovaLens product line.",
+      "final_answer": "NovaLens supports the following data connectors:  \n- Databricks  \n- Snowflake  \n- BigQuery  \n- Redshift  \n- PostgreSQL  \n\nThese are explicitly listed in the knowledge base under `NovaLens | supports_connector | [connector]`. Note that tier-specific details (e.g., NovaLens Professional supports 3 connectors, NovaLens Business supports 15, and NovaLens Enterprise includes \"unlimited connectors\") refer to the number of connectors available in each tier, but the specific connectors listed above are the confirmed supported options for the NovaLens product line.",
+      "claims": [
+        "NovaLens supports the following data connectors:  \n- Databricks  \n- Snowflake  \n- BigQuery  \n- Redshift  \n- PostgreSQL  \n\nThese are explicitly listed in the knowledge base under `NovaLens | supports_connector | [connector]`",
+        "Note that tier-specific details (e.g., NovaLens Professional supports 3 connectors, NovaLens Business supports 15, and NovaLens Enterprise includes \"unlimited connectors\") refer to the number of connectors available in each tier, but the specific connectors listed above are the confirmed supported options for the NovaLens product line"
+      ],
+      "verification_results": [
+        {
+          "claim": "NovaLens supports the following data connectors:  \n- Databricks  \n- Snowflake  \n- BigQuery  \n- Redshift  \n- PostgreSQL  \n\nThese are explicitly listed in the knowledge base under `NovaLens | supports_connector | [connector]`",
+          "verdict": "UNVERIFIABLE",
+          "confidence": 0.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaLens",
+              "relation": "supports_connector",
+              "object": "Snowflake",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens",
+              "relation": "supports_connector",
+              "object": "Databricks",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens",
+              "relation": "supports_connector",
+              "object": "BigQuery",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens",
+              "relation": "supports_connector",
+              "object": "Redshift",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens",
+              "relation": "supports_connector",
+              "object": "PostgreSQL",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "data_connectors",
+              "object": "3",
+              "score": 94
+            },
+            {
+              "subject": "NovaLens Business",
+              "relation": "data_connectors",
+              "object": "15",
+              "score": 91
+            },
+            {
+              "subject": "NovaLens",
+              "relation": "launched_in",
+              "object": "Q1 2023",
+              "score": 71
+            },
+            {
+              "subject": "NovaLens",
+              "relation": "pm_owner",
+              "object": "James Okafor",
+              "score": 64
+            },
+            {
+              "subject": "NovaLens",
+              "relation": "product_type",
+              "object": "Predictive Analytics Engine",
+              "score": 55
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "price",
+              "object": "$3,000/month",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "monitored_models_limit",
+              "object": "3",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Business",
+              "relation": "price",
+              "object": "$12,000/month",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Business",
+              "relation": "user_limit",
+              "object": "20 users",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "pto_minimum_per_year",
+              "object": "15 days",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard",
+              "relation": "pm_owner",
+              "object": "James Okafor",
+              "score": 100
+            },
+            {
+              "subject": "James Okafor",
+              "relation": "start_date",
+              "object": "September 2023",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "price",
+              "object": "$4,000/month",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "user_limit",
+              "object": "5 users",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "london_office_opened",
+              "object": "2023",
+              "score": 73
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "joined_NovaAI",
+              "object": "2023",
+              "score": 73
+            }
+          ],
+          "reasoning": "Verification call failed: call_llm_json failed to produce valid JSON after 3 attempts. Last error: call_llm failed after 1 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'"
+        },
+        {
+          "claim": "Note that tier-specific details (e.g., NovaLens Professional supports 3 connectors, NovaLens Business supports 15, and NovaLens Enterprise includes \"unlimited connectors\") refer to the number of connectors available in each tier, but the specific connectors listed above are the confirmed supported options for the NovaLens product line",
+          "verdict": "UNVERIFIABLE",
+          "confidence": 0.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaLens Professional",
+              "relation": "data_connectors",
+              "object": "3",
+              "score": 93
+            },
+            {
+              "subject": "NovaLens Business",
+              "relation": "data_connectors",
+              "object": "15",
+              "score": 93
+            },
+            {
+              "subject": "NovaLens Enterprise",
+              "relation": "includes_feature",
+              "object": "unlimited connectors",
+              "score": 92
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "price",
+              "object": "$4,000/month",
+              "score": 88
+            },
+            {
+              "subject": "NovaLens Enterprise",
+              "relation": "includes_feature",
+              "object": "bring-your-own-model support",
+              "score": 88
+            },
+            {
+              "subject": "NovaLens Business",
+              "relation": "includes_feature",
+              "object": "custom dashboards",
+              "score": 87
+            },
+            {
+              "subject": "NovaLens",
+              "relation": "product_type",
+              "object": "Predictive Analytics Engine",
+              "score": 86
+            },
+            {
+              "subject": "NovaLens Business",
+              "relation": "price",
+              "object": "$12,000/month",
+              "score": 85
+            },
+            {
+              "subject": "NovaLens Professional",
+              "relation": "user_limit",
+              "object": "5 users",
+              "score": 79
+            },
+            {
+              "subject": "NovaLens",
+              "relation": "supports_connector",
+              "object": "Snowflake",
+              "score": 77
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "price",
+              "object": "$3,000/month",
+              "score": 100
+            },
+            {
+              "subject": "NovaGuard Standard",
+              "relation": "monitored_models_limit",
+              "object": "3",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Business",
+              "relation": "user_limit",
+              "object": "20 users",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "pto_minimum_per_year",
+              "object": "15 days",
+              "score": 100
+            },
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "automation_runs_per_month",
+              "object": "50,000",
+              "score": 90
+            },
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "price",
+              "object": "$8,000/month",
+              "score": 90
+            },
+            {
+              "subject": "NovaLens",
+              "relation": "launched_in",
+              "object": "Q1 2023",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens Enterprise",
+              "relation": "model_refresh_frequency",
+              "object": "daily",
+              "score": 100
+            },
+            {
+              "subject": "NovaLens",
+              "relation": "supports_connector",
+              "object": "BigQuery",
+              "score": 55
+            },
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "user_limit",
+              "object": "10 users",
+              "score": 83
+            },
+            {
+              "subject": "NovaPilot Growth",
+              "relation": "user_limit",
+              "object": "50 users",
+              "score": 83
+            }
+          ],
+          "reasoning": "Verification call failed: call_llm_json failed to produce valid JSON after 3 attempts. Last error: call_llm failed after 1 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'"
+        }
+      ],
+      "had_hallucinations": false,
+      "reflections_used": null,
+      "latency_seconds": 78.063,
+      "exact_match": false,
+      "key_fact_recall": 1.0,
+      "is_correct": true,
+      "key_facts_found": 5,
+      "key_facts_total": 5,
+      "facts_missing": []
+    },
+    {
+      "id": "q15",
+      "category": "products_pricing",
+      "difficulty": "medium",
+      "question": "What is the price and model monitoring limit for NovaGuard Advanced?",
+      "ground_truth_answer": "NovaGuard Advanced costs $9,500/month and can monitor up to 20 AI models. It includes daily reports and Slack/PagerDuty integration, and is available via self-serve.",
+      "key_facts": [
+        "$9,500/month",
+        "20",
+        "daily",
+        "Slack/PagerDuty",
+        "self-serve"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 5,
+      "facts_missing": [
+        "$9,500/month",
+        "20",
+        "daily",
+        "Slack/PagerDuty",
+        "self-serve"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q16",
+      "category": "products_pricing",
+      "difficulty": "easy",
+      "question": "What is the price and model limit for NovaGuard Standard?",
+      "ground_truth_answer": "NovaGuard Standard costs $3,000/month and can monitor up to 3 AI models. It includes weekly reports and email alerts, and is available via self-serve.",
+      "key_facts": [
+        "$3,000/month",
+        "3",
+        "weekly",
+        "email alerts",
+        "self-serve"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 5,
+      "facts_missing": [
+        "$3,000/month",
+        "3",
+        "weekly",
+        "email alerts",
+        "self-serve"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q17",
+      "category": "products_pricing",
+      "difficulty": "easy",
+      "question": "What license is NovaBridge released under and how many GitHub stars does it have?",
+      "ground_truth_answer": "NovaBridge is open-source and released under the Apache 2.0 license. It has over 4,200 GitHub stars and approximately 800 contributors. The base version is free.",
+      "key_facts": [
+        "Apache 2.0",
+        "4,200+",
+        "~800",
+        "free"
+      ],
+      "variant": "v1rag",
+      "raw_answer": "NovaBridge is released under the **Apache 2.0 license** and has **4,200+ GitHub stars**.",
+      "final_answer": "NovaBridge is released under the **Apache 2.0 license** and has **4,200+ GitHub stars**.",
+      "claims": [
+        "NovaBridge is released under the **Apache 2.0 license** and has **4,200+ GitHub stars**"
+      ],
+      "verification_results": [
+        {
+          "claim": "NovaBridge is released under the **Apache 2.0 license** and has **4,200+ GitHub stars**",
+          "verdict": "UNVERIFIABLE",
+          "confidence": 0.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaBridge",
+              "relation": "license",
+              "object": "Apache 2.0",
+              "score": 100
+            },
+            {
+              "subject": "NovaBridge",
+              "relation": "github_stars",
+              "object": "4,200+",
+              "score": 100
+            },
+            {
+              "subject": "NovaBridge",
+              "relation": "released_in",
+              "object": "March 2024",
+              "score": 93
+            },
+            {
+              "subject": "NovaBridge Pro",
+              "relation": "price",
+              "object": "$1,200/month",
+              "score": 67
+            },
+            {
+              "subject": "NovaBridge",
+              "relation": "base_price",
+              "object": "free (open-source)",
+              "score": 65
+            },
+            {
+              "subject": "NovaBridge",
+              "relation": "maintained_by",
+              "object": "Platform Infrastructure team",
+              "score": 59
+            },
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "price",
+              "object": "$2,500/month",
+              "score": 64
+            },
+            {
+              "subject": "NovaPilot Starter",
+              "relation": "automation_runs_per_month",
+              "object": "50,000",
+              "score": 62
+            },
+            {
+              "subject": "Product department",
+              "relation": "open_req",
+              "object": "PM-2026-04",
+              "score": 56
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "singapore_office_opened",
+              "object": "2024",
+              "score": 55
+            },
+            {
+              "subject": "People Operations",
+              "relation": "open_requisitions",
+              "object": "14 (as of March 2026)",
+              "score": 67
+            },
+            {
+              "subject": "Oliver Haines",
+              "relation": "start_date",
+              "object": "March 2022",
+              "score": 67
+            },
+            {
+              "subject": "NovaBridge Pro",
+              "relation": "includes_feature",
+              "object": "SLA-backed support",
+              "score": 100
+            },
+            {
+              "subject": "NovaBridge Pro",
+              "relation": "includes_feature",
+              "object": "private forums",
+              "score": 100
+            },
+            {
+              "subject": "Engineering",
+              "relation": "has_sub_team",
+              "object": "Platform Infrastructure",
+              "score": 100
+            },
+            {
+              "subject": "Platform Infrastructure",
+              "relation": "team_lead",
+              "object": "Raj Mehta",
+              "score": 100
+            }
+          ],
+          "reasoning": "Verification call failed: call_llm_json failed to produce valid JSON after 3 attempts. Last error: call_llm failed after 1 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'"
+        }
+      ],
+      "had_hallucinations": false,
+      "reflections_used": null,
+      "latency_seconds": 39.926,
+      "exact_match": false,
+      "key_fact_recall": 0.5,
+      "is_correct": false,
+      "key_facts_found": 2,
+      "key_facts_total": 4,
+      "facts_missing": [
+        "~800",
+        "free"
+      ]
+    },
+    {
+      "id": "q18",
+      "category": "hr_policy",
+      "difficulty": "medium",
+      "question": "What is NovaAI's PTO policy?",
+      "ground_truth_answer": "NovaAI has a flexible/unlimited PTO policy. Employees must take a minimum of 15 days per year. PTO requests of 3 or more days must be submitted in Workday at least 5 business days in advance. Sick leave is tracked separately from PTO. NovaAI also provides 11 paid company holidays per year.",
+      "key_facts": [
+        "flexible/unlimited",
+        "15 days",
+        "5 business days",
+        "Workday",
+        "separately",
+        "11"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 6,
+      "facts_missing": [
+        "flexible/unlimited",
+        "15 days",
+        "5 business days",
+        "Workday",
+        "separately",
+        "11"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q19",
+      "category": "hr_policy",
+      "difficulty": "medium",
+      "question": "What are NovaAI's in-office requirements for San Francisco employees?",
+      "ground_truth_answer": "NovaAI is hybrid-first. San Francisco-based employees are required to be in the office on Tuesday and Thursday each week. Fully remote arrangements require approval from the direct manager, department VP, and Claudia Torres, and are reviewed annually.",
+      "key_facts": [
+        "hybrid-first",
+        "Tuesday",
+        "Thursday",
+        "Claudia Torres",
+        "annually"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 5,
+      "facts_missing": [
+        "hybrid-first",
+        "Tuesday",
+        "Thursday",
+        "Claudia Torres",
+        "annually"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q20",
+      "category": "hr_policy",
+      "difficulty": "medium",
+      "question": "What are the expense limits for hotel stays and how must expenses be submitted?",
+      "ground_truth_answer": "The hotel limit is $350/night in major cities (SF, NYC, London) and $250/night in other cities. All expenses must be submitted through Expensify within 30 days of the expense date. Receipts are required for expenses over $25.",
+      "key_facts": [
+        "$350/night",
+        "SF, NYC, London",
+        "$250/night",
+        "Expensify",
+        "30 days",
+        "$25"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 6,
+      "facts_missing": [
+        "$350/night",
+        "SF, NYC, London",
+        "$250/night",
+        "Expensify",
+        "30 days",
+        "$25"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q21",
+      "category": "hr_policy",
+      "difficulty": "hard",
+      "question": "How does NovaAI's performance review cycle work?",
+      "ground_truth_answer": "NovaAI runs a bi-annual performance review cycle. The mid-year review calibration happens in July with results delivered by July 31. The annual review calibration is in January with results by January 31. Ratings use a 5-point scale (Exceptional, Exceeds Expectations, Meets Expectations, Developing, Unsatisfactory). A rating of Developing or below triggers a PIP within 30 days.",
+      "key_facts": [
+        "bi-annual",
+        "July",
+        "July 31",
+        "January",
+        "January 31",
+        "5-point",
+        "Developing",
+        "30 days"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 8,
+      "facts_missing": [
+        "bi-annual",
+        "July",
+        "July 31",
+        "January",
+        "January 31",
+        "5-point",
+        "Developing",
+        "30 days"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q22",
+      "category": "hr_policy",
+      "difficulty": "medium",
+      "question": "What is NovaAI's airfare booking policy?",
+      "ground_truth_answer": "Airfare must be booked through TravelPerk. Economy class is required for flights under 6 hours. Business class is permitted for flights of 6 hours or more with VP+ approval. Expenses over $5,000 require CFO (Priya Nambiar) approval.",
+      "key_facts": [
+        "TravelPerk",
+        "economy",
+        "under 6 hours",
+        "business class",
+        "6 hours or more",
+        "$5,000",
+        "CFO"
+      ],
+      "variant": "v1rag",
+      "raw_answer": "NovaAI uses TravelPerk as its airfare booking platform. According to the verified facts, \"NovaAI | airfare_booking_platform | TravelPerk\" is the only information provided related to airfare booking. No specific policy details (e.g., reimbursement rules, booking procedures, or restrictions) are included in the knowledge base.",
+      "final_answer": "NovaAI uses TravelPerk as its airfare booking platform. According to the verified facts, \"NovaAI | airfare_booking_platform | TravelPerk\" is the only information provided related to airfare booking. No specific policy details (e.g., reimbursement rules, booking procedures, or restrictions) are included in the knowledge base.",
+      "claims": [
+        "NovaAI uses TravelPerk as its airfare booking platform",
+        "According to the verified facts, \"NovaAI | airfare_booking_platform | TravelPerk\" is the only information provided related to airfare booking",
+        "No specific policy details (e.g., reimbursement rules, booking procedures, or restrictions) are included in the knowledge base"
+      ],
+      "verification_results": [
+        {
+          "claim": "NovaAI uses TravelPerk as its airfare booking platform",
+          "verdict": "UNVERIFIABLE",
+          "confidence": 0.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaAI",
+              "relation": "airfare_booking_platform",
+              "object": "TravelPerk",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "equity_management_platform",
+              "object": "Carta",
+              "score": 62
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "conduct_reporting_platform",
+              "object": "EthicsPoint",
+              "score": 62
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "expense_submission_platform",
+              "object": "Expensify",
+              "score": 61
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_ceo",
+              "object": "Dr. Mara Chen",
+              "score": 60
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cto",
+              "object": "Lucas Ferreira",
+              "score": 60
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cfo",
+              "object": "Priya Nambiar",
+              "score": 60
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_coo",
+              "object": "James Whitfield",
+              "score": 60
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cro",
+              "object": "Dominique Leblanc",
+              "score": 60
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "on_call_managed_by",
+              "object": "Platform Infrastructure team",
+              "score": 56
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "joined_NovaAI",
+              "object": "2022",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "also_oversees",
+              "object": "Legal",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "joined_NovaAI",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "start_date",
+              "object": "February 2023",
+              "score": 100
+            },
+            {
+              "subject": "Engineering",
+              "relation": "has_sub_team",
+              "object": "Platform Infrastructure",
+              "score": 100
+            },
+            {
+              "subject": "Platform Infrastructure",
+              "relation": "team_lead",
+              "object": "Raj Mehta",
+              "score": 100
+            },
+            {
+              "subject": "NovaBridge",
+              "relation": "maintained_by",
+              "object": "Platform Infrastructure team",
+              "score": 100
+            },
+            {
+              "subject": "Dominique Leblanc",
+              "relation": "title",
+              "object": "CRO",
+              "score": 100
+            },
+            {
+              "subject": "Dominique Leblanc",
+              "relation": "department",
+              "object": "Sales",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            }
+          ],
+          "reasoning": "Verification call failed: call_llm_json failed to produce valid JSON after 3 attempts. Last error: call_llm failed after 1 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'"
+        },
+        {
+          "claim": "According to the verified facts, \"NovaAI | airfare_booking_platform | TravelPerk\" is the only information provided related to airfare booking",
+          "verdict": "UNVERIFIABLE",
+          "confidence": 0.0,
+          "evidence_triples": [
+            {
+              "subject": "NovaAI",
+              "relation": "airfare_booking_platform",
+              "object": "TravelPerk",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "equity_management_platform",
+              "object": "Carta",
+              "score": 62
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "conduct_reporting_platform",
+              "object": "EthicsPoint",
+              "score": 62
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "expense_submission_platform",
+              "object": "Expensify",
+              "score": 61
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_ceo",
+              "object": "Dr. Mara Chen",
+              "score": 60
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cto",
+              "object": "Lucas Ferreira",
+              "score": 60
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cfo",
+              "object": "Priya Nambiar",
+              "score": 60
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_coo",
+              "object": "James Whitfield",
+              "score": 60
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "has_cro",
+              "object": "Dominique Leblanc",
+              "score": 60
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "valuation",
+              "object": "$1.4B",
+              "score": 55
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "joined_NovaAI",
+              "object": "2022",
+              "score": 100
+            },
+            {
+              "subject": "Priya Nambiar",
+              "relation": "also_oversees",
+              "object": "Legal",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Lucas Ferreira",
+              "score": 100
+            },
+            {
+              "subject": "Lucas Ferreira",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "founded_in_year",
+              "object": "2021",
+              "score": 100
+            },
+            {
+              "subject": "NovaAI",
+              "relation": "co_founded_by",
+              "object": "Dr. Mara Chen",
+              "score": 100
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "joined_NovaAI",
+              "object": "2023",
+              "score": 100
+            },
+            {
+              "subject": "James Whitfield",
+              "relation": "start_date",
+              "object": "February 2023",
+              "score": 100
+            },
+            {
+              "subject": "Dominique Leblanc",
+              "relation": "title",
+              "object": "CRO",
+              "score": 100
+            },
+            {
+              "subject": "Dominique Leblanc",
+              "relation": "department",
+              "object": "Sales",
+              "score": 100
+            },
+            {
+              "subject": "Dr. Mara Chen",
+              "relation": "start_date",
+              "object": "January 2021",
+              "score": 100
+            }
+          ],
+          "reasoning": "Verification call failed: call_llm_json failed to produce valid JSON after 3 attempts. Last error: call_llm failed after 1 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'"
+        },
+        {
+          "claim": "No specific policy details (e.g., reimbursement rules, booking procedures, or restrictions) are included in the knowledge base",
+          "verdict": "UNVERIFIABLE",
+          "confidence": 0.0,
+          "evidence_triples": [],
+          "reasoning": "No relevant KG triples found for this claim."
+        }
+      ],
+      "had_hallucinations": false,
+      "reflections_used": null,
+      "latency_seconds": 70.511,
+      "exact_match": false,
+      "key_fact_recall": 0.143,
+      "is_correct": false,
+      "key_facts_found": 1,
+      "key_facts_total": 7,
+      "facts_missing": [
+        "economy",
+        "under 6 hours",
+        "business class",
+        "6 hours or more",
+        "$5,000",
+        "CFO"
+      ]
+    },
+    {
+      "id": "q23",
+      "category": "benefits",
+      "difficulty": "easy",
+      "question": "What is NovaAI's parental leave policy?",
+      "ground_truth_answer": "NovaAI provides 16 weeks of fully paid parental leave for all parents regardless of gender, including both birthing and non-birthing parents.",
+      "key_facts": [
+        "16 weeks",
+        "fully paid",
+        "all parents",
+        "regardless of gender"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 4,
+      "facts_missing": [
+        "16 weeks",
+        "fully paid",
+        "all parents",
+        "regardless of gender"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q24",
+      "category": "benefits",
+      "difficulty": "easy",
+      "question": "What is the 401(k) match at NovaAI and when are employees eligible?",
+      "ground_truth_answer": "NovaAI matches 4% of salary dollar-for-dollar on 401(k) contributions. There is a 6-month eligibility waiting period before employees can participate.",
+      "key_facts": [
+        "4%",
+        "dollar-for-dollar",
+        "6 months"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 3,
+      "facts_missing": [
+        "4%",
+        "dollar-for-dollar",
+        "6 months"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q25",
+      "category": "benefits",
+      "difficulty": "medium",
+      "question": "What is the annual L&D budget per employee and how does it work?",
+      "ground_truth_answer": "Each employee receives a $2,500 annual L&D budget, refreshed on January 1. Unused budget does not roll over. Requests must be submitted via the Workday L&D portal.",
+      "key_facts": [
+        "$2,500",
+        "January 1",
+        "does not roll over",
+        "Workday"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 4,
+      "facts_missing": [
+        "$2,500",
+        "January 1",
+        "does not roll over",
+        "Workday"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q26",
+      "category": "leadership",
+      "difficulty": "easy",
+      "question": "Who is NovaAI's Chief Operating Officer?",
+      "ground_truth_answer": "James Whitfield is NovaAI's Chief Operating Officer.",
+      "key_facts": [
+        "James Whitfield",
+        "COO"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 2,
+      "facts_missing": [
+        "James Whitfield",
+        "COO"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q27",
+      "category": "benefits",
+      "difficulty": "easy",
+      "question": "Which platform does NovaAI use for equity management?",
+      "ground_truth_answer": "NovaAI uses Carta as its equity management platform.",
+      "key_facts": [
+        "Carta",
+        "equity management"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 2,
+      "facts_missing": [
+        "Carta",
+        "equity management"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q28",
+      "category": "company_overview",
+      "difficulty": "easy",
+      "question": "What is the street address of NovaAI's headquarters?",
+      "ground_truth_answer": "NovaAI's headquarters is at 450 Market Street, Suite 1200, with ZIP code 94105.",
+      "key_facts": [
+        "450 Market Street",
+        "Suite 1200",
+        "94105"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 3,
+      "facts_missing": [
+        "450 Market Street",
+        "Suite 1200",
+        "94105"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q29",
+      "category": "benefits",
+      "difficulty": "easy",
+      "question": "Which provider administers NovaAI's health benefits?",
+      "ground_truth_answer": "Anthem Blue Cross administers NovaAI's health benefits.",
+      "key_facts": [
+        "Anthem Blue Cross",
+        "health benefits provider"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 2,
+      "facts_missing": [
+        "Anthem Blue Cross",
+        "health benefits provider"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q30",
+      "category": "products_pricing",
+      "difficulty": "easy",
+      "question": "When was NovaGuard launched?",
+      "ground_truth_answer": "NovaGuard was launched in Q4 2023.",
+      "key_facts": [
+        "NovaGuard",
+        "Q4 2023"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 2,
+      "facts_missing": [
+        "NovaGuard",
+        "Q4 2023"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q31",
+      "category": "products_pricing",
+      "difficulty": "easy",
+      "question": "When was NovaBridge released?",
+      "ground_truth_answer": "NovaBridge was released in March 2024.",
+      "key_facts": [
+        "NovaBridge",
+        "March 2024"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 2,
+      "facts_missing": [
+        "NovaBridge",
+        "March 2024"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q32",
+      "category": "company_overview",
+      "difficulty": "easy",
+      "question": "Which cloud provider does NovaAI use as its secondary provider?",
+      "ground_truth_answer": "GCP is NovaAI's secondary cloud provider.",
+      "key_facts": [
+        "GCP",
+        "secondary cloud"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 2,
+      "facts_missing": [
+        "GCP",
+        "secondary cloud"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q33",
+      "category": "benefits",
+      "difficulty": "easy",
+      "question": "What is NovaAI's on-call compensation rate?",
+      "ground_truth_answer": "NovaAI pays an additional $300 per week for on-call duty.",
+      "key_facts": [
+        "$300/week",
+        "on-call"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 2,
+      "facts_missing": [
+        "$300/week",
+        "on-call"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q34",
+      "category": "benefits",
+      "difficulty": "easy",
+      "question": "What is NovaAI's home office equipment stipend for new hires?",
+      "ground_truth_answer": "NovaAI provides a $1,500 one-time home office equipment stipend upon hire.",
+      "key_facts": [
+        "$1,500",
+        "one-time",
+        "upon hire"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 3,
+      "facts_missing": [
+        "$1,500",
+        "one-time",
+        "upon hire"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q35",
+      "category": "benefits",
+      "difficulty": "easy",
+      "question": "What health benefits coverage does NovaAI provide?",
+      "ground_truth_answer": "NovaAI provides medical, dental, and vision health benefits coverage.",
+      "key_facts": [
+        "medical",
+        "dental",
+        "vision"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 3,
+      "facts_missing": [
+        "medical",
+        "dental",
+        "vision"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q36",
+      "category": "products_pricing",
+      "difficulty": "hard",
+      "question": "Who is the PM owner of NovaAI's flagship product?",
+      "ground_truth_answer": "Fatima Al-Rashid is the PM owner of NovaPilot, NovaAI's flagship product.",
+      "key_facts": [
+        "Fatima Al-Rashid",
+        "NovaPilot"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 2,
+      "facts_missing": [
+        "Fatima Al-Rashid",
+        "NovaPilot"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q37",
+      "category": "leadership",
+      "difficulty": "hard",
+      "question": "Who leads the UX/Design team, and when did they join NovaAI?",
+      "ground_truth_answer": "Lena Park leads the UX/Design team and joined NovaAI in June 2022.",
+      "key_facts": [
+        "Lena Park",
+        "UX/Design",
+        "June 2022"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 3,
+      "facts_missing": [
+        "Lena Park",
+        "UX/Design",
+        "June 2022"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q38",
+      "category": "leadership",
+      "difficulty": "hard",
+      "question": "Who leads the SMB Sales team, and what is their FY2026 quota?",
+      "ground_truth_answer": "Tanya Osei leads the SMB Sales team, and her FY2026 quota is $6M.",
+      "key_facts": [
+        "Tanya Osei",
+        "SMB Sales",
+        "$6M"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 3,
+      "facts_missing": [
+        "Tanya Osei",
+        "SMB Sales",
+        "$6M"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q39",
+      "category": "leadership",
+      "difficulty": "hard",
+      "question": "When did NovaAI's Chief Revenue Officer join the company?",
+      "ground_truth_answer": "Dominique Leblanc, NovaAI's Chief Revenue Officer, joined the company in June 2022.",
+      "key_facts": [
+        "Dominique Leblanc",
+        "CRO",
+        "June 2022"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 3,
+      "facts_missing": [
+        "Dominique Leblanc",
+        "CRO",
+        "June 2022"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q40",
+      "category": "leadership",
+      "difficulty": "hard",
+      "question": "When did NovaAI's VP of Marketing join the company?",
+      "ground_truth_answer": "Rachel Huang, NovaAI's VP of Marketing, joined the company in January 2023.",
+      "key_facts": [
+        "Rachel Huang",
+        "VP of Marketing",
+        "January 2023"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 3,
+      "facts_missing": [
+        "Rachel Huang",
+        "VP of Marketing",
+        "January 2023"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q41",
+      "category": "leadership",
+      "difficulty": "hard",
+      "question": "Who is NovaBridge's Developer Relations Lead, and to whom do they report?",
+      "ground_truth_answer": "Priya Osei is NovaBridge's Developer Relations Lead, and she reports to the VP of Marketing.",
+      "key_facts": [
+        "Priya Osei",
+        "Developer Relations Lead",
+        "reports to VP of Marketing"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 3,
+      "facts_missing": [
+        "Priya Osei",
+        "Developer Relations Lead",
+        "reports to VP of Marketing"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q42",
+      "category": "leadership",
+      "difficulty": "hard",
+      "question": "When did NovaAI's VP of Product join the company?",
+      "ground_truth_answer": "Oliver Haines, NovaAI's VP of Product, joined the company in March 2022.",
+      "key_facts": [
+        "Oliver Haines",
+        "VP of Product",
+        "March 2022"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 3,
+      "facts_missing": [
+        "Oliver Haines",
+        "VP of Product",
+        "March 2022"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q43",
+      "category": "leadership",
+      "difficulty": "hard",
+      "question": "What is the FY2026 NRR target of the department led by NovaAI's VP of Customer Success?",
+      "ground_truth_answer": "Customer Success, the department led by VP of Customer Success Amara Diallo, has an FY2026 NRR target of 118%.",
+      "key_facts": [
+        "Amara Diallo",
+        "Customer Success",
+        "118%",
+        "NRR"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 4,
+      "facts_missing": [
+        "Amara Diallo",
+        "Customer Success",
+        "118%",
+        "NRR"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q44",
+      "category": "products_pricing",
+      "difficulty": "hard",
+      "question": "Which product has a roadmap for real-time streaming via Kafka, and what type of product is it?",
+      "ground_truth_answer": "NovaLens has a roadmap for real-time streaming via Kafka, and it is a Predictive Analytics Engine.",
+      "key_facts": [
+        "NovaLens",
+        "real-time streaming via Kafka",
+        "Predictive Analytics Engine"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 3,
+      "facts_missing": [
+        "NovaLens",
+        "real-time streaming via Kafka",
+        "Predictive Analytics Engine"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "q45",
+      "category": "leadership",
+      "difficulty": "hard",
+      "question": "Who leads the Solutions Engineering team, and when did they join NovaAI?",
+      "ground_truth_answer": "Wei Zhang leads the Solutions Engineering team and joined NovaAI in April 2023.",
+      "key_facts": [
+        "Wei Zhang",
+        "Solutions Engineering",
+        "April 2023"
+      ],
+      "error": "call_llm failed after 3 attempts for model 'qwen/qwen3-next-80b-a3b-thinking'",
+      "raw_answer": "",
+      "final_answer": "",
+      "exact_match": false,
+      "key_fact_recall": 0.0,
+      "is_correct": false,
+      "key_facts_found": 0,
+      "key_facts_total": 3,
+      "facts_missing": [
+        "Wei Zhang",
+        "Solutions Engineering",
+        "April 2023"
+      ],
+      "claims": null,
+      "verification_results": null,
+      "had_hallucinations": null,
+      "reflections_used": null,
+      "latency_seconds": 0.0
+    }
+  ]
+}
